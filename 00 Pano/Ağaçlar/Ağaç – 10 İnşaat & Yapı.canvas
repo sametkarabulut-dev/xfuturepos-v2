@@ -1,0 +1,438 @@
+{
+  "nodes": [
+    {
+      "type": "text",
+      "id": "n1",
+      "x": 0,
+      "y": -280,
+      "width": 520,
+      "height": 160,
+      "text": "# 10 İnşaat & Yapı: ağaç\n**Sektör → Dal → Alt dal**\n7 dal · 7 alt dal\nDala tıkla → dal canvas"
+    },
+    {
+      "type": "file",
+      "id": "n2",
+      "file": "01 Sektörler/10 İnşaat & Yapı.md",
+      "x": 0,
+      "y": 710,
+      "width": 420,
+      "height": 120,
+      "color": "6"
+    },
+    {
+      "type": "group",
+      "id": "n3",
+      "x": 500,
+      "y": -40,
+      "width": 1130,
+      "height": 200,
+      "label": "Bina proje ofisi (1)"
+    },
+    {
+      "type": "file",
+      "id": "n4",
+      "file": "02 İşletmeler/10 İnşaat & Yapı/Bina proje ofisi/Dal – Bina proje ofisi.md",
+      "x": 520,
+      "y": 0,
+      "width": 400,
+      "height": 120,
+      "color": "5"
+    },
+    {
+      "type": "file",
+      "id": "n5",
+      "file": "02 İşletmeler/10 İnşaat & Yapı/Bina proje ofisi/Bina proje ofisi.md",
+      "x": 1080,
+      "y": 0,
+      "width": 400,
+      "height": 120,
+      "color": "4"
+    },
+    {
+      "type": "text",
+      "id": "n6",
+      "x": 1520,
+      "y": 0,
+      "width": 280,
+      "height": 80,
+      "text": "→ [[Ağaç – 10 – Bina proje ofisi]]"
+    },
+    {
+      "type": "group",
+      "id": "n7",
+      "x": 500,
+      "y": 180,
+      "width": 1130,
+      "height": 200,
+      "label": "Küçük ölçekli bina müteahhidi (1)"
+    },
+    {
+      "type": "file",
+      "id": "n8",
+      "file": "02 İşletmeler/10 İnşaat & Yapı/Küçük ölçekli bina müteahhidi/Dal – Küçük ölçekli bina müteahhidi.md",
+      "x": 520,
+      "y": 220,
+      "width": 400,
+      "height": 120,
+      "color": "5"
+    },
+    {
+      "type": "file",
+      "id": "n9",
+      "file": "02 İşletmeler/10 İnşaat & Yapı/Küçük ölçekli bina müteahhidi/Küçük ölçekli bina müteahhidi.md",
+      "x": 1080,
+      "y": 220,
+      "width": 400,
+      "height": 120,
+      "color": "4"
+    },
+    {
+      "type": "text",
+      "id": "n10",
+      "x": 1520,
+      "y": 220,
+      "width": 280,
+      "height": 80,
+      "text": "→ [[Ağaç – 10 – Küçük ölçekli bina müteahhidi]]"
+    },
+    {
+      "type": "group",
+      "id": "n11",
+      "x": 500,
+      "y": 400,
+      "width": 1130,
+      "height": 200,
+      "label": "Mekanik ve elektrik tesisat taşeronu (1)"
+    },
+    {
+      "type": "file",
+      "id": "n12",
+      "file": "02 İşletmeler/10 İnşaat & Yapı/Mekanik ve elektrik tesisat taşeronu/Dal – Mekanik ve elektrik tesisat taşeronu.md",
+      "x": 520,
+      "y": 440,
+      "width": 400,
+      "height": 120,
+      "color": "5"
+    },
+    {
+      "type": "file",
+      "id": "n13",
+      "file": "02 İşletmeler/10 İnşaat & Yapı/Mekanik ve elektrik tesisat taşeronu/Mekanik ve elektrik tesisat taşeronu.md",
+      "x": 1080,
+      "y": 440,
+      "width": 400,
+      "height": 120,
+      "color": "4"
+    },
+    {
+      "type": "text",
+      "id": "n14",
+      "x": 1520,
+      "y": 440,
+      "width": 280,
+      "height": 80,
+      "text": "→ [[Ağaç – 10 – Mekanik ve elektrik tesisat taşeronu]]"
+    },
+    {
+      "type": "group",
+      "id": "n15",
+      "x": 500,
+      "y": 620,
+      "width": 1130,
+      "height": 200,
+      "label": "Tadilat ve basit onarım (1)"
+    },
+    {
+      "type": "file",
+      "id": "n16",
+      "file": "02 İşletmeler/10 İnşaat & Yapı/Tadilat ve basit onarım/Dal – Tadilat ve basit onarım.md",
+      "x": 520,
+      "y": 660,
+      "width": 400,
+      "height": 120,
+      "color": "5"
+    },
+    {
+      "type": "file",
+      "id": "n17",
+      "file": "02 İşletmeler/10 İnşaat & Yapı/Tadilat ve basit onarım/Tadilat ve basit onarım.md",
+      "x": 1080,
+      "y": 660,
+      "width": 400,
+      "height": 120,
+      "color": "4"
+    },
+    {
+      "type": "text",
+      "id": "n18",
+      "x": 1520,
+      "y": 660,
+      "width": 280,
+      "height": 80,
+      "text": "→ [[Ağaç – 10 – Tadilat ve basit onarım]]"
+    },
+    {
+      "type": "group",
+      "id": "n19",
+      "x": 500,
+      "y": 840,
+      "width": 1130,
+      "height": 200,
+      "label": "Yapı denetim kuruluşu (1)"
+    },
+    {
+      "type": "file",
+      "id": "n20",
+      "file": "02 İşletmeler/10 İnşaat & Yapı/Yapı denetim kuruluşu/Dal – Yapı denetim kuruluşu.md",
+      "x": 520,
+      "y": 880,
+      "width": 400,
+      "height": 120,
+      "color": "5"
+    },
+    {
+      "type": "file",
+      "id": "n21",
+      "file": "02 İşletmeler/10 İnşaat & Yapı/Yapı denetim kuruluşu/Yapı denetim kuruluşu.md",
+      "x": 1080,
+      "y": 880,
+      "width": 400,
+      "height": 120,
+      "color": "4"
+    },
+    {
+      "type": "text",
+      "id": "n22",
+      "x": 1520,
+      "y": 880,
+      "width": 280,
+      "height": 80,
+      "text": "→ [[Ağaç – 10 – Yapı denetim kuruluşu]]"
+    },
+    {
+      "type": "group",
+      "id": "n23",
+      "x": 500,
+      "y": 1060,
+      "width": 1130,
+      "height": 200,
+      "label": "Yapı malzemesi bayii (1)"
+    },
+    {
+      "type": "file",
+      "id": "n24",
+      "file": "02 İşletmeler/10 İnşaat & Yapı/Yapı malzemesi bayii/Dal – Yapı malzemesi bayii.md",
+      "x": 520,
+      "y": 1100,
+      "width": 400,
+      "height": 120,
+      "color": "5"
+    },
+    {
+      "type": "file",
+      "id": "n25",
+      "file": "02 İşletmeler/10 İnşaat & Yapı/Yapı malzemesi bayii/Yapı malzemesi bayii.md",
+      "x": 1080,
+      "y": 1100,
+      "width": 400,
+      "height": 120,
+      "color": "4"
+    },
+    {
+      "type": "text",
+      "id": "n26",
+      "x": 1520,
+      "y": 1100,
+      "width": 280,
+      "height": 80,
+      "text": "→ [[Ağaç – 10 – Yapı malzemesi bayii]]"
+    },
+    {
+      "type": "group",
+      "id": "n27",
+      "x": 500,
+      "y": 1280,
+      "width": 1130,
+      "height": 200,
+      "label": "Şantiye ihtisas taşeronu (1)"
+    },
+    {
+      "type": "file",
+      "id": "n28",
+      "file": "02 İşletmeler/10 İnşaat & Yapı/Şantiye ihtisas taşeronu/Dal – Şantiye ihtisas taşeronu.md",
+      "x": 520,
+      "y": 1320,
+      "width": 400,
+      "height": 120,
+      "color": "5"
+    },
+    {
+      "type": "file",
+      "id": "n29",
+      "file": "02 İşletmeler/10 İnşaat & Yapı/Şantiye ihtisas taşeronu/Şantiye ihtisas taşeronu.md",
+      "x": 1080,
+      "y": 1320,
+      "width": 400,
+      "height": 120,
+      "color": "4"
+    },
+    {
+      "type": "text",
+      "id": "n30",
+      "x": 1520,
+      "y": 1320,
+      "width": 280,
+      "height": 80,
+      "text": "→ [[Ağaç – 10 – Şantiye ihtisas taşeronu]]"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "fromNode": "n2",
+      "fromSide": "right",
+      "toNode": "n4",
+      "toSide": "left"
+    },
+    {
+      "id": "e2",
+      "fromNode": "n4",
+      "fromSide": "right",
+      "toNode": "n5",
+      "toSide": "left"
+    },
+    {
+      "id": "e3",
+      "fromNode": "n5",
+      "fromSide": "right",
+      "toNode": "n6",
+      "toSide": "left"
+    },
+    {
+      "id": "e4",
+      "fromNode": "n2",
+      "fromSide": "right",
+      "toNode": "n8",
+      "toSide": "left"
+    },
+    {
+      "id": "e5",
+      "fromNode": "n8",
+      "fromSide": "right",
+      "toNode": "n9",
+      "toSide": "left"
+    },
+    {
+      "id": "e6",
+      "fromNode": "n9",
+      "fromSide": "right",
+      "toNode": "n10",
+      "toSide": "left"
+    },
+    {
+      "id": "e7",
+      "fromNode": "n2",
+      "fromSide": "right",
+      "toNode": "n12",
+      "toSide": "left"
+    },
+    {
+      "id": "e8",
+      "fromNode": "n12",
+      "fromSide": "right",
+      "toNode": "n13",
+      "toSide": "left"
+    },
+    {
+      "id": "e9",
+      "fromNode": "n13",
+      "fromSide": "right",
+      "toNode": "n14",
+      "toSide": "left"
+    },
+    {
+      "id": "e10",
+      "fromNode": "n2",
+      "fromSide": "right",
+      "toNode": "n16",
+      "toSide": "left"
+    },
+    {
+      "id": "e11",
+      "fromNode": "n16",
+      "fromSide": "right",
+      "toNode": "n17",
+      "toSide": "left"
+    },
+    {
+      "id": "e12",
+      "fromNode": "n17",
+      "fromSide": "right",
+      "toNode": "n18",
+      "toSide": "left"
+    },
+    {
+      "id": "e13",
+      "fromNode": "n2",
+      "fromSide": "right",
+      "toNode": "n20",
+      "toSide": "left"
+    },
+    {
+      "id": "e14",
+      "fromNode": "n20",
+      "fromSide": "right",
+      "toNode": "n21",
+      "toSide": "left"
+    },
+    {
+      "id": "e15",
+      "fromNode": "n21",
+      "fromSide": "right",
+      "toNode": "n22",
+      "toSide": "left"
+    },
+    {
+      "id": "e16",
+      "fromNode": "n2",
+      "fromSide": "right",
+      "toNode": "n24",
+      "toSide": "left"
+    },
+    {
+      "id": "e17",
+      "fromNode": "n24",
+      "fromSide": "right",
+      "toNode": "n25",
+      "toSide": "left"
+    },
+    {
+      "id": "e18",
+      "fromNode": "n25",
+      "fromSide": "right",
+      "toNode": "n26",
+      "toSide": "left"
+    },
+    {
+      "id": "e19",
+      "fromNode": "n2",
+      "fromSide": "right",
+      "toNode": "n28",
+      "toSide": "left"
+    },
+    {
+      "id": "e20",
+      "fromNode": "n28",
+      "fromSide": "right",
+      "toNode": "n29",
+      "toSide": "left"
+    },
+    {
+      "id": "e21",
+      "fromNode": "n29",
+      "fromSide": "right",
+      "toNode": "n30",
+      "toSide": "left"
+    }
+  ]
+}

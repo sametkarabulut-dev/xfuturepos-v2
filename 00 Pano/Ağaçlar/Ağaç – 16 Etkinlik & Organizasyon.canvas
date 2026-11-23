@@ -1,0 +1,379 @@
+{
+  "nodes": [
+    {
+      "type": "text",
+      "id": "n1",
+      "x": 0,
+      "y": -280,
+      "width": 520,
+      "height": 160,
+      "text": "# 16 Etkinlik & Organizasyon: ağaç\n**Sektör → Dal → Alt dal**\n6 dal · 6 alt dal\nDala tıkla → dal canvas"
+    },
+    {
+      "type": "file",
+      "id": "n2",
+      "file": "01 Sektörler/16 Etkinlik & Organizasyon.md",
+      "x": 0,
+      "y": 600,
+      "width": 420,
+      "height": 120,
+      "color": "6"
+    },
+    {
+      "type": "group",
+      "id": "n3",
+      "x": 500,
+      "y": -40,
+      "width": 1130,
+      "height": 200,
+      "label": "Düğün, balo ve davet mekânı işletmeciliği (1)"
+    },
+    {
+      "type": "file",
+      "id": "n4",
+      "file": "02 İşletmeler/16 Etkinlik & Organizasyon/Düğün, balo ve davet mekânı işletmeciliği/Dal – Düğün, balo ve davet mekânı işletmeciliği.md",
+      "x": 520,
+      "y": 0,
+      "width": 400,
+      "height": 120,
+      "color": "5"
+    },
+    {
+      "type": "file",
+      "id": "n5",
+      "file": "02 İşletmeler/16 Etkinlik & Organizasyon/Düğün, balo ve davet mekânı işletmeciliği/Düğün, balo ve davet mekânı işletmeciliği.md",
+      "x": 1080,
+      "y": 0,
+      "width": 400,
+      "height": 120,
+      "color": "4"
+    },
+    {
+      "type": "text",
+      "id": "n6",
+      "x": 1520,
+      "y": 0,
+      "width": 280,
+      "height": 80,
+      "text": "→ [[Ağaç – 16 – Düğün, balo ve davet mekânı işletmeciliği]]"
+    },
+    {
+      "type": "group",
+      "id": "n7",
+      "x": 500,
+      "y": 180,
+      "width": 1130,
+      "height": 200,
+      "label": "Etkinlik ikramı (1)"
+    },
+    {
+      "type": "file",
+      "id": "n8",
+      "file": "02 İşletmeler/16 Etkinlik & Organizasyon/Etkinlik ikramı/Dal – Etkinlik ikramı.md",
+      "x": 520,
+      "y": 220,
+      "width": 400,
+      "height": 120,
+      "color": "5"
+    },
+    {
+      "type": "file",
+      "id": "n9",
+      "file": "02 İşletmeler/16 Etkinlik & Organizasyon/Etkinlik ikramı/Etkinlik ikramı.md",
+      "x": 1080,
+      "y": 220,
+      "width": 400,
+      "height": 120,
+      "color": "4"
+    },
+    {
+      "type": "text",
+      "id": "n10",
+      "x": 1520,
+      "y": 220,
+      "width": 280,
+      "height": 80,
+      "text": "→ [[Ağaç – 16 – Etkinlik ikramı]]"
+    },
+    {
+      "type": "group",
+      "id": "n11",
+      "x": 500,
+      "y": 400,
+      "width": 1130,
+      "height": 200,
+      "label": "Konser ve küçük festival organizatörlüğü (1)"
+    },
+    {
+      "type": "file",
+      "id": "n12",
+      "file": "02 İşletmeler/16 Etkinlik & Organizasyon/Konser ve küçük festival organizatörlüğü/Dal – Konser ve küçük festival organizatörlüğü.md",
+      "x": 520,
+      "y": 440,
+      "width": 400,
+      "height": 120,
+      "color": "5"
+    },
+    {
+      "type": "file",
+      "id": "n13",
+      "file": "02 İşletmeler/16 Etkinlik & Organizasyon/Konser ve küçük festival organizatörlüğü/Konser ve küçük festival organizatörlüğü.md",
+      "x": 1080,
+      "y": 440,
+      "width": 400,
+      "height": 120,
+      "color": "4"
+    },
+    {
+      "type": "text",
+      "id": "n14",
+      "x": 1520,
+      "y": 440,
+      "width": 280,
+      "height": 80,
+      "text": "→ [[Ağaç – 16 – Konser ve küçük festival organizatörlüğü]]"
+    },
+    {
+      "type": "group",
+      "id": "n15",
+      "x": 500,
+      "y": 620,
+      "width": 1130,
+      "height": 200,
+      "label": "Kurumsal etkinlik ve kongre ajansı (1)"
+    },
+    {
+      "type": "file",
+      "id": "n16",
+      "file": "02 İşletmeler/16 Etkinlik & Organizasyon/Kurumsal etkinlik ve kongre ajansı/Dal – Kurumsal etkinlik ve kongre ajansı.md",
+      "x": 520,
+      "y": 660,
+      "width": 400,
+      "height": 120,
+      "color": "5"
+    },
+    {
+      "type": "file",
+      "id": "n17",
+      "file": "02 İşletmeler/16 Etkinlik & Organizasyon/Kurumsal etkinlik ve kongre ajansı/Kurumsal etkinlik ve kongre ajansı.md",
+      "x": 1080,
+      "y": 660,
+      "width": 400,
+      "height": 120,
+      "color": "4"
+    },
+    {
+      "type": "text",
+      "id": "n18",
+      "x": 1520,
+      "y": 660,
+      "width": 280,
+      "height": 80,
+      "text": "→ [[Ağaç – 16 – Kurumsal etkinlik ve kongre ajansı]]"
+    },
+    {
+      "type": "group",
+      "id": "n19",
+      "x": 500,
+      "y": 840,
+      "width": 1130,
+      "height": 200,
+      "label": "Sahne, ses ve ışık teknik hizmeti (1)"
+    },
+    {
+      "type": "file",
+      "id": "n20",
+      "file": "02 İşletmeler/16 Etkinlik & Organizasyon/Sahne, ses ve ışık teknik hizmeti/Dal – Sahne, ses ve ışık teknik hizmeti.md",
+      "x": 520,
+      "y": 880,
+      "width": 400,
+      "height": 120,
+      "color": "5"
+    },
+    {
+      "type": "file",
+      "id": "n21",
+      "file": "02 İşletmeler/16 Etkinlik & Organizasyon/Sahne, ses ve ışık teknik hizmeti/Sahne, ses ve ışık teknik hizmeti.md",
+      "x": 1080,
+      "y": 880,
+      "width": 400,
+      "height": 120,
+      "color": "4"
+    },
+    {
+      "type": "text",
+      "id": "n22",
+      "x": 1520,
+      "y": 880,
+      "width": 280,
+      "height": 80,
+      "text": "→ [[Ağaç – 16 – Sahne, ses ve ışık teknik hizmeti]]"
+    },
+    {
+      "type": "group",
+      "id": "n23",
+      "x": 500,
+      "y": 1060,
+      "width": 1130,
+      "height": 200,
+      "label": "Özel gün organizatörlüğü (1)"
+    },
+    {
+      "type": "file",
+      "id": "n24",
+      "file": "02 İşletmeler/16 Etkinlik & Organizasyon/Özel gün organizatörlüğü/Dal – Özel gün organizatörlüğü.md",
+      "x": 520,
+      "y": 1100,
+      "width": 400,
+      "height": 120,
+      "color": "5"
+    },
+    {
+      "type": "file",
+      "id": "n25",
+      "file": "02 İşletmeler/16 Etkinlik & Organizasyon/Özel gün organizatörlüğü/Özel gün organizatörlüğü.md",
+      "x": 1080,
+      "y": 1100,
+      "width": 400,
+      "height": 120,
+      "color": "4"
+    },
+    {
+      "type": "text",
+      "id": "n26",
+      "x": 1520,
+      "y": 1100,
+      "width": 280,
+      "height": 80,
+      "text": "→ [[Ağaç – 16 – Özel gün organizatörlüğü]]"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "fromNode": "n2",
+      "fromSide": "right",
+      "toNode": "n4",
+      "toSide": "left"
+    },
+    {
+      "id": "e2",
+      "fromNode": "n4",
+      "fromSide": "right",
+      "toNode": "n5",
+      "toSide": "left"
+    },
+    {
+      "id": "e3",
+      "fromNode": "n5",
+      "fromSide": "right",
+      "toNode": "n6",
+      "toSide": "left"
+    },
+    {
+      "id": "e4",
+      "fromNode": "n2",
+      "fromSide": "right",
+      "toNode": "n8",
+      "toSide": "left"
+    },
+    {
+      "id": "e5",
+      "fromNode": "n8",
+      "fromSide": "right",
+      "toNode": "n9",
+      "toSide": "left"
+    },
+    {
+      "id": "e6",
+      "fromNode": "n9",
+      "fromSide": "right",
+      "toNode": "n10",
+      "toSide": "left"
+    },
+    {
+      "id": "e7",
+      "fromNode": "n2",
+      "fromSide": "right",
+      "toNode": "n12",
+      "toSide": "left"
+    },
+    {
+      "id": "e8",
+      "fromNode": "n12",
+      "fromSide": "right",
+      "toNode": "n13",
+      "toSide": "left"
+    },
+    {
+      "id": "e9",
+      "fromNode": "n13",
+      "fromSide": "right",
+      "toNode": "n14",
+      "toSide": "left"
+    },
+    {
+      "id": "e10",
+      "fromNode": "n2",
+      "fromSide": "right",
+      "toNode": "n16",
+      "toSide": "left"
+    },
+    {
+      "id": "e11",
+      "fromNode": "n16",
+      "fromSide": "right",
+      "toNode": "n17",
+      "toSide": "left"
+    },
+    {
+      "id": "e12",
+      "fromNode": "n17",
+      "fromSide": "right",
+      "toNode": "n18",
+      "toSide": "left"
+    },
+    {
+      "id": "e13",
+      "fromNode": "n2",
+      "fromSide": "right",
+      "toNode": "n20",
+      "toSide": "left"
+    },
+    {
+      "id": "e14",
+      "fromNode": "n20",
+      "fromSide": "right",
+      "toNode": "n21",
+      "toSide": "left"
+    },
+    {
+      "id": "e15",
+      "fromNode": "n21",
+      "fromSide": "right",
+      "toNode": "n22",
+      "toSide": "left"
+    },
+    {
+      "id": "e16",
+      "fromNode": "n2",
+      "fromSide": "right",
+      "toNode": "n24",
+      "toSide": "left"
+    },
+    {
+      "id": "e17",
+      "fromNode": "n24",
+      "fromSide": "right",
+      "toNode": "n25",
+      "toSide": "left"
+    },
+    {
+      "id": "e18",
+      "fromNode": "n25",
+      "fromSide": "right",
+      "toNode": "n26",
+      "toSide": "left"
+    }
+  ]
+}

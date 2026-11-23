@@ -16,7 +16,7 @@ is_modeli: sevkiyat
 
 <!-- dallar:start -->
 ## Dallar (ağaç)
-> **Sektör → Dal → Alt dal → Fonksiyon.** Fonksiyon havuzu: `07 Fonksiyonlar/`
+> **Sektör → Dal → Alt dal → Fonksiyon.** Görsel: [[Ağaç – 12 Lojistik & Taşımacılık]] · Fonksiyon havuzu: `07 Fonksiyonlar/`
 
 | Dal | Alt dal | Fonksiyon | Durum |
 |---|---|---|---|

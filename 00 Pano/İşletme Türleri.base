@@ -1,0 +1,69 @@
+filters:
+  and:
+    - tip == "isletme"
+formulas:
+  oncelik: ((pazar_puani + odeme_puani + rekabet_puani + kolaylik_puani + aciliyet_puani) / 5).toFixed(1)
+properties:
+  file.name:
+    displayName: İşletme türü
+  note.sektor:
+    displayName: Sektör
+  note.dal:
+    displayName: Dal
+  note.durum:
+    displayName: Durum
+  note.olcek:
+    displayName: Ölçek
+  note.isletme_sayisi:
+    displayName: İşletme sayısı
+  note.nace:
+    displayName: NACE
+  note.pazar_puani:
+    displayName: Pazar
+  note.odeme_puani:
+    displayName: Ödeme isteği
+  note.rekabet_puani:
+    displayName: Rekabet boşluğu
+  note.kolaylik_puani:
+    displayName: Kolaylık
+  note.aciliyet_puani:
+    displayName: Aciliyet
+  formula.oncelik:
+    displayName: Öncelik
+  note.ihtiyaclar:
+    displayName: İhtiyaçlar
+  note.moduller:
+    displayName: Modüller
+  note.rakipler:
+    displayName: Rakipler
+  note.fiyat_araligi:
+    displayName: Fiyat aralığı
+  note.is_modeli:
+    displayName: İş modeli
+views:
+  - type: table
+    name: Dala göre (ağaç)
+    groupBy:
+      property: dal
+      direction: ASC
+    order:
+      - file.name
+      - sektor
+      - dal
+      - isletme_sayisi
+      - formula.oncelik
+      - durum
+  - type: table
+    name: Sektöre göre
+    groupBy:
+      property: sektor
+      direction: ASC
+    order:
+      - file.name
+      - durum
+      - formula.oncelik
+      - pazar_puani
+      - odeme_puani
+      - rekabet_puani
+      - kolaylik_puani
+      - aciliyet_puani

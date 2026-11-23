@@ -1,0 +1,27 @@
+filters:
+  and:
+    - tip == "fonksiyon"
+properties:
+  file.name:
+    displayName: Fonksiyon
+  note.kod:
+    displayName: Kod
+  note.arac:
+    displayName: Araç
+  note.kapsam:
+    displayName: Kapsam
+  note.kullanim:
+    displayName: Kullanım
+  note.durum:
+    displayName: Durum
+views:
+  - type: table
+    name: Araça göre
+    groupBy:
+      property: arac
+      direction: ASC
+    order:
+      - file.name
+      - kod
+      - kapsam
+      - kullanim

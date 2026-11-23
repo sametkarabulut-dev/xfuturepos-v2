@@ -1,0 +1,28 @@
+filters:
+  and:
+    - tip == "modul"
+properties:
+  file.name:
+    displayName: Modül
+  note.katman:
+    displayName: Katman
+  note.arac_turu:
+    displayName: Araç türü
+  note.mvp:
+    displayName: MVP
+  note.kod:
+    displayName: Kod
+  note.durum:
+    displayName: Durum
+views:
+  - type: table
+    name: Katmana göre
+    groupBy:
+      property: katman
+      direction: ASC
+    order:
+      - file.name
+      - arac_turu
+      - mvp
+      - kod
+      - durum

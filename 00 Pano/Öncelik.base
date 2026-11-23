@@ -1,0 +1,55 @@
+filters:
+  and:
+    - tip == "isletme"
+formulas:
+  puan: if(pazar_puani, ((pazar_puani + odeme_puani + rekabet_puani + kolaylik_puani + aciliyet_puani) / 5).toFixed(1), "")
+properties:
+  note.kod:
+    displayName: ID
+  file.name:
+    displayName: İşletme
+  note.sektor:
+    displayName: Sektör
+  note.dal:
+    displayName: Dal
+  formula.puan:
+    displayName: Puan
+  note.oneri_harf:
+    displayName: Önerimiz
+  note.oncelik:
+    displayName: Öncelik (A/B/C)
+  note.gereksiz:
+    displayName: Gereksiz
+  note.oncelik_notu:
+    displayName: Not
+  note.fiyat_araligi:
+    displayName: Fiyat önerisi
+views:
+  - type: table
+    name: Karar listesi
+    groupBy:
+      property: sektor
+      direction: ASC
+    order:
+      - kod
+      - file.name
+      - dal
+      - formula.puan
+      - oneri_harf
+      - oncelik
+      - gereksiz
+      - oncelik_notu
+    sort:
+      - property: kod
+        direction: ASC
+  - type: table
+    name: Kararsız (öncelik boş)
+    filters:
+      and:
+        - oncelik == null || oncelik == ""
+        - gereksiz != true
+    order:
+      - kod
+      - file.name
+      - formula.puan
+      - oneri_harf

@@ -1,0 +1,22 @@
+filters:
+  and:
+    - tip == "ihtiyac"
+properties:
+  file.name:
+    displayName: İhtiyaç
+  note.kategori:
+    displayName: Kategori
+  note.durum:
+    displayName: Durum
+  note.moduller:
+    displayName: Modüller
+views:
+  - type: table
+    name: Kategoriye göre
+    groupBy:
+      property: kategori
+      direction: ASC
+    order:
+      - file.name
+      - durum
+      - moduller

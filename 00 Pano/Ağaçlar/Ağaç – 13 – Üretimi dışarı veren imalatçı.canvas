@@ -1,0 +1,76 @@
+{
+  "nodes": [
+    {
+      "type": "text",
+      "id": "n1",
+      "x": 0,
+      "y": -260,
+      "width": 480,
+      "height": 140,
+      "text": "# Üretimi dışarı veren imalatçı\n**Sektör → Dal → Alt dal → Fonksiyon**\n[[13 Üretim & İmalat]]"
+    },
+    {
+      "type": "file",
+      "id": "n2",
+      "file": "01 Sektörler/13 Üretim & İmalat.md",
+      "x": 0,
+      "y": 0,
+      "width": 420,
+      "height": 120,
+      "color": "6"
+    },
+    {
+      "type": "file",
+      "id": "n3",
+      "file": "02 İşletmeler/13 Üretim & İmalat/Üretimi dışarı veren imalatçı/Dal – Üretimi dışarı veren imalatçı.md",
+      "x": 0,
+      "y": 200,
+      "width": 420,
+      "height": 140,
+      "color": "5"
+    },
+    {
+      "type": "file",
+      "id": "n4",
+      "file": "02 İşletmeler/13 Üretim & İmalat/Üretimi dışarı veren imalatçı/Üretimi dışarı veren imalatçı.md",
+      "x": 560,
+      "y": 180,
+      "width": 420,
+      "height": 160,
+      "color": "4"
+    },
+    {
+      "type": "text",
+      "id": "n5",
+      "x": 1080,
+      "y": 0,
+      "width": 520,
+      "height": 520,
+      "text": "### Üretimi dışarı veren imalatçı\n17 modül · 7 fonksiyon\n\n**Modüller**\n- [[Muhasebe ve Gelir-Gider]]\n- [[e-Fatura ve e-Arşiv]]\n- [[CRM]]\n- [[Personel ve Vardiya]]\n- [[Raporlar]]\n- [[AI Asistan]]\n- [[Ayarlar]]\n- [[İş Emri (Üretim)]]\n- [[Reçete BOM]]\n- [[Fire Kayıt]]\n- [[Depo Sevk]]\n- [[Fason Mutabakat]]\n\n**Fonksiyon örnekleri**\n- ABC'ye 405 kg kumaş sevk et\n- Açık sevkler\n- ABC dönüşünü kaydet 960 adet\n- Ret 40\n- ABC hakedişini kesintili hesapla\n- Kimde ne malzeme var\n- Kesim ABC, dikim DEF"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "fromNode": "n2",
+      "fromSide": "bottom",
+      "toNode": "n3",
+      "toSide": "top"
+    },
+    {
+      "id": "e2",
+      "fromNode": "n3",
+      "fromSide": "right",
+      "toNode": "n4",
+      "toSide": "left"
+    },
+    {
+      "id": "e3",
+      "fromNode": "n4",
+      "fromSide": "right",
+      "toNode": "n5",
+      "toSide": "left",
+      "label": "kullanır"
+    }
+  ]
+}

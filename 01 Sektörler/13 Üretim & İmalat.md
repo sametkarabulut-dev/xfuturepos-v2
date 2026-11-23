@@ -16,7 +16,7 @@ is_modeli: uretim
 
 <!-- dallar:start -->
 ## Dallar (ağaç)
-> **Sektör → Dal → Alt dal → Fonksiyon.** Fonksiyon havuzu: `07 Fonksiyonlar/`
+> **Sektör → Dal → Alt dal → Fonksiyon.** Görsel: [[Ağaç – 13 Üretim & İmalat]] · Fonksiyon havuzu: `07 Fonksiyonlar/`
 
 | Dal | Alt dal | Fonksiyon | Durum |
 |---|---|---|---|

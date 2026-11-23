@@ -1,0 +1,76 @@
+{
+  "nodes": [
+    {
+      "type": "text",
+      "id": "n1",
+      "x": 0,
+      "y": -260,
+      "width": 480,
+      "height": 140,
+      "text": "# Mekanik ve elektrik tesisat taşeronu\n**Sektör → Dal → Alt dal → Fonksiyon**\n[[10 İnşaat & Yapı]]"
+    },
+    {
+      "type": "file",
+      "id": "n2",
+      "file": "01 Sektörler/10 İnşaat & Yapı.md",
+      "x": 0,
+      "y": 0,
+      "width": 420,
+      "height": 120,
+      "color": "6"
+    },
+    {
+      "type": "file",
+      "id": "n3",
+      "file": "02 İşletmeler/10 İnşaat & Yapı/Mekanik ve elektrik tesisat taşeronu/Dal – Mekanik ve elektrik tesisat taşeronu.md",
+      "x": 0,
+      "y": 200,
+      "width": 420,
+      "height": 140,
+      "color": "5"
+    },
+    {
+      "type": "file",
+      "id": "n4",
+      "file": "02 İşletmeler/10 İnşaat & Yapı/Mekanik ve elektrik tesisat taşeronu/Mekanik ve elektrik tesisat taşeronu.md",
+      "x": 560,
+      "y": 180,
+      "width": 420,
+      "height": 160,
+      "color": "4"
+    },
+    {
+      "type": "text",
+      "id": "n5",
+      "x": 1080,
+      "y": 0,
+      "width": 520,
+      "height": 520,
+      "text": "### Mekanik ve elektrik tesisat taşeronu\n19 modül · 10 fonksiyon\n\n**Modüller**\n- [[Muhasebe ve Gelir-Gider]]\n- [[e-Fatura ve e-Arşiv]]\n- [[CRM]]\n- [[Personel ve Vardiya]]\n- [[Raporlar]]\n- [[AI Asistan]]\n- [[Ayarlar]]\n- [[Proje Kartı]]\n- [[Saha Puantajı]]\n- [[Metraj Hakediş]]\n- [[Şantiye Günlüğü]]\n- [[Malzeme Takibi]]\n\n**Fonksiyon örnekleri**\n- Kollektör hattı metrajını güncelle\n- Elektrik poz farkını göster\n- Isıtma basınç testini kaydet\n- Açık testleri listele\n- Yangın pompalarını teslim al\n- Eksik vana listesi\n- As-built’i müellife gönder\n- Bekleyen as-built’ler"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "fromNode": "n2",
+      "fromSide": "bottom",
+      "toNode": "n3",
+      "toSide": "top"
+    },
+    {
+      "id": "e2",
+      "fromNode": "n3",
+      "fromSide": "right",
+      "toNode": "n4",
+      "toSide": "left"
+    },
+    {
+      "id": "e3",
+      "fromNode": "n4",
+      "fromSide": "right",
+      "toNode": "n5",
+      "toSide": "left",
+      "label": "kullanır"
+    }
+  ]
+}

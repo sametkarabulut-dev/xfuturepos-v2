@@ -1,0 +1,76 @@
+{
+  "nodes": [
+    {
+      "type": "text",
+      "id": "n1",
+      "x": 0,
+      "y": -260,
+      "width": 480,
+      "height": 140,
+      "text": "# Mecra planlama ve satın alma ofisi\n**Sektör → Dal → Alt dal → Fonksiyon**\n[[15 Teknoloji Medya & Ajans]]"
+    },
+    {
+      "type": "file",
+      "id": "n2",
+      "file": "01 Sektörler/15 Teknoloji Medya & Ajans.md",
+      "x": 0,
+      "y": 0,
+      "width": 420,
+      "height": 120,
+      "color": "6"
+    },
+    {
+      "type": "file",
+      "id": "n3",
+      "file": "02 İşletmeler/15 Teknoloji Medya & Ajans/Mecra planlama ve satın alma ofisi/Dal – Mecra planlama ve satın alma ofisi.md",
+      "x": 0,
+      "y": 200,
+      "width": 420,
+      "height": 140,
+      "color": "5"
+    },
+    {
+      "type": "file",
+      "id": "n4",
+      "file": "02 İşletmeler/15 Teknoloji Medya & Ajans/Mecra planlama ve satın alma ofisi/Mecra planlama ve satın alma ofisi.md",
+      "x": 560,
+      "y": 180,
+      "width": 420,
+      "height": 160,
+      "color": "4"
+    },
+    {
+      "type": "text",
+      "id": "n5",
+      "x": 1080,
+      "y": 0,
+      "width": 520,
+      "height": 520,
+      "text": "### Mecra planlama ve satın alma ofisi\n18 modül · 8 fonksiyon\n\n**Modüller**\n- [[Muhasebe ve Gelir-Gider]]\n- [[e-Fatura ve e-Arşiv]]\n- [[CRM]]\n- [[Personel ve Vardiya]]\n- [[Raporlar]]\n- [[AI Asistan]]\n- [[Ayarlar]]\n- [[Proje Kapsamı]]\n- [[Saat Kullanımı]]\n- [[Brief Onayı]]\n- [[Teslim Takvimi]]\n- [[Sözleşme Takibi]]\n\n**Fonksiyon örnekleri**\n- Plan ile siparişi karşılaştır\n- Bu ayın mecra planını özetle\n- Teyidi gelmeyen siparişleri listele\n- Yayın teyidini eşle\n- Faturası gelmeyen siparişleri bul\n- Fatura farklarını listele\n- Sapma olan mecraları göster\n- Bütçe aşımını özetle"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "fromNode": "n2",
+      "fromSide": "bottom",
+      "toNode": "n3",
+      "toSide": "top"
+    },
+    {
+      "id": "e2",
+      "fromNode": "n3",
+      "fromSide": "right",
+      "toNode": "n4",
+      "toSide": "left"
+    },
+    {
+      "id": "e3",
+      "fromNode": "n4",
+      "fromSide": "right",
+      "toNode": "n5",
+      "toSide": "left",
+      "label": "kullanır"
+    }
+  ]
+}

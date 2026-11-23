@@ -1,0 +1,161 @@
+{
+  "nodes": [
+    {
+      "type": "text",
+      "id": "n1",
+      "x": 0,
+      "y": -200,
+      "width": 480,
+      "height": 120,
+      "text": "# Yapı Ağacı\nKasa klasörleri ve okuma sırası"
+    },
+    {
+      "type": "text",
+      "id": "n2",
+      "x": 0,
+      "y": 0,
+      "width": 420,
+      "height": 90,
+      "text": "## 00 Pano\nPano, Bases, Ağaçlar",
+      "color": "4"
+    },
+    {
+      "type": "text",
+      "id": "n3",
+      "x": 0,
+      "y": 120,
+      "width": 420,
+      "height": 90,
+      "text": "## 01 Sektörler\n6 sektör özeti",
+      "color": "4"
+    },
+    {
+      "type": "text",
+      "id": "n4",
+      "x": 0,
+      "y": 240,
+      "width": 420,
+      "height": 90,
+      "text": "## 02 İşletmeler\nDal + işletme türü",
+      "color": "0"
+    },
+    {
+      "type": "text",
+      "id": "n5",
+      "x": 0,
+      "y": 360,
+      "width": 420,
+      "height": 90,
+      "text": "## 03 İhtiyaçlar\nİhtiyaç kartları",
+      "color": "0"
+    },
+    {
+      "type": "text",
+      "id": "n6",
+      "x": 0,
+      "y": 480,
+      "width": 420,
+      "height": 90,
+      "text": "## 04 Modüller\nAraçlar",
+      "color": "0"
+    },
+    {
+      "type": "text",
+      "id": "n7",
+      "x": 0,
+      "y": 600,
+      "width": 420,
+      "height": 90,
+      "text": "## 05 Rakipler\nRakip notları",
+      "color": "0"
+    },
+    {
+      "type": "text",
+      "id": "n8",
+      "x": 0,
+      "y": 720,
+      "width": 420,
+      "height": 90,
+      "text": "## 06 Kaynaklar\nKaynak listeleri",
+      "color": "0"
+    },
+    {
+      "type": "text",
+      "id": "n9",
+      "x": 0,
+      "y": 840,
+      "width": 420,
+      "height": 90,
+      "text": "## 07 Fonksiyonlar\nTekil işlevler",
+      "color": "0"
+    },
+    {
+      "type": "text",
+      "id": "n10",
+      "x": 0,
+      "y": 960,
+      "width": 420,
+      "height": 90,
+      "text": "## 99 Şablonlar\nŞablonlar",
+      "color": "0"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "fromNode": "n2",
+      "fromSide": "bottom",
+      "toNode": "n3",
+      "toSide": "top"
+    },
+    {
+      "id": "e2",
+      "fromNode": "n3",
+      "fromSide": "bottom",
+      "toNode": "n4",
+      "toSide": "top"
+    },
+    {
+      "id": "e3",
+      "fromNode": "n4",
+      "fromSide": "bottom",
+      "toNode": "n5",
+      "toSide": "top"
+    },
+    {
+      "id": "e4",
+      "fromNode": "n5",
+      "fromSide": "bottom",
+      "toNode": "n6",
+      "toSide": "top"
+    },
+    {
+      "id": "e5",
+      "fromNode": "n6",
+      "fromSide": "bottom",
+      "toNode": "n7",
+      "toSide": "top"
+    },
+    {
+      "id": "e6",
+      "fromNode": "n7",
+      "fromSide": "bottom",
+      "toNode": "n8",
+      "toSide": "top"
+    },
+    {
+      "id": "e7",
+      "fromNode": "n8",
+      "fromSide": "bottom",
+      "toNode": "n9",
+      "toSide": "top"
+    },
+    {
+      "id": "e8",
+      "fromNode": "n9",
+      "fromSide": "bottom",
+      "toNode": "n10",
+      "toSide": "top"
+    }
+  ]
+}

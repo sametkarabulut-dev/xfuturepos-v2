@@ -11,10 +11,11 @@ Yalnızca şu 6 sektör. Dışına ÇIKMA:
 09 Emlak & Gayrimenkul · 10 İnşaat & Yapı · 12 Lojistik & Taşımacılık · 13 Üretim & İmalat · 15 Teknoloji Medya & Ajans · 16 Etkinlik & Organizasyon
 
 ## Okuma sırası
-1. `04 Modüller/` — çekirdek araçlar (Muhasebe, e-Fatura, CRM, Personel, Raporlar, AI Asistan, Ayarlar)
-2. `01 Sektörler/<sektör>.md` — özet, dallar, araç matrisi, yasal, pazar, rakip
-3. `02 İşletmeler/<sektör>/…` — dal ve işletme türü notları
-4. Gerekirse `03 İhtiyaçlar/`, `07 Fonksiyonlar/`, `05 Rakipler/`, `06 Kaynaklar/`
+1. `00 Pano/Ana Pano.md` · `Ana Ağaç` · `Araç Kutusu`
+2. `04 Modüller/` — çekirdek araçlar (Muhasebe, e-Fatura, CRM, Personel, Raporlar, AI Asistan, Ayarlar)
+3. `01 Sektörler/<sektör>.md` — özet, dallar, araç matrisi, yasal, pazar, rakip
+4. `02 İşletmeler/<sektör>/…` — dal ve işletme türü notları
+5. Gerekirse `03 İhtiyaçlar/`, `07 Fonksiyonlar/`, `05 Rakipler/`, `06 Kaynaklar/`
 
 ## Çalışma kuralları
 - Gereksiz soru sorma. Sadece karar kullanıcıya aitse sor.
@@ -26,7 +27,7 @@ Yalnızca şu 6 sektör. Dışına ÇIKMA:
 
 ## Kasa yapısı
 ```
-00 Pano/        Ana Pano, Alan Sözlüğü, Bases
+00 Pano/        Ana Pano, Alan Sözlüğü, Araç Kutusu, Bases, Ağaçlar/
 01 Sektörler/   6 sektör notu
 02 İşletmeler/  sektör → dal → işletme türü
 03 İhtiyaçlar/  her ihtiyaç = 1 not

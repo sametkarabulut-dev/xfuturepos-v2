@@ -1,0 +1,76 @@
+{
+  "nodes": [
+    {
+      "type": "text",
+      "id": "n1",
+      "x": 0,
+      "y": -260,
+      "width": 480,
+      "height": 140,
+      "text": "# Sahne, ses ve ışık teknik hizmeti\n**Sektör → Dal → Alt dal → Fonksiyon**\n[[16 Etkinlik & Organizasyon]]"
+    },
+    {
+      "type": "file",
+      "id": "n2",
+      "file": "01 Sektörler/16 Etkinlik & Organizasyon.md",
+      "x": 0,
+      "y": 0,
+      "width": 420,
+      "height": 120,
+      "color": "6"
+    },
+    {
+      "type": "file",
+      "id": "n3",
+      "file": "02 İşletmeler/16 Etkinlik & Organizasyon/Sahne, ses ve ışık teknik hizmeti/Dal – Sahne, ses ve ışık teknik hizmeti.md",
+      "x": 0,
+      "y": 200,
+      "width": 420,
+      "height": 140,
+      "color": "5"
+    },
+    {
+      "type": "file",
+      "id": "n4",
+      "file": "02 İşletmeler/16 Etkinlik & Organizasyon/Sahne, ses ve ışık teknik hizmeti/Sahne, ses ve ışık teknik hizmeti.md",
+      "x": 560,
+      "y": 180,
+      "width": 420,
+      "height": 160,
+      "color": "4"
+    },
+    {
+      "type": "text",
+      "id": "n5",
+      "x": 1080,
+      "y": 0,
+      "width": 520,
+      "height": 520,
+      "text": "### Sahne, ses ve ışık teknik hizmeti\n15 modül · 6 fonksiyon\n\n**Modüller**\n- [[Muhasebe ve Gelir-Gider]]\n- [[e-Fatura ve e-Arşiv]]\n- [[CRM]]\n- [[Personel ve Vardiya]]\n- [[Raporlar]]\n- [[AI Asistan]]\n- [[Ayarlar]]\n- [[Etkinlik takvimi]]\n- [[Kapora sözleşme]]\n- [[Tedarikçi teyidi]]\n- [[Run-of-show]]\n- [[Kişi sayısı]]\n\n**Fonksiyon örnekleri**\n- 2x line array müsait mi?\n- Cumartesi çıkış listesi\n- Load-in 14–18 çakışıyor mu?\n- Kaç teknisyen?\n- Dönüşte eksik ne?\n- Hasar kaydı aç"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "fromNode": "n2",
+      "fromSide": "bottom",
+      "toNode": "n3",
+      "toSide": "top"
+    },
+    {
+      "id": "e2",
+      "fromNode": "n3",
+      "fromSide": "right",
+      "toNode": "n4",
+      "toSide": "left"
+    },
+    {
+      "id": "e3",
+      "fromNode": "n4",
+      "fromSide": "right",
+      "toNode": "n5",
+      "toSide": "left",
+      "label": "kullanır"
+    }
+  ]
+}

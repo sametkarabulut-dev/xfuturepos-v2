@@ -1,0 +1,320 @@
+{
+  "nodes": [
+    {
+      "type": "text",
+      "id": "n1",
+      "x": 0,
+      "y": -280,
+      "width": 520,
+      "height": 160,
+      "text": "# 09 Emlak & Gayrimenkul: ağaç\n**Sektör → Dal → Alt dal**\n5 dal · 5 alt dal\nDala tıkla → dal canvas"
+    },
+    {
+      "type": "file",
+      "id": "n2",
+      "file": "01 Sektörler/09 Emlak & Gayrimenkul.md",
+      "x": 0,
+      "y": 490,
+      "width": 420,
+      "height": 120,
+      "color": "6"
+    },
+    {
+      "type": "group",
+      "id": "n3",
+      "x": 500,
+      "y": -40,
+      "width": 1130,
+      "height": 200,
+      "label": "Emlak aracılık ofisi (1)"
+    },
+    {
+      "type": "file",
+      "id": "n4",
+      "file": "02 İşletmeler/09 Emlak & Gayrimenkul/Emlak aracılık ofisi/Dal – Emlak aracılık ofisi.md",
+      "x": 520,
+      "y": 0,
+      "width": 400,
+      "height": 120,
+      "color": "5"
+    },
+    {
+      "type": "file",
+      "id": "n5",
+      "file": "02 İşletmeler/09 Emlak & Gayrimenkul/Emlak aracılık ofisi/Emlak aracılık ofisi.md",
+      "x": 1080,
+      "y": 0,
+      "width": 400,
+      "height": 120,
+      "color": "4"
+    },
+    {
+      "type": "text",
+      "id": "n6",
+      "x": 1520,
+      "y": 0,
+      "width": 280,
+      "height": 80,
+      "text": "→ [[Ağaç – 09 – Emlak aracılık ofisi]]"
+    },
+    {
+      "type": "group",
+      "id": "n7",
+      "x": 500,
+      "y": 180,
+      "width": 1130,
+      "height": 200,
+      "label": "Gayrimenkul değerleme kuruluşu (1)"
+    },
+    {
+      "type": "file",
+      "id": "n8",
+      "file": "02 İşletmeler/09 Emlak & Gayrimenkul/Gayrimenkul değerleme kuruluşu/Dal – Gayrimenkul değerleme kuruluşu.md",
+      "x": 520,
+      "y": 220,
+      "width": 400,
+      "height": 120,
+      "color": "5"
+    },
+    {
+      "type": "file",
+      "id": "n9",
+      "file": "02 İşletmeler/09 Emlak & Gayrimenkul/Gayrimenkul değerleme kuruluşu/Gayrimenkul değerleme kuruluşu.md",
+      "x": 1080,
+      "y": 220,
+      "width": 400,
+      "height": 120,
+      "color": "4"
+    },
+    {
+      "type": "text",
+      "id": "n10",
+      "x": 1520,
+      "y": 220,
+      "width": 280,
+      "height": 80,
+      "text": "→ [[Ağaç – 09 – Gayrimenkul değerleme kuruluşu]]"
+    },
+    {
+      "type": "group",
+      "id": "n11",
+      "x": 500,
+      "y": 400,
+      "width": 1130,
+      "height": 200,
+      "label": "Site, apartman ve toplu yapı yönetimi (1)"
+    },
+    {
+      "type": "file",
+      "id": "n12",
+      "file": "02 İşletmeler/09 Emlak & Gayrimenkul/Site, apartman ve toplu yapı yönetimi/Dal – Site, apartman ve toplu yapı yönetimi.md",
+      "x": 520,
+      "y": 440,
+      "width": 400,
+      "height": 120,
+      "color": "5"
+    },
+    {
+      "type": "file",
+      "id": "n13",
+      "file": "02 İşletmeler/09 Emlak & Gayrimenkul/Site, apartman ve toplu yapı yönetimi/Site, apartman ve toplu yapı yönetimi.md",
+      "x": 1080,
+      "y": 440,
+      "width": 400,
+      "height": 120,
+      "color": "4"
+    },
+    {
+      "type": "text",
+      "id": "n14",
+      "x": 1520,
+      "y": 440,
+      "width": 280,
+      "height": 80,
+      "text": "→ [[Ağaç – 09 – Site, apartman ve toplu yapı yönetimi]]"
+    },
+    {
+      "type": "group",
+      "id": "n15",
+      "x": 500,
+      "y": 620,
+      "width": 1130,
+      "height": 200,
+      "label": "Turizm amaçlı kısa süreli konut işletmeciliği (1)"
+    },
+    {
+      "type": "file",
+      "id": "n16",
+      "file": "02 İşletmeler/09 Emlak & Gayrimenkul/Turizm amaçlı kısa süreli konut işletmeciliği/Dal – Turizm amaçlı kısa süreli konut işletmeciliği.md",
+      "x": 520,
+      "y": 660,
+      "width": 400,
+      "height": 120,
+      "color": "5"
+    },
+    {
+      "type": "file",
+      "id": "n17",
+      "file": "02 İşletmeler/09 Emlak & Gayrimenkul/Turizm amaçlı kısa süreli konut işletmeciliği/Turizm amaçlı kısa süreli konut işletmeciliği.md",
+      "x": 1080,
+      "y": 660,
+      "width": 400,
+      "height": 120,
+      "color": "4"
+    },
+    {
+      "type": "text",
+      "id": "n18",
+      "x": 1520,
+      "y": 660,
+      "width": 280,
+      "height": 80,
+      "text": "→ [[Ağaç – 09 – Turizm amaçlı kısa süreli konut işletmeciliği]]"
+    },
+    {
+      "type": "group",
+      "id": "n19",
+      "x": 500,
+      "y": 840,
+      "width": 1130,
+      "height": 200,
+      "label": "Uzun süreli kira ve mülk işletmeciliği (1)"
+    },
+    {
+      "type": "file",
+      "id": "n20",
+      "file": "02 İşletmeler/09 Emlak & Gayrimenkul/Uzun süreli kira ve mülk işletmeciliği/Dal – Uzun süreli kira ve mülk işletmeciliği.md",
+      "x": 520,
+      "y": 880,
+      "width": 400,
+      "height": 120,
+      "color": "5"
+    },
+    {
+      "type": "file",
+      "id": "n21",
+      "file": "02 İşletmeler/09 Emlak & Gayrimenkul/Uzun süreli kira ve mülk işletmeciliği/Uzun süreli kira ve mülk işletmeciliği.md",
+      "x": 1080,
+      "y": 880,
+      "width": 400,
+      "height": 120,
+      "color": "4"
+    },
+    {
+      "type": "text",
+      "id": "n22",
+      "x": 1520,
+      "y": 880,
+      "width": 280,
+      "height": 80,
+      "text": "→ [[Ağaç – 09 – Uzun süreli kira ve mülk işletmeciliği]]"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "fromNode": "n2",
+      "fromSide": "right",
+      "toNode": "n4",
+      "toSide": "left"
+    },
+    {
+      "id": "e2",
+      "fromNode": "n4",
+      "fromSide": "right",
+      "toNode": "n5",
+      "toSide": "left"
+    },
+    {
+      "id": "e3",
+      "fromNode": "n5",
+      "fromSide": "right",
+      "toNode": "n6",
+      "toSide": "left"
+    },
+    {
+      "id": "e4",
+      "fromNode": "n2",
+      "fromSide": "right",
+      "toNode": "n8",
+      "toSide": "left"
+    },
+    {
+      "id": "e5",
+      "fromNode": "n8",
+      "fromSide": "right",
+      "toNode": "n9",
+      "toSide": "left"
+    },
+    {
+      "id": "e6",
+      "fromNode": "n9",
+      "fromSide": "right",
+      "toNode": "n10",
+      "toSide": "left"
+    },
+    {
+      "id": "e7",
+      "fromNode": "n2",
+      "fromSide": "right",
+      "toNode": "n12",
+      "toSide": "left"
+    },
+    {
+      "id": "e8",
+      "fromNode": "n12",
+      "fromSide": "right",
+      "toNode": "n13",
+      "toSide": "left"
+    },
+    {
+      "id": "e9",
+      "fromNode": "n13",
+      "fromSide": "right",
+      "toNode": "n14",
+      "toSide": "left"
+    },
+    {
+      "id": "e10",
+      "fromNode": "n2",
+      "fromSide": "right",
+      "toNode": "n16",
+      "toSide": "left"
+    },
+    {
+      "id": "e11",
+      "fromNode": "n16",
+      "fromSide": "right",
+      "toNode": "n17",
+      "toSide": "left"
+    },
+    {
+      "id": "e12",
+      "fromNode": "n17",
+      "fromSide": "right",
+      "toNode": "n18",
+      "toSide": "left"
+    },
+    {
+      "id": "e13",
+      "fromNode": "n2",
+      "fromSide": "right",
+      "toNode": "n20",
+      "toSide": "left"
+    },
+    {
+      "id": "e14",
+      "fromNode": "n20",
+      "fromSide": "right",
+      "toNode": "n21",
+      "toSide": "left"
+    },
+    {
+      "id": "e15",
+      "fromNode": "n21",
+      "fromSide": "right",
+      "toNode": "n22",
+      "toSide": "left"
+    }
+  ]
+}

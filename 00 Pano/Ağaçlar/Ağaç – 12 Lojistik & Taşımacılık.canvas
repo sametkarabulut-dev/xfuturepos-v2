@@ -1,0 +1,438 @@
+{
+  "nodes": [
+    {
+      "type": "text",
+      "id": "n1",
+      "x": 0,
+      "y": -280,
+      "width": 520,
+      "height": 160,
+      "text": "# 12 Lojistik & Taşımacılık: ağaç\n**Sektör → Dal → Alt dal**\n7 dal · 7 alt dal\nDala tıkla → dal canvas"
+    },
+    {
+      "type": "file",
+      "id": "n2",
+      "file": "01 Sektörler/12 Lojistik & Taşımacılık.md",
+      "x": 0,
+      "y": 710,
+      "width": 420,
+      "height": 120,
+      "color": "6"
+    },
+    {
+      "type": "group",
+      "id": "n3",
+      "x": 500,
+      "y": -40,
+      "width": 1130,
+      "height": 200,
+      "label": "Depolama ve sipariş karşılama (1)"
+    },
+    {
+      "type": "file",
+      "id": "n4",
+      "file": "02 İşletmeler/12 Lojistik & Taşımacılık/Depolama ve sipariş karşılama/Dal – Depolama ve sipariş karşılama.md",
+      "x": 520,
+      "y": 0,
+      "width": 400,
+      "height": 120,
+      "color": "5"
+    },
+    {
+      "type": "file",
+      "id": "n5",
+      "file": "02 İşletmeler/12 Lojistik & Taşımacılık/Depolama ve sipariş karşılama/Depolama ve sipariş karşılama.md",
+      "x": 1080,
+      "y": 0,
+      "width": 400,
+      "height": 120,
+      "color": "4"
+    },
+    {
+      "type": "text",
+      "id": "n6",
+      "x": 1520,
+      "y": 0,
+      "width": 280,
+      "height": 80,
+      "text": "→ [[Ağaç – 12 – Depolama ve sipariş karşılama]]"
+    },
+    {
+      "type": "group",
+      "id": "n7",
+      "x": 500,
+      "y": 180,
+      "width": 1130,
+      "height": 200,
+      "label": "Ev ve büro taşımacılığı (1)"
+    },
+    {
+      "type": "file",
+      "id": "n8",
+      "file": "02 İşletmeler/12 Lojistik & Taşımacılık/Ev ve büro taşımacılığı/Dal – Ev ve büro taşımacılığı.md",
+      "x": 520,
+      "y": 220,
+      "width": 400,
+      "height": 120,
+      "color": "5"
+    },
+    {
+      "type": "file",
+      "id": "n9",
+      "file": "02 İşletmeler/12 Lojistik & Taşımacılık/Ev ve büro taşımacılığı/Ev ve büro taşımacılığı.md",
+      "x": 1080,
+      "y": 220,
+      "width": 400,
+      "height": 120,
+      "color": "4"
+    },
+    {
+      "type": "text",
+      "id": "n10",
+      "x": 1520,
+      "y": 220,
+      "width": 280,
+      "height": 80,
+      "text": "→ [[Ağaç – 12 – Ev ve büro taşımacılığı]]"
+    },
+    {
+      "type": "group",
+      "id": "n11",
+      "x": 500,
+      "y": 400,
+      "width": 1130,
+      "height": 200,
+      "label": "Nakliyat ambarı (1)"
+    },
+    {
+      "type": "file",
+      "id": "n12",
+      "file": "02 İşletmeler/12 Lojistik & Taşımacılık/Nakliyat ambarı/Dal – Nakliyat ambarı.md",
+      "x": 520,
+      "y": 440,
+      "width": 400,
+      "height": 120,
+      "color": "5"
+    },
+    {
+      "type": "file",
+      "id": "n13",
+      "file": "02 İşletmeler/12 Lojistik & Taşımacılık/Nakliyat ambarı/Nakliyat ambarı.md",
+      "x": 1080,
+      "y": 440,
+      "width": 400,
+      "height": 120,
+      "color": "4"
+    },
+    {
+      "type": "text",
+      "id": "n14",
+      "x": 1520,
+      "y": 440,
+      "width": 280,
+      "height": 80,
+      "text": "→ [[Ağaç – 12 – Nakliyat ambarı]]"
+    },
+    {
+      "type": "group",
+      "id": "n15",
+      "x": 500,
+      "y": 620,
+      "width": 1130,
+      "height": 200,
+      "label": "Taşıma organizatörlüğü ve acentelik (1)"
+    },
+    {
+      "type": "file",
+      "id": "n16",
+      "file": "02 İşletmeler/12 Lojistik & Taşımacılık/Taşıma organizatörlüğü ve acentelik/Dal – Taşıma organizatörlüğü ve acentelik.md",
+      "x": 520,
+      "y": 660,
+      "width": 400,
+      "height": 120,
+      "color": "5"
+    },
+    {
+      "type": "file",
+      "id": "n17",
+      "file": "02 İşletmeler/12 Lojistik & Taşımacılık/Taşıma organizatörlüğü ve acentelik/Taşıma organizatörlüğü ve acentelik.md",
+      "x": 1080,
+      "y": 660,
+      "width": 400,
+      "height": 120,
+      "color": "4"
+    },
+    {
+      "type": "text",
+      "id": "n18",
+      "x": 1520,
+      "y": 660,
+      "width": 280,
+      "height": 80,
+      "text": "→ [[Ağaç – 12 – Taşıma organizatörlüğü ve acentelik]]"
+    },
+    {
+      "type": "group",
+      "id": "n19",
+      "x": 500,
+      "y": 840,
+      "width": 1130,
+      "height": 200,
+      "label": "Uluslararası karayolu yük taşımacılığı (1)"
+    },
+    {
+      "type": "file",
+      "id": "n20",
+      "file": "02 İşletmeler/12 Lojistik & Taşımacılık/Uluslararası karayolu yük taşımacılığı/Dal – Uluslararası karayolu yük taşımacılığı.md",
+      "x": 520,
+      "y": 880,
+      "width": 400,
+      "height": 120,
+      "color": "5"
+    },
+    {
+      "type": "file",
+      "id": "n21",
+      "file": "02 İşletmeler/12 Lojistik & Taşımacılık/Uluslararası karayolu yük taşımacılığı/Uluslararası karayolu yük taşımacılığı.md",
+      "x": 1080,
+      "y": 880,
+      "width": 400,
+      "height": 120,
+      "color": "4"
+    },
+    {
+      "type": "text",
+      "id": "n22",
+      "x": 1520,
+      "y": 880,
+      "width": 280,
+      "height": 80,
+      "text": "→ [[Ağaç – 12 – Uluslararası karayolu yük taşımacılığı]]"
+    },
+    {
+      "type": "group",
+      "id": "n23",
+      "x": 500,
+      "y": 1060,
+      "width": 1130,
+      "height": 200,
+      "label": "Yurt içi karayolu yük taşımacılığı (1)"
+    },
+    {
+      "type": "file",
+      "id": "n24",
+      "file": "02 İşletmeler/12 Lojistik & Taşımacılık/Yurt içi karayolu yük taşımacılığı/Dal – Yurt içi karayolu yük taşımacılığı.md",
+      "x": 520,
+      "y": 1100,
+      "width": 400,
+      "height": 120,
+      "color": "5"
+    },
+    {
+      "type": "file",
+      "id": "n25",
+      "file": "02 İşletmeler/12 Lojistik & Taşımacılık/Yurt içi karayolu yük taşımacılığı/Yurt içi karayolu yük taşımacılığı.md",
+      "x": 1080,
+      "y": 1100,
+      "width": 400,
+      "height": 120,
+      "color": "4"
+    },
+    {
+      "type": "text",
+      "id": "n26",
+      "x": 1520,
+      "y": 1100,
+      "width": 280,
+      "height": 80,
+      "text": "→ [[Ağaç – 12 – Yurt içi karayolu yük taşımacılığı]]"
+    },
+    {
+      "type": "group",
+      "id": "n27",
+      "x": 500,
+      "y": 1280,
+      "width": 1130,
+      "height": 200,
+      "label": "Şehir içi kurye ve dağıtım (1)"
+    },
+    {
+      "type": "file",
+      "id": "n28",
+      "file": "02 İşletmeler/12 Lojistik & Taşımacılık/Şehir içi kurye ve dağıtım/Dal – Şehir içi kurye ve dağıtım.md",
+      "x": 520,
+      "y": 1320,
+      "width": 400,
+      "height": 120,
+      "color": "5"
+    },
+    {
+      "type": "file",
+      "id": "n29",
+      "file": "02 İşletmeler/12 Lojistik & Taşımacılık/Şehir içi kurye ve dağıtım/Şehir içi kurye ve dağıtım.md",
+      "x": 1080,
+      "y": 1320,
+      "width": 400,
+      "height": 120,
+      "color": "4"
+    },
+    {
+      "type": "text",
+      "id": "n30",
+      "x": 1520,
+      "y": 1320,
+      "width": 280,
+      "height": 80,
+      "text": "→ [[Ağaç – 12 – Şehir içi kurye ve dağıtım]]"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "fromNode": "n2",
+      "fromSide": "right",
+      "toNode": "n4",
+      "toSide": "left"
+    },
+    {
+      "id": "e2",
+      "fromNode": "n4",
+      "fromSide": "right",
+      "toNode": "n5",
+      "toSide": "left"
+    },
+    {
+      "id": "e3",
+      "fromNode": "n5",
+      "fromSide": "right",
+      "toNode": "n6",
+      "toSide": "left"
+    },
+    {
+      "id": "e4",
+      "fromNode": "n2",
+      "fromSide": "right",
+      "toNode": "n8",
+      "toSide": "left"
+    },
+    {
+      "id": "e5",
+      "fromNode": "n8",
+      "fromSide": "right",
+      "toNode": "n9",
+      "toSide": "left"
+    },
+    {
+      "id": "e6",
+      "fromNode": "n9",
+      "fromSide": "right",
+      "toNode": "n10",
+      "toSide": "left"
+    },
+    {
+      "id": "e7",
+      "fromNode": "n2",
+      "fromSide": "right",
+      "toNode": "n12",
+      "toSide": "left"
+    },
+    {
+      "id": "e8",
+      "fromNode": "n12",
+      "fromSide": "right",
+      "toNode": "n13",
+      "toSide": "left"
+    },
+    {
+      "id": "e9",
+      "fromNode": "n13",
+      "fromSide": "right",
+      "toNode": "n14",
+      "toSide": "left"
+    },
+    {
+      "id": "e10",
+      "fromNode": "n2",
+      "fromSide": "right",
+      "toNode": "n16",
+      "toSide": "left"
+    },
+    {
+      "id": "e11",
+      "fromNode": "n16",
+      "fromSide": "right",
+      "toNode": "n17",
+      "toSide": "left"
+    },
+    {
+      "id": "e12",
+      "fromNode": "n17",
+      "fromSide": "right",
+      "toNode": "n18",
+      "toSide": "left"
+    },
+    {
+      "id": "e13",
+      "fromNode": "n2",
+      "fromSide": "right",
+      "toNode": "n20",
+      "toSide": "left"
+    },
+    {
+      "id": "e14",
+      "fromNode": "n20",
+      "fromSide": "right",
+      "toNode": "n21",
+      "toSide": "left"
+    },
+    {
+      "id": "e15",
+      "fromNode": "n21",
+      "fromSide": "right",
+      "toNode": "n22",
+      "toSide": "left"
+    },
+    {
+      "id": "e16",
+      "fromNode": "n2",
+      "fromSide": "right",
+      "toNode": "n24",
+      "toSide": "left"
+    },
+    {
+      "id": "e17",
+      "fromNode": "n24",
+      "fromSide": "right",
+      "toNode": "n25",
+      "toSide": "left"
+    },
+    {
+      "id": "e18",
+      "fromNode": "n25",
+      "fromSide": "right",
+      "toNode": "n26",
+      "toSide": "left"
+    },
+    {
+      "id": "e19",
+      "fromNode": "n2",
+      "fromSide": "right",
+      "toNode": "n28",
+      "toSide": "left"
+    },
+    {
+      "id": "e20",
+      "fromNode": "n28",
+      "fromSide": "right",
+      "toNode": "n29",
+      "toSide": "left"
+    },
+    {
+      "id": "e21",
+      "fromNode": "n29",
+      "fromSide": "right",
+      "toNode": "n30",
+      "toSide": "left"
+    }
+  ]
+}
