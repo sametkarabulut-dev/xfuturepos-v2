@@ -4,19 +4,20 @@ durum: tamamlandi
 sektor_id: "13"
 is_modeli: uretim
 ---
+
 # 13 Üretim & İmalat
 
 ## Özet
-- TÜİK’in 24 Aralık 2025 tarihli 2024 KOBİ bülteninde KOBİ, 250’den az çalışan ve 500 milyon TL eşiğini aşmayan girişimdir.
-- TÜİK sipariş, parti, fason veya proje payı yayımlamaz.
-- Sanayi sicili devamlı ve seri imalata ilişir.
+- TÜİK’in 24 Aralık 2025 tarihli 2024 KOBİ bülteninde KOBİ, 250’den az çalışan ve 500 milyon TL eşiğini aşmayan girişimdir. KOBİ’ler girişimlerin %99,6’sıdır; bunların %12,1’i imalattadır. İmalat KOBİ’leri KOBİ istihdamının %25,4’ünü ve üretim değerinin %41,2’sini oluşturur. KOSGEB derlemesinde mali ölçütlü imalat 473.142 girişimdir. İş kayıtlarında 1–9 çalışan 437.372, 10–49 çalışan 45.314’tür. İki sayım aynı evren değildir.
+- TÜİK sipariş, parti, fason veya proje payı yayımlamaz. Ayrım MEB’in üretim organizasyonu modülünden ve TOBB kapasite hesabından gelir. Logo hızlı üretim fişi tek seviyeli reçete ve fireyi kapatır. Tiger 3’te üretim emri, rota ve fason emri ayrıdır. Mikro API’sinde iş emri, reçete, fire, rota ve parti-lot vardır. TÜİK 2023 bilişim araştırmasında ERP kullanan girişim oranı %29,7’dir; bu oran 10 ve daha fazla çalışan içindir ve imalata özel değildir.
+- Sanayi sicili devamlı ve seri imalata ilişir. e-İrsaliye bütün imalatçılara otomatik değildir: demir-çelik GTİP 72 ve 73 ciro şartı olmadan kapsamdadır; ayrıca e-Fatura kayıtlı olup 2021 sonrası 10 milyon TL ve üzeri hasılatı olanlar kapsamdadır. Gıda kaydı yalnızca gıda işletmesindedir. CE yalnızca ilgili teknik düzenlemenin aradığı üründedir.
 - Karar: Ayrım hammaddeye göre değil iş emrinin nasıl açıldığına göredir.
-- Modül sayısı: sektör ortak 6; alt sektör 6; toplam 42; MVP 23.
-- Ortak çekirdek (tüm sektörler): Muhasebe, e-Fatura/e-Arşiv, CRM, Personel, Raporlar, AI Asistan, Ayarlar → `04 Modüller/00 Ortak Çekirdek.md`.
+- Modül: sektör ortak 6; alt sektör 6; toplam 42; MVP 23.
+- Ortak çekirdek (tüm sektörler) bu dosyada yoktur → `04 Modüller/00 Ortak Çekirdek.md`.
 
 <!-- dallar:start -->
 ## Dallar (ağaç)
-> **Sektör → Dal → Alt dal → Fonksiyon.** Fonksiyon havuzu: `07 Fonksiyonlar/` · Ortak araçlar: `04 Modüller/`
+> **Sektör → Dal → Alt dal → Fonksiyon.** Ortak araçlar: `04 Modüller/`
 
 | Dal | Alt dal | Fonksiyon | Durum |
 |---|---|---|---|
@@ -31,7 +32,7 @@ is_modeli: uretim
 ## Alt işletme türleri (onay listesi)
 > İşaretli = Adım 1 onay listesi.
 
-- [x] [[Siparişe göre kısa çevrim atölye|Siparişe göre kısa çevrim atölye]]
+- [x] [[13.01 Siparişe göre kısa çevrim atölye|13.01 Siparişe göre kısa çevrim atölye]]
 - [x] [[Tekrarlayan parti ve stok üretimi|Tekrarlayan parti ve stok üretimi]]
 - [x] [[Fason işleyen atölye|Fason işleyen atölye]]
 - [x] [[Proje tipi makine ve ekipman imalatı|Proje tipi makine ve ekipman imalatı]]
@@ -51,14 +52,16 @@ is_modeli: uretim
 ## Ortak iş akışı
 ```mermaid
 flowchart LR
-  A["Talep / kayıt"] --> B["Sektör işi"]
-  B --> C["Belge / tahsilat taslağı"]
-  C --> D["Onay kuyruğu"]
-  D --> E["e-Belge · CRM · rapor"]
+  A["Sipariş / iş emri"] --> B["Reçete · malzeme"]
+  B --> C["Üretim · fire"]
+  C --> D["Depo sevk taslağı"]
+  D --> E["Onay"]
+  E --> F["e-İrsaliye / e-Belge"]
+  F --> G["Fason mutabakat"]
 ```
 
 ## Araç mimarisi
-> İlke: her araç bir kez yapılır. Bir işletme türü = araçların birleşimi. Tek türe özel büyük geliştirme yok.
+> İlke: her araç bir kez yapılır. Bir işletme türü = araçların birleşimi.
 
 ```mermaid
 flowchart TB
@@ -79,20 +82,27 @@ flowchart TB
 ## Araç matrisi (hangi araç kaç alt türe hizmet ediyor)
 > ● = kullanıyor. genel = tüm sektörler, ozel = yalnız bu sektör.
 
-| Araç | Tür | Siparişe | Tekrarlayan | Fason | Proje | Gıda işleme | Üretimi | Toplam |
+| Araç | Tür | 13.01 | Tekrarlayan | Fason | Proje | Gıda işleme | Üretimi | Toplam |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| [[Muhasebe ve Gelir-Gider]] | genel | ● | ● | ● | ● | ● | ● | **6** |
+| [[e-Fatura ve e-Arşiv]] | genel | ● | ● | ● | ● | ● | ● | **6** |
+| [[CRM]] | genel | ● | ● | ● | ● | ● | ● | **6** |
+| [[Personel ve Vardiya]] | genel | ● | ● | ● | ● | ● | ● | **6** |
+| [[Raporlar]] | genel | ● | ● | ● | ● | ● | ● | **6** |
+| [[AI Asistan]] | genel | ● | ● | ● | ● | ● | ● | **6** |
+| [[Ayarlar]] | genel | ● | ● | ● | ● | ● | ● | **6** |
 | [[blok yalnız Üretim & İmalat içindir. Tüm sektörlerin ortak modülü değildir.]] | ozel | ● | ● | ● | ● | ● | ● | **6** |
 | [[İş Emri]] | ozel | ● | ● | ● | ● | ● | ● | **6** |
 | [[Reçete BOM]] | ozel | ● | ● | ● | ● | ● | ● | **6** |
 | [[Fire Kayıt]] | ozel | ● | ● | ● | ● | ● | ● | **6** |
 | [[Depo Sevk]] | ozel | ● | ● | ● | ● | ● | ● | **6** |
 | [[Fason Mutabakat]] | ozel | ● | ● | ● | ● | ● | ● | **6** |
-| [[modeli: karma.]] | ozel | ● |  |  |  |  |  | **1** |
-| [[Sipariş Emri]] | ozel | ● |  |  |  |  |  | **1** |
-| [[Atölye Kuyruk]] | ozel | ● |  |  |  |  |  | **1** |
-| [[Termin Alarm]] | ozel | ● |  |  |  |  |  | **1** |
-| [[Tezgah Yük]] | ozel | ● |  |  |  |  |  | **1** |
-| [[Revize Sipariş]] | ozel | ● |  |  |  |  |  | **1** |
+| [[modeli: karma.]] | ozel |  |  |  |  |  |  | **0** |
+| [[Sipariş Emri]] | ozel |  |  |  |  |  |  | **0** |
+| [[Atölye Kuyruk]] | ozel |  |  |  |  |  |  | **0** |
+| [[Termin Alarm]] | ozel |  |  |  |  |  |  | **0** |
+| [[Tezgah Yük]] | ozel |  |  |  |  |  |  | **0** |
+| [[Revize Sipariş]] | ozel |  |  |  |  |  |  | **0** |
 | [[modeli: uretim.]] | ozel |  | ● |  |  |  |  | **1** |
 | [[Parti Plan]] | ozel |  | ● |  |  |  |  | **1** |
 | [[Lot Barkod]] | ozel |  | ● |  |  |  |  | **1** |
@@ -123,22 +133,61 @@ flowchart TB
 | [[Hakediş Kesinti]] | ozel |  |  |  |  |  | ● | **1** |
 | [[Fasoncu Bakiye]] | ozel |  |  |  |  |  | ● | **1** |
 | [[Çok Fasoncu]] | ozel |  |  |  |  |  | ● | **1** |
-| [[Muhasebe ve Gelir-Gider]] | genel | ● | ● | ● | ● | ● | ● | **6** |
-| [[e-Fatura ve e-Arşiv]] | genel | ● | ● | ● | ● | ● | ● | **6** |
-| [[CRM]] | genel | ● | ● | ● | ● | ● | ● | **6** |
-| [[Personel ve Vardiya]] | genel | ● | ● | ● | ● | ● | ● | **6** |
-| [[Raporlar]] | genel | ● | ● | ● | ● | ● | ● | **6** |
-| [[AI Asistan]] | genel | ● | ● | ● | ● | ● | ● | **6** |
-| [[Ayarlar]] | genel | ● | ● | ● | ● | ● | ● | **6** |
+
+## Ortak ihtiyaçlar (6 alt türde sıklık)
+| İhtiyaç | Kategori | Sıklık |
+|---|---|---|
+| [[İş emri]] | operasyon | 6/6 |
+| [[Reçete / BOM]] | operasyon | 6/6 |
+| [[Fire kaydı]] | operasyon | 6/6 |
+| [[Depo sevk]] | operasyon | 6/6 |
+| [[e-Belge / e-İrsaliye]] | yasal | 6/6 |
+| [[Fason mutabakat]] | finans | 4/6 |
+| [[Lot / SKT]] | yasal | 1/6 |
+| [[Gıda kayıt]] | yasal | 1/6 |
+| [[Proje milestone]] | finans | 1/6 |
+| [[Termin alarm]] | operasyon | 3/6 |
+
+## Öncelik tablosu
+> Puanlar tahmindir (1–5). Öncelik = beş puanın ortalaması. Pazar büyüklüğü yalnızca kaynaklı satırlarda nettir.
+
+| # | Alt tür | Pazar | Ödeme | Rekabet | Kolaylık | Aciliyet | Öncelik |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 | [[Siparişe göre kısa çevrim atölye]] | 5 | 4 | 3 | 4 | 5 | **4.2** |
+| 2 | [[Fason işleyen atölye]] | 4 | 3 | 3 | 4 | 4 | **3.6** |
+| 3 | [[Tekrarlayan parti ve stok üretimi]] | 4 | 4 | 2 | 3 | 4 | **3.4** |
+| 4 | [[Üretimi dışarı veren imalatçı]] | 3 | 3 | 3 | 3 | 3 | **3.0** |
+| 5 | [[Gıda işleme]] | 3 | 3 | 2 | 2 | 4 | **2.8** |
+| 6 | [[Proje tipi makine ve ekipman imalatı]] | 2 | 3 | 2 | 2 | 3 | **2.4** |
+
+## Yasal çerçeve
+| Konu | Kural | Yazılım etkisi | Kaynak |
+|---|---|---|---|
+| KOBİ imalat | TÜİK/KOSGEB: imalat KOBİ payı; 1–9: 437.372; 10–49: 45.314 (iş kayıtları) | 1–50 bandı | https://webdosya.kosgeb.gov.tr/Content/Upload/Dosya/Kurumsal/2026/Tu%CC%88rkiye'deki_KOBI%CC%87'lere_I%CC%87lis%CC%A7kin_Baz%C4%B1_I%CC%87statistiki_Go%CC%88stergeler.pdf |
+| Sanayi sicili | 6948 sayılı Kanun | Sicil notu | https://www.mevzuat.gov.tr/MevzuatMetin/1.3.6948.pdf |
+| e-İrsaliye | VUK 509; GTİP 72/73 veya e-Fatura + hasılat eşiği | Mikro gönderim onayla | https://cdn.gib.gov.tr/api/gibportal-file/file/getFile?objectKey=MEVZUAT_TEBLIGLER%2FUNIVERSAL%2F2026%2FMEVZUAT_TEBLIGLER_2026_VukTeb509_Guncel.pdf |
+| Gıda | Gıda işletme kayıt yönetmeliği | Kayıt belgesi tarihi | https://www.mevzuat.gov.tr/MevzuatMetin/yonetmelik/7.5.15594.htm |
+
+## Pazar büyüklüğü
+| Alt tür / küme | Sayı | NACE / not |
+|---|---|---|
+| [[İmalat 1–9]] | 437.372 (KOSGEB iş kayıtları) | C |
+| [[İmalat 10–49]] | 45.314 | C |
+| [[ERP oranı]] | TÜİK 2023: %29,7 (10+ çalışan; imalata özel değil) | — |
+| [[Sipariş/parti/fason payı]] | bulunamadı | — |
+
+## Rakip fiyat haritası
+| Segment | Aralık | Rakipler |
+|---|---|---|
+| ERP API | Mikro açık | Mikro |
+| Logo / Nebim | bu turda kamuya açık reçete ucu yok | — |
 
 ## Sektör ortak modüller
 
+Bu blok yalnız 13 Üretim & İmalat içindir. Tüm sektörlerin ortak modülü değildir.
+
 ### Bu blok yalnız Üretim & İmalat içindir. Tüm sektörlerin ortak modülü değildir.
 
-- oncelik: 
-- durum: 
-- aciklama: 
-- entegrasyonlar: yok
 - ai_komutlari:
 
 ### 13.00.01 İş Emri
@@ -203,16 +252,8 @@ flowchart TB
 
 ## 13.01 Siparişe göre kısa çevrim atölye
 
-- aciklama: Müşterinin ölçüsüne göre saatler veya birkaç gün süren ayrı iş çıkaran atölye.
-- gunluk_is: Teklif, eksik ölçü, iş emri, tezgâh sırası, fire ve sevk.
-- ai: Serbest siparişten eksik ölçü ve termin listesi çıkarır; durum cümlesi taslaklar.
-
 ### İş modeli: karma.
 
-- oncelik: 
-- durum: 
-- aciklama: 
-- entegrasyonlar: yok
 - ai_komutlari:
 
 ### 13.01.01 Sipariş Emri
@@ -276,10 +317,6 @@ flowchart TB
 
 ### İş modeli: uretim.
 
-- oncelik: 
-- durum: 
-- aciklama: 
-- entegrasyonlar: yok
 - ai_komutlari:
 
 ### 13.02.01 Parti Plan
@@ -344,10 +381,6 @@ flowchart TB
 
 ### İş modeli: uretim.
 
-- oncelik: 
-- durum: 
-- aciklama: 
-- entegrasyonlar: yok
 - ai_komutlari:
 
 ### 13.03.01 Müşteri Malzeme
@@ -413,10 +446,6 @@ flowchart TB
 
 ### İş modeli: karma.
 
-- oncelik: 
-- durum: 
-- aciklama: 
-- entegrasyonlar: yok
 - ai_komutlari:
 
 ### 13.04.01 Proje BOM
@@ -480,10 +509,6 @@ flowchart TB
 
 ### İş modeli: uretim.
 
-- oncelik: 
-- durum: 
-- aciklama: 
-- entegrasyonlar: yok
 - ai_komutlari:
 
 ### 13.05.01 Lot İzle
@@ -552,10 +577,6 @@ flowchart TB
 
 ### İş modeli: karma.
 
-- oncelik: 
-- durum: 
-- aciklama: 
-- entegrasyonlar: yok
 - ai_komutlari:
 
 ### 13.06.01 Fasoncu Sevk

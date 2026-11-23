@@ -4,19 +4,20 @@ durum: tamamlandi
 sektor_id: "10"
 is_modeli: karma
 ---
+
 # 10 İnşaat & Yapı
 
 ## Özet
-- İnşaat NACE F (41–43) olarak ayrıdır.
-- Küçük müteahhit yetki belgesi, şantiye şefi, taşeron, malzeme, yapı denetim evrakı ve SGK dosyasıyla günü geçirir.
-- SantiyePro, Hakedra ve ESSantiye puantaj, metraj, hakediş ve şantiye günlüğünü toplar.
+- İnşaat NACE F (41–43) olarak ayrıdır. KOSGEB 2024 iş kayıtlarında bu kolda 354.194 girişim vardır; 281.616’sı 1–9, 31.732’si 10–49 çalışandır. KOBİ tanımına giren inşaat girişimleri 306.162’dir. KOBİ’ler inşaat cirosunun %53,1’ini ve üretim değerinin %55,9’unu oluşturur. İki tablo aynı küme değildir. TMB ve İNTES profili büyük taahhüttür; 1–50 çalışanlı firmanın günü bu birliklerin işi değildir.
+- Küçük müteahhit yetki belgesi, şantiye şefi, taşeron, malzeme, yapı denetim evrakı ve SGK dosyasıyla günü geçirir. İhtisas ekipleri metraj veya yevmiye ile hakediş keser. Tesisat, proje, malzeme, montaj ve test ile yürür. Taşıyıcıya dokunmayan basit tamir ruhsata tabi değildir. Yapı malzemesi satışı 2026 sınıflamasında 46.83 toptan ticarettir. Mimarlık 71.1’dedir. Yapı denetim 4708 sayılı kanunla ayrı tüzel kişidir.
+- SantiyePro, Hakedra ve ESSantiye puantaj, metraj, hakediş ve şantiye günlüğünü toplar. ŞANTİYE-M ve Ulusal Yapı Denetim Sistemi kamu portalıdır; üçüncü parti için açık API bulunamadı.
 - Karar: 10.05 toptan ticaret kodundadır ama şantiye carisi nedeniyle burada tutuldu. 10.06 ve 10.07 NACE 71’dedir; ruhsat zinciri nedeniyle burada bırakıldı.
-- Modül sayısı: sektör ortak 8; alt sektör 7; toplam 50; MVP 26.
-- Ortak çekirdek (tüm sektörler): Muhasebe, e-Fatura/e-Arşiv, CRM, Personel, Raporlar, AI Asistan, Ayarlar → `04 Modüller/00 Ortak Çekirdek.md`.
+- Modül: sektör ortak 8; alt sektör 7; toplam 50; MVP 26.
+- Ortak çekirdek (tüm sektörler) bu dosyada yoktur → `04 Modüller/00 Ortak Çekirdek.md`.
 
 <!-- dallar:start -->
 ## Dallar (ağaç)
-> **Sektör → Dal → Alt dal → Fonksiyon.** Fonksiyon havuzu: `07 Fonksiyonlar/` · Ortak araçlar: `04 Modüller/`
+> **Sektör → Dal → Alt dal → Fonksiyon.** Ortak araçlar: `04 Modüller/`
 
 | Dal | Alt dal | Fonksiyon | Durum |
 |---|---|---|---|
@@ -32,7 +33,7 @@ is_modeli: karma
 ## Alt işletme türleri (onay listesi)
 > İşaretli = Adım 1 onay listesi.
 
-- [x] [[Küçük ölçekli bina müteahhidi|Küçük ölçekli bina müteahhidi]]
+- [x] [[10.01 Küçük ölçekli bina müteahhidi|10.01 Küçük ölçekli bina müteahhidi]]
 - [x] [[Şantiye ihtisas taşeronu|Şantiye ihtisas taşeronu]]
 - [x] [[Mekanik ve elektrik tesisat taşeronu|Mekanik ve elektrik tesisat taşeronu]]
 - [x] [[Tadilat ve basit onarım|Tadilat ve basit onarım]]
@@ -55,14 +56,16 @@ is_modeli: karma
 ## Ortak iş akışı
 ```mermaid
 flowchart LR
-  A["Talep / kayıt"] --> B["Sektör işi"]
-  B --> C["Belge / tahsilat taslağı"]
-  C --> D["Onay kuyruğu"]
-  D --> E["e-Belge · CRM · rapor"]
+  A["Keşif / ruhsat"] --> B["İş programı"]
+  B --> C["Puantaj · metraj"]
+  C --> D["Hakediş taslağı"]
+  D --> E["Onay"]
+  E --> F["e-Belge · malzeme"]
+  F --> G["Şantiye günlüğü"]
 ```
 
 ## Araç mimarisi
-> İlke: her araç bir kez yapılır. Bir işletme türü = araçların birleşimi. Tek türe özel büyük geliştirme yok.
+> İlke: her araç bir kez yapılır. Bir işletme türü = araçların birleşimi.
 
 ```mermaid
 flowchart TB
@@ -77,6 +80,7 @@ flowchart TB
     O5[Şantiye Günlüğü]
     O6[Malzeme Takibi]
     O7[İSG Kontrol]
+    O8[Taşeron Sözleşme]
   end
   GEN --> OZEL
 ```
@@ -84,8 +88,15 @@ flowchart TB
 ## Araç matrisi (hangi araç kaç alt türe hizmet ediyor)
 > ● = kullanıyor. genel = tüm sektörler, ozel = yalnız bu sektör.
 
-| Araç | Tür | Küçük | Şantiye | Mekanik | Tadilat | Yapı | Bina proje ofisi | Yapı | Toplam |
+| Araç | Tür | 10.01 | Şantiye | Mekanik | Tadilat | Yapı | Bina proje ofisi | Yapı | Toplam |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| [[Muhasebe ve Gelir-Gider]] | genel | ● | ● | ● | ● | ● | ● | ● | **7** |
+| [[e-Fatura ve e-Arşiv]] | genel | ● | ● | ● | ● | ● | ● | ● | **7** |
+| [[CRM]] | genel | ● | ● | ● | ● | ● | ● | ● | **7** |
+| [[Personel ve Vardiya]] | genel | ● | ● | ● | ● | ● | ● | ● | **7** |
+| [[Raporlar]] | genel | ● | ● | ● | ● | ● | ● | ● | **7** |
+| [[AI Asistan]] | genel | ● | ● | ● | ● | ● | ● | ● | **7** |
+| [[Ayarlar]] | genel | ● | ● | ● | ● | ● | ● | ● | **7** |
 | [[blok yalnız İnşaat & Yapı içindir. Tüm sektörlerin ortak modülü değildir.]] | ozel | ● | ● | ● | ● | ● | ● | ● | **7** |
 | [[Proje Kartı]] | ozel | ● | ● | ● | ● | ● | ● | ● | **7** |
 | [[Saha Puantajı]] | ozel | ● | ● | ● | ● | ● | ● | ● | **7** |
@@ -94,12 +105,12 @@ flowchart TB
 | [[Malzeme Takibi]] | ozel | ● | ● | ● | ● | ● | ● | ● | **7** |
 | [[İSG Kontrol]] | ozel | ● | ● | ● | ● | ● | ● | ● | **7** |
 | [[Taşeron Sözleşme]] | ozel | ● | ● | ● | ● | ● | ● | ● | **7** |
-| [[iş modeli: proje.]] | ozel | ● |  |  |  |  |  |  | **1** |
-| [[Ruhsat Takibi]] | ozel | ● |  |  |  |  |  |  | **1** |
-| [[İş Programı]] | ozel | ● |  |  |  |  |  |  | **1** |
-| [[Maliyet Bütçe]] | ozel | ● |  |  |  |  |  |  | **1** |
-| [[Şef Atama]] | ozel | ● |  |  |  |  |  |  | **1** |
-| [[Keşif Teklif]] | ozel | ● |  |  |  |  |  |  | **1** |
+| [[iş modeli: proje.]] | ozel |  |  |  |  |  |  |  | **0** |
+| [[Ruhsat Takibi]] | ozel |  |  |  |  |  |  |  | **0** |
+| [[İş Programı]] | ozel |  |  |  |  |  |  |  | **0** |
+| [[Maliyet Bütçe]] | ozel |  |  |  |  |  |  |  | **0** |
+| [[Şef Atama]] | ozel |  |  |  |  |  |  |  | **0** |
+| [[Keşif Teklif]] | ozel |  |  |  |  |  |  |  | **0** |
 | [[iş modeli: proje.]] | ozel |  | ● |  |  |  |  |  | **1** |
 | [[İş Emri]] | ozel |  | ● |  |  |  |  |  | **1** |
 | [[Yevmiye Hakediş]] | ozel |  | ● |  |  |  |  |  | **1** |
@@ -136,22 +147,64 @@ flowchart TB
 | [[Seviye Hakediş]] | ozel |  |  |  |  |  |  | ● | **1** |
 | [[Laboratuvar Numune]] | ozel |  |  |  |  |  |  | ● | **1** |
 | [[UYDS Hazırlık]] | ozel |  |  |  |  |  |  | ● | **1** |
-| [[Muhasebe ve Gelir-Gider]] | genel | ● | ● | ● | ● | ● | ● | ● | **7** |
-| [[e-Fatura ve e-Arşiv]] | genel | ● | ● | ● | ● | ● | ● | ● | **7** |
-| [[CRM]] | genel | ● | ● | ● | ● | ● | ● | ● | **7** |
-| [[Personel ve Vardiya]] | genel | ● | ● | ● | ● | ● | ● | ● | **7** |
-| [[Raporlar]] | genel | ● | ● | ● | ● | ● | ● | ● | **7** |
-| [[AI Asistan]] | genel | ● | ● | ● | ● | ● | ● | ● | **7** |
-| [[Ayarlar]] | genel | ● | ● | ● | ● | ● | ● | ● | **7** |
+
+## Ortak ihtiyaçlar (7 alt türde sıklık)
+| İhtiyaç | Kategori | Sıklık |
+|---|---|---|
+| [[Proje / iş kartı]] | operasyon | 7/7 |
+| [[Puantaj / yoklama]] | personel | 7/7 |
+| [[Metraj ve hakediş]] | finans | 7/7 |
+| [[Malzeme / stok]] | operasyon | 7/7 |
+| [[e-Belge]] | yasal | 7/7 |
+| [[Şantiye günlüğü]] | operasyon | 5/7 |
+| [[Ruhsat / evrak paketi]] | yasal | 4/7 |
+| [[İSG checklist]] | yasal | 3/7 |
+| [[Keşif teklifi]] | finans | 3/7 |
+| [[UYDS / ŞANTİYE-M paketi]] | yasal | 3/7 |
+| [[Bayi sevkiyat]] | operasyon | 1/7 |
+| [[Denetim tutanağı]] | yasal | 1/7 |
+
+## Öncelik tablosu
+> Puanlar tahmindir (1–5). Öncelik = beş puanın ortalaması. Pazar büyüklüğü yalnızca kaynaklı satırlarda nettir.
+
+| # | Alt tür | Pazar | Ödeme | Rekabet | Kolaylık | Aciliyet | Öncelik |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 | [[Küçük ölçekli bina müteahhidi]] | 5 | 4 | 2 | 3 | 5 | **3.8** |
+| 2 | [[Tadilat ve basit onarım]] | 4 | 4 | 3 | 4 | 4 | **3.8** |
+| 3 | [[Şantiye ihtisas taşeronu]] | 4 | 3 | 3 | 4 | 4 | **3.6** |
+| 4 | [[Mekanik ve elektrik tesisat taşeronu]] | 3 | 3 | 3 | 3 | 4 | **3.2** |
+| 5 | [[Yapı malzemesi bayii]] | 3 | 4 | 2 | 3 | 3 | **3.0** |
+| 6 | [[Bina proje ofisi]] | 3 | 3 | 2 | 3 | 3 | **2.8** |
+| 7 | [[Yapı denetim kuruluşu]] | 2 | 3 | 2 | 2 | 3 | **2.4** |
+
+## Yasal çerçeve
+| Konu | Kural | Yazılım etkisi | Kaynak |
+|---|---|---|---|
+| KOBİ ölçeği | KOSGEB 2024: inşaatta 1–9: 281.616; 10–49: 31.732 | 1–50 bandı | https://webdosya.kosgeb.gov.tr/Content/Upload/Dosya/Kurumsal/2026/Tu%CC%88rkiye'deki_KOBI%CC%87'lere_I%CC%87lis%CC%A7kin_Baz%C4%B1_I%CC%87statistiki_Go%CC%88stergeler.pdf |
+| Yapı denetim | 4708 sayılı Kanun | Tutanak ve seviye; UYDS girişi kullanıcıda | https://www.mevzuat.gov.tr/mevzuatmetin/1.5.4708.pdf |
+| ŞANTİYE-M | ÇŞB e-Devlet hizmeti; üçüncü parti API yok | Paket panelde | https://cbs.csb.gov.tr/santiye-m-yazilimi-113510 |
+| İmar | Planlı Alanlar İmar Yönetmeliği; basit tamir / esaslı tadilat | Ruhsat checklist | https://mevzuat.gov.tr/File/GeneratePdf?mevzuatNo=23722&mevzuatTertip=5&mevzuatTur=KurumVeKurulusYonetmeligi |
+
+## Pazar büyüklüğü
+| Alt tür / küme | Sayı | NACE / not |
+|---|---|---|
+| [[İnşaat KOBİ]] | KOSGEB: 306.162 KOBİ tanımına giren inşaat girişimi | NACE F |
+| [[1–9 çalışan]] | 281.616 | F |
+| [[10–49 çalışan]] | 31.732 | F |
+| [[Alt sektör firma sayısı]] | bulunamadı | — |
+
+## Rakip fiyat haritası
+| Segment | Aralık | Rakipler |
+|---|---|---|
+| Şantiye / hakediş | bulunamadı | SantiyePro, Hakedra, ESSantiye |
+| ERP | Mikro API açık; Logo/Nebim bu turda yok | Mikro |
 
 ## Sektör ortak modüller
 
+Bu blok yalnız 10 İnşaat & Yapı içindir. Tüm sektörlerin ortak modülü değildir.
+
 ### Bu blok yalnız İnşaat & Yapı içindir. Tüm sektörlerin ortak modülü değildir.
 
-- oncelik: 
-- durum: 
-- aciklama: 
-- entegrasyonlar: yok
 - ai_komutlari:
 
 ### 10.00.01 Proje Kartı
@@ -242,16 +295,8 @@ flowchart TB
 
 ## 10.01 Küçük ölçekli bina müteahhidi
 
-- aciklama: Ruhsatlı konut, işyeri veya esaslı tadilatı kendi yetki belgesiyle üstlenen firma.
-- gunluk_is: Yetki belgesi, şantiye şefi, malzeme, taşeron, yapı denetim evrakı ve işçilik bildirimi.
-- ai: Puantaj, irsaliye ve metrajdan taşeron hakediş taslağını kurup tutarı onaya düşürür.
-
 ### Baskın iş modeli: proje.
 
-- oncelik: 
-- durum: 
-- aciklama: 
-- entegrasyonlar: yok
 - ai_komutlari:
 
 ### 10.01.01 Ruhsat Takibi
@@ -319,10 +364,6 @@ flowchart TB
 
 ### Baskın iş modeli: proje.
 
-- oncelik: 
-- durum: 
-- aciklama: 
-- entegrasyonlar: yok
 - ai_komutlari:
 
 ### 10.02.01 İş Emri
@@ -391,10 +432,6 @@ flowchart TB
 
 ### Baskın iş modeli: proje.
 
-- oncelik: 
-- durum: 
-- aciklama: 
-- entegrasyonlar: yok
 - ai_komutlari:
 
 ### 10.03.01 Keşif Metraj
@@ -462,10 +499,6 @@ flowchart TB
 
 ### Baskın iş modeli: karma.
 
-- oncelik: 
-- durum: 
-- aciklama: 
-- entegrasyonlar: yok
 - ai_komutlari:
 
 ### 10.04.01 Keşif Randevu
@@ -532,10 +565,6 @@ flowchart TB
 
 ### Baskın iş modeli: siparis_stok.
 
-- oncelik: 
-- durum: 
-- aciklama: 
-- entegrasyonlar: yok
 - ai_komutlari:
 
 ### 10.05.01 Sipariş Stok
@@ -603,10 +632,6 @@ flowchart TB
 
 ### Baskın iş modeli: proje.
 
-- oncelik: 
-- durum: 
-- aciklama: 
-- entegrasyonlar: yok
 - ai_komutlari:
 
 ### 10.06.01 Proje Dosya
@@ -676,10 +701,6 @@ flowchart TB
 
 ### Baskın iş modeli: proje.
 
-- oncelik: 
-- durum: 
-- aciklama: 
-- entegrasyonlar: yok
 - ai_komutlari:
 
 ### 10.07.01 YİBF Takip

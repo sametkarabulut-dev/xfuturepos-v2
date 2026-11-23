@@ -4,19 +4,20 @@ durum: tamamlandi
 sektor_id: "12"
 is_modeli: sevkiyat
 ---
+
 # 12 Lojistik & Taşımacılık
 
 ## Özet
-- 1–50 çalışanlı yük lojistiği, işin nereye oturduğuna göre ayrılır: sefer, ambar hattı, şehir içi çok durak, ev taşıma, filosuz organizasyon ve başkasının malını depoda hazırlama.
-- Günün döngüsü yükü kabul etmek, aracı ve sürücüyü bağlamak, taşıma belgesini çıkarmak ve navlunu kapatmaktır.
-- UTİKAD raporu ulaştırma ve depolamanın 2024 GSYH payını TÜİK’e dayanarak %8,2 verir.
+- 1–50 çalışanlı yük lojistiği, işin nereye oturduğuna göre ayrılır: sefer, ambar hattı, şehir içi çok durak, ev taşıma, filosuz organizasyon ve başkasının malını depoda hazırlama. Karayolu Taşıma Yönetmeliği bunları ayrı yetki belgelerine bağlar; ürün kümesi belge kodu değildir. 14 Ocak 2023 değişikliğiyle mevcut C2 belgeleri L2’ye çevrilmiş ve yeni C2 düzenlenmemiştir.
+- Günün döngüsü yükü kabul etmek, aracı ve sürücüyü bağlamak, taşıma belgesini çıkarmak ve navlunu kapatmaktır. C3, K1, K3, L1, L2, N1 ve N2 sahipleri sefer bilgisini taşıma başlayıncaya kadar U-ETDS’ye işler. Bakanlık bildirimin e-Devlet, web servisi ve UETDS uygulamasıyla yapılabildiğini duyurmuştur.
+- UTİKAD raporu ulaştırma ve depolamanın 2024 GSYH payını TÜİK’e dayanarak %8,2 verir. Bu, 1–50 çalışanlı firma sayısı değildir. Güncel yetki belgesi envanteri açık tablo olarak bulunamadı.
 - Karar: Uluslararası karayolu ayrı durur çünkü sefer fiilen sürer; ikinci bir lojistik işletmeciliği kopyası açılmaz.
-- Modül sayısı: sektör ortak 8; alt sektör 7; toplam 50; MVP 26.
-- Ortak çekirdek (tüm sektörler): Muhasebe, e-Fatura/e-Arşiv, CRM, Personel, Raporlar, AI Asistan, Ayarlar → `04 Modüller/00 Ortak Çekirdek.md`.
+- Modül: sektör ortak 8; alt sektör 7; toplam 50; MVP 26.
+- Ortak çekirdek (tüm sektörler) bu dosyada yoktur → `04 Modüller/00 Ortak Çekirdek.md`.
 
 <!-- dallar:start -->
 ## Dallar (ağaç)
-> **Sektör → Dal → Alt dal → Fonksiyon.** Fonksiyon havuzu: `07 Fonksiyonlar/` · Ortak araçlar: `04 Modüller/`
+> **Sektör → Dal → Alt dal → Fonksiyon.** Ortak araçlar: `04 Modüller/`
 
 | Dal | Alt dal | Fonksiyon | Durum |
 |---|---|---|---|
@@ -32,7 +33,7 @@ is_modeli: sevkiyat
 ## Alt işletme türleri (onay listesi)
 > İşaretli = Adım 1 onay listesi.
 
-- [x] [[Yurt içi karayolu yük taşımacılığı|Yurt içi karayolu yük taşımacılığı]]
+- [x] [[12.01 Yurt içi karayolu yük taşımacılığı|12.01 Yurt içi karayolu yük taşımacılığı]]
 - [x] [[Uluslararası karayolu yük taşımacılığı|Uluslararası karayolu yük taşımacılığı]]
 - [x] [[Nakliyat ambarı|Nakliyat ambarı]]
 - [x] [[Şehir içi kurye ve dağıtım|Şehir içi kurye ve dağıtım]]
@@ -54,14 +55,16 @@ is_modeli: sevkiyat
 ## Ortak iş akışı
 ```mermaid
 flowchart LR
-  A["Talep / kayıt"] --> B["Sektör işi"]
-  B --> C["Belge / tahsilat taslağı"]
-  C --> D["Onay kuyruğu"]
-  D --> E["e-Belge · CRM · rapor"]
+  A["Yük talebi"] --> B["Araç · şoför"]
+  B --> C["Taşıma belgesi"]
+  C --> D["U-ETDS taslağı"]
+  D --> E["Onay · gönderim"]
+  E --> F["Teslim kanıtı"]
+  F --> G["Navlun · e-Belge"]
 ```
 
 ## Araç mimarisi
-> İlke: her araç bir kez yapılır. Bir işletme türü = araçların birleşimi. Tek türe özel büyük geliştirme yok.
+> İlke: her araç bir kez yapılır. Bir işletme türü = araçların birleşimi.
 
 ```mermaid
 flowchart TB
@@ -76,6 +79,7 @@ flowchart TB
     O5[Teslim Kanıtı]
     O6[Araç Şoför]
     O7[Hasar Dosyası]
+    O8[Araç Takip]
   end
   GEN --> OZEL
 ```
@@ -83,8 +87,15 @@ flowchart TB
 ## Araç matrisi (hangi araç kaç alt türe hizmet ediyor)
 > ● = kullanıyor. genel = tüm sektörler, ozel = yalnız bu sektör.
 
-| Araç | Tür | Yurt | Uluslararası | Nakliyat ambarı | Şehir | Ev | Taşıma | Depolama | Toplam |
+| Araç | Tür | 12.01 | Uluslararası | Nakliyat ambarı | Şehir | Ev | Taşıma | Depolama | Toplam |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| [[Muhasebe ve Gelir-Gider]] | genel | ● | ● | ● | ● | ● | ● | ● | **7** |
+| [[e-Fatura ve e-Arşiv]] | genel | ● | ● | ● | ● | ● | ● | ● | **7** |
+| [[CRM]] | genel | ● | ● | ● | ● | ● | ● | ● | **7** |
+| [[Personel ve Vardiya]] | genel | ● | ● | ● | ● | ● | ● | ● | **7** |
+| [[Raporlar]] | genel | ● | ● | ● | ● | ● | ● | ● | **7** |
+| [[AI Asistan]] | genel | ● | ● | ● | ● | ● | ● | ● | **7** |
+| [[Ayarlar]] | genel | ● | ● | ● | ● | ● | ● | ● | **7** |
 | [[blok yalnız Lojistik & Taşımacılık içindir. Tüm sektörlerin ortak modülü değildir.]] | ozel | ● | ● | ● | ● | ● | ● | ● | **7** |
 | [[Sevkiyat Kartı]] | ozel | ● | ● | ● | ● | ● | ● | ● | **7** |
 | [[Navlun Teklifi]] | ozel | ● | ● | ● | ● | ● | ● | ● | **7** |
@@ -93,12 +104,12 @@ flowchart TB
 | [[Araç Şoför]] | ozel | ● | ● | ● | ● | ● | ● | ● | **7** |
 | [[Hasar Dosyası]] | ozel | ● | ● | ● | ● | ● | ● | ● | **7** |
 | [[Araç Takip]] | ozel | ● | ● | ● | ● | ● | ● | ● | **7** |
-| [[veya sözleşmeli araçla yurt içinde komple/parça yük taşıyan K1 odaklı işletmeler.]] | ozel | ● |  |  |  |  |  |  | **1** |
-| [[Sefer Planı]] | ozel | ● |  |  |  |  |  |  | **1** |
-| [[K1 Belge]] | ozel | ● |  |  |  |  |  |  | **1** |
-| [[Yol Masrafı]] | ozel | ● |  |  |  |  |  |  | **1** |
-| [[Takograf Uyarı]] | ozel | ● |  |  |  |  |  |  | **1** |
-| [[Taşıma İrsaliye]] | ozel | ● |  |  |  |  |  |  | **1** |
+| [[veya sözleşmeli araçla yurt içinde komple/parça yük taşıyan K1 odaklı işletmeler.]] | ozel |  |  |  |  |  |  |  | **0** |
+| [[Sefer Planı]] | ozel |  |  |  |  |  |  |  | **0** |
+| [[K1 Belge]] | ozel |  |  |  |  |  |  |  | **0** |
+| [[Yol Masrafı]] | ozel |  |  |  |  |  |  |  | **0** |
+| [[Takograf Uyarı]] | ozel |  |  |  |  |  |  |  | **0** |
+| [[Taşıma İrsaliye]] | ozel |  |  |  |  |  |  |  | **0** |
 | [[ötesi karayolu yük seferi; belge fiilen L2 (eski C2 dönüşümü).]] | ozel |  | ● |  |  |  |  |  | **1** |
 | [[CMR Belgesi]] | ozel |  | ● |  |  |  |  |  | **1** |
 | [[L2 Belge]] | ozel |  | ● |  |  |  |  |  | **1** |
@@ -135,22 +146,63 @@ flowchart TB
 | [[Mal Sahibi Hesap]] | ozel |  |  |  |  |  |  | ● | **1** |
 | [[Sevk İrsaliye]] | ozel |  |  |  |  |  |  | ● | **1** |
 | [[L Belge Notu]] | ozel |  |  |  |  |  |  | ● | **1** |
-| [[Muhasebe ve Gelir-Gider]] | genel | ● | ● | ● | ● | ● | ● | ● | **7** |
-| [[e-Fatura ve e-Arşiv]] | genel | ● | ● | ● | ● | ● | ● | ● | **7** |
-| [[CRM]] | genel | ● | ● | ● | ● | ● | ● | ● | **7** |
-| [[Personel ve Vardiya]] | genel | ● | ● | ● | ● | ● | ● | ● | **7** |
-| [[Raporlar]] | genel | ● | ● | ● | ● | ● | ● | ● | **7** |
-| [[AI Asistan]] | genel | ● | ● | ● | ● | ● | ● | ● | **7** |
-| [[Ayarlar]] | genel | ● | ● | ● | ● | ● | ● | ● | **7** |
+
+## Ortak ihtiyaçlar (7 alt türde sıklık)
+| İhtiyaç | Kategori | Sıklık |
+|---|---|---|
+| [[Sevkiyat kartı]] | operasyon | 7/7 |
+| [[Navlun teklifi]] | finans | 7/7 |
+| [[Araç / şoför]] | operasyon | 7/7 |
+| [[Teslim kanıtı]] | operasyon | 7/7 |
+| [[e-Belge]] | yasal | 7/7 |
+| [[U-ETDS köprüsü]] | yasal | 5/7 |
+| [[Belge / yetki takibi]] | yasal | 5/7 |
+| [[Kurye / durak rotası]] | operasyon | 2/7 |
+| [[Depo / pick-pack]] | operasyon | 1/7 |
+| [[CMR / transit]] | yasal | 1/7 |
+| [[Filo konum]] | operasyon | 3/7 |
+| [[Pazaryeri / ERP stok]] | operasyon | 1/7 |
+
+## Öncelik tablosu
+> Puanlar tahmindir (1–5). Öncelik = beş puanın ortalaması. Pazar büyüklüğü yalnızca kaynaklı satırlarda nettir.
+
+| # | Alt tür | Pazar | Ödeme | Rekabet | Kolaylık | Aciliyet | Öncelik |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 | [[Yurt içi karayolu yük taşımacılığı]] | 5 | 4 | 2 | 3 | 5 | **3.8** |
+| 2 | [[Şehir içi kurye ve dağıtım]] | 4 | 4 | 3 | 4 | 4 | **3.8** |
+| 3 | [[Nakliyat ambarı]] | 3 | 3 | 3 | 3 | 4 | **3.2** |
+| 4 | [[Depolama ve sipariş karşılama]] | 3 | 4 | 2 | 3 | 4 | **3.2** |
+| 5 | [[Ev ve büro taşımacılığı]] | 3 | 3 | 3 | 4 | 3 | **3.2** |
+| 6 | [[Taşıma organizatörlüğü ve acentelik]] | 3 | 3 | 2 | 3 | 3 | **2.8** |
+| 7 | [[Uluslararası karayolu yük taşımacılığı]] | 3 | 3 | 2 | 2 | 3 | **2.6** |
+
+## Yasal çerçeve
+| Konu | Kural | Yazılım etkisi | Kaynak |
+|---|---|---|---|
+| Karayolu taşıma | Karayolu Taşıma Yönetmeliği; yetki belgeleri | Belge alanı | https://www.mevzuat.gov.tr/MevzuatMetin/yonetmelik/7.5.24299.pdf |
+| U-ETDS | Eşya bildirimi; SOAP V3.6 | Taslak + onaylı gönderim | https://uetds.uab.gov.tr/esya |
+| TİO | Taşıma İşleri Organizatörlüğü Yönetmeliği | TİO belge alanı | https://www.mevzuat.gov.tr/MevzuatMetin/yonetmelik/7.5.39686.pdf |
+| e-İrsaliye | VUK 509; taşıyıcıda taşıma irsaliyesi ayrıdır | Mikro e-İrsaliye onayla | https://cdn.gib.gov.tr/api/gibportal-file/file/getFile?objectKey=MEVZUAT_TEBLIGLER%2FUNIVERSAL%2F2026%2FMEVZUAT_TEBLIGLER_2026_VukTeb509_Guncel.pdf |
+
+## Pazar büyüklüğü
+| Alt tür / küme | Sayı | NACE / not |
+|---|---|---|
+| [[Ulaştırma-depolama GSYH payı]] | UTİKAD 2024: %8,2 (TÜİK’e dayanarak; 1–50 firma sayısı değil) | H |
+| [[Yetki belgesi envanteri]] | güncel açık tablo bulunamadı | — |
+
+## Rakip fiyat haritası
+| Segment | Aralık | Rakipler |
+|---|---|---|
+| U-ETDS | resmi SOAP | UAB U-ETDS |
+| Rota | Google Routes API | Google |
+| Mesaj | WhatsApp Cloud API | Meta |
 
 ## Sektör ortak modüller
 
+Bu blok yalnız 12 Lojistik & Taşımacılık içindir. Tüm sektörlerin ortak modülü değildir.
+
 ### Bu blok yalnız Lojistik & Taşımacılık içindir. Tüm sektörlerin ortak modülü değildir.
 
-- oncelik: 
-- durum: 
-- aciklama: 
-- entegrasyonlar: yok
 - ai_komutlari:
 
 ### 12.00.01 Sevkiyat Kartı
@@ -240,16 +292,8 @@ flowchart TB
 
 ## 12.01 Yurt içi karayolu yük taşımacılığı
 
-- aciklama: Başka firmaların yükünü Türkiye içinde ticari olarak taşıyan filo.
-- gunluk_is: Yükü araca ve SRC’li sürücüye bağlar, taşıma belgesini çıkarır, U-ETDS’ye işler, navlun ve yakıtı kapatır.
-- ai: WhatsApp yük metninden sefer taslağı ve U-ETDS alanlarını hazırlar; gönderim onayda kalır.
-
 ### Kendi veya sözleşmeli araçla yurt içinde komple/parça yük taşıyan K1 odaklı işletmeler.
 
-- oncelik: 
-- durum: 
-- aciklama: 
-- entegrasyonlar: yok
 - ai_komutlari:
 
 ### 12.01.01 Sefer Planı
@@ -318,10 +362,6 @@ flowchart TB
 
 ### Sınır ötesi karayolu yük seferi; belge fiilen L2 (eski C2 dönüşümü).
 
-- oncelik: 
-- durum: 
-- aciklama: 
-- entegrasyonlar: yok
 - ai_komutlari:
 
 ### 12.02.01 CMR Belgesi
@@ -390,10 +430,6 @@ flowchart TB
 
 ### Parça yükü ambarda toplayıp hat aracıyla dağıtan N1/N2 işletmeleri.
 
-- oncelik: 
-- durum: 
-- aciklama: 
-- entegrasyonlar: yok
 - ai_komutlari:
 
 ### 12.03.01 Parsiyel Toplama
@@ -463,10 +499,6 @@ flowchart TB
 
 ### Şehir içi çok duraklı küçük paket/kurye; P1 (ve koşullu P2) odaklı.
 
-- oncelik: 
-- durum: 
-- aciklama: 
-- entegrasyonlar: yok
 - ai_komutlari:
 
 ### 12.04.01 Durak Rotası
@@ -534,10 +566,6 @@ flowchart TB
 
 ### Ev/büro taşınma eşyası; yurt içi K3, uluslararası C3.
 
-- oncelik: 
-- durum: 
-- aciklama: 
-- entegrasyonlar: yok
 - ai_komutlari:
 
 ### 12.05.01 Keşif Randevu
@@ -605,10 +633,6 @@ flowchart TB
 
 ### Filo işletmeden taşımayı organize eden TİO ve N acenteliği (G1) işletmeleri.
 
-- oncelik: 
-- durum: 
-- aciklama: 
-- entegrasyonlar: yok
 - ai_komutlari:
 
 ### 12.06.01 Taşıyıcı Havuz
@@ -676,10 +700,6 @@ flowchart TB
 
 ### Başkasının malını depolayıp sipariş karşılayan (fulfillment) işletmeler; dağıtım varsa L belgesi gündeme gelir.
 
-- oncelik: 
-- durum: 
-- aciklama: 
-- entegrasyonlar: yok
 - ai_komutlari:
 
 ### 12.07.01 Lokasyon Stok
@@ -753,3 +773,4 @@ flowchart TB
 - U-ETDS teknik doküman: https://uetds.uab.gov.tr/teknik-dokuman
 - TİO Yönetmeliği: https://www.mevzuat.gov.tr/MevzuatMetin/yonetmelik/7.5.39686.pdf
 - UTİKAD 2024 raporu: https://www.utikad.org.tr/images/HizmetRapor/utikadlojistiksektoruraporu2024-9911.pdf
+- https://cdn.gib.gov.tr/api/gibportal-file/file/getFile?objectKey=MEVZUAT_TEBLIGLER%2FUNIVERSAL%2F2026%2FMEVZUAT_TEBLIGLER_2026_VukTeb509_Guncel.pdf

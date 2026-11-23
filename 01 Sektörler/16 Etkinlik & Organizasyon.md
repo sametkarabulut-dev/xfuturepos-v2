@@ -4,19 +4,20 @@ durum: tamamlandi
 sektor_id: "16"
 is_modeli: etkinlik
 ---
+
 # 16 Etkinlik & Organizasyon
 
 ## Özet
-- 1–50 çalışanlı etkinlik işletmesi tek bir organizasyon firması değildir.
-- Tarih sorusu telefon, Excel, WhatsApp ve Instagram DM arasında kalır.
-- Sabit düğün salonu işyeri açma ruhsatına tabidir.
+- 1–50 çalışanlı etkinlik işletmesi tek bir organizasyon firması değildir. Ticaret Bakanlığı’nın 2021 faaliyet listesinde kongre organizasyonu (82.30.02), özel günlerde dışarıya yemek (56.21.01), sahne ve ses-ışık (90.02.12) ve canlı konserin sahneye konması ayrı satırlardır. YEPUD ve TEODER çatısı alt sektör sınırı olamaz. Sınır, kimin neyi sattığıdır: tarihli oda, özel gün koordinasyonu, kurumsal proje, gösteri, teknik ekip veya etkinliğe giden yemek.
+- Tarih sorusu telefon, Excel, WhatsApp ve Instagram DM arasında kalır. Salon programları takvim, opsiyon ve kaporayı merkeze koyar. Çifte satışın gerekçesi ürün metinlerindedir: aynı takvime iki kişi bakması. Kayıp kapora oranı bu taramada yoktur. Salon yazılımlarının dışarıya açık API’si doğrulanmadı.
+- Sabit düğün salonu işyeri açma ruhsatına tabidir. ÇŞİDB’nin 29.09.2023 görüşü bu salonları sıhhi müessese sayar; müzik yayını yapan işyeri il müdürlüğünden müzik yayın izni alır. Beyoğlu Belediyesi sayfası düğün salonunu umuma açık listeye koyduğu için yerel uygulama tek cümlede kapanmaz. MSG konser ve etkinlik ücretini mekân veya organizatörden toplar. Merkezî mutfakta yemek üretip götüren işletme gıda kayıt rejimindedir.
 - Karar: Fotoğraf, süs ve çiçek tedarikçi olarak dışarıdadır. Stadyum ve uluslararası fuar alanı işletmeciliği kapsama girmez.
-- Modül sayısı: sektör ortak 6; alt sektör 6; toplam 30; MVP 23.
-- Ortak çekirdek (tüm sektörler): Muhasebe, e-Fatura/e-Arşiv, CRM, Personel, Raporlar, AI Asistan, Ayarlar → `04 Modüller/00 Ortak Çekirdek.md`.
+- Modül: sektör ortak 6; alt sektör 6; toplam 30; MVP 23.
+- Ortak çekirdek (tüm sektörler) bu dosyada yoktur → `04 Modüller/00 Ortak Çekirdek.md`.
 
 <!-- dallar:start -->
 ## Dallar (ağaç)
-> **Sektör → Dal → Alt dal → Fonksiyon.** Fonksiyon havuzu: `07 Fonksiyonlar/` · Ortak araçlar: `04 Modüller/`
+> **Sektör → Dal → Alt dal → Fonksiyon.** Ortak araçlar: `04 Modüller/`
 
 | Dal | Alt dal | Fonksiyon | Durum |
 |---|---|---|---|
@@ -31,7 +32,7 @@ is_modeli: etkinlik
 ## Alt işletme türleri (onay listesi)
 > İşaretli = Adım 1 onay listesi.
 
-- [x] [[Düğün, balo ve davet mekânı işletmeciliği|Düğün, balo ve davet mekânı işletmeciliği]]
+- [x] [[16.01 Düğün, balo ve davet mekânı işletmeciliği|16.01 Düğün, balo ve davet mekânı işletmeciliği]]
 - [x] [[Özel gün organizatörlüğü|Özel gün organizatörlüğü]]
 - [x] [[Kurumsal etkinlik ve kongre ajansı|Kurumsal etkinlik ve kongre ajansı]]
 - [x] [[Konser ve küçük festival organizatörlüğü|Konser ve küçük festival organizatörlüğü]]
@@ -54,14 +55,15 @@ is_modeli: etkinlik
 ## Ortak iş akışı
 ```mermaid
 flowchart LR
-  A["Talep / kayıt"] --> B["Sektör işi"]
-  B --> C["Belge / tahsilat taslağı"]
-  C --> D["Onay kuyruğu"]
-  D --> E["e-Belge · CRM · rapor"]
+  A["Tarih / opsiyon"] --> B["Kapora · sözleşme"]
+  B --> C["Tedarikçi teyidi"]
+  C --> D["Run-of-show"]
+  D --> E["Gün"]
+  E --> F["Hakediş · e-Belge"]
 ```
 
 ## Araç mimarisi
-> İlke: her araç bir kez yapılır. Bir işletme türü = araçların birleşimi. Tek türe özel büyük geliştirme yok.
+> İlke: her araç bir kez yapılır. Bir işletme türü = araçların birleşimi.
 
 ```mermaid
 flowchart TB
@@ -82,18 +84,25 @@ flowchart TB
 ## Araç matrisi (hangi araç kaç alt türe hizmet ediyor)
 > ● = kullanıyor. genel = tüm sektörler, ozel = yalnız bu sektör.
 
-| Araç | Tür | Düğün, | Özel | Kurumsal | Konser | Sahne, | Etkinlik ikramı | Toplam |
+| Araç | Tür | 16.01 | Özel | Kurumsal | Konser | Sahne, | Etkinlik ikramı | Toplam |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| [[Muhasebe ve Gelir-Gider]] | genel | ● | ● | ● | ● | ● | ● | **6** |
+| [[e-Fatura ve e-Arşiv]] | genel | ● | ● | ● | ● | ● | ● | **6** |
+| [[CRM]] | genel | ● | ● | ● | ● | ● | ● | **6** |
+| [[Personel ve Vardiya]] | genel | ● | ● | ● | ● | ● | ● | **6** |
+| [[Raporlar]] | genel | ● | ● | ● | ● | ● | ● | **6** |
+| [[AI Asistan]] | genel | ● | ● | ● | ● | ● | ● | **6** |
+| [[Ayarlar]] | genel | ● | ● | ● | ● | ● | ● | **6** |
 | [[blok yalnız Etkinlik & Organizasyon içindir. Tüm sektörlerin ortak modülü değildir.]] | ozel | ● | ● | ● | ● | ● | ● | **6** |
 | [[Etkinlik takvimi]] | ozel | ● | ● | ● | ● | ● | ● | **6** |
 | [[Kapora sözleşme]] | ozel | ● | ● | ● | ● | ● | ● | **6** |
 | [[Tedarikçi teyidi]] | ozel | ● | ● | ● | ● | ● | ● | **6** |
 | [[Run-of-show]] | ozel | ● | ● | ● | ● | ● | ● | **6** |
 | [[Kişi sayısı]] | ozel | ● | ● | ● | ● | ● | ● | **6** |
-| [[modeli: etkinlik.]] | ozel | ● |  |  |  |  |  | **1** |
-| [[Salon seans]] | ozel | ● |  |  |  |  |  | **1** |
-| [[Paket menü]] | ozel | ● |  |  |  |  |  | **1** |
-| [[Mekân lisans]] | ozel | ● |  |  |  |  |  | **1** |
+| [[modeli: etkinlik.]] | ozel |  |  |  |  |  |  | **0** |
+| [[Salon seans]] | ozel |  |  |  |  |  |  | **0** |
+| [[Paket menü]] | ozel |  |  |  |  |  |  | **0** |
+| [[Mekân lisans]] | ozel |  |  |  |  |  |  | **0** |
 | [[modeli: etkinlik.]] | ozel |  | ● |  |  |  |  | **1** |
 | [[İş brief]] | ozel |  | ● |  |  |  |  | **1** |
 | [[Teklif karşılaştır]] | ozel |  | ● |  |  |  |  | **1** |
@@ -114,22 +123,62 @@ flowchart TB
 | [[Menü maliyet]] | ozel |  |  |  |  |  | ● | **1** |
 | [[Üretim sevkiyat]] | ozel |  |  |  |  |  | ● | **1** |
 | [[Gıda kayıt]] | ozel |  |  |  |  |  | ● | **1** |
-| [[Muhasebe ve Gelir-Gider]] | genel | ● | ● | ● | ● | ● | ● | **6** |
-| [[e-Fatura ve e-Arşiv]] | genel | ● | ● | ● | ● | ● | ● | **6** |
-| [[CRM]] | genel | ● | ● | ● | ● | ● | ● | **6** |
-| [[Personel ve Vardiya]] | genel | ● | ● | ● | ● | ● | ● | **6** |
-| [[Raporlar]] | genel | ● | ● | ● | ● | ● | ● | **6** |
-| [[AI Asistan]] | genel | ● | ● | ● | ● | ● | ● | **6** |
-| [[Ayarlar]] | genel | ● | ● | ● | ● | ● | ● | **6** |
+
+## Ortak ihtiyaçlar (6 alt türde sıklık)
+| İhtiyaç | Kategori | Sıklık |
+|---|---|---|
+| [[Etkinlik takvimi]] | operasyon | 6/6 |
+| [[Kapora / sözleşme]] | finans | 6/6 |
+| [[Tedarikçi teyidi]] | operasyon | 6/6 |
+| [[Run-of-show]] | operasyon | 6/6 |
+| [[Kişi sayısı]] | operasyon | 6/6 |
+| [[e-Belge]] | yasal | 6/6 |
+| [[Salon seans]] | operasyon | 1/6 |
+| [[Telif / MSG listesi]] | yasal | 1/6 |
+| [[Ekipman çıkış]] | operasyon | 1/6 |
+| [[Menü maliyet]] | finans | 1/6 |
+| [[Gıda kayıt]] | yasal | 1/6 |
+| [[Hasılat]] | finans | 1/6 |
+
+## Öncelik tablosu
+> Puanlar tahmindir (1–5). Öncelik = beş puanın ortalaması. Pazar büyüklüğü yalnızca kaynaklı satırlarda nettir.
+
+| # | Alt tür | Pazar | Ödeme | Rekabet | Kolaylık | Aciliyet | Öncelik |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 | [[Düğün, balo ve davet mekânı işletmeciliği]] | 4 | 4 | 2 | 4 | 5 | **3.8** |
+| 2 | [[Özel gün organizatörlüğü]] | 3 | 3 | 3 | 4 | 4 | **3.4** |
+| 3 | [[Kurumsal etkinlik ve kongre ajansı]] | 3 | 4 | 2 | 3 | 4 | **3.2** |
+| 4 | [[Etkinlik ikramı]] | 3 | 3 | 3 | 3 | 3 | **3.0** |
+| 5 | [[Sahne, ses ve ışık teknik hizmeti]] | 2 | 3 | 3 | 3 | 3 | **2.8** |
+| 6 | [[Konser ve küçük festival organizatörlüğü]] | 2 | 3 | 2 | 2 | 3 | **2.4** |
+
+## Yasal çerçeve
+| Konu | Kural | Yazılım etkisi | Kaynak |
+|---|---|---|---|
+| Düğün salonu | ÇŞİDB 29.09.2023: sıhhi müessese; müzik yayın izni | Lisans tarihi | https://webdosya.csb.gov.tr/db/yerelyonetimler/icerikler/dugun-salonlari-20231006135258.pdf |
+| MSG | Konser/etkinlik bildirimi formla | Eser listesi taslak; API yok | https://msg.org.tr/dagitim/konser-etkinlik-bildirimi |
+| Özel güvenlik | 5188 sayılı Kanun | Hatırlatma; her düğün zorunlu değil | https://www.mevzuat.gov.tr/MevzuatMetin/1.5.5188.pdf |
+| Gıda kayıt | e-Devlet işletme kayıt belgesi | 16.06; 16.01 kendi mutfak notu | https://www.turkiye.gov.tr/gida-tarbil-isletme-kayit-belgesi |
+
+## Pazar büyüklüğü
+| Alt tür / küme | Sayı | NACE / not |
+|---|---|---|
+| [[Sektör cirosu / firma sayısı]] | bulunamadı | — |
+| [[Kayıp kapora oranı]] | bulunamadı | — |
+
+## Rakip fiyat haritası
+| Segment | Aralık | Rakipler |
+|---|---|---|
+| Salon yazılımı | açık API yok | DüğünAsist, DavetPro, BaloSoft, Ajandam |
+| Kapora | iyzico dokümanı açık | iyzico |
+| Bilet | API yok | Biletix, Passo |
 
 ## Sektör ortak modüller
 
+Bu blok yalnız 16 Etkinlik & Organizasyon içindir. Tüm sektörlerin ortak modülü değildir.
+
 ### Bu blok yalnız Etkinlik & Organizasyon içindir. Tüm sektörlerin ortak modülü değildir.
 
-- oncelik: 
-- durum: 
-- aciklama: 
-- entegrasyonlar: yok
 - ai_komutlari:
 
 ### 16.00.01 Etkinlik takvimi
@@ -194,16 +243,8 @@ flowchart TB
 
 ## 16.01 Düğün, balo ve davet mekânı işletmeciliği
 
-- aciklama: Tarihi ve salonu satan işletme. Mekânsız planlayıcı bu satırda değildir.
-- gunluk_is: Salon takviminde opsiyon ve kesin tarih, kapora, kişi sayısı, menü ve servis ekibi.
-- ai: Telefonda kalmış tarih sözünü kesin ve opsiyon kayıtlarıyla karşılaştırıp ikinci sözü gösterir.
-
 ### İş modeli: etkinlik.
 
-- oncelik: 
-- durum: 
-- aciklama: 
-- entegrasyonlar: yok
 - ai_komutlari:
 
 ### 16.01.01 Salon seans
@@ -250,10 +291,6 @@ flowchart TB
 
 ### İş modeli: etkinlik.
 
-- oncelik: 
-- durum: 
-- aciklama: 
-- entegrasyonlar: yok
 - ai_komutlari:
 
 ### 16.02.01 İş brief
@@ -298,10 +335,6 @@ flowchart TB
 
 ### İş modeli: etkinlik.
 
-- oncelik: 
-- durum: 
-- aciklama: 
-- entegrasyonlar: yok
 - ai_komutlari:
 
 ### 16.03.01 Proje bütçe
@@ -346,10 +379,6 @@ flowchart TB
 
 ### İş modeli: etkinlik.
 
-- oncelik: 
-- durum: 
-- aciklama: 
-- entegrasyonlar: yok
 - ai_komutlari:
 
 ### 16.04.01 Gösteri dosya
@@ -396,10 +425,6 @@ flowchart TB
 
 ### İş modeli: karma.
 
-- oncelik: 
-- durum: 
-- aciklama: 
-- entegrasyonlar: yok
 - ai_komutlari:
 
 ### 16.05.01 Ekipman çıkış
@@ -444,10 +469,6 @@ flowchart TB
 
 ### İş modeli: karma.
 
-- oncelik: 
-- durum: 
-- aciklama: 
-- entegrasyonlar: yok
 - ai_komutlari:
 
 ### 16.06.01 Menü maliyet

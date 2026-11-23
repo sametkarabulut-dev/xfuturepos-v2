@@ -4,19 +4,20 @@ durum: tamamlandi
 sektor_id: "15"
 is_modeli: karma
 ---
+
 # 15 Teknoloji, Medya & Ajans
 
 ## Özet
-- Bu başlık tek iş değildir.
-- Kayıp, saat, onay ve faturanın ayrı yerlerde kalmasından ve reklam hesabında yanlış erişim ile harcama tavanından gelir.
-- Büyük TV, telekom ve kurumsal entegratör dışarıdadır.
+- Bu başlık tek iş değildir. NACE, kendi yazılımını yayımlayan firmayı (58.29), müşteriye özel kod yazanı (62.10), sistemi kurup destekleyeni (62.20) ve barındırmayı (63.10) ayırır. Reklamda ajans (73.11), başkasının alanını satan temsilcilik (73.12), grafik (74.12) ve reklam filmi (59.11) aynı sınıf değildir. Reklamcılar Derneği üye listesinde yaratıcı, dijital, medya ve danışmanlık ayrı tür olarak durur.
+- Kayıp, saat, onay ve faturanın ayrı yerlerde kalmasından ve reklam hesabında yanlış erişim ile harcama tavanından gelir. Ölçülmüş bir sektör oranı bulunmadı. Google Ads yönetici hesabı çoklu müşteri hesabını izler. Meta, başka işletmenin reklam hesabına erişimi ajans paylaşımına bağlar.
+- Büyük TV, telekom ve kurumsal entegratör dışarıdadır. Fuar organizatörlüğü 16’dadır. Emlak veya imalat firmasının içindeki pazarlama ekibi bu sektöre yazılmaz.
 - Karar: Sekiz alt sektör aralığın üst sınırıdır. 15.05’i 15.02 ile birleştirmek ve 15.06’yı dışarıda bırakmak açık karardır. Barındırma 15.07 içinde tutuldu.
-- Modül sayısı: sektör ortak 8; alt sektör 8; toplam 54; MVP 29.
-- Ortak çekirdek (tüm sektörler): Muhasebe, e-Fatura/e-Arşiv, CRM, Personel, Raporlar, AI Asistan, Ayarlar → `04 Modüller/00 Ortak Çekirdek.md`.
+- Modül: sektör ortak 8; alt sektör 8; toplam 54; MVP 29.
+- Ortak çekirdek (tüm sektörler) bu dosyada yoktur → `04 Modüller/00 Ortak Çekirdek.md`.
 
 <!-- dallar:start -->
 ## Dallar (ağaç)
-> **Sektör → Dal → Alt dal → Fonksiyon.** Fonksiyon havuzu: `07 Fonksiyonlar/` · Ortak araçlar: `04 Modüller/`
+> **Sektör → Dal → Alt dal → Fonksiyon.** Ortak araçlar: `04 Modüller/`
 
 | Dal | Alt dal | Fonksiyon | Durum |
 |---|---|---|---|
@@ -33,7 +34,7 @@ is_modeli: karma
 ## Alt işletme türleri (onay listesi)
 > İşaretli = Adım 1 onay listesi.
 
-- [x] [[Özel yazılım proje ofisi|Özel yazılım proje ofisi]]
+- [x] [[15.01 Özel yazılım proje ofisi|15.01 Özel yazılım proje ofisi]]
 - [x] [[Performans ve reklam hesabı ajansı|Performans ve reklam hesabı ajansı]]
 - [x] [[Müşteri adına içerik ofisi|Müşteri adına içerik ofisi]]
 - [x] [[Marka, tasarım ve görüntü stüdyosu|Marka, tasarım ve görüntü stüdyosu]]
@@ -57,14 +58,15 @@ is_modeli: karma
 ## Ortak iş akışı
 ```mermaid
 flowchart LR
-  A["Talep / kayıt"] --> B["Sektör işi"]
-  B --> C["Belge / tahsilat taslağı"]
-  C --> D["Onay kuyruğu"]
-  D --> E["e-Belge · CRM · rapor"]
+  A["Brief / kapsam"] --> B["Saat · sprint"]
+  B --> C["Teslim · onay"]
+  C --> D["Rapor / hesap"]
+  D --> E["Onay"]
+  E --> F["e-Belge · retainer"]
 ```
 
 ## Araç mimarisi
-> İlke: her araç bir kez yapılır. Bir işletme türü = araçların birleşimi. Tek türe özel büyük geliştirme yok.
+> İlke: her araç bir kez yapılır. Bir işletme türü = araçların birleşimi.
 
 ```mermaid
 flowchart TB
@@ -79,6 +81,7 @@ flowchart TB
     O5[Teslim Takvimi]
     O6[Sözleşme Takibi]
     O7[Kaynak Planı]
+    O8[Teklif Paketi]
   end
   GEN --> OZEL
 ```
@@ -86,8 +89,15 @@ flowchart TB
 ## Araç matrisi (hangi araç kaç alt türe hizmet ediyor)
 > ● = kullanıyor. genel = tüm sektörler, ozel = yalnız bu sektör.
 
-| Araç | Tür | Özel | Performans | Müşteri | Marka, | Mecra | Kendi | BT | Abonelikli | Toplam |
+| Araç | Tür | 15.01 | Performans | Müşteri | Marka, | Mecra | Kendi | BT | Abonelikli | Toplam |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| [[Muhasebe ve Gelir-Gider]] | genel | ● | ● | ● | ● | ● | ● | ● | ● | **8** |
+| [[e-Fatura ve e-Arşiv]] | genel | ● | ● | ● | ● | ● | ● | ● | ● | **8** |
+| [[CRM]] | genel | ● | ● | ● | ● | ● | ● | ● | ● | **8** |
+| [[Personel ve Vardiya]] | genel | ● | ● | ● | ● | ● | ● | ● | ● | **8** |
+| [[Raporlar]] | genel | ● | ● | ● | ● | ● | ● | ● | ● | **8** |
+| [[AI Asistan]] | genel | ● | ● | ● | ● | ● | ● | ● | ● | **8** |
+| [[Ayarlar]] | genel | ● | ● | ● | ● | ● | ● | ● | ● | **8** |
 | [[blok yalnız Teknoloji, Medya & Ajans içindir. Tüm sektörlerin ortak modülü değildir.]] | ozel | ● | ● | ● | ● | ● | ● | ● | ● | **8** |
 | [[Proje Kapsamı]] | ozel | ● | ● | ● | ● | ● | ● | ● | ● | **8** |
 | [[Saat Kullanımı]] | ozel | ● | ● | ● | ● | ● | ● | ● | ● | **8** |
@@ -96,12 +106,12 @@ flowchart TB
 | [[Sözleşme Takibi]] | ozel | ● | ● | ● | ● | ● | ● | ● | ● | **8** |
 | [[Kaynak Planı]] | ozel | ● | ● | ● | ● | ● | ● | ● | ● | **8** |
 | [[Teklif Paketi]] | ozel | ● | ● | ● | ● | ● | ● | ● | ● | **8** |
-| [[sözleşmesiyle yazılım yazan veya uyarlayan ekip; nesne sprint, kabul ve kapsamdır.]] | ozel | ● |  |  |  |  |  |  |  | **1** |
-| [[Sprint Tahtası]] | ozel | ● |  |  |  |  |  |  |  | **1** |
-| [[Kabul Kontrolü]] | ozel | ● |  |  |  |  |  |  |  | **1** |
-| [[Teknik Kapsam]] | ozel | ● |  |  |  |  |  |  |  | **1** |
-| [[Ortam Envanteri]] | ozel | ● |  |  |  |  |  |  |  | **1** |
-| [[Depo Bağlantısı]] | ozel | ● |  |  |  |  |  |  |  | **1** |
+| [[sözleşmesiyle yazılım yazan veya uyarlayan ekip; nesne sprint, kabul ve kapsamdır.]] | ozel |  |  |  |  |  |  |  |  | **0** |
+| [[Sprint Tahtası]] | ozel |  |  |  |  |  |  |  |  | **0** |
+| [[Kabul Kontrolü]] | ozel |  |  |  |  |  |  |  |  | **0** |
+| [[Teknik Kapsam]] | ozel |  |  |  |  |  |  |  |  | **0** |
+| [[Ortam Envanteri]] | ozel |  |  |  |  |  |  |  |  | **0** |
+| [[Depo Bağlantısı]] | ozel |  |  |  |  |  |  |  |  | **0** |
 | [[reklam hesabında kampanya süren ofis; nesne erişim, harcama tavanı ve dönem raporudur.]] | ozel |  | ● |  |  |  |  |  |  | **1** |
 | [[Hesap Erişimi]] | ozel |  | ● |  |  |  |  |  |  | **1** |
 | [[Harcama Tavanı]] | ozel |  | ● |  |  |  |  |  |  | **1** |
@@ -142,22 +152,64 @@ flowchart TB
 | [[Destek Kuyruğu]] | ozel |  |  |  |  |  |  |  | ● | **1** |
 | [[Sürüm Notu]] | ozel |  |  |  |  |  |  |  | ● | **1** |
 | [[Kullanım Ölçümü]] | ozel |  |  |  |  |  |  |  | ● | **1** |
-| [[Muhasebe ve Gelir-Gider]] | genel | ● | ● | ● | ● | ● | ● | ● | ● | **8** |
-| [[e-Fatura ve e-Arşiv]] | genel | ● | ● | ● | ● | ● | ● | ● | ● | **8** |
-| [[CRM]] | genel | ● | ● | ● | ● | ● | ● | ● | ● | **8** |
-| [[Personel ve Vardiya]] | genel | ● | ● | ● | ● | ● | ● | ● | ● | **8** |
-| [[Raporlar]] | genel | ● | ● | ● | ● | ● | ● | ● | ● | **8** |
-| [[AI Asistan]] | genel | ● | ● | ● | ● | ● | ● | ● | ● | **8** |
-| [[Ayarlar]] | genel | ● | ● | ● | ● | ● | ● | ● | ● | **8** |
+
+## Ortak ihtiyaçlar (8 alt türde sıklık)
+| İhtiyaç | Kategori | Sıklık |
+|---|---|---|
+| [[Proje kapsamı]] | operasyon | 8/8 |
+| [[Saat kullanımı]] | finans | 8/8 |
+| [[Brief / onay]] | musteri | 8/8 |
+| [[Teslim takvimi]] | operasyon | 8/8 |
+| [[Sözleşme / retainer]] | yasal | 8/8 |
+| [[e-Belge]] | yasal | 8/8 |
+| [[Reklam hesabı erişimi]] | operasyon | 1/8 |
+| [[Yayın takvimi]] | operasyon | 2/8 |
+| [[Varlık sürümü]] | operasyon | 1/8 |
+| [[SLA ticket]] | operasyon | 1/8 |
+| [[Abonelik yenileme]] | finans | 1/8 |
+| [[5651 / yasal bilgi]] | yasal | 1/8 |
+
+## Öncelik tablosu
+> Puanlar tahmindir (1–5). Öncelik = beş puanın ortalaması. Pazar büyüklüğü yalnızca kaynaklı satırlarda nettir.
+
+| # | Alt tür | Pazar | Ödeme | Rekabet | Kolaylık | Aciliyet | Öncelik |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 | [[Özel yazılım proje ofisi]] | 4 | 4 | 3 | 4 | 5 | **4.0** |
+| 2 | [[Performans ve reklam hesabı ajansı]] | 4 | 5 | 2 | 3 | 5 | **3.8** |
+| 3 | [[Müşteri adına içerik ofisi]] | 4 | 3 | 3 | 4 | 4 | **3.6** |
+| 4 | [[BT bakım ve paket yazılım destek ofisi]] | 3 | 4 | 3 | 4 | 4 | **3.6** |
+| 5 | [[Abonelikli yazılım ürünü işletmesi]] | 3 | 4 | 2 | 3 | 4 | **3.2** |
+| 6 | [[Marka, tasarım ve görüntü stüdyosu]] | 3 | 3 | 3 | 4 | 3 | **3.2** |
+| 7 | [[Mecra planlama ve satın alma ofisi]] | 2 | 3 | 2 | 3 | 3 | **2.6** |
+| 8 | [[Kendi mecrasını işleten yayıncı]] | 2 | 3 | 2 | 3 | 3 | **2.6** |
+
+## Yasal çerçeve
+| Konu | Kural | Yazılım etkisi | Kaynak |
+|---|---|---|---|
+| Ticari reklam | Ticari Reklam ve Haksız Ticari Uygulamalar Yönetmeliği | Reklam işi 15.02; örtülü reklam varsayılan kapalı | https://www.mevzuat.gov.tr/MevzuatMetin/yonetmelik/7.5.20435.pdf |
+| 5651 | İnternet ortamında yapılan yayınlar | Yayıncı 15.06; barındırma notu 15.07 | https://www.mevzuat.gov.tr/MevzuatMetin/1.5.5651.htm |
+| 5846 | Fikir ve Sanat Eserleri | Hak listesi | https://www.mevzuat.gov.tr/MevzuatMetin/1.3.5846.pdf |
+| Ads API | Google Ads access levels; Meta Marketing API App Review | Doküman açık; üretim başvuru ister | https://developers.google.com/google-ads/api/docs/access-levels |
+
+## Pazar büyüklüğü
+| Alt tür / küme | Sayı | NACE / not |
+|---|---|---|
+| [[Alt sektör firma/ciro]] | bulunamadı | NACE 58/62/63/73 |
+| [[Reklamcılar Derneği]] | üye listesi tür ayrımı var; sayı bu turda çekilmedi | 73 |
+
+## Rakip fiyat haritası
+| Segment | Aralık | Rakipler |
+|---|---|---|
+| Proje / saat | bulunamadı | Notion, Asana, ClickUp (penetrasyon yok) |
+| Ads | API dokümanı açık | Meta, Google Ads |
+| Kod depo | REST açık | GitHub, GitLab |
 
 ## Sektör ortak modüller
 
+Bu blok yalnız 15 Teknoloji, Medya & Ajans içindir. Tüm sektörlerin ortak modülü değildir.
+
 ### Bu blok yalnız Teknoloji, Medya & Ajans içindir. Tüm sektörlerin ortak modülü değildir.
 
-- oncelik: 
-- durum: 
-- aciklama: 
-- entegrasyonlar: yok
 - ai_komutlari:
 
 ### 15.00.01 Proje Kapsamı
@@ -241,16 +293,8 @@ flowchart TB
 
 ## 15.01 Özel yazılım proje ofisi
 
-- aciklama: Müşteri sözleşmesiyle yazılım yazan veya mevcut uygulamayı uyarlayan ekip. Kendi ürününü abonelikle yayımlamaz.
-- gunluk_is: Teklif kapsamı, sprint, kabul ve saat kaydı.
-- ai: Toplantı ve yazışmadan kapsam maddesi çıkarır; teklifte olmayan işi işaretler.
-
 ### Müşteri sözleşmesiyle yazılım yazan veya uyarlayan ekip; nesne sprint, kabul ve kapsamdır.
 
-- oncelik: 
-- durum: 
-- aciklama: 
-- entegrasyonlar: yok
 - ai_komutlari:
 
 ### 15.01.01 Sprint Tahtası
@@ -317,10 +361,6 @@ flowchart TB
 
 ### Müşteri reklam hesabında kampanya süren ofis; nesne erişim, harcama tavanı ve dönem raporudur.
 
-- oncelik: 
-- durum: 
-- aciklama: 
-- entegrasyonlar: yok
 - ai_komutlari:
 
 ### 15.02.01 Hesap Erişimi
@@ -391,10 +431,6 @@ flowchart TB
 
 ### Müşteri kanalında takvimle yayın yapan retainer ofis; nesne takvim, onay ve yayındır.
 
-- oncelik: 
-- durum: 
-- aciklama: 
-- entegrasyonlar: yok
 - ai_komutlari:
 
 ### 15.03.01 Yayın Takvimi
@@ -463,10 +499,6 @@ flowchart TB
 
 ### Brief ile marka, grafik veya görüntü teslim eden stüdyo; nesne sürüm, revizyon ve hak kapsamıdır.
 
-- oncelik: 
-- durum: 
-- aciklama: 
-- entegrasyonlar: yok
 - ai_komutlari:
 
 ### 15.04.01 Varlık Sürümü
@@ -534,10 +566,6 @@ flowchart TB
 
 ### Müşteri bütçesini mecralara yerleştiren ofis; nesne plan, sipariş, teyit ve mecra faturasıdır.
 
-- oncelik: 
-- durum: 
-- aciklama: 
-- entegrasyonlar: yok
 - ai_komutlari:
 
 ### 15.05.01 Mecra Planı
@@ -594,10 +622,6 @@ flowchart TB
 
 ### Kendi yayın takvimini yürüten ve kendi alan veya zamanını satan küçük dijital yayın.
 
-- oncelik: 
-- durum: 
-- aciklama: 
-- entegrasyonlar: yok
 - ai_komutlari:
 
 ### 15.06.01 Yayın Masası
@@ -655,10 +679,6 @@ flowchart TB
 
 ### Paket yazılım kurulum, eğitim ve arıza kuyruğu; nesne SLA ticket ve sözleşme süresidir.
 
-- oncelik: 
-- durum: 
-- aciklama: 
-- entegrasyonlar: yok
 - ai_komutlari:
 
 ### 15.07.01 SLA Ticket
@@ -725,10 +745,6 @@ flowchart TB
 
 ### Kendi yazılımını yayımlayıp abonelik, sürüm ve destek yürüten şirket.
 
-- oncelik: 
-- durum: 
-- aciklama: 
-- entegrasyonlar: yok
 - ai_komutlari:
 
 ### 15.08.01 Abonelik Yenileme
@@ -803,3 +819,4 @@ flowchart TB
 - 5846 sayılı Kanun: https://www.mevzuat.gov.tr/MevzuatMetin/1.3.5846.pdf
 - Google Ads API: https://developers.google.com/google-ads/api/docs/start
 - Meta Marketing API: https://developers.facebook.com/docs/marketing-api/overview/
+- https://developers.google.com/google-ads/api/docs/access-levels

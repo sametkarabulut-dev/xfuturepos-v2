@@ -4,19 +4,20 @@ durum: tamamlandi
 sektor_id: "09"
 is_modeli: karma
 ---
+
 # 09 Emlak & Gayrimenkul
 
 ## Özet
-- KOBİ çekirdeği, başkasına ait taşınmazın alım, satım ve kirasına aracılık eden yetki belgeli işletmelerdir.
-- Gün, işlemin bitip bitmemesine göre ayrılır.
-- Aracılıkta portföy CRM’de, ilan portallarda, yazışma WhatsApp’tadır.
+- KOBİ çekirdeği, başkasına ait taşınmazın alım, satım ve kirasına aracılık eden yetki belgeli işletmelerdir. Taşınmaz Ticareti Hakkında Yönetmelik faaliyeti tacir veya esnaf işletmesine bağlar: yetki belgesi, oda kaydı, vergi mükellefiyeti, en az bir Seviye 5 sorumlu danışman ve satış personelinde Seviye 4 yeterlilik. İstanbul Ticaret Odası Gayrimenkul Hizmetleri dökümünde aracılık (68.31.01) 14.828 kayıtla en kalabalık satırdır. Ardından kendi taşınmazını kiralayanlar (68.20.02, 5.013), kendi hesabına alım satım (68.11.00, 1.243), değerleme (68.32.01, 1.174) ve apartman yöneticiliği hariç ücretli yönetim (68.32.02, 795) gelir. Bu sayılar İstanbul oda kaydıdır; Türkiye geneli ve 1–50 çalışan kırılımı yoktur.
+- Gün, işlemin bitip bitmemesine göre ayrılır. Aracılık ofisinde yetkilendirme, EİDS izinli ilan, talep, yer gösterme ve teklif vardır. Uzun kira işletmesinde tahsilat, sözleşme, abonelik ve bakım vardır. Site yönetiminde 634 sayılı Kanun çerçevesinde aidat, işletme projesi, banka hesabı ve genel kurul vardır. Değerlemede saha ve imzalı rapor vardır. Kısa kiralamada 7464 sayılı Kanun çerçevesinde izin belgesi, plaket ve misafir devri vardır.
+- Aracılıkta portföy CRM’de, ilan portallarda, yazışma WhatsApp’tadır. RE-OS dağınık liste ve her portala ayrı girişi mevcut biçim olarak anlatır. Sahibinden API’si her panele açık değildir. Site tarafında selfSite, Dijiyon, Konsiyon ve NOKTApp aidatı Excel’in yerine koyar. WebTapu ve e-Kira e-Devlet hizmetidir; KOBİ paneline açık TAKBİS veya e-Kira API bu taramada görülmedi.
 - Karar: 09.04 en az on tam zamanlı uzman şartıyla 1–50 bandının üst sınırına yakındır. 09.05’te seyahat acentesi dışarıdadır.
-- Modül sayısı: sektör ortak 8; alt sektör 5; toplam 39; MVP 20.
-- Ortak çekirdek (tüm sektörler): Muhasebe, e-Fatura/e-Arşiv, CRM, Personel, Raporlar, AI Asistan, Ayarlar → `04 Modüller/00 Ortak Çekirdek.md`.
+- Modül: sektör ortak 8; alt sektör 5; toplam 39; MVP 20.
+- Ortak çekirdek (tüm sektörler) bu dosyada yoktur → `04 Modüller/00 Ortak Çekirdek.md`.
 
 <!-- dallar:start -->
 ## Dallar (ağaç)
-> **Sektör → Dal → Alt dal → Fonksiyon.** Fonksiyon havuzu: `07 Fonksiyonlar/` · Ortak araçlar: `04 Modüller/`
+> **Sektör → Dal → Alt dal → Fonksiyon.** Ortak araçlar: `04 Modüller/`
 
 | Dal | Alt dal | Fonksiyon | Durum |
 |---|---|---|---|
@@ -30,7 +31,7 @@ is_modeli: karma
 ## Alt işletme türleri (onay listesi)
 > İşaretli = Adım 1 onay listesi.
 
-- [x] [[Emlak aracılık ofisi|Emlak aracılık ofisi]]
+- [x] [[09.01 Emlak aracılık ofisi|09.01 Emlak aracılık ofisi]]
 - [x] [[Uzun süreli kira ve mülk işletmeciliği|Uzun süreli kira ve mülk işletmeciliği]]
 - [x] [[Site, apartman ve toplu yapı yönetimi|Site, apartman ve toplu yapı yönetimi]]
 - [x] [[Gayrimenkul değerleme kuruluşu|Gayrimenkul değerleme kuruluşu]]
@@ -53,14 +54,16 @@ is_modeli: karma
 ## Ortak iş akışı
 ```mermaid
 flowchart LR
-  A["Talep / kayıt"] --> B["Sektör işi"]
-  B --> C["Belge / tahsilat taslağı"]
-  C --> D["Onay kuyruğu"]
-  D --> E["e-Belge · CRM · rapor"]
+  A["Yetki / portföy"] --> B["İlan · EİDS kontrol"]
+  B --> C["Talep · gösterim"]
+  C --> D["Teklif · sözleşme taslağı"]
+  D --> E["Onay"]
+  E --> F["Komisyon · e-Belge"]
+  F --> G["CRM · hatırlatma"]
 ```
 
 ## Araç mimarisi
-> İlke: her araç bir kez yapılır. Bir işletme türü = araçların birleşimi. Tek türe özel büyük geliştirme yok.
+> İlke: her araç bir kez yapılır. Bir işletme türü = araçların birleşimi.
 
 ```mermaid
 flowchart TB
@@ -75,6 +78,7 @@ flowchart TB
     O5[Yetki Takibi]
     O6[Sözleşme Taslağı]
     O7[Belge Kasası]
+    O8[Komisyon Hesabı]
   end
   GEN --> OZEL
 ```
@@ -82,8 +86,15 @@ flowchart TB
 ## Araç matrisi (hangi araç kaç alt türe hizmet ediyor)
 > ● = kullanıyor. genel = tüm sektörler, ozel = yalnız bu sektör.
 
-| Araç | Tür | Emlak | Uzun | Site, | Gayrimenkul | Turizm | Toplam |
+| Araç | Tür | 09.01 | Uzun | Site, | Gayrimenkul | Turizm | Toplam |
 | --- | --- | --- | --- | --- | --- | --- | --- |
+| [[Muhasebe ve Gelir-Gider]] | genel | ● | ● | ● | ● | ● | **5** |
+| [[e-Fatura ve e-Arşiv]] | genel | ● | ● | ● | ● | ● | **5** |
+| [[CRM]] | genel | ● | ● | ● | ● | ● | **5** |
+| [[Personel ve Vardiya]] | genel | ● | ● | ● | ● | ● | **5** |
+| [[Raporlar]] | genel | ● | ● | ● | ● | ● | **5** |
+| [[AI Asistan]] | genel | ● | ● | ● | ● | ● | **5** |
+| [[Ayarlar]] | genel | ● | ● | ● | ● | ● | **5** |
 | [[blok yalnız Emlak & Gayrimenkul içindir. Tüm sektörlerin ortak modülü değildir.]] | ozel | ● | ● | ● | ● | ● | **5** |
 | [[Portföy Kartı]] | ozel | ● | ● | ● | ● | ● | **5** |
 | [[Gösterim Randevu]] | ozel | ● | ● | ● | ● | ● | **5** |
@@ -92,12 +103,12 @@ flowchart TB
 | [[Sözleşme Taslağı]] | ozel | ● | ● | ● | ● | ● | **5** |
 | [[Belge Kasası]] | ozel | ● | ● | ● | ● | ● | **5** |
 | [[Komisyon Hesabı]] | ozel | ● | ● | ● | ● | ● | **5** |
-| [[belgeli işletmelerde taşınmaz alım-satım/kira aracılığı, portföy ve ilan yönetimi.]] | ozel | ● |  |  |  |  | **1** |
-| [[Alıcı Eşleştirme]] | ozel | ● |  |  |  |  | **1** |
-| [[Malik Yetkilendirme]] | ozel | ● |  |  |  |  | **1** |
-| [[Teklif Takibi]] | ozel | ● |  |  |  |  | **1** |
-| [[Ofis Portföy Payı]] | ozel | ● |  |  |  |  | **1** |
-| [[Piyasa Bandı]] | ozel | ● |  |  |  |  | **1** |
+| [[belgeli işletmelerde taşınmaz alım-satım/kira aracılığı, portföy ve ilan yönetimi.]] | ozel |  |  |  |  |  | **0** |
+| [[Alıcı Eşleştirme]] | ozel |  |  |  |  |  | **0** |
+| [[Malik Yetkilendirme]] | ozel |  |  |  |  |  | **0** |
+| [[Teklif Takibi]] | ozel |  |  |  |  |  | **0** |
+| [[Ofis Portföy Payı]] | ozel |  |  |  |  |  | **0** |
+| [[Piyasa Bandı]] | ozel |  |  |  |  |  | **0** |
 | [[işyeri uzun dönem kiralama, tahsilat ve bakım işletmeciliği.]] | ozel |  | ● |  |  |  | **1** |
 | [[Kira Dosyası]] | ozel |  | ● |  |  |  | **1** |
 | [[Kira Tahsilat]] | ozel |  | ● |  |  |  | **1** |
@@ -123,22 +134,65 @@ flowchart TB
 | [[Temizlik Planı]] | ozel |  |  |  |  | ● | **1** |
 | [[Kanal Yönetimi]] | ozel |  |  |  |  | ● | **1** |
 | [[Dinamik Fiyat]] | ozel |  |  |  |  | ● | **1** |
-| [[Muhasebe ve Gelir-Gider]] | genel | ● | ● | ● | ● | ● | **5** |
-| [[e-Fatura ve e-Arşiv]] | genel | ● | ● | ● | ● | ● | **5** |
-| [[CRM]] | genel | ● | ● | ● | ● | ● | **5** |
-| [[Personel ve Vardiya]] | genel | ● | ● | ● | ● | ● | **5** |
-| [[Raporlar]] | genel | ● | ● | ● | ● | ● | **5** |
-| [[AI Asistan]] | genel | ● | ● | ● | ● | ● | **5** |
-| [[Ayarlar]] | genel | ● | ● | ● | ● | ● | **5** |
+
+## Ortak ihtiyaçlar (5 alt türde sıklık)
+| İhtiyaç | Kategori | Sıklık |
+|---|---|---|
+| [[Yetki belgesi ve sorumlu danışman takibi]] | yasal | 5/5 |
+| [[Portföy kartı ve medya]] | operasyon | 5/5 |
+| [[Gösterim randevusu]] | operasyon | 5/5 |
+| [[Tahsilat / aidat / komisyon kaydı]] | finans | 5/5 |
+| [[e-Belge]] | yasal | 5/5 |
+| [[Sözleşme taslağı]] | yasal | 5/5 |
+| [[İlan doğrulama / EİDS checklist]] | yasal | 3/5 |
+| [[Kira tahsilat ve dekont]] | finans | 2/5 |
+| [[Aidat ve genel kurul]] | operasyon | 1/5 |
+| [[Değerleme rapor iş emri]] | operasyon | 1/5 |
+| [[Kısa kiralama doluluk]] | operasyon | 1/5 |
+| [[Portal ilan aktarımı]] | pazarlama | 2/5 |
+
+## Öncelik tablosu
+> Puanlar tahmindir (1–5). Öncelik = beş puanın ortalaması. Pazar büyüklüğü yalnızca kaynaklı satırlarda nettir.
+
+| # | Alt tür | Pazar | Ödeme | Rekabet | Kolaylık | Aciliyet | Öncelik |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 | [[Emlak aracılık ofisi]] | 5 | 4 | 2 | 3 | 5 | **3.8** |
+| 2 | [[Uzun süreli kira ve mülk işletmeciliği]] | 3 | 4 | 3 | 4 | 4 | **3.6** |
+| 3 | [[Site, apartman ve toplu yapı yönetimi]] | 3 | 3 | 3 | 3 | 4 | **3.2** |
+| 4 | [[Turizm amaçlı kısa süreli konut işletmeciliği]] | 2 | 4 | 3 | 3 | 4 | **3.2** |
+| 5 | [[Gayrimenkul değerleme kuruluşu]] | 2 | 3 | 2 | 2 | 3 | **2.4** |
+
+## Yasal çerçeve
+| Konu | Kural | Yazılım etkisi | Kaynak |
+|---|---|---|---|
+| Taşınmaz ticareti | Taşınmaz Ticareti Hakkında Yönetmelik; TTBS yetki belgesi | Yetki vade alanı | https://mevzuat.adalet.gov.tr/mevzuat/105916 |
+| EİDS | Elektronik ilan doğrulama | İlan checklist; ofis API yok | https://eids.ticaret.gov.tr/ |
+| Kat mülkiyeti | 634 sayılı Kanun; aidat, işletme projesi, gecikme | Aidat kaydı; icra onaya kalır | https://www.mevzuat.gov.tr/MevzuatMetin/1.5.634.pdf |
+| Kısa kiralama | 7464 sayılı Kanun; yüz gün, izin belgesi | İzin tarihi ve doluluk | https://www.mevzuat.gov.tr/MevzuatMetin/1.5.7464.htm |
+| Değerleme | SPK III-62.3; en az on tam zamanlı uzman | Lisans sicil kaydı | https://resmigazete.gov.tr/eskiler/2019/08/20190831-12.htm |
+
+## Pazar büyüklüğü
+| Alt tür / küme | Sayı | NACE / not |
+|---|---|---|
+| [[Emlak aracılık]] | İTO NACE 68.31.01: 14.828 kayıt (İstanbul oda; TR geneli yok) | 68.31 |
+| [[Kendi taşınmazını kiralama]] | İTO 68.20.02: 5.013 | 68.20 |
+| [[Değerleme]] | İTO 68.32.01: 1.174 | 68.32 |
+| [[Ücretli yönetim]] | İTO 68.32.02: 795 | 68.32 |
+| [[Türkiye geneli 1–50 kırılımı]] | bulunamadı | — |
+
+## Rakip fiyat haritası
+| Segment | Aralık | Rakipler |
+|---|---|---|
+| Portföy / CRM | bulunamadı | RE-OS (dağınık liste anlatımı) |
+| Site aidat | bulunamadı | selfSite, Dijiyon, Konsiyon, NOKTApp |
+| İlan portalı | sözleşmeli API | sahibinden kurumsal aktarım |
 
 ## Sektör ortak modüller
 
+Bu blok yalnız 09 Emlak & Gayrimenkul içindir. Tüm sektörlerin ortak modülü değildir.
+
 ### Bu blok yalnız Emlak & Gayrimenkul içindir. Tüm sektörlerin ortak modülü değildir.
 
-- oncelik: 
-- durum: 
-- aciklama: 
-- entegrasyonlar: yok
 - ai_komutlari:
 
 ### 09.00.01 Portföy Kartı
@@ -228,16 +282,8 @@ flowchart TB
 
 ## 09.01 Emlak aracılık ofisi
 
-- aciklama: Yetki belgeli işletme, başkasına ait konut, işyeri, arsa veya devre mülke komisyonla aracılık eder.
-- gunluk_is: Yetkilendirme dosyası, EİDS izinli ilan, talep eşleme, yer gösterme, yazılı teklif ve aracılık sözleşmesi.
-- ai: Dosyadan ilan metni ve talep listesi kurar; yetki bitişi ile ilanı üç gün içinde kaldırma süresini hatırlatır.
-
 ### Yetki belgeli işletmelerde taşınmaz alım-satım/kira aracılığı, portföy ve ilan yönetimi.
 
-- oncelik: 
-- durum: 
-- aciklama: 
-- entegrasyonlar: yok
 - ai_komutlari:
 
 ### 09.01.01 Alıcı Eşleştirme
@@ -306,10 +352,6 @@ flowchart TB
 
 ### Konut/çatılı işyeri uzun dönem kiralama, tahsilat ve bakım işletmeciliği.
 
-- oncelik: 
-- durum: 
-- aciklama: 
-- entegrasyonlar: yok
 - ai_komutlari:
 
 ### 09.02.01 Kira Dosyası
@@ -379,10 +421,6 @@ flowchart TB
 
 ### Kat mülkiyeti kapsamında aidat, işletme projesi, genel kurul ve ortak alan yönetimi.
 
-- oncelik: 
-- durum: 
-- aciklama: 
-- entegrasyonlar: yok
 - ai_komutlari:
 
 ### 09.03.01 İşletme Projesi
@@ -453,10 +491,6 @@ flowchart TB
 
 ### SPK yetkili kuruluşlarda lisanslı uzmanlarla değerleme raporu üretimi.
 
-- oncelik: 
-- durum: 
-- aciklama: 
-- entegrasyonlar: yok
 - ai_komutlari:
 
 ### 09.04.01 Rapor İş Akışı
@@ -527,10 +561,6 @@ flowchart TB
 
 ### Tek seferde 100 gün veya daha kısa turizm amaçlı konut kiralaması ve izin belgeli işletme.
 
-- oncelik: 
-- durum: 
-- aciklama: 
-- entegrasyonlar: yok
 - ai_komutlari:
 
 ### 09.05.01 Rezervasyon Takvim
