@@ -1,5 +1,11 @@
-# xFuture sektör araştırma kasası
+# xFuture POS V2 — Araştırma Kasası
 
-Obsidian markdown. Yapay zeka önce ortak çekirdeği, sonra sektör dosyasını okur.
+Obsidian markdown kasası. Biçim referansı: [enes-1/xfuturepos-arastirma](https://github.com/enes-1/xfuturepos-arastirma).
 
-Başlangıç: [`CLAUDE.md`](CLAUDE.md) · [`00 Pano/Pano.md`](00%20Pano/Pano.md) · [`04 Modüller/00 Ortak Çekirdek.md`](04%20Modüller/00%20Ortak%20Çekirdek.md)
+## Sektörler
+09 Emlak · 10 İnşaat · 12 Lojistik · 13 Üretim · 15 Teknoloji/Medya/Ajans · 16 Etkinlik
+
+## Yapı
+`01 Sektörler` özet · `02 İşletmeler` dal/işletme · `03 İhtiyaçlar` · `04 Modüller` · `05 Rakipler` · `06 Kaynaklar` · `07 Fonksiyonlar` · `99 Şablonlar`
+
+AI okuma sırası: `CLAUDE.md`.
