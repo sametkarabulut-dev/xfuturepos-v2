@@ -14,7 +14,7 @@ Bu kasa yapay zekanın okuyacağı kaynaktır. HTML ve JSON kaynak değildir.
 - `[[wiki link]]` Obsidian bağlantısıdır; AI bunu özellik/modül adı olarak okur.
 
 ## Klasörler
-- `01 Sektörler` — sektör dosyaları (Sağlık.md biçimi)
+- `01 Sektörler` — yalnız 09, 10, 12, 13, 15, 16
 - `02 İşletmeler` — işletme türü notları
 - `03 İhtiyaçlar` — ihtiyaç kartları
 - `04 Modüller` — ortak ve sektörel araçlar
