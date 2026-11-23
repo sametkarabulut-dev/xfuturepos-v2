@@ -1,2 +1,6 @@
 # Yerelde kalsın, GitHub'a gitmesin
 08 Arşiv/
+
+__pycache__/
+*.pyc
+
