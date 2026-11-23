@@ -1,6 +1,6 @@
 # xFuture POS V2 — Araştırma Kasası
 
-Obsidian markdown kasası. Biçim referansı: [enes-1/xfuturepos-arastirma](https://github.com/enes-1/xfuturepos-arastirma).
+Obsidian markdown araştırma kasası.
 
 ## Sektörler
 09 Emlak · 10 İnşaat · 12 Lojistik · 13 Üretim · 15 Teknoloji/Medya/Ajans · 16 Etkinlik

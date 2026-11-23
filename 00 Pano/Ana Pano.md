@@ -22,4 +22,4 @@ durum: tamamlandi
 - [[15 Teknoloji Medya & Ajans]]
 - [[16 Etkinlik & Organizasyon]]
 
-Biçim: Obsidian markdown (enes-1 kasası ile aynı iskelet). HTML/JSON kaynak değildir.
+Biçim: Obsidian markdown. HTML/JSON kaynak değildir.

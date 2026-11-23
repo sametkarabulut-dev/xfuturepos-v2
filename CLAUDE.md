@@ -10,8 +10,6 @@
 Yalnızca şu 6 sektör. Dışına ÇIKMA:
 09 Emlak & Gayrimenkul · 10 İnşaat & Yapı · 12 Lojistik & Taşımacılık · 13 Üretim & İmalat · 15 Teknoloji Medya & Ajans · 16 Etkinlik & Organizasyon
 
-Referans biçim: `enes-1/xfuturepos-arastirma` (Sağlık şablonu ve işletme/modül/ihtiyaç notları).
-
 ## Okuma sırası
 1. `04 Modüller/` — çekirdek araçlar (Muhasebe, e-Fatura, CRM, Personel, Raporlar, AI Asistan, Ayarlar)
 2. `01 Sektörler/<sektör>.md` — özet, dallar, araç matrisi, yasal, pazar, rakip
