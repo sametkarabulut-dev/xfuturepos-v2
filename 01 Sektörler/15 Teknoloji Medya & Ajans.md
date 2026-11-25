@@ -11,7 +11,7 @@ is_modeli: karma
 - Kayıp, saat, onay ve faturanın ayrı yerlerde kalmasından ve reklam hesabında yanlış erişim ile harcama tavanından gelir. Ölçülmüş bir sektör oranı bulunmadı. Google Ads yönetici hesabı çoklu müşteri hesabını izler. Meta, başka işletmenin reklam hesabına erişimi ajans paylaşımına bağlar.
 - Büyük TV, telekom ve kurumsal entegratör dışarıdadır. Fuar organizatörlüğü 16’dadır. Emlak veya imalat firmasının içindeki pazarlama ekibi bu sektöre yazılmaz.
 - Karar: Sekiz alt sektör aralığın üst sınırıdır. 15.05’i 15.02 ile birleştirmek ve 15.06’yı dışarıda bırakmak açık karardır. Barındırma 15.07 içinde tutuldu.
-- Modül: sektör ortak 7; alt sektör 8; toplam 45; MVP 29.
+- Alt işletme: 10. Modül kartları `04 Modüller/`.
 - Ortak çekirdek (tüm sektörler) bu dosyada yoktur → `04 Modüller/` çekirdek araçlar.
 
 <!-- dallar:start -->
@@ -20,27 +20,29 @@ is_modeli: karma
 
 | Dal | Alt dal | Fonksiyon | Durum |
 |---|---|---|---|
-| [[Özel yazılım proje ofisi]] | 1 | 14 | açık |
-| [[Performans ve reklam hesabı ajansı]] | 1 | 14 | açık |
-| [[Müşteri adına içerik ofisi]] | 1 | 14 | açık |
-| [[Marka, tasarım ve görüntü stüdyosu]] | 1 | 14 | açık |
-| [[Mecra planlama ve satın alma ofisi]] | 1 | 12 | açık |
-| [[Kendi mecrasını işleten yayıncı]] | 1 | 12 | açık |
-| [[BT bakım ve paket yazılım destek ofisi]] | 1 | 14 | açık |
-| [[Abonelikli yazılım ürünü işletmesi]] | 1 | 14 | açık |
+| [[Abonelikli yazılım ürünü işletmesi]] | 1 | 43 | açık |
+| [[BT bakım ve paket yazılım destek ofisi]] | 1 | 43 | açık |
+| [[Kendi mecrasını işleten yayıncı]] | 1 | 40 | açık |
+| [[Marka, tasarım ve görüntü stüdyosu]] | 1 | 43 | açık |
+| [[Mecra planlama ve satın alma ofisi]] | 1 | 40 | açık |
+| [[Müşteri adına içerik ofisi]] | 2 | 86 | açık |
+| [[Performans ve reklam hesabı ajansı]] | 1 | 43 | açık |
+| [[Özel yazılım proje ofisi]] | 2 | 86 | açık |
 <!-- dallar:end -->
 
 ## Alt işletme türleri (onay listesi)
 > İşaretli = Adım 1 onay listesi.
 
-- [x] [[Özel yazılım proje ofisi|Özel yazılım proje ofisi]]
-- [x] [[Performans ve reklam hesabı ajansı|Performans ve reklam hesabı ajansı]]
-- [x] [[Müşteri adına içerik ofisi|Müşteri adına içerik ofisi]]
+- [x] [[Abonelikli yazılım ürünü işletmesi|Abonelikli yazılım ürünü işletmesi]]
+- [x] [[BT bakım ve paket yazılım destek ofisi|BT bakım ve paket yazılım destek ofisi]]
+- [x] [[Kendi mecrasını işleten yayıncı|Kendi mecrasını işleten yayıncı]]
 - [x] [[Marka, tasarım ve görüntü stüdyosu|Marka, tasarım ve görüntü stüdyosu]]
 - [x] [[Mecra planlama ve satın alma ofisi|Mecra planlama ve satın alma ofisi]]
-- [x] [[Kendi mecrasını işleten yayıncı|Kendi mecrasını işleten yayıncı]]
-- [x] [[BT bakım ve paket yazılım destek ofisi|BT bakım ve paket yazılım destek ofisi]]
-- [x] [[Abonelikli yazılım ürünü işletmesi|Abonelikli yazılım ürünü işletmesi]]
+- [x] [[Kurumsal içerik ve blog ofisi|Kurumsal içerik ve blog ofisi]]
+- [x] [[Sosyal medya içerik ofisi|Sosyal medya içerik ofisi]]
+- [x] [[Performans ve reklam hesabı ajansı|Performans ve reklam hesabı ajansı]]
+- [x] [[Sabit fiyatlı yazılım proje ofisi|Sabit fiyatlı yazılım proje ofisi]]
+- [x] [[Zaman-malzeme yazılım ofisi|Zaman-malzeme yazılım ofisi]]
 
 ## Sınırlar ve doğrulanamayan
 - Sektör arşiv notundaki sınır ve doğrulanamayan maddeler geçerlidir (`08 Arşiv/eski-docs-sektorel-arastirma/ai-kaynak/15-teknoloji-medya-ajans.md`).
@@ -149,14 +151,16 @@ flowchart TB
 
 | # | Alt tür | Pazar | Ödeme | Rekabet | Kolaylık | Aciliyet | Öncelik |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | [[Özel yazılım proje ofisi]] | 4 | 4 | 3 | 4 | 5 | **4.0** |
-| 2 | [[Performans ve reklam hesabı ajansı]] | 4 | 5 | 2 | 3 | 5 | **3.8** |
-| 3 | [[Müşteri adına içerik ofisi]] | 4 | 3 | 3 | 4 | 4 | **3.6** |
-| 4 | [[BT bakım ve paket yazılım destek ofisi]] | 3 | 4 | 3 | 4 | 4 | **3.6** |
-| 5 | [[Abonelikli yazılım ürünü işletmesi]] | 3 | 4 | 2 | 3 | 4 | **3.2** |
-| 6 | [[Marka, tasarım ve görüntü stüdyosu]] | 3 | 3 | 3 | 4 | 3 | **3.2** |
-| 7 | [[Mecra planlama ve satın alma ofisi]] | 2 | 3 | 2 | 3 | 3 | **2.6** |
-| 8 | [[Kendi mecrasını işleten yayıncı]] | 2 | 3 | 2 | 3 | 3 | **2.6** |
+| 1 | [[Sosyal medya içerik ofisi]] | 4 | 3 | 3 | 4 | 4 | **3.6** |
+| 2 | [[Performans ve reklam hesabı ajansı]] | 4 | 4 | 2 | 3 | 5 | **3.6** |
+| 3 | [[Zaman-malzeme yazılım ofisi]] | 5 | 4 | 2 | 3 | 4 | **3.6** |
+| 4 | [[BT bakım ve paket yazılım destek ofisi]] | 3 | 4 | 3 | 4 | 3 | **3.4** |
+| 5 | [[Marka, tasarım ve görüntü stüdyosu]] | 4 | 3 | 3 | 4 | 3 | **3.4** |
+| 6 | [[Sabit fiyatlı yazılım proje ofisi]] | 4 | 4 | 2 | 3 | 4 | **3.4** |
+| 7 | [[Abonelikli yazılım ürünü işletmesi]] | 3 | 4 | 2 | 3 | 4 | **3.2** |
+| 8 | [[Kurumsal içerik ve blog ofisi]] | 3 | 3 | 3 | 4 | 3 | **3.2** |
+| 9 | [[Kendi mecrasını işleten yayıncı]] | 2 | 3 | 2 | 2 | 3 | **2.4** |
+| 10 | [[Mecra planlama ve satın alma ofisi]] | 2 | 3 | 2 | 2 | 3 | **2.4** |
 
 ## Yasal çerçeve
 | Konu | Kural | Yazılım etkisi | Kaynak |

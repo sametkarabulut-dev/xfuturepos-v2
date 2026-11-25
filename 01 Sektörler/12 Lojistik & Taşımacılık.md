@@ -11,7 +11,7 @@ is_modeli: sevkiyat
 - Günün döngüsü yükü kabul etmek, aracı ve sürücüyü bağlamak, taşıma belgesini çıkarmak ve navlunu kapatmaktır. C3, K1, K3, L1, L2, N1 ve N2 sahipleri sefer bilgisini taşıma başlayıncaya kadar U-ETDS’ye işler. Bakanlık bildirimin e-Devlet, web servisi ve UETDS uygulamasıyla yapılabildiğini duyurmuştur.
 - UTİKAD raporu ulaştırma ve depolamanın 2024 GSYH payını TÜİK’e dayanarak %8,2 verir. Bu, 1–50 çalışanlı firma sayısı değildir. Güncel yetki belgesi envanteri açık tablo olarak bulunamadı.
 - Karar: Uluslararası karayolu ayrı durur çünkü sefer fiilen sürer; ikinci bir lojistik işletmeciliği kopyası açılmaz.
-- Modül: sektör ortak 7; alt sektör 7; toplam 42; MVP 26.
+- Alt işletme: 9. Modül kartları `04 Modüller/`.
 - Ortak çekirdek (tüm sektörler) bu dosyada yoktur → `04 Modüller/` çekirdek araçlar.
 
 <!-- dallar:start -->
@@ -20,25 +20,27 @@ is_modeli: sevkiyat
 
 | Dal | Alt dal | Fonksiyon | Durum |
 |---|---|---|---|
-| [[Yurt içi karayolu yük taşımacılığı]] | 1 | 14 | açık |
-| [[Uluslararası karayolu yük taşımacılığı]] | 1 | 14 | açık |
-| [[Nakliyat ambarı]] | 1 | 14 | açık |
-| [[Şehir içi kurye ve dağıtım]] | 1 | 14 | açık |
-| [[Ev ve büro taşımacılığı]] | 1 | 14 | açık |
-| [[Taşıma organizatörlüğü ve acentelik]] | 1 | 14 | açık |
-| [[Depolama ve sipariş karşılama]] | 1 | 14 | açık |
+| [[Depolama ve sipariş karşılama]] | 1 | 41 | açık |
+| [[Ev ve büro taşımacılığı]] | 1 | 41 | açık |
+| [[Nakliyat ambarı]] | 1 | 42 | açık |
+| [[Taşıma organizatörlüğü ve acentelik]] | 1 | 41 | açık |
+| [[Uluslararası karayolu yük taşımacılığı]] | 1 | 41 | açık |
+| [[Yurt içi karayolu yük taşımacılığı]] | 2 | 84 | açık |
+| [[Şehir içi kurye ve dağıtım]] | 2 | 82 | açık |
 <!-- dallar:end -->
 
 ## Alt işletme türleri (onay listesi)
 > İşaretli = Adım 1 onay listesi.
 
-- [x] [[Yurt içi karayolu yük taşımacılığı|Yurt içi karayolu yük taşımacılığı]]
-- [x] [[Uluslararası karayolu yük taşımacılığı|Uluslararası karayolu yük taşımacılığı]]
-- [x] [[Nakliyat ambarı|Nakliyat ambarı]]
-- [x] [[Şehir içi kurye ve dağıtım|Şehir içi kurye ve dağıtım]]
-- [x] [[Ev ve büro taşımacılığı|Ev ve büro taşımacılığı]]
-- [x] [[Taşıma organizatörlüğü ve acentelik|Taşıma organizatörlüğü ve acentelik]]
 - [x] [[Depolama ve sipariş karşılama|Depolama ve sipariş karşılama]]
+- [x] [[Ev ve büro taşımacılığı|Ev ve büro taşımacılığı]]
+- [x] [[Nakliyat ambarı|Nakliyat ambarı]]
+- [x] [[Taşıma organizatörlüğü ve acentelik|Taşıma organizatörlüğü ve acentelik]]
+- [x] [[Uluslararası karayolu yük taşımacılığı|Uluslararası karayolu yük taşımacılığı]]
+- [x] [[Yurt içi frigorifik / özel şartlı taşıma|Yurt içi frigorifik / özel şartlı taşıma]]
+- [x] [[Yurt içi genel kamyon taşımacılığı|Yurt içi genel kamyon taşımacılığı]]
+- [x] [[Aynı gün kurye|Aynı gün kurye]]
+- [x] [[Çok duraklı dağıtım turu|Çok duraklı dağıtım turu]]
 
 ## Sınırlar ve doğrulanamayan
 - Sektör arşiv notundaki sınır ve doğrulanamayan maddeler geçerlidir (`08 Arşiv/eski-docs-sektorel-arastirma/ai-kaynak/12-lojistik-tasimacilik.md`).
@@ -145,13 +147,15 @@ flowchart TB
 
 | # | Alt tür | Pazar | Ödeme | Rekabet | Kolaylık | Aciliyet | Öncelik |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | [[Yurt içi karayolu yük taşımacılığı]] | 5 | 4 | 2 | 3 | 5 | **3.8** |
-| 2 | [[Şehir içi kurye ve dağıtım]] | 4 | 4 | 3 | 4 | 4 | **3.8** |
-| 3 | [[Nakliyat ambarı]] | 3 | 3 | 3 | 3 | 4 | **3.2** |
-| 4 | [[Depolama ve sipariş karşılama]] | 3 | 4 | 2 | 3 | 4 | **3.2** |
-| 5 | [[Ev ve büro taşımacılığı]] | 3 | 3 | 3 | 4 | 3 | **3.2** |
-| 6 | [[Taşıma organizatörlüğü ve acentelik]] | 3 | 3 | 2 | 3 | 3 | **2.8** |
-| 7 | [[Uluslararası karayolu yük taşımacılığı]] | 3 | 3 | 2 | 2 | 3 | **2.6** |
+| 1 | [[Ev ve büro taşımacılığı]] | 4 | 4 | 3 | 4 | 4 | **3.8** |
+| 2 | [[Yurt içi genel kamyon taşımacılığı]] | 5 | 4 | 2 | 3 | 5 | **3.8** |
+| 3 | [[Aynı gün kurye]] | 4 | 4 | 3 | 4 | 4 | **3.8** |
+| 4 | [[Çok duraklı dağıtım turu]] | 3 | 4 | 3 | 3 | 4 | **3.4** |
+| 5 | [[Depolama ve sipariş karşılama]] | 3 | 4 | 2 | 3 | 4 | **3.2** |
+| 6 | [[Nakliyat ambarı]] | 3 | 3 | 3 | 3 | 4 | **3.2** |
+| 7 | [[Yurt içi frigorifik / özel şartlı taşıma]] | 3 | 4 | 3 | 2 | 4 | **3.2** |
+| 8 | [[Taşıma organizatörlüğü ve acentelik]] | 2 | 3 | 3 | 3 | 3 | **2.8** |
+| 9 | [[Uluslararası karayolu yük taşımacılığı]] | 3 | 3 | 2 | 2 | 4 | **2.8** |
 
 ## Yasal çerçeve
 | Konu | Kural | Yazılım etkisi | Kaynak |

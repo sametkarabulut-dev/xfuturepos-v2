@@ -2,26 +2,26 @@
 tip: rakip
 durum: tamamlandi
 sektorler:
-  - "[[13 Üretim & İmalat]]"
+  - "[[10 İnşaat & Yapı]]"
 fiyat: "teklif"
-guclu: "ERP / üretim / e-belge"
-zayif: "Fiyat/şikayet derinliği bu turda taranmadı veya bulunamadı"
+guclu: "ERP / e-belge API"
+zayif: "Derin şikayet taraması sonraki tur"
 web: "https://www.mikro.com.tr"
 ---
 # Mikro
 
 ## Özet
-- ERP / üretim / e-belge
-- **Sektör:** [[13 Üretim & İmalat]]
+- ERP / e-belge API
+- **Sektör:** [[10 İnşaat & Yapı]]
 
 ## Fiyat
 - teklif
 
 ## Güçlü yönler
-- ERP / üretim / e-belge
+- ERP / e-belge API
 
 ## Zayıf yönler
-- Derin Şikayetvar/mağaza taraması bu notta tamamlanmadı → sonraki tur.
+- Bu turda Şikayetvar/mağaza derinliği tamamlanmadı.
 
 ## Kaynaklar
 - https://www.mikro.com.tr

@@ -1,6 +1,6 @@
 ---
 tip: isletme
-kod: "15-06-01"
+kod: "15-03-01"
 oneri_harf: C
 oncelik:
 gereksiz: false
@@ -95,7 +95,7 @@ parca_olmali: 0
 parca_iyi: 9
 parca_durum: tamamlandi
 ---
-# 15-06-01 · Kendi mecrasını işleten yayıncı
+# 15-03-01 · Kendi mecrasını işleten yayıncı
 
 > Sektör: [[15 Teknoloji Medya & Ajans]] · Öncelik: **2.4** / 5 · Öneri: **C**
 > Puanlar tahmindir: pazar 2 · ödeme 3 · rekabet boşluğu 2 · kolaylık 2 · aciliyet 3

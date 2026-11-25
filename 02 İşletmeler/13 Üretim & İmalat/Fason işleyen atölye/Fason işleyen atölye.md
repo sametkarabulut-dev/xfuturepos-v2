@@ -1,6 +1,6 @@
 ---
 tip: isletme
-kod: "13-03-01"
+kod: "13-01-01"
 oneri_harf: A
 oncelik:
 gereksiz: false
@@ -87,7 +87,7 @@ parca_olmali: 0
 parca_iyi: 4
 parca_durum: tamamlandi
 ---
-# 13-03-01 · Fason işleyen atölye
+# 13-01-01 · Fason işleyen atölye
 
 > Sektör: [[13 Üretim & İmalat]] · Öncelik: **3.6** / 5 · Öneri: **A**
 > Puanlar tahmindir: pazar 4 · ödeme 3 · rekabet boşluğu 3 · kolaylık 4 · aciliyet 4

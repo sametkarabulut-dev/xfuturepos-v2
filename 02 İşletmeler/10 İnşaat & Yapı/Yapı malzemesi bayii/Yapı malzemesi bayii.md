@@ -1,6 +1,6 @@
 ---
 tip: isletme
-kod: "10-05-01"
+kod: "10-06-01"
 oneri_harf: B
 oncelik:
 gereksiz: false
@@ -100,7 +100,7 @@ parca_olmali: 0
 parca_iyi: 12
 parca_durum: tamamlandi
 ---
-# 10-05-01 · Yapı malzemesi bayii
+# 10-06-01 · Yapı malzemesi bayii
 
 > Sektör: [[10 İnşaat & Yapı]] · Öncelik: **3.0** / 5 · Öneri: **B**
 > Puanlar tahmindir: pazar 3 · ödeme 4 · rekabet boşluğu 2 · kolaylık 3 · aciliyet 3

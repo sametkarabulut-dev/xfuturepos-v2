@@ -4,24 +4,24 @@ durum: tamamlandi
 sektorler:
   - "[[15 Teknoloji Medya & Ajans]]"
 fiyat: "doküman açık"
-guclu: "Reklam hesabı API (başvuru/onay)"
-zayif: "Fiyat/şikayet derinliği bu turda taranmadı veya bulunamadı"
+guclu: "Reklam API (başvuru/onay)"
+zayif: "Derin şikayet taraması sonraki tur"
 web: "https://developers.facebook.com"
 ---
 # Meta Ads
 
 ## Özet
-- Reklam hesabı API (başvuru/onay)
+- Reklam API (başvuru/onay)
 - **Sektör:** [[15 Teknoloji Medya & Ajans]]
 
 ## Fiyat
 - doküman açık
 
 ## Güçlü yönler
-- Reklam hesabı API (başvuru/onay)
+- Reklam API (başvuru/onay)
 
 ## Zayıf yönler
-- Derin Şikayetvar/mağaza taraması bu notta tamamlanmadı → sonraki tur.
+- Bu turda Şikayetvar/mağaza derinliği tamamlanmadı.
 
 ## Kaynaklar
 - https://developers.facebook.com

@@ -7,19 +7,17 @@ moduller: []
 # Yayın takvimi
 
 ## Tanım
-- 15 Teknoloji Medya & Ajans ortak ihtiyaç satırı; sıklık 2/8.
+- İşletmenin yayın takvimi ihtiyacı; sektör ortak ihtiyaç tablosundan.
 
 ## Bugün nasıl çözülüyor
-- Excel, WhatsApp, kurum portalı veya rakip paket (tahmin / sektör özeti).
+- Excel, WhatsApp, defter veya kurum portalı (tahmin / sektör özeti).
+- Dağınık dosya; hatırlatma kişiye bağlı.
 
 ## Etkisi (zaman / para / risk)
-- Operasyon dağınıklığı, tahsilat/uyum kaybı riski.
+- Zaman kaybı, kaçan tahsilat/uyum, çift kayıt.
 
 ## Çözen modüller
-- İlgili sektör araç matrisi satırlarına bak.
-
-## Sektörlere göre
-- **[[15 Teknoloji Medya & Ajans]]:** 2/8 işletme türünde.
+- İlgili sektör araç matrisi ve işletme Parçalar tablosu.
 
 ## Kullanan işletme türleri
 ```base

@@ -1,14 +1,14 @@
 ---
 tip: isletme
-kod: "13-01-01"
+kod: "13-04-01"
 oneri_harf: A
 oncelik:
 gereksiz: false
-oncelik_notu:
+oncelik_notu: ""
 sektor: "[[13 Üretim & İmalat]]"
 dal: "[[Dal – Siparişe göre kısa çevrim atölye]]"
 durum: tamamlandi
-olcek: ['mikro', 'kucuk-orta']
+olcek: [mikro, kucuk-orta]
 isletme_sayisi: "bulunamadı"
 sayi_turu: tahmin
 nace: "C"
@@ -87,34 +87,32 @@ parca_olmali: 0
 parca_iyi: 4
 parca_durum: tamamlandi
 ---
-# 13-01-01 · Siparişe göre kısa çevrim atölye
+# 13-04-01 · Sipariş atölyesi (tek seferlik iş)
 
 > Sektör: [[13 Üretim & İmalat]] · Öncelik: **4.0** / 5 · Öneri: **A**
 > Puanlar tahmindir: pazar 5 · ödeme 4 · rekabet boşluğu 3 · kolaylık 4 · aciliyet 4
 
 ## 1. Özet
-Müşterinin ölçüsüne göre saatler veya birkaç gün süren ayrı iş çıkaran atölye.
+Müşteri siparişiyle kısa çevrim; iş emri, reçete ve teslim.
 
 - **İşletme sayısı:** bulunamadı
 - **NACE:** C
 - **Sayı türü:** tahmin
 
 ## 2. Günlük iş akışı
-1. Teklif
-2. eksik ölçü
-3. iş emri
-4. tezgâh sırası
-5. fire
-6. sevk.
+1. Sipariş
+2. İş emri
+3. Üretim
+4. Fire
+5. Teslim / fatura
 
 ```mermaid
 flowchart LR
-  S1["Teklif"] --> S2
-  S2["eksik ölçü"] --> S3
-  S3["iş emri"] --> S4
-  S4["tezgâh sırası"] --> S5
-  S5["fire"] --> S6
-  S6["sevk."]
+  S1["Sipariş"] --> S2
+  S2["İş emri"] --> S3
+  S3["Üretim"] --> S4
+  S4["Fire"] --> S5
+  S5["Teslim / fatura"]
 ```
 
 ## 3. İhtiyaçlar ve sorunlar
@@ -183,13 +181,12 @@ _Yok._
 | [[Sipariş 55 miktarı 80 yap]] | [[Revize Sipariş]] | Sipariş 55 miktarı 80 yap — Üretimde miktar/ölçü değişikliği onayı |
 
 ## 5. Teknik detay
-- **Entegrasyonlar:** Modül kartlarındaki entegrasyon notlarına bak; açık API yoksa panel kaydı + kullanıcı girişi.
-- **Ana ekranlar:** İş listesi / kart · Takvim veya pipeline · Tahsilat · Rapor
-- **Veri yapısı:** `Cari → İşKaydı → Belge/Tahsilat → Hatırlatma (onay kuyruğu)`
+- **Entegrasyonlar:** Modül kartlarına bak; açık API yoksa panel kaydı.
+- **Ana ekranlar:** İş listesi · Kart · Tahsilat · Rapor
+- **Veri yapısı:** `Cari → İşKaydı → Belge/Tahsilat → Hatırlatma (onay)`
 
 ## 6. Rakipler
 - [[Mikro]]
 
 ## 7. Kaynaklar
 - [[13 Üretim & İmalat – Kaynaklar]]
-- Araştırma arşivi: `08 Arşiv/eski-docs-sektorel-arastirma/`

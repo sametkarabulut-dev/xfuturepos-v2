@@ -1,6 +1,6 @@
 ---
 tip: isletme
-kod: "12-05-01"
+kod: "12-02-01"
 oneri_harf: A
 oncelik:
 gereksiz: false
@@ -96,7 +96,7 @@ parca_olmali: 6
 parca_iyi: 10
 parca_durum: tamamlandi
 ---
-# 12-05-01 · Ev ve büro taşımacılığı
+# 12-02-01 · Ev ve büro taşımacılığı
 
 > Sektör: [[12 Lojistik & Taşımacılık]] · Öncelik: **3.8** / 5 · Öneri: **A**
 > Puanlar tahmindir: pazar 4 · ödeme 4 · rekabet boşluğu 3 · kolaylık 4 · aciliyet 4

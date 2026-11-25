@@ -1,18 +1,18 @@
 ---
 tip: isletme
-kod: "15-01-01"
-oneri_harf: A
+kod: "15-08-01"
+oneri_harf: B
 oncelik:
 gereksiz: false
-oncelik_notu:
+oncelik_notu: ""
 sektor: "[[15 Teknoloji Medya & Ajans]]"
 dal: "[[Dal – Özel yazılım proje ofisi]]"
 durum: tamamlandi
-olcek: ['tek-kisilik', 'mikro', 'kucuk-orta']
+olcek: [mikro, kucuk-orta]
 isletme_sayisi: "bulunamadı"
 sayi_turu: tahmin
-nace: 62.01
-pazar_puani: 5
+nace: "62.01"
+pazar_puani: 4
 odeme_puani: 4
 rekabet_puani: 2
 kolaylik_puani: 3
@@ -73,12 +73,6 @@ fonksiyonlar:
   - "[[Sözleşme Takibi]]"
   - "[[30 gün içinde biten retainer'ları göster]]"
   - "[[Sözleşme yenileme taslağı hazırla]]"
-  - "[[Kaynak Planı]]"
-  - "[[Kim aşırı yüklü?]]"
-  - "[[Sprint için boş kapasiteyi bul]]"
-  - "[[Teklif Paketi]]"
-  - "[[Benzer tekliften taslak üret]]"
-  - "[[Kapsam maddelerini numaralandır]]"
   - "[[Sprint Tahtası]]"
   - "[[Engelli işleri listele]]"
   - "[[Sprint bitiş özeti yaz]]"
@@ -88,6 +82,12 @@ fonksiyonlar:
   - "[[Teknik Kapsam]]"
   - "[[Bu talep teklifte var mı?]]"
   - "[[Kapsam dışı PR'ları işaretle]]"
+  - "[[Kaynak Planı]]"
+  - "[[Kim aşırı yüklü?]]"
+  - "[[Sprint için boş kapasiteyi bul]]"
+  - "[[Teklif Paketi]]"
+  - "[[Benzer tekliften taslak üret]]"
+  - "[[Kapsam maddelerini numaralandır]]"
   - "[[Ortam Envanteri]]"
   - "[[Müşteri ortam kartını özetle]]"
   - "[[Eksik erişimleri listele]]"
@@ -99,30 +99,30 @@ parca_olmali: 0
 parca_iyi: 12
 parca_durum: tamamlandi
 ---
-# 15-01-01 · Özel yazılım proje ofisi
+# 15-08-01 · Sabit fiyatlı yazılım proje ofisi
 
-> Sektör: [[15 Teknoloji Medya & Ajans]] · Öncelik: **3.6** / 5 · Öneri: **A**
-> Puanlar tahmindir: pazar 5 · ödeme 4 · rekabet boşluğu 2 · kolaylık 3 · aciliyet 4
+> Sektör: [[15 Teknoloji Medya & Ajans]] · Öncelik: **3.4** / 5 · Öneri: **B**
+> Puanlar tahmindir: pazar 4 · ödeme 4 · rekabet boşluğu 2 · kolaylık 3 · aciliyet 4
 
 ## 1. Özet
-Müşteri sözleşmesiyle yazılım yazan veya mevcut uygulamayı uyarlayan ekip. Kendi ürününü abonelikle yayımlamaz.
+Sabit kapsamlı proje; kilometre taşı ve hakediş.
 
 - **İşletme sayısı:** bulunamadı
 - **NACE:** 62.01
 - **Sayı türü:** tahmin
 
 ## 2. Günlük iş akışı
-1. Teklif kapsamı
-2. sprint
-3. kabul
-4. saat kaydı.
+1. Sözleşme
+2. Kilometre taşı
+3. Teslim
+4. Hakediş
 
 ```mermaid
 flowchart LR
-  S1["Teklif kapsamı"] --> S2
-  S2["sprint"] --> S3
-  S3["kabul"] --> S4
-  S4["saat kaydı."]
+  S1["Sözleşme"] --> S2
+  S2["Kilometre taşı"] --> S3
+  S3["Teslim"] --> S4
+  S4["Hakediş"]
 ```
 
 ## 3. İhtiyaçlar ve sorunlar
@@ -199,9 +199,9 @@ _Yok._
 | [[Açık PR'ları işlere eşle]] | [[Depo Bağlantısı]] | Açık PR'ları işlere eşle — Commit/PR kaydını iş kartına bağlama. |
 
 ## 5. Teknik detay
-- **Entegrasyonlar:** Modül kartlarındaki entegrasyon notlarına bak; açık API yoksa panel kaydı + kullanıcı girişi.
-- **Ana ekranlar:** İş listesi / kart · Takvim veya pipeline · Tahsilat · Rapor
-- **Veri yapısı:** `Cari → İşKaydı → Belge/Tahsilat → Hatırlatma (onay kuyruğu)`
+- **Entegrasyonlar:** Modül kartlarına bak; açık API yoksa panel kaydı.
+- **Ana ekranlar:** İş listesi · Kart · Tahsilat · Rapor
+- **Veri yapısı:** `Cari → İşKaydı → Belge/Tahsilat → Hatırlatma (onay)`
 
 ## 6. Rakipler
 - [[Meta Ads]]
@@ -210,4 +210,3 @@ _Yok._
 
 ## 7. Kaynaklar
 - [[15 Teknoloji Medya & Ajans – Kaynaklar]]
-- Araştırma arşivi: `08 Arşiv/eski-docs-sektorel-arastirma/`

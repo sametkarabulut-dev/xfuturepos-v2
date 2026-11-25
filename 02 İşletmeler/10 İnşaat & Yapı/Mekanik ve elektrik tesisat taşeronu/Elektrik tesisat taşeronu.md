@@ -4,14 +4,14 @@ kod: "10-03-01"
 oneri_harf: B
 oncelik:
 gereksiz: false
-oncelik_notu:
+oncelik_notu: ""
 sektor: "[[10 İnşaat & Yapı]]"
 dal: "[[Dal – Mekanik ve elektrik tesisat taşeronu]]"
 durum: tamamlandi
-olcek: ['mikro', 'kucuk-orta']
+olcek: [mikro, kucuk-orta]
 isletme_sayisi: "bulunamadı"
 sayi_turu: tahmin
-nace: 43.2
+nace: "43.21"
 pazar_puani: 3
 odeme_puani: 3
 rekabet_puani: 3
@@ -74,12 +74,6 @@ fonksiyonlar:
   - "[[Malzeme Takibi]]"
   - "[[Bugün gelen demiri kaydet]]"
   - "[[Beton sarfiyatı metrajı aşıyor mu?]]"
-  - "[[İSG Kontrol]]"
-  - "[[Süresi dolan İSG belgelerini listele]]"
-  - "[[Ramak kala aç]]"
-  - "[[Taşeron Sözleşme]]"
-  - "[[Yeni sıva taşeron sözleşmesi oluştur]]"
-  - "[[Ek iş protokollerini göster]]"
   - "[[Keşif Metraj]]"
   - "[[Kollektör hattı metrajını güncelle]]"
   - "[[Elektrik poz farkını göster]]"
@@ -89,6 +83,12 @@ fonksiyonlar:
   - "[[Malzeme Poz]]"
   - "[[Yangın pompalarını teslim al]]"
   - "[[Eksik vana listesi]]"
+  - "[[İSG Kontrol]]"
+  - "[[Süresi dolan İSG belgelerini listele]]"
+  - "[[Ramak kala aç]]"
+  - "[[Taşeron Sözleşme]]"
+  - "[[Yeni sıva taşeron sözleşmesi oluştur]]"
+  - "[[Ek iş protokollerini göster]]"
   - "[[As-Built Proje]]"
   - "[[As-built’i müellife gönder]]"
   - "[[Bekleyen as-built’ler]]"
@@ -100,32 +100,30 @@ parca_olmali: 0
 parca_iyi: 12
 parca_durum: tamamlandi
 ---
-# 10-03-01 · Mekanik ve elektrik tesisat taşeronu
+# 10-03-01 · Elektrik tesisat taşeronu
 
 > Sektör: [[10 İnşaat & Yapı]] · Öncelik: **3.2** / 5 · Öneri: **B**
 > Puanlar tahmindir: pazar 3 · ödeme 3 · rekabet boşluğu 3 · kolaylık 3 · aciliyet 4
 
 ## 1. Özet
-Bina içi elektrik, sıhhi tesisat, ısıtma-iklimlendirme ve asansör montajını proje ve malzeme ile yürüten firma.
+Şantiye elektrik tesisatı; malzeme, montaj ve test kayıtları.
 
 - **İşletme sayısı:** bulunamadı
-- **NACE:** 43.2
+- **NACE:** 43.21
 - **Sayı türü:** tahmin
 
 ## 2. Günlük iş akışı
-1. Projeden malzeme çıkarma
-2. tedarik
-3. montaj
-4. test
-5. hakediş.
+1. Keşif
+2. Malzeme
+3. Montaj
+4. Test / hakediş
 
 ```mermaid
 flowchart LR
-  S1["Projeden malzeme çıkarma"] --> S2
-  S2["tedarik"] --> S3
-  S3["montaj"] --> S4
-  S4["test"] --> S5
-  S5["hakediş."]
+  S1["Keşif"] --> S2
+  S2["Malzeme"] --> S3
+  S3["Montaj"] --> S4
+  S4["Test / hakediş"]
 ```
 
 ## 3. İhtiyaçlar ve sorunlar
@@ -202,9 +200,9 @@ _Yok._
 | [[Cevapsız RFI’ları göster]] | [[Revizyon Talep]] | Cevapsız RFI’ları göster — Sahadan RFI. |
 
 ## 5. Teknik detay
-- **Entegrasyonlar:** Modül kartlarındaki entegrasyon notlarına bak; açık API yoksa panel kaydı + kullanıcı girişi.
-- **Ana ekranlar:** İş listesi / kart · Takvim veya pipeline · Tahsilat · Rapor
-- **Veri yapısı:** `Cari → İşKaydı → Belge/Tahsilat → Hatırlatma (onay kuyruğu)`
+- **Entegrasyonlar:** Modül kartlarına bak; açık API yoksa panel kaydı.
+- **Ana ekranlar:** İş listesi · Kart · Tahsilat · Rapor
+- **Veri yapısı:** `Cari → İşKaydı → Belge/Tahsilat → Hatırlatma (onay)`
 
 ## 6. Rakipler
 - [[SantiyePro]]
@@ -214,4 +212,3 @@ _Yok._
 
 ## 7. Kaynaklar
 - [[10 İnşaat & Yapı – Kaynaklar]]
-- Araştırma arşivi: `08 Arşiv/eski-docs-sektorel-arastirma/`

@@ -1,6 +1,6 @@
 ---
 tip: isletme
-kod: "16-03-01"
+kod: "16-04-01"
 oneri_harf: B
 oncelik:
 gereksiz: false
@@ -82,7 +82,7 @@ parca_olmali: 0
 parca_iyi: 0
 parca_durum: tamamlandi
 ---
-# 16-03-01 · Kurumsal etkinlik ve kongre ajansı
+# 16-04-01 · Kurumsal etkinlik ve kongre ajansı
 
 > Sektör: [[16 Etkinlik & Organizasyon]] · Öncelik: **3.2** / 5 · Öneri: **B**
 > Puanlar tahmindir: pazar 3 · ödeme 4 · rekabet boşluğu 3 · kolaylık 3 · aciliyet 3

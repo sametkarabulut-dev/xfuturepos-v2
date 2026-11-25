@@ -5,7 +5,7 @@ sektorler:
   - "[[09 Emlak & Gayrimenkul]]"
 fiyat: "bulunamadı"
 guclu: "Site aidat yönetimi"
-zayif: "Fiyat/şikayet derinliği bu turda taranmadı veya bulunamadı"
+zayif: "Derin şikayet taraması sonraki tur"
 web: ""
 ---
 # selfSite
@@ -21,7 +21,7 @@ web: ""
 - Site aidat yönetimi
 
 ## Zayıf yönler
-- Derin Şikayetvar/mağaza taraması bu notta tamamlanmadı → sonraki tur.
+- Bu turda Şikayetvar/mağaza derinliği tamamlanmadı.
 
 ## Kaynaklar
 - bulunamadı

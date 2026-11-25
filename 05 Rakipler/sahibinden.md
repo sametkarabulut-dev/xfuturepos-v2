@@ -5,7 +5,7 @@ sektorler:
   - "[[09 Emlak & Gayrimenkul]]"
 fiyat: "sözleşmeli API"
 guclu: "İlan portalı; kurumsal aktarım sözleşmeli"
-zayif: "Fiyat/şikayet derinliği bu turda taranmadı veya bulunamadı"
+zayif: "Derin şikayet taraması sonraki tur"
 web: "https://www.sahibinden.com"
 ---
 # sahibinden
@@ -21,7 +21,7 @@ web: "https://www.sahibinden.com"
 - İlan portalı; kurumsal aktarım sözleşmeli
 
 ## Zayıf yönler
-- Derin Şikayetvar/mağaza taraması bu notta tamamlanmadı → sonraki tur.
+- Bu turda Şikayetvar/mağaza derinliği tamamlanmadı.
 
 ## Kaynaklar
 - https://www.sahibinden.com

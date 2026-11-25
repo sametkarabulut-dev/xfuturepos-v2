@@ -1,25 +1,23 @@
 ---
 tip: ihtiyac
 durum: tamamlandi
-kategori: yasal
+kategori: operasyon
 moduller: []
 ---
-# Ruhsat / evrak paketi
+# Ruhsat - evrak paketi
 
 ## Tanım
-- 10 İnşaat & Yapı ortak ihtiyaç satırı; sıklık 4/7.
+- İşletmenin ruhsat - evrak paketi ihtiyacı; sektör ortak ihtiyaç tablosundan.
 
 ## Bugün nasıl çözülüyor
-- Excel, WhatsApp, kurum portalı veya rakip paket (tahmin / sektör özeti).
+- Excel, WhatsApp, defter veya kurum portalı (tahmin / sektör özeti).
+- Dağınık dosya; hatırlatma kişiye bağlı.
 
 ## Etkisi (zaman / para / risk)
-- Operasyon dağınıklığı, tahsilat/uyum kaybı riski.
+- Zaman kaybı, kaçan tahsilat/uyum, çift kayıt.
 
 ## Çözen modüller
-- İlgili sektör araç matrisi satırlarına bak.
-
-## Sektörlere göre
-- **[[10 İnşaat & Yapı]]:** 4/7 işletme türünde.
+- İlgili sektör araç matrisi ve işletme Parçalar tablosu.
 
 ## Kullanan işletme türleri
 ```base

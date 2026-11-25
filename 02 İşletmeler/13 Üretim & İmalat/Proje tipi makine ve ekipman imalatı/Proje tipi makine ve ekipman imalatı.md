@@ -1,6 +1,6 @@
 ---
 tip: isletme
-kod: "13-04-01"
+kod: "13-03-01"
 oneri_harf: C
 oncelik:
 gereksiz: false
@@ -86,7 +86,7 @@ parca_olmali: 0
 parca_iyi: 4
 parca_durum: tamamlandi
 ---
-# 13-04-01 · Proje tipi makine ve ekipman imalatı
+# 13-03-01 · Proje tipi makine ve ekipman imalatı
 
 > Sektör: [[13 Üretim & İmalat]] · Öncelik: **2.6** / 5 · Öneri: **C**
 > Puanlar tahmindir: pazar 3 · ödeme 3 · rekabet boşluğu 2 · kolaylık 2 · aciliyet 3

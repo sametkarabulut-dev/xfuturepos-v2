@@ -4,10 +4,10 @@
       "type": "text",
       "id": "n1",
       "x": 0,
-      "y": -260,
-      "width": 480,
-      "height": 140,
-      "text": "# Performans ve reklam hesabı ajansı\n**Sektör → Dal → Alt dal → Fonksiyon**\n[[15 Teknoloji Medya & Ajans]]"
+      "y": -180,
+      "width": 460,
+      "height": 110,
+      "text": "# Performans ve reklam hesabı ajansı\n[[15 Teknoloji Medya & Ajans]]"
     },
     {
       "type": "file",
@@ -15,8 +15,8 @@
       "file": "01 Sektörler/15 Teknoloji Medya & Ajans.md",
       "x": 0,
       "y": 0,
-      "width": 420,
-      "height": 120,
+      "width": 400,
+      "height": 100,
       "color": "6"
     },
     {
@@ -24,29 +24,20 @@
       "id": "n3",
       "file": "02 İşletmeler/15 Teknoloji Medya & Ajans/Performans ve reklam hesabı ajansı/Dal – Performans ve reklam hesabı ajansı.md",
       "x": 0,
-      "y": 200,
-      "width": 420,
-      "height": 140,
+      "y": 150,
+      "width": 400,
+      "height": 110,
       "color": "5"
     },
     {
       "type": "file",
       "id": "n4",
       "file": "02 İşletmeler/15 Teknoloji Medya & Ajans/Performans ve reklam hesabı ajansı/Performans ve reklam hesabı ajansı.md",
-      "x": 560,
-      "y": 180,
-      "width": 420,
-      "height": 160,
+      "x": 520,
+      "y": 80,
+      "width": 400,
+      "height": 95,
       "color": "4"
-    },
-    {
-      "type": "text",
-      "id": "n5",
-      "x": 1080,
-      "y": 0,
-      "width": 520,
-      "height": 520,
-      "text": "### Performans ve reklam hesabı ajansı\n19 modül · 10 fonksiyon\n\n**Modüller**\n- [[Muhasebe ve Gelir-Gider]]\n- [[e-Fatura ve e-Arşiv]]\n- [[CRM]]\n- [[Personel ve Vardiya]]\n- [[Raporlar]]\n- [[AI Asistan]]\n- [[Ayarlar]]\n- [[Proje Kapsamı]]\n- [[Saat Kullanımı]]\n- [[Brief Onayı]]\n- [[Teslim Takvimi]]\n- [[Sözleşme Takibi]]\n\n**Fonksiyon örnekleri**\n- Erişimi eksik hesapları göster\n- Müşteri Z hesaplarını listele\n- Tavana yaklaşan hesapları göster\n- Dün tavanı aşanları listele\n- Müşteri A için aylık rapor taslağı\n- Hesaplar arası harcamayı karşılaştır\n- Duraklayan kampanyaları listele\n- En pahalı kampanyayı bul"
     }
   ],
   "edges": [
@@ -63,14 +54,6 @@
       "fromSide": "right",
       "toNode": "n4",
       "toSide": "left"
-    },
-    {
-      "id": "e3",
-      "fromNode": "n4",
-      "fromSide": "right",
-      "toNode": "n5",
-      "toSide": "left",
-      "label": "kullanır"
     }
   ]
 }

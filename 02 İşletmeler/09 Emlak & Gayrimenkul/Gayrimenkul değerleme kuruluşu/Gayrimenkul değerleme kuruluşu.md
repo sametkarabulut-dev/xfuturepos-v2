@@ -1,6 +1,6 @@
 ---
 tip: isletme
-kod: "09-04-01"
+kod: "09-02-01"
 oneri_harf: C
 oncelik:
 gereksiz: false
@@ -103,7 +103,7 @@ parca_olmali: 3
 parca_iyi: 12
 parca_durum: tamamlandi
 ---
-# 09-04-01 · Gayrimenkul değerleme kuruluşu
+# 09-02-01 · Gayrimenkul değerleme kuruluşu
 
 > Sektör: [[09 Emlak & Gayrimenkul]] · Öncelik: **2.4** / 5 · Öneri: **C**
 > Puanlar tahmindir: pazar 2 · ödeme 3 · rekabet boşluğu 2 · kolaylık 2 · aciliyet 3

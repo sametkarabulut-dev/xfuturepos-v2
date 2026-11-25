@@ -5,7 +5,7 @@ sektorler:
   - "[[10 İnşaat & Yapı]]"
 fiyat: "bulunamadı"
 guclu: "Şantiye / hakediş"
-zayif: "Fiyat/şikayet derinliği bu turda taranmadı veya bulunamadı"
+zayif: "Derin şikayet taraması sonraki tur"
 web: ""
 ---
 # SantiyePro
@@ -21,7 +21,7 @@ web: ""
 - Şantiye / hakediş
 
 ## Zayıf yönler
-- Derin Şikayetvar/mağaza taraması bu notta tamamlanmadı → sonraki tur.
+- Bu turda Şikayetvar/mağaza derinliği tamamlanmadı.
 
 ## Kaynaklar
 - bulunamadı

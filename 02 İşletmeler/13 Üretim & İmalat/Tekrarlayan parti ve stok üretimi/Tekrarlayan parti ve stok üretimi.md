@@ -1,6 +1,6 @@
 ---
 tip: isletme
-kod: "13-02-01"
+kod: "13-05-01"
 oneri_harf: B
 oncelik:
 gereksiz: false
@@ -87,7 +87,7 @@ parca_olmali: 0
 parca_iyi: 4
 parca_durum: tamamlandi
 ---
-# 13-02-01 · Tekrarlayan parti ve stok üretimi
+# 13-05-01 · Tekrarlayan parti ve stok üretimi
 
 > Sektör: [[13 Üretim & İmalat]] · Öncelik: **3.4** / 5 · Öneri: **B**
 > Puanlar tahmindir: pazar 4 · ödeme 4 · rekabet boşluğu 2 · kolaylık 3 · aciliyet 4

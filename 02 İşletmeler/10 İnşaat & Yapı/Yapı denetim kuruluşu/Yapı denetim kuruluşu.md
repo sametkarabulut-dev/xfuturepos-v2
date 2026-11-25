@@ -1,6 +1,6 @@
 ---
 tip: isletme
-kod: "10-07-01"
+kod: "10-05-01"
 oneri_harf: C
 oncelik:
 gereksiz: false
@@ -100,7 +100,7 @@ parca_olmali: 0
 parca_iyi: 12
 parca_durum: tamamlandi
 ---
-# 10-07-01 · Yapı denetim kuruluşu
+# 10-05-01 · Yapı denetim kuruluşu
 
 > Sektör: [[10 İnşaat & Yapı]] · Öncelik: **2.4** / 5 · Öneri: **C**
 > Puanlar tahmindir: pazar 2 · ödeme 3 · rekabet boşluğu 2 · kolaylık 2 · aciliyet 3

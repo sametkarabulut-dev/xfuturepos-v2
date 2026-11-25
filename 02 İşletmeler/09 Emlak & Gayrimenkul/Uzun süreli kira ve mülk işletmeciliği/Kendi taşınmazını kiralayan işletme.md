@@ -1,21 +1,22 @@
 ---
 tip: isletme
-kod: "09-05-01"
-oneri_harf: B
+kod: "09-05-02"
+oneri_harf: A
 oncelik:
 gereksiz: false
-oncelik_notu:
+oncelik_notu: ""
 sektor: "[[09 Emlak & Gayrimenkul]]"
-dal: "[[Dal – Turizm amaçlı kısa süreli konut işletmeciliği]]"
+dal: "[[Dal – Uzun süreli kira ve mülk işletmeciliği]]"
 durum: tamamlandi
-olcek: ['tek-kisilik', 'mikro']
-isletme_sayisi: "bulunamadı"
-sayi_turu: tahmin
-nace: 55.20
-pazar_puani: 2
+olcek: [mikro, kucuk-orta]
+isletme_sayisi: "İTO 68.20.02: 5.013 (İstanbul oda; TR geneli yok)"
+isletme_sayisi_n: 5013
+sayi_turu: kaynakli
+nace: "68.20"
+pazar_puani: 3
 odeme_puani: 4
 rekabet_puani: 3
-kolaylik_puani: 3
+kolaylik_puani: 4
 aciliyet_puani: 4
 ihtiyaclar:
   - "[[Yetki belgesi ve sorumlu danışman takibi]]"
@@ -41,12 +42,11 @@ moduller:
   - "[[Sözleşme Taslağı]]"
   - "[[Belge Kasası]]"
   - "[[Komisyon Hesabı]]"
-  - "[[Rezervasyon Takvim]]"
-  - "[[İzin Belgesi]]"
-  - "[[Misafir Checkin]]"
-  - "[[Temizlik Planı]]"
-  - "[[Kanal Yönetimi]]"
-  - "[[Dinamik Fiyat]]"
+  - "[[Kira Dosyası]]"
+  - "[[Kira Tahsilat]]"
+  - "[[Bakım İş Emri]]"
+  - "[[Tahliye Takvimi]]"
+  - "[[Depozito Defteri]]"
 rakipler:
   - "[[RE-OS]]"
   - "[[selfSite]]"
@@ -74,6 +74,15 @@ fonksiyonlar:
   - "[[Yetki Takibi]]"
   - "[[Yetki belgesi vadesi yaklaşanları göster]]"
   - "[[Seviye 5 sorumlu listesi]]"
+  - "[[Kira Dosyası]]"
+  - "[[Bitimine 60 gün kalan kiraları listele]]"
+  - "[[Bu sözleşmenin artış maddesini özetle]]"
+  - "[[Kira Tahsilat]]"
+  - "[[Bu ay ödenmeyen kiraları getir]]"
+  - "[[Gecikme tutarını hesapla]]"
+  - "[[Bakım İş Emri]]"
+  - "[[Açık arızaları önceliklendir]]"
+  - "[[Bu ay bakım maliyetini özetle]]"
   - "[[Sözleşme Taslağı]]"
   - "[[Satış yetki sözleşmesi taslağı üret]]"
   - "[[Kira sözleşmesi madde özetini çıkar]]"
@@ -83,55 +92,43 @@ fonksiyonlar:
   - "[[Komisyon Hesabı]]"
   - "[[Bu satışta komisyon tutarını hesapla]]"
   - "[[Danışman payını göster]]"
-  - "[[Rezervasyon Takvim]]"
-  - "[[Bu hafta doluluk göster]]"
-  - "[[Çakışan rezervasyonları bul]]"
-  - "[[İzin Belgesi]]"
-  - "[[İzin belgesi olmayan üniteleri listele]]"
-  - "[[Denetim hatırlatmalarını göster]]"
-  - "[[Misafir Checkin]]"
-  - "[[Bugün check-in listesini getir]]"
-  - "[[Eksik kimlik kaydı olanları göster]]"
-  - "[[Temizlik Planı]]"
-  - "[[Bugünkü temizlik turunu planla]]"
-  - "[[Turnover gecikenleri göster]]"
-  - "[[Kanal Yönetimi]]"
-  - "[[Kanallardaki fiyat farklarını göster]]"
-  - "[[Overbooking riskini tara]]"
-  - "[[Dinamik Fiyat]]"
-  - "[[Yarın için fiyat öner]]"
-  - "[[Düşük doluluk günlerini işaretle]]"
+  - "[[Tahliye Takvimi]]"
+  - "[[Tahliye tarihi yaklaşanları göster]]"
+  - "[[TBK 352 sürelerini kontrol et]]"
+  - "[[Depozito Defteri]]"
+  - "[[İade bekleyen depozitoları listele]]"
+  - "[[Mahsup kalemlerini özetle]]"
 parca_sart: 28
 parca_olmali: 3
-parca_iyi: 15
+parca_iyi: 12
 parca_durum: tamamlandi
 ---
-# 09-05-01 · Turizm amaçlı kısa süreli konut işletmeciliği
+# 09-05-02 · Kendi taşınmazını kiralayan işletme
 
-> Sektör: [[09 Emlak & Gayrimenkul]] · Öncelik: **3.2** / 5 · Öneri: **B**
-> Puanlar tahmindir: pazar 2 · ödeme 4 · rekabet boşluğu 3 · kolaylık 3 · aciliyet 4
+> Sektör: [[09 Emlak & Gayrimenkul]] · Öncelik: **3.6** / 5 · Öneri: **A**
+> Puanlar tahmindir: pazar 3 · ödeme 4 · rekabet boşluğu 3 · kolaylık 4 · aciliyet 4
 
 ## 1. Özet
-İzin belgeli konutu yüz güne kadar kiraya veren malik işletme veya yüksek nitelikli konutta yönetim işletmesi.
+Malik, kendi konut veya çatılı işyerini uzun süreli kiraya verir; tahsilat, sözleşme ve bakım kendi hesabınadır.
 
-- **İşletme sayısı:** bulunamadı
-- **NACE:** 55.20
-- **Sayı türü:** tahmin
+- **İşletme sayısı:** İTO 68.20.02: 5.013 (İstanbul oda; TR geneli yok)
+- **NACE:** 68.20
+- **Sayı türü:** kaynakli
 
 ## 2. Günlük iş akışı
-1. İzin belgesi
-2. plaket
-3. doluluk
-4. giriş-çıkış
-5. temizlik sırası.
+1. İlan veya mevcut kiracı
+2. Sözleşme / artış
+3. Tahsilat
+4. Bakım
+5. Dönem hesabı
 
 ```mermaid
 flowchart LR
-  S1["İzin belgesi"] --> S2
-  S2["plaket"] --> S3
-  S3["doluluk"] --> S4
-  S4["giriş-çıkış"] --> S5
-  S5["temizlik sırası."]
+  S1["İlan veya mevcut kiracı"] --> S2
+  S2["Sözleşme / artış"] --> S3
+  S3["Tahsilat"] --> S4
+  S4["Bakım"] --> S5
+  S5["Dönem hesabı"]
 ```
 
 ## 3. İhtiyaçlar ve sorunlar
@@ -148,7 +145,7 @@ flowchart LR
 
 ## 4. Parçalar
 
-46 parça · 28 şart · 3 olmalı · 15 iyi olur
+43 parça · 28 şart · 3 olmalı · 12 iyi olur
 
 ### Şart (28)
 
@@ -173,15 +170,15 @@ flowchart LR
 | [[Yetki Takibi]] | [[Yetki Takibi]] | İşletme yetki belgesi, sorumlu emlak danışmanı ve belge vade takibi (TTBS). |
 | [[Yetki belgesi vadesi yaklaşanları göster]] | [[Yetki Takibi]] | Yetki belgesi vadesi yaklaşanları göster — İşletme yetki belgesi, sorumlu emlak danışmanı ve belge vade takibi (TTBS). |
 | [[Seviye 5 sorumlu listesi]] | [[Yetki Takibi]] | Seviye 5 sorumlu listesi — İşletme yetki belgesi, sorumlu emlak danışmanı ve belge vade takibi (TTBS). |
-| [[Rezervasyon Takvim]] | [[Rezervasyon Takvim]] | Kısa süreli konaklama takvimi, çakışma ve kapalı gün yönetimi. |
-| [[Bu hafta doluluk göster]] | [[Rezervasyon Takvim]] | Bu hafta doluluk göster — Kısa süreli konaklama takvimi, çakışma ve kapalı gün yönetimi. |
-| [[Çakışan rezervasyonları bul]] | [[Rezervasyon Takvim]] | Çakışan rezervasyonları bul — Kısa süreli konaklama takvimi, çakışma ve kapalı gün yönetimi. |
-| [[İzin Belgesi]] | [[İzin Belgesi]] | e-Devlet izin belgesi numarası, yenileme ve iptal risk takibi. |
-| [[İzin belgesi olmayan üniteleri listele]] | [[İzin Belgesi]] | İzin belgesi olmayan üniteleri listele — e-Devlet izin belgesi numarası, yenileme ve iptal risk takibi. |
-| [[Denetim hatırlatmalarını göster]] | [[İzin Belgesi]] | Denetim hatırlatmalarını göster — e-Devlet izin belgesi numarası, yenileme ve iptal risk takibi. |
-| [[Misafir Checkin]] | [[Misafir Checkin]] | Kimlik/pasaport kaydı, giriş-çıkış ve ev kuralları onayı. |
-| [[Bugün check-in listesini getir]] | [[Misafir Checkin]] | Bugün check-in listesini getir — Kimlik/pasaport kaydı, giriş-çıkış ve ev kuralları onayı. |
-| [[Eksik kimlik kaydı olanları göster]] | [[Misafir Checkin]] | Eksik kimlik kaydı olanları göster — Kimlik/pasaport kaydı, giriş-çıkış ve ev kuralları onayı. |
+| [[Kira Dosyası]] | [[Kira Dosyası]] | Kira sözleşmesi, süre, artış ve eklerin dosya bazlı yönetimi. |
+| [[Bitimine 60 gün kalan kiraları listele]] | [[Kira Dosyası]] | Bitimine 60 gün kalan kiraları listele — Kira sözleşmesi, süre, artış ve eklerin dosya bazlı yönetimi. |
+| [[Bu sözleşmenin artış maddesini özetle]] | [[Kira Dosyası]] | Bu sözleşmenin artış maddesini özetle — Kira sözleşmesi, süre, artış ve eklerin dosya bazlı yönetimi. |
+| [[Kira Tahsilat]] | [[Kira Tahsilat]] | Muhasebe & Gelir-Gider genişlemesi: kira vade, gecikme ve dekont eşlemesi. |
+| [[Bu ay ödenmeyen kiraları getir]] | [[Kira Tahsilat]] | Bu ay ödenmeyen kiraları getir — Muhasebe & Gelir-Gider genişlemesi: kira vade, gecikme ve dekont eşlemesi. |
+| [[Gecikme tutarını hesapla]] | [[Kira Tahsilat]] | Gecikme tutarını hesapla — Muhasebe & Gelir-Gider genişlemesi: kira vade, gecikme ve dekont eşlemesi. |
+| [[Bakım İş Emri]] | [[Bakım İş Emri]] | Kiracı/malik arıza kaydı, tedarikçi atama ve kapanış. |
+| [[Açık arızaları önceliklendir]] | [[Bakım İş Emri]] | Açık arızaları önceliklendir — Kiracı/malik arıza kaydı, tedarikçi atama ve kapanış. |
+| [[Bu ay bakım maliyetini özetle]] | [[Bakım İş Emri]] | Bu ay bakım maliyetini özetle — Kiracı/malik arıza kaydı, tedarikçi atama ve kapanış. |
 
 ### Olmalı (3)
 
@@ -191,7 +188,7 @@ flowchart LR
 | [[Satış yetki sözleşmesi taslağı üret]] | [[Sözleşme Taslağı]] | Satış yetki sözleşmesi taslağı üret — Satış/kira/yetkilendirme taslak üretimi; imza ve gönderim insan onayına bağlı. |
 | [[Kira sözleşmesi madde özetini çıkar]] | [[Sözleşme Taslağı]] | Kira sözleşmesi madde özetini çıkar — Satış/kira/yetkilendirme taslak üretimi; imza ve gönderim insan onayına bağlı. |
 
-### İyi olur (15)
+### İyi olur (12)
 
 | Fonksiyon | Araç | Kullanım |
 |---|---|---|
@@ -201,20 +198,17 @@ flowchart LR
 | [[Komisyon Hesabı]] | [[Komisyon Hesabı]] | Muhasebe & Gelir-Gider genişlemesi: işlem komisyonu ve ofis/danışman payı önerisi. |
 | [[Bu satışta komisyon tutarını hesapla]] | [[Komisyon Hesabı]] | Bu satışta komisyon tutarını hesapla — Muhasebe & Gelir-Gider genişlemesi: işlem komisyonu ve ofis/danışman payı önerisi. |
 | [[Danışman payını göster]] | [[Komisyon Hesabı]] | Danışman payını göster — Muhasebe & Gelir-Gider genişlemesi: işlem komisyonu ve ofis/danışman payı önerisi. |
-| [[Temizlik Planı]] | [[Temizlik Planı]] | Personel & Vardiya genişlemesi: çıkış sonrası temizlik ve turnover planı. |
-| [[Bugünkü temizlik turunu planla]] | [[Temizlik Planı]] | Bugünkü temizlik turunu planla — Personel & Vardiya genişlemesi: çıkış sonrası temizlik ve turnover planı. |
-| [[Turnover gecikenleri göster]] | [[Temizlik Planı]] | Turnover gecikenleri göster — Personel & Vardiya genişlemesi: çıkış sonrası temizlik ve turnover planı. |
-| [[Kanal Yönetimi]] | [[Kanal Yönetimi]] | OTA/ilan kanallarında takvim/fiyat senkron uyumsuzluk takibi. |
-| [[Kanallardaki fiyat farklarını göster]] | [[Kanal Yönetimi]] | Kanallardaki fiyat farklarını göster — OTA/ilan kanallarında takvim/fiyat senkron uyumsuzluk takibi. |
-| [[Overbooking riskini tara]] | [[Kanal Yönetimi]] | Overbooking riskini tara — OTA/ilan kanallarında takvim/fiyat senkron uyumsuzluk takibi. |
-| [[Dinamik Fiyat]] | [[Dinamik Fiyat]] | Sezon ve doluluk bazlı fiyat bandı önerisi; yazma insan onaylı. |
-| [[Yarın için fiyat öner]] | [[Dinamik Fiyat]] | Yarın için fiyat öner — Sezon ve doluluk bazlı fiyat bandı önerisi; yazma insan onaylı. |
-| [[Düşük doluluk günlerini işaretle]] | [[Dinamik Fiyat]] | Düşük doluluk günlerini işaretle — Sezon ve doluluk bazlı fiyat bandı önerisi; yazma insan onaylı. |
+| [[Tahliye Takvimi]] | [[Tahliye Takvimi]] | Tahliye taahhüdü tarihleri ve yasal süre hatırlatmaları. |
+| [[Tahliye tarihi yaklaşanları göster]] | [[Tahliye Takvimi]] | Tahliye tarihi yaklaşanları göster — Tahliye taahhüdü tarihleri ve yasal süre hatırlatmaları. |
+| [[TBK 352 sürelerini kontrol et]] | [[Tahliye Takvimi]] | TBK 352 sürelerini kontrol et — Tahliye taahhüdü tarihleri ve yasal süre hatırlatmaları. |
+| [[Depozito Defteri]] | [[Depozito Defteri]] | Depozito alma, iade, mahsup ve belgelendirme. |
+| [[İade bekleyen depozitoları listele]] | [[Depozito Defteri]] | İade bekleyen depozitoları listele — Depozito alma, iade, mahsup ve belgelendirme. |
+| [[Mahsup kalemlerini özetle]] | [[Depozito Defteri]] | Mahsup kalemlerini özetle — Depozito alma, iade, mahsup ve belgelendirme. |
 
 ## 5. Teknik detay
-- **Entegrasyonlar:** Modül kartlarındaki entegrasyon notlarına bak; açık API yoksa panel kaydı + kullanıcı girişi.
-- **Ana ekranlar:** İş listesi / kart · Takvim veya pipeline · Tahsilat · Rapor
-- **Veri yapısı:** `Cari → İşKaydı → Belge/Tahsilat → Hatırlatma (onay kuyruğu)`
+- **Entegrasyonlar:** Modül kartlarına bak; açık API yoksa panel kaydı.
+- **Ana ekranlar:** İş listesi · Kart · Tahsilat · Rapor
+- **Veri yapısı:** `Cari → İşKaydı → Belge/Tahsilat → Hatırlatma (onay)`
 
 ## 6. Rakipler
 - [[RE-OS]]
@@ -226,4 +220,3 @@ flowchart LR
 
 ## 7. Kaynaklar
 - [[09 Emlak & Gayrimenkul – Kaynaklar]]
-- Araştırma arşivi: `08 Arşiv/eski-docs-sektorel-arastirma/`

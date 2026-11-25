@@ -11,7 +11,7 @@ is_modeli: karma
 - Küçük müteahhit yetki belgesi, şantiye şefi, taşeron, malzeme, yapı denetim evrakı ve SGK dosyasıyla günü geçirir. İhtisas ekipleri metraj veya yevmiye ile hakediş keser. Tesisat, proje, malzeme, montaj ve test ile yürür. Taşıyıcıya dokunmayan basit tamir ruhsata tabi değildir. Yapı malzemesi satışı 2026 sınıflamasında 46.83 toptan ticarettir. Mimarlık 71.1’dedir. Yapı denetim 4708 sayılı kanunla ayrı tüzel kişidir.
 - SantiyePro, Hakedra ve ESSantiye puantaj, metraj, hakediş ve şantiye günlüğünü toplar. ŞANTİYE-M ve Ulusal Yapı Denetim Sistemi kamu portalıdır; üçüncü parti için açık API bulunamadı.
 - Karar: 10.05 toptan ticaret kodundadır ama şantiye carisi nedeniyle burada tutuldu. 10.06 ve 10.07 NACE 71’dedir; ruhsat zinciri nedeniyle burada bırakıldı.
-- Modül: sektör ortak 7; alt sektör 7; toplam 42; MVP 26.
+- Alt işletme: 9. Modül kartları `04 Modüller/`.
 - Ortak çekirdek (tüm sektörler) bu dosyada yoktur → `04 Modüller/` çekirdek araçlar.
 
 <!-- dallar:start -->
@@ -20,25 +20,27 @@ is_modeli: karma
 
 | Dal | Alt dal | Fonksiyon | Durum |
 |---|---|---|---|
-| [[Küçük ölçekli bina müteahhidi]] | 1 | 14 | açık |
-| [[Şantiye ihtisas taşeronu]] | 1 | 14 | açık |
-| [[Mekanik ve elektrik tesisat taşeronu]] | 1 | 14 | açık |
-| [[Tadilat ve basit onarım]] | 1 | 14 | açık |
-| [[Yapı malzemesi bayii]] | 1 | 14 | açık |
-| [[Bina proje ofisi]] | 1 | 14 | açık |
-| [[Yapı denetim kuruluşu]] | 1 | 14 | açık |
+| [[Bina proje ofisi]] | 1 | 43 | açık |
+| [[Küçük ölçekli bina müteahhidi]] | 1 | 43 | açık |
+| [[Mekanik ve elektrik tesisat taşeronu]] | 2 | 86 | açık |
+| [[Tadilat ve basit onarım]] | 1 | 43 | açık |
+| [[Yapı denetim kuruluşu]] | 1 | 43 | açık |
+| [[Yapı malzemesi bayii]] | 1 | 43 | açık |
+| [[Şantiye ihtisas taşeronu]] | 2 | 86 | açık |
 <!-- dallar:end -->
 
 ## Alt işletme türleri (onay listesi)
 > İşaretli = Adım 1 onay listesi.
 
-- [x] [[Küçük ölçekli bina müteahhidi|Küçük ölçekli bina müteahhidi]]
-- [x] [[Şantiye ihtisas taşeronu|Şantiye ihtisas taşeronu]]
-- [x] [[Mekanik ve elektrik tesisat taşeronu|Mekanik ve elektrik tesisat taşeronu]]
-- [x] [[Tadilat ve basit onarım|Tadilat ve basit onarım]]
-- [x] [[Yapı malzemesi bayii|Yapı malzemesi bayii]]
 - [x] [[Bina proje ofisi|Bina proje ofisi]]
+- [x] [[Küçük ölçekli bina müteahhidi|Küçük ölçekli bina müteahhidi]]
+- [x] [[Elektrik tesisat taşeronu|Elektrik tesisat taşeronu]]
+- [x] [[Sıhhi tesisat ve iklimlendirme taşeronu|Sıhhi tesisat ve iklimlendirme taşeronu]]
+- [x] [[Tadilat ve basit onarım|Tadilat ve basit onarım]]
 - [x] [[Yapı denetim kuruluşu|Yapı denetim kuruluşu]]
+- [x] [[Yapı malzemesi bayii|Yapı malzemesi bayii]]
+- [x] [[İnce iş ve kaplama taşeronu|İnce iş ve kaplama taşeronu]]
+- [x] [[Kaba iş ihtisas taşeronu|Kaba iş ihtisas taşeronu]]
 
 ## Sınırlar ve doğrulanamayan
 - Sektör arşiv notundaki sınır ve doğrulanamayan maddeler geçerlidir (`08 Arşiv/eski-docs-sektorel-arastirma/ai-kaynak/10-insaat-yapi.md`).
@@ -147,11 +149,13 @@ flowchart TB
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 1 | [[Küçük ölçekli bina müteahhidi]] | 5 | 4 | 2 | 3 | 5 | **3.8** |
 | 2 | [[Tadilat ve basit onarım]] | 4 | 4 | 3 | 4 | 4 | **3.8** |
-| 3 | [[Şantiye ihtisas taşeronu]] | 4 | 3 | 3 | 4 | 4 | **3.6** |
-| 4 | [[Mekanik ve elektrik tesisat taşeronu]] | 3 | 3 | 3 | 3 | 4 | **3.2** |
-| 5 | [[Yapı malzemesi bayii]] | 3 | 4 | 2 | 3 | 3 | **3.0** |
-| 6 | [[Bina proje ofisi]] | 3 | 3 | 2 | 3 | 3 | **2.8** |
-| 7 | [[Yapı denetim kuruluşu]] | 2 | 3 | 2 | 2 | 3 | **2.4** |
+| 3 | [[Kaba iş ihtisas taşeronu]] | 4 | 3 | 3 | 4 | 4 | **3.6** |
+| 4 | [[İnce iş ve kaplama taşeronu]] | 3 | 3 | 3 | 4 | 4 | **3.4** |
+| 5 | [[Elektrik tesisat taşeronu]] | 3 | 3 | 3 | 3 | 4 | **3.2** |
+| 6 | [[Sıhhi tesisat ve iklimlendirme taşeronu]] | 3 | 3 | 3 | 3 | 4 | **3.2** |
+| 7 | [[Yapı malzemesi bayii]] | 3 | 4 | 2 | 3 | 3 | **3.0** |
+| 8 | [[Bina proje ofisi]] | 3 | 3 | 2 | 3 | 3 | **2.8** |
+| 9 | [[Yapı denetim kuruluşu]] | 2 | 3 | 2 | 2 | 3 | **2.4** |
 
 ## Yasal çerçeve
 | Konu | Kural | Yazılım etkisi | Kaynak |

@@ -11,7 +11,7 @@ is_modeli: karma
 - Gün, işlemin bitip bitmemesine göre ayrılır. Aracılık ofisinde yetkilendirme, EİDS izinli ilan, talep, yer gösterme ve teklif vardır. Uzun kira işletmesinde tahsilat, sözleşme, abonelik ve bakım vardır. Site yönetiminde 634 sayılı Kanun çerçevesinde aidat, işletme projesi, banka hesabı ve genel kurul vardır. Değerlemede saha ve imzalı rapor vardır. Kısa kiralamada 7464 sayılı Kanun çerçevesinde izin belgesi, plaket ve misafir devri vardır.
 - Aracılıkta portföy CRM’de, ilan portallarda, yazışma WhatsApp’tadır. RE-OS dağınık liste ve her portala ayrı girişi mevcut biçim olarak anlatır. Sahibinden API’si her panele açık değildir. Site tarafında selfSite, Dijiyon, Konsiyon ve NOKTApp aidatı Excel’in yerine koyar. WebTapu ve e-Kira e-Devlet hizmetidir; KOBİ paneline açık TAKBİS veya e-Kira API bu taramada görülmedi.
 - Karar: 09.04 en az on tam zamanlı uzman şartıyla 1–50 bandının üst sınırına yakındır. 09.05’te seyahat acentesi dışarıdadır.
-- Modül: sektör ortak 7; alt sektör 5; toplam 33; MVP 20.
+- Alt işletme: 9. Modül kartları `04 Modüller/`.
 - Ortak çekirdek (tüm sektörler) bu dosyada yoktur → `04 Modüller/` çekirdek araçlar.
 
 <!-- dallar:start -->
@@ -20,21 +20,25 @@ is_modeli: karma
 
 | Dal | Alt dal | Fonksiyon | Durum |
 |---|---|---|---|
-| [[Emlak aracılık ofisi]] | 1 | 14 | açık |
-| [[Uzun süreli kira ve mülk işletmeciliği]] | 1 | 14 | açık |
-| [[Site, apartman ve toplu yapı yönetimi]] | 1 | 14 | açık |
-| [[Gayrimenkul değerleme kuruluşu]] | 1 | 14 | açık |
-| [[Turizm amaçlı kısa süreli konut işletmeciliği]] | 1 | 16 | açık |
+| [[Emlak aracılık ofisi]] | 2 | 86 | açık |
+| [[Gayrimenkul değerleme kuruluşu]] | 1 | 43 | açık |
+| [[Site, apartman ve toplu yapı yönetimi]] | 2 | 86 | açık |
+| [[Turizm amaçlı kısa süreli konut işletmeciliği]] | 2 | 92 | açık |
+| [[Uzun süreli kira ve mülk işletmeciliği]] | 2 | 86 | açık |
 <!-- dallar:end -->
 
 ## Alt işletme türleri (onay listesi)
 > İşaretli = Adım 1 onay listesi.
 
-- [x] [[Emlak aracılık ofisi|Emlak aracılık ofisi]]
-- [x] [[Uzun süreli kira ve mülk işletmeciliği|Uzun süreli kira ve mülk işletmeciliği]]
-- [x] [[Site, apartman ve toplu yapı yönetimi|Site, apartman ve toplu yapı yönetimi]]
+- [x] [[Bağımsız emlak aracılık ofisi|Bağımsız emlak aracılık ofisi]]
+- [x] [[Sözleşmeli veya franchise emlak ofisi|Sözleşmeli veya franchise emlak ofisi]]
 - [x] [[Gayrimenkul değerleme kuruluşu|Gayrimenkul değerleme kuruluşu]]
-- [x] [[Turizm amaçlı kısa süreli konut işletmeciliği|Turizm amaçlı kısa süreli konut işletmeciliği]]
+- [x] [[Apartman yönetimi|Apartman yönetimi]]
+- [x] [[Site ve toplu yapı yönetimi|Site ve toplu yapı yönetimi]]
+- [x] [[Malik kısa kiralama işletmesi|Malik kısa kiralama işletmesi]]
+- [x] [[Yüksek nitelikli konut kısa kiralama yönetimi|Yüksek nitelikli konut kısa kiralama yönetimi]]
+- [x] [[Başkası adına kira yöneticisi|Başkası adına kira yöneticisi]]
+- [x] [[Kendi taşınmazını kiralayan işletme|Kendi taşınmazını kiralayan işletme]]
 
 ## Sınırlar ve doğrulanamayan
 - Sektör arşiv notundaki sınır ve doğrulanamayan maddeler geçerlidir (`08 Arşiv/eski-docs-sektorel-arastirma/ai-kaynak/09-emlak-gayrimenkul.md`).
@@ -132,11 +136,15 @@ flowchart TB
 
 | # | Alt tür | Pazar | Ödeme | Rekabet | Kolaylık | Aciliyet | Öncelik |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | [[Emlak aracılık ofisi]] | 5 | 4 | 2 | 3 | 5 | **3.8** |
-| 2 | [[Uzun süreli kira ve mülk işletmeciliği]] | 3 | 4 | 3 | 4 | 4 | **3.6** |
-| 3 | [[Site, apartman ve toplu yapı yönetimi]] | 3 | 3 | 3 | 3 | 4 | **3.2** |
-| 4 | [[Turizm amaçlı kısa süreli konut işletmeciliği]] | 2 | 4 | 3 | 3 | 4 | **3.2** |
-| 5 | [[Gayrimenkul değerleme kuruluşu]] | 2 | 3 | 2 | 2 | 3 | **2.4** |
+| 1 | [[Bağımsız emlak aracılık ofisi]] | 5 | 4 | 2 | 3 | 5 | **3.8** |
+| 2 | [[Başkası adına kira yöneticisi]] | 3 | 4 | 3 | 4 | 4 | **3.6** |
+| 3 | [[Kendi taşınmazını kiralayan işletme]] | 3 | 4 | 3 | 4 | 4 | **3.6** |
+| 4 | [[Sözleşmeli veya franchise emlak ofisi]] | 4 | 4 | 2 | 3 | 4 | **3.4** |
+| 5 | [[Apartman yönetimi]] | 3 | 3 | 3 | 3 | 4 | **3.2** |
+| 6 | [[Site ve toplu yapı yönetimi]] | 3 | 3 | 3 | 3 | 4 | **3.2** |
+| 7 | [[Malik kısa kiralama işletmesi]] | 2 | 4 | 3 | 3 | 4 | **3.2** |
+| 8 | [[Yüksek nitelikli konut kısa kiralama yönetimi]] | 2 | 4 | 3 | 3 | 4 | **3.2** |
+| 9 | [[Gayrimenkul değerleme kuruluşu]] | 2 | 3 | 2 | 2 | 3 | **2.4** |
 
 ## Yasal çerçeve
 | Konu | Kural | Yazılım etkisi | Kaynak |

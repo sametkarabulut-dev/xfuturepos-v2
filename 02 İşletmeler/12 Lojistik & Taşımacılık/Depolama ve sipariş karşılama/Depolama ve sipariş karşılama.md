@@ -1,6 +1,6 @@
 ---
 tip: isletme
-kod: "12-07-01"
+kod: "12-01-01"
 oneri_harf: B
 oncelik:
 gereksiz: false
@@ -96,7 +96,7 @@ parca_olmali: 6
 parca_iyi: 10
 parca_durum: tamamlandi
 ---
-# 12-07-01 · Depolama ve sipariş karşılama
+# 12-01-01 · Depolama ve sipariş karşılama
 
 > Sektör: [[12 Lojistik & Taşımacılık]] · Öncelik: **3.2** / 5 · Öneri: **B**
 > Puanlar tahmindir: pazar 3 · ödeme 4 · rekabet boşluğu 2 · kolaylık 3 · aciliyet 4

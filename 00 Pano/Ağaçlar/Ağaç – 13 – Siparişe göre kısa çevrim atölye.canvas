@@ -4,10 +4,10 @@
       "type": "text",
       "id": "n1",
       "x": 0,
-      "y": -260,
-      "width": 480,
-      "height": 140,
-      "text": "# Siparişe göre kısa çevrim atölye\n**Sektör → Dal → Alt dal → Fonksiyon**\n[[13 Üretim & İmalat]]"
+      "y": -180,
+      "width": 460,
+      "height": 110,
+      "text": "# Siparişe göre kısa çevrim atölye\n[[13 Üretim & İmalat]]"
     },
     {
       "type": "file",
@@ -15,8 +15,8 @@
       "file": "01 Sektörler/13 Üretim & İmalat.md",
       "x": 0,
       "y": 0,
-      "width": 420,
-      "height": 120,
+      "width": 400,
+      "height": 100,
       "color": "6"
     },
     {
@@ -24,29 +24,30 @@
       "id": "n3",
       "file": "02 İşletmeler/13 Üretim & İmalat/Siparişe göre kısa çevrim atölye/Dal – Siparişe göre kısa çevrim atölye.md",
       "x": 0,
-      "y": 200,
-      "width": 420,
-      "height": 140,
+      "y": 150,
+      "width": 400,
+      "height": 110,
       "color": "5"
     },
     {
       "type": "file",
       "id": "n4",
-      "file": "02 İşletmeler/13 Üretim & İmalat/Siparişe göre kısa çevrim atölye/Siparişe göre kısa çevrim atölye.md",
-      "x": 560,
-      "y": 180,
-      "width": 420,
-      "height": 160,
+      "file": "02 İşletmeler/13 Üretim & İmalat/Siparişe göre kısa çevrim atölye/Sipariş atölyesi (tek seferlik iş).md",
+      "x": 520,
+      "y": 80,
+      "width": 400,
+      "height": 95,
       "color": "4"
     },
     {
-      "type": "text",
+      "type": "file",
       "id": "n5",
-      "x": 1080,
-      "y": 0,
-      "width": 520,
-      "height": 520,
-      "text": "### Siparişe göre kısa çevrim atölye\n17 modül · 8 fonksiyon\n\n**Modüller**\n- [[Muhasebe ve Gelir-Gider]]\n- [[e-Fatura ve e-Arşiv]]\n- [[CRM]]\n- [[Personel ve Vardiya]]\n- [[Raporlar]]\n- [[AI Asistan]]\n- [[Ayarlar]]\n- [[İş Emri (Üretim)]]\n- [[Reçete BOM]]\n- [[Fire Kayıt]]\n- [[Depo Sevk]]\n- [[Fason Mutabakat]]\n\n**Fonksiyon örnekleri**\n- Sipariş 120'yi iş emrine çevir\n- Bugün teslimler\n- Torna kuyruğunu sırala\n- Acil işi öne al\n- Geç kalacak işleri söyle\n- Müşteri X gecikmeleri\n- Bu hafta freze doluluk\n- Sipariş 55 miktarı 80 yap"
+      "file": "02 İşletmeler/13 Üretim & İmalat/Siparişe göre kısa çevrim atölye/Tamir ve revizyon atölyesi.md",
+      "x": 520,
+      "y": 190,
+      "width": 400,
+      "height": 95,
+      "color": "4"
     }
   ],
   "edges": [
@@ -66,11 +67,10 @@
     },
     {
       "id": "e3",
-      "fromNode": "n4",
+      "fromNode": "n3",
       "fromSide": "right",
       "toNode": "n5",
-      "toSide": "left",
-      "label": "kullanır"
+      "toSide": "left"
     }
   ]
 }

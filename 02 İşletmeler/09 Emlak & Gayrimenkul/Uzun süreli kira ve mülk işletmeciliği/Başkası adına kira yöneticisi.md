@@ -1,21 +1,21 @@
 ---
 tip: isletme
-kod: "09-03-01"
-oneri_harf: B
+kod: "09-05-01"
+oneri_harf: A
 oncelik:
 gereksiz: false
-oncelik_notu:
+oncelik_notu: ""
 sektor: "[[09 Emlak & Gayrimenkul]]"
-dal: "[[Dal – Site, apartman ve toplu yapı yönetimi]]"
+dal: "[[Dal – Uzun süreli kira ve mülk işletmeciliği]]"
 durum: tamamlandi
-olcek: ['mikro', 'kucuk-orta']
-isletme_sayisi: "İTO 68.32.02: 795 (ücretli yönetim; site yönetim TR geneli bulunamadı)"
+olcek: [mikro, kucuk-orta]
+isletme_sayisi: "İTO 68.32.02: 795 (ücretli yönetim kümesi; kırılım bulunamadı)"
 sayi_turu: tahmin
-nace: 68.32
+nace: "68.32"
 pazar_puani: 3
-odeme_puani: 3
+odeme_puani: 4
 rekabet_puani: 3
-kolaylik_puani: 3
+kolaylik_puani: 4
 aciliyet_puani: 4
 ihtiyaclar:
   - "[[Yetki belgesi ve sorumlu danışman takibi]]"
@@ -41,11 +41,11 @@ moduller:
   - "[[Sözleşme Taslağı]]"
   - "[[Belge Kasası]]"
   - "[[Komisyon Hesabı]]"
-  - "[[İşletme Projesi]]"
-  - "[[Genel Kurul]]"
-  - "[[Arıza Talep]]"
-  - "[[Ortak Alan]]"
-  - "[[Aidat İcra]]"
+  - "[[Kira Dosyası]]"
+  - "[[Kira Tahsilat]]"
+  - "[[Bakım İş Emri]]"
+  - "[[Tahliye Takvimi]]"
+  - "[[Depozito Defteri]]"
 rakipler:
   - "[[RE-OS]]"
   - "[[selfSite]]"
@@ -73,6 +73,15 @@ fonksiyonlar:
   - "[[Yetki Takibi]]"
   - "[[Yetki belgesi vadesi yaklaşanları göster]]"
   - "[[Seviye 5 sorumlu listesi]]"
+  - "[[Kira Dosyası]]"
+  - "[[Bitimine 60 gün kalan kiraları listele]]"
+  - "[[Bu sözleşmenin artış maddesini özetle]]"
+  - "[[Kira Tahsilat]]"
+  - "[[Bu ay ödenmeyen kiraları getir]]"
+  - "[[Gecikme tutarını hesapla]]"
+  - "[[Bakım İş Emri]]"
+  - "[[Açık arızaları önceliklendir]]"
+  - "[[Bu ay bakım maliyetini özetle]]"
   - "[[Sözleşme Taslağı]]"
   - "[[Satış yetki sözleşmesi taslağı üret]]"
   - "[[Kira sözleşmesi madde özetini çıkar]]"
@@ -82,52 +91,43 @@ fonksiyonlar:
   - "[[Komisyon Hesabı]]"
   - "[[Bu satışta komisyon tutarını hesapla]]"
   - "[[Danışman payını göster]]"
-  - "[[İşletme Projesi]]"
-  - "[[Geçici işletme projesi taslağı oluştur]]"
-  - "[[Yeniden değerleme üst sınırını uygula]]"
-  - "[[Genel Kurul]]"
-  - "[[Son kurul kararlarını özetle]]"
-  - "[[Yönetim planı değişiklik gündemi hazırla]]"
-  - "[[Arıza Talep]]"
-  - "[[Acil arızaları listele]]"
-  - "[[Ortalama çözüm süresini göster]]"
-  - "[[Ortak Alan]]"
-  - "[[Cumartesi salon müsaitliğini göster]]"
-  - "[[Çakışan rezervasyonları bul]]"
-  - "[[Aidat İcra]]"
-  - "[[3+ ay gecikenleri listele]]"
-  - "[[Gecikme tazminatı hesapla]]"
+  - "[[Tahliye Takvimi]]"
+  - "[[Tahliye tarihi yaklaşanları göster]]"
+  - "[[TBK 352 sürelerini kontrol et]]"
+  - "[[Depozito Defteri]]"
+  - "[[İade bekleyen depozitoları listele]]"
+  - "[[Mahsup kalemlerini özetle]]"
 parca_sart: 28
 parca_olmali: 3
 parca_iyi: 12
 parca_durum: tamamlandi
 ---
-# 09-03-01 · Site, apartman ve toplu yapı yönetimi
+# 09-05-01 · Başkası adına kira yöneticisi
 
-> Sektör: [[09 Emlak & Gayrimenkul]] · Öncelik: **3.2** / 5 · Öneri: **B**
-> Puanlar tahmindir: pazar 3 · ödeme 3 · rekabet boşluğu 3 · kolaylık 3 · aciliyet 4
+> Sektör: [[09 Emlak & Gayrimenkul]] · Öncelik: **3.6** / 5 · Öneri: **A**
+> Puanlar tahmindir: pazar 3 · ödeme 4 · rekabet boşluğu 3 · kolaylık 4 · aciliyet 4
 
 ## 1. Özet
-Profesyonel yönetici, kat mülkiyetli yapının ortak giderini, personelini ve kurullarını yürütür.
+Sözleşmeyle malik adına uzun kira tahsilatı, boşalma ve bakım işletir; malike dönem hesabı verir.
 
-- **İşletme sayısı:** İTO 68.32.02: 795 (ücretli yönetim; site yönetim TR geneli bulunamadı)
+- **İşletme sayısı:** İTO 68.32.02: 795 (ücretli yönetim kümesi; kırılım bulunamadı)
 - **NACE:** 68.32
 - **Sayı türü:** tahmin
 
 ## 2. Günlük iş akışı
-1. Aidat
-2. banka tahsilatı
-3. işletme projesi
-4. arıza
-5. genel kurul.
+1. Malik yetkisi
+2. Kiracı dosyası
+3. Tahsilat / dekont
+4. Arıza iş emri
+5. Malik özeti
 
 ```mermaid
 flowchart LR
-  S1["Aidat"] --> S2
-  S2["banka tahsilatı"] --> S3
-  S3["işletme projesi"] --> S4
-  S4["arıza"] --> S5
-  S5["genel kurul."]
+  S1["Malik yetkisi"] --> S2
+  S2["Kiracı dosyası"] --> S3
+  S3["Tahsilat / dekont"] --> S4
+  S4["Arıza iş emri"] --> S5
+  S5["Malik özeti"]
 ```
 
 ## 3. İhtiyaçlar ve sorunlar
@@ -169,15 +169,15 @@ flowchart LR
 | [[Yetki Takibi]] | [[Yetki Takibi]] | İşletme yetki belgesi, sorumlu emlak danışmanı ve belge vade takibi (TTBS). |
 | [[Yetki belgesi vadesi yaklaşanları göster]] | [[Yetki Takibi]] | Yetki belgesi vadesi yaklaşanları göster — İşletme yetki belgesi, sorumlu emlak danışmanı ve belge vade takibi (TTBS). |
 | [[Seviye 5 sorumlu listesi]] | [[Yetki Takibi]] | Seviye 5 sorumlu listesi — İşletme yetki belgesi, sorumlu emlak danışmanı ve belge vade takibi (TTBS). |
-| [[İşletme Projesi]] | [[İşletme Projesi]] | Yıllık gelir-gider, avans/aidat dağılımı; geçici proje ve genel kurul onayı. |
-| [[Geçici işletme projesi taslağı oluştur]] | [[İşletme Projesi]] | Geçici işletme projesi taslağı oluştur — Yıllık gelir-gider, avans/aidat dağılımı; geçici proje ve genel kurul onayı. |
-| [[Yeniden değerleme üst sınırını uygula]] | [[İşletme Projesi]] | Yeniden değerleme üst sınırını uygula — Yıllık gelir-gider, avans/aidat dağılımı; geçici proje ve genel kurul onayı. |
-| [[Genel Kurul]] | [[Genel Kurul]] | Toplantı çağrısı, gündem, karar ve tutanak arşivi. |
-| [[Son kurul kararlarını özetle]] | [[Genel Kurul]] | Son kurul kararlarını özetle — Toplantı çağrısı, gündem, karar ve tutanak arşivi. |
-| [[Yönetim planı değişiklik gündemi hazırla]] | [[Genel Kurul]] | Yönetim planı değişiklik gündemi hazırla — Toplantı çağrısı, gündem, karar ve tutanak arşivi. |
-| [[Arıza Talep]] | [[Arıza Talep]] | Kat maliki/kiracı talep, teknisyen atama ve SLA. |
-| [[Acil arızaları listele]] | [[Arıza Talep]] | Acil arızaları listele — Kat maliki/kiracı talep, teknisyen atama ve SLA. |
-| [[Ortalama çözüm süresini göster]] | [[Arıza Talep]] | Ortalama çözüm süresini göster — Kat maliki/kiracı talep, teknisyen atama ve SLA. |
+| [[Kira Dosyası]] | [[Kira Dosyası]] | Kira sözleşmesi, süre, artış ve eklerin dosya bazlı yönetimi. |
+| [[Bitimine 60 gün kalan kiraları listele]] | [[Kira Dosyası]] | Bitimine 60 gün kalan kiraları listele — Kira sözleşmesi, süre, artış ve eklerin dosya bazlı yönetimi. |
+| [[Bu sözleşmenin artış maddesini özetle]] | [[Kira Dosyası]] | Bu sözleşmenin artış maddesini özetle — Kira sözleşmesi, süre, artış ve eklerin dosya bazlı yönetimi. |
+| [[Kira Tahsilat]] | [[Kira Tahsilat]] | Muhasebe & Gelir-Gider genişlemesi: kira vade, gecikme ve dekont eşlemesi. |
+| [[Bu ay ödenmeyen kiraları getir]] | [[Kira Tahsilat]] | Bu ay ödenmeyen kiraları getir — Muhasebe & Gelir-Gider genişlemesi: kira vade, gecikme ve dekont eşlemesi. |
+| [[Gecikme tutarını hesapla]] | [[Kira Tahsilat]] | Gecikme tutarını hesapla — Muhasebe & Gelir-Gider genişlemesi: kira vade, gecikme ve dekont eşlemesi. |
+| [[Bakım İş Emri]] | [[Bakım İş Emri]] | Kiracı/malik arıza kaydı, tedarikçi atama ve kapanış. |
+| [[Açık arızaları önceliklendir]] | [[Bakım İş Emri]] | Açık arızaları önceliklendir — Kiracı/malik arıza kaydı, tedarikçi atama ve kapanış. |
+| [[Bu ay bakım maliyetini özetle]] | [[Bakım İş Emri]] | Bu ay bakım maliyetini özetle — Kiracı/malik arıza kaydı, tedarikçi atama ve kapanış. |
 
 ### Olmalı (3)
 
@@ -197,17 +197,17 @@ flowchart LR
 | [[Komisyon Hesabı]] | [[Komisyon Hesabı]] | Muhasebe & Gelir-Gider genişlemesi: işlem komisyonu ve ofis/danışman payı önerisi. |
 | [[Bu satışta komisyon tutarını hesapla]] | [[Komisyon Hesabı]] | Bu satışta komisyon tutarını hesapla — Muhasebe & Gelir-Gider genişlemesi: işlem komisyonu ve ofis/danışman payı önerisi. |
 | [[Danışman payını göster]] | [[Komisyon Hesabı]] | Danışman payını göster — Muhasebe & Gelir-Gider genişlemesi: işlem komisyonu ve ofis/danışman payı önerisi. |
-| [[Ortak Alan]] | [[Ortak Alan]] | Ortak alan (salon, misafir otopark vb.) rezervasyon yönetimi. |
-| [[Cumartesi salon müsaitliğini göster]] | [[Ortak Alan]] | Cumartesi salon müsaitliğini göster — Ortak alan (salon, misafir otopark vb.) rezervasyon yönetimi. |
-| [[Çakışan rezervasyonları bul]] | [[Ortak Alan]] | Çakışan rezervasyonları bul — Ortak alan (salon, misafir otopark vb.) rezervasyon yönetimi. |
-| [[Aidat İcra]] | [[Aidat İcra]] | Gecikme tazminatı hesabı ve icra dosya hazırlığı; takip başlatma insan onaylı. |
-| [[3+ ay gecikenleri listele]] | [[Aidat İcra]] | 3+ ay gecikenleri listele — Gecikme tazminatı hesabı ve icra dosya hazırlığı; takip başlatma insan onaylı. |
-| [[Gecikme tazminatı hesapla]] | [[Aidat İcra]] | Gecikme tazminatı hesapla — Gecikme tazminatı hesabı ve icra dosya hazırlığı; takip başlatma insan onaylı. |
+| [[Tahliye Takvimi]] | [[Tahliye Takvimi]] | Tahliye taahhüdü tarihleri ve yasal süre hatırlatmaları. |
+| [[Tahliye tarihi yaklaşanları göster]] | [[Tahliye Takvimi]] | Tahliye tarihi yaklaşanları göster — Tahliye taahhüdü tarihleri ve yasal süre hatırlatmaları. |
+| [[TBK 352 sürelerini kontrol et]] | [[Tahliye Takvimi]] | TBK 352 sürelerini kontrol et — Tahliye taahhüdü tarihleri ve yasal süre hatırlatmaları. |
+| [[Depozito Defteri]] | [[Depozito Defteri]] | Depozito alma, iade, mahsup ve belgelendirme. |
+| [[İade bekleyen depozitoları listele]] | [[Depozito Defteri]] | İade bekleyen depozitoları listele — Depozito alma, iade, mahsup ve belgelendirme. |
+| [[Mahsup kalemlerini özetle]] | [[Depozito Defteri]] | Mahsup kalemlerini özetle — Depozito alma, iade, mahsup ve belgelendirme. |
 
 ## 5. Teknik detay
-- **Entegrasyonlar:** Modül kartlarındaki entegrasyon notlarına bak; açık API yoksa panel kaydı + kullanıcı girişi.
-- **Ana ekranlar:** İş listesi / kart · Takvim veya pipeline · Tahsilat · Rapor
-- **Veri yapısı:** `Cari → İşKaydı → Belge/Tahsilat → Hatırlatma (onay kuyruğu)`
+- **Entegrasyonlar:** Modül kartlarına bak; açık API yoksa panel kaydı.
+- **Ana ekranlar:** İş listesi · Kart · Tahsilat · Rapor
+- **Veri yapısı:** `Cari → İşKaydı → Belge/Tahsilat → Hatırlatma (onay)`
 
 ## 6. Rakipler
 - [[RE-OS]]
@@ -219,4 +219,3 @@ flowchart LR
 
 ## 7. Kaynaklar
 - [[09 Emlak & Gayrimenkul – Kaynaklar]]
-- Araştırma arşivi: `08 Arşiv/eski-docs-sektorel-arastirma/`

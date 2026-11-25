@@ -1,6 +1,6 @@
 ---
 tip: isletme
-kod: "12-06-01"
+kod: "12-04-01"
 oneri_harf: C
 oncelik:
 gereksiz: false
@@ -96,7 +96,7 @@ parca_olmali: 6
 parca_iyi: 10
 parca_durum: tamamlandi
 ---
-# 12-06-01 · Taşıma organizatörlüğü ve acentelik
+# 12-04-01 · Taşıma organizatörlüğü ve acentelik
 
 > Sektör: [[12 Lojistik & Taşımacılık]] · Öncelik: **2.8** / 5 · Öneri: **C**
 > Puanlar tahmindir: pazar 2 · ödeme 3 · rekabet boşluğu 3 · kolaylık 3 · aciliyet 3

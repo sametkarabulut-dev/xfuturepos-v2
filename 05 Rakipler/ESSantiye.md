@@ -5,7 +5,7 @@ sektorler:
   - "[[10 İnşaat & Yapı]]"
 fiyat: "bulunamadı"
 guclu: "Şantiye günlüğü"
-zayif: "Fiyat/şikayet derinliği bu turda taranmadı veya bulunamadı"
+zayif: "Derin şikayet taraması sonraki tur"
 web: ""
 ---
 # ESSantiye
@@ -21,7 +21,7 @@ web: ""
 - Şantiye günlüğü
 
 ## Zayıf yönler
-- Derin Şikayetvar/mağaza taraması bu notta tamamlanmadı → sonraki tur.
+- Bu turda Şikayetvar/mağaza derinliği tamamlanmadı.
 
 ## Kaynaklar
 - bulunamadı

@@ -1,21 +1,21 @@
 ---
 tip: isletme
-kod: "12-04-01"
-oneri_harf: A
+kod: "12-07-02"
+oneri_harf: B
 oncelik:
 gereksiz: false
-oncelik_notu:
+oncelik_notu: ""
 sektor: "[[12 Lojistik & Taşımacılık]]"
 dal: "[[Dal – Şehir içi kurye ve dağıtım]]"
 durum: tamamlandi
-olcek: ['mikro', 'kucuk-orta']
+olcek: [mikro, kucuk-orta]
 isletme_sayisi: "bulunamadı"
 sayi_turu: tahmin
-nace: 53.20
-pazar_puani: 4
+nace: "53.20"
+pazar_puani: 3
 odeme_puani: 4
 rekabet_puani: 3
-kolaylik_puani: 4
+kolaylik_puani: 3
 aciliyet_puani: 4
 ihtiyaclar:
   - "[[Sevkiyat kartı]]"
@@ -63,21 +63,9 @@ fonksiyonlar:
   - "[[Navlun Teklifi]]"
   - "[[İstanbul Ankara 12 ton navlun taslağı çıkar]]"
   - "[[Geçen ayki ABC fiyatını bu işe kopyala]]"
-  - "[[U-ETDS Köprüsü]]"
-  - "[[34 ABC 123 seferini U-ETDS için hazırla]]"
-  - "[[Bugün bildirilmemiş seferleri göster]]"
   - "[[Teslim Kanıtı]]"
   - "[[Sevkiyat 34-882 teslim kanıtını aç]]"
   - "[[Dün reddedilen teslimleri listele]]"
-  - "[[Araç Şoför]]"
-  - "[[SRC si 30 günde bitecek şoförleri göster]]"
-  - "[[34 XYZ 45 plakasını Mehmet e ata]]"
-  - "[[Hasar Dosyası]]"
-  - "[[Sevkiyat 441 için hasar dosyası aç]]"
-  - "[[Açık hasar dosyalarını özetle]]"
-  - "[[Araç Takip]]"
-  - "[[34 ABC 123 son bilinen konum]]"
-  - "[[ETA sı geciken araçları göster]]"
   - "[[Durak Rotası]]"
   - "[[Bugünkü 18 durağı sırala]]"
   - "[[Öğleden sonra rotayı yeniden kur]]"
@@ -87,6 +75,18 @@ fonksiyonlar:
   - "[[Canlı Teslim]]"
   - "[[8841 için teslim kodu gönder]]"
   - "[[Bugünkü iade kuyruğunu aç]]"
+  - "[[U-ETDS Köprüsü]]"
+  - "[[34 ABC 123 seferini U-ETDS için hazırla]]"
+  - "[[Bugün bildirilmemiş seferleri göster]]"
+  - "[[Araç Şoför]]"
+  - "[[SRC si 30 günde bitecek şoförleri göster]]"
+  - "[[34 XYZ 45 plakasını Mehmet e ata]]"
+  - "[[Hasar Dosyası]]"
+  - "[[Sevkiyat 441 için hasar dosyası aç]]"
+  - "[[Açık hasar dosyalarını özetle]]"
+  - "[[Araç Takip]]"
+  - "[[34 ABC 123 son bilinen konum]]"
+  - "[[ETA sı geciken araçları göster]]"
   - "[[P Belge]]"
   - "[[P1 taşıt sayısı eksiği var mı]]"
   - "[[Yoğunluk Paneli]]"
@@ -96,28 +96,30 @@ parca_olmali: 6
 parca_iyi: 10
 parca_durum: tamamlandi
 ---
-# 12-04-01 · Şehir içi kurye ve dağıtım
+# 12-07-02 · Çok duraklı dağıtım turu
 
-> Sektör: [[12 Lojistik & Taşımacılık]] · Öncelik: **3.8** / 5 · Öneri: **A**
-> Puanlar tahmindir: pazar 4 · ödeme 4 · rekabet boşluğu 3 · kolaylık 4 · aciliyet 4
+> Sektör: [[12 Lojistik & Taşımacılık]] · Öncelik: **3.4** / 5 · Öneri: **B**
+> Puanlar tahmindir: pazar 3 · ödeme 4 · rekabet boşluğu 3 · kolaylık 3 · aciliyet 4
 
 ## 1. Özet
-İl içi veya komşu ilçelerde tasnif olmadan taşınan kurye gönderisi.
+Şehir içi çok duraklı dağıtım (gıda vb.); tur planı ve teslim kanıtı.
 
 - **İşletme sayısı:** bulunamadı
 - **NACE:** 53.20
 - **Sayı türü:** tahmin
 
 ## 2. Günlük iş akışı
-1. Çok duraklı tur
-2. teslim kanıtı
-3. sık tahsilat.
+1. Tur planı
+2. Yükleme
+3. Durak teslim
+4. İade
 
 ```mermaid
 flowchart LR
-  S1["Çok duraklı tur"] --> S2
-  S2["teslim kanıtı"] --> S3
-  S3["sık tahsilat."]
+  S1["Tur planı"] --> S2
+  S2["Yükleme"] --> S3
+  S3["Durak teslim"] --> S4
+  S4["İade"]
 ```
 
 ## 3. İhtiyaçlar ve sorunlar
@@ -193,9 +195,9 @@ flowchart LR
 | [[Dün başarısız teslim nedenlerini özetle]] | [[Yoğunluk Paneli]] | Dün başarısız teslim nedenlerini özetle — Saat dilimine göre başarısız teslim ve neden özeti. |
 
 ## 5. Teknik detay
-- **Entegrasyonlar:** Modül kartlarındaki entegrasyon notlarına bak; açık API yoksa panel kaydı + kullanıcı girişi.
-- **Ana ekranlar:** İş listesi / kart · Takvim veya pipeline · Tahsilat · Rapor
-- **Veri yapısı:** `Cari → İşKaydı → Belge/Tahsilat → Hatırlatma (onay kuyruğu)`
+- **Entegrasyonlar:** Modül kartlarına bak; açık API yoksa panel kaydı.
+- **Ana ekranlar:** İş listesi · Kart · Tahsilat · Rapor
+- **Veri yapısı:** `Cari → İşKaydı → Belge/Tahsilat → Hatırlatma (onay)`
 
 ## 6. Rakipler
 - [[U-ETDS]]
@@ -203,4 +205,3 @@ flowchart LR
 
 ## 7. Kaynaklar
 - [[12 Lojistik & Taşımacılık – Kaynaklar]]
-- Araştırma arşivi: `08 Arşiv/eski-docs-sektorel-arastirma/`

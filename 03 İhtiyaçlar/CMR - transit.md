@@ -1,25 +1,23 @@
 ---
 tip: ihtiyac
 durum: tamamlandi
-kategori: yasal
+kategori: operasyon
 moduller: []
 ---
-# CMR / transit
+# CMR - transit
 
 ## Tanım
-- 12 Lojistik & Taşımacılık ortak ihtiyaç satırı; sıklık 1/7.
+- İşletmenin cmr - transit ihtiyacı; sektör ortak ihtiyaç tablosundan.
 
 ## Bugün nasıl çözülüyor
-- Excel, WhatsApp, kurum portalı veya rakip paket (tahmin / sektör özeti).
+- Excel, WhatsApp, defter veya kurum portalı (tahmin / sektör özeti).
+- Dağınık dosya; hatırlatma kişiye bağlı.
 
 ## Etkisi (zaman / para / risk)
-- Operasyon dağınıklığı, tahsilat/uyum kaybı riski.
+- Zaman kaybı, kaçan tahsilat/uyum, çift kayıt.
 
 ## Çözen modüller
-- İlgili sektör araç matrisi satırlarına bak.
-
-## Sektörlere göre
-- **[[12 Lojistik & Taşımacılık]]:** 1/7 işletme türünde.
+- İlgili sektör araç matrisi ve işletme Parçalar tablosu.
 
 ## Kullanan işletme türleri
 ```base

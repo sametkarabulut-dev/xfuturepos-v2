@@ -1,22 +1,22 @@
 ---
 tip: isletme
-kod: "16-02-01"
-oneri_harf: A
+kod: "16-06-02"
+oneri_harf: B
 oncelik:
 gereksiz: false
-oncelik_notu:
+oncelik_notu: ""
 sektor: "[[16 Etkinlik & Organizasyon]]"
 dal: "[[Dal – Özel gün organizatörlüğü]]"
 durum: tamamlandi
-olcek: ['mikro', 'kucuk-orta']
+olcek: [mikro, kucuk-orta]
 isletme_sayisi: "bulunamadı"
 sayi_turu: tahmin
-nace: 82.30
-pazar_puani: 4
+nace: "82.30"
+pazar_puani: 3
 odeme_puani: 4
 rekabet_puani: 3
 kolaylik_puani: 4
-aciliyet_puani: 4
+aciliyet_puani: 3
 ihtiyaclar:
   - "[[Etkinlik takvimi]]"
   - "[[Kapora / sözleşme]]"
@@ -82,13 +82,13 @@ parca_olmali: 3
 parca_iyi: 0
 parca_durum: tamamlandi
 ---
-# 16-02-01 · Özel gün organizatörlüğü
+# 16-06-02 · Özel gün ve kutlama organizatörü
 
-> Sektör: [[16 Etkinlik & Organizasyon]] · Öncelik: **3.8** / 5 · Öneri: **A**
-> Puanlar tahmindir: pazar 4 · ödeme 4 · rekabet boşluğu 3 · kolaylık 4 · aciliyet 4
+> Sektör: [[16 Etkinlik & Organizasyon]] · Öncelik: **3.4** / 5 · Öneri: **B**
+> Puanlar tahmindir: pazar 3 · ödeme 4 · rekabet boşluğu 3 · kolaylık 4 · aciliyet 3
 
 ## 1. Özet
-Çift veya aile adına günü planlayan, salonu işletmeyen firma.
+Nişan, kına, doğum günü vb.; aynı operasyon iskeleti.
 
 - **İşletme sayısı:** bulunamadı
 - **NACE:** 82.30
@@ -96,16 +96,16 @@ parca_durum: tamamlandi
 
 ## 2. Günlük iş akışı
 1. Brief
-2. tedarikçi teyidi
-3. kapora
-4. günün akış çizelgesi.
+2. Tedarikçi
+3. Timeline
+4. Gün
 
 ```mermaid
 flowchart LR
   S1["Brief"] --> S2
-  S2["tedarikçi teyidi"] --> S3
-  S3["kapora"] --> S4
-  S4["günün akış çizelgesi."]
+  S2["Tedarikçi"] --> S3
+  S3["Timeline"] --> S4
+  S4["Gün"]
 ```
 
 ## 3. İhtiyaçlar ve sorunlar
@@ -170,9 +170,9 @@ flowchart LR
 _Yok._
 
 ## 5. Teknik detay
-- **Entegrasyonlar:** Modül kartlarındaki entegrasyon notlarına bak; açık API yoksa panel kaydı + kullanıcı girişi.
-- **Ana ekranlar:** İş listesi / kart · Takvim veya pipeline · Tahsilat · Rapor
-- **Veri yapısı:** `Cari → İşKaydı → Belge/Tahsilat → Hatırlatma (onay kuyruğu)`
+- **Entegrasyonlar:** Modül kartlarına bak; açık API yoksa panel kaydı.
+- **Ana ekranlar:** İş listesi · Kart · Tahsilat · Rapor
+- **Veri yapısı:** `Cari → İşKaydı → Belge/Tahsilat → Hatırlatma (onay)`
 
 ## 6. Rakipler
 - [[iyzico]]
@@ -180,4 +180,3 @@ _Yok._
 
 ## 7. Kaynaklar
 - [[16 Etkinlik & Organizasyon – Kaynaklar]]
-- Araştırma arşivi: `08 Arşiv/eski-docs-sektorel-arastirma/`

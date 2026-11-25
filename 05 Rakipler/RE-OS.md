@@ -5,8 +5,8 @@ sektorler:
   - "[[09 Emlak & Gayrimenkul]]"
 fiyat: "bulunamadı"
 guclu: "Portföy/CRM; dağınık liste anlatımı"
-zayif: "Fiyat/şikayet derinliği bu turda taranmadı veya bulunamadı"
-web: "https://re-os.com"
+zayif: "Derin şikayet taraması sonraki tur"
+web: ""
 ---
 # RE-OS
 
@@ -21,7 +21,7 @@ web: "https://re-os.com"
 - Portföy/CRM; dağınık liste anlatımı
 
 ## Zayıf yönler
-- Derin Şikayetvar/mağaza taraması bu notta tamamlanmadı → sonraki tur.
+- Bu turda Şikayetvar/mağaza derinliği tamamlanmadı.
 
 ## Kaynaklar
-- https://re-os.com
+- bulunamadı

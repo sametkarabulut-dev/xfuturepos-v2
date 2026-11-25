@@ -1,6 +1,6 @@
 ---
 tip: isletme
-kod: "10-01-01"
+kod: "10-02-01"
 oneri_harf: A
 oncelik:
 gereksiz: false
@@ -100,7 +100,7 @@ parca_olmali: 0
 parca_iyi: 12
 parca_durum: tamamlandi
 ---
-# 10-01-01 · Küçük ölçekli bina müteahhidi
+# 10-02-01 · Küçük ölçekli bina müteahhidi
 
 > Sektör: [[10 İnşaat & Yapı]] · Öncelik: **3.8** / 5 · Öneri: **A**
 > Puanlar tahmindir: pazar 5 · ödeme 4 · rekabet boşluğu 2 · kolaylık 3 · aciliyet 5

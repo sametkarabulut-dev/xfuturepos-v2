@@ -1,18 +1,18 @@
 ---
 tip: isletme
-kod: "10-02-01"
-oneri_harf: A
+kod: "10-07-01"
+oneri_harf: B
 oncelik:
 gereksiz: false
-oncelik_notu:
+oncelik_notu: ""
 sektor: "[[10 İnşaat & Yapı]]"
 dal: "[[Dal – Şantiye ihtisas taşeronu]]"
 durum: tamamlandi
-olcek: ['mikro', 'kucuk-orta']
+olcek: [mikro, kucuk-orta]
 isletme_sayisi: "bulunamadı"
 sayi_turu: tahmin
-nace: 43
-pazar_puani: 4
+nace: "43.3"
+pazar_puani: 3
 odeme_puani: 3
 rekabet_puani: 3
 kolaylik_puani: 4
@@ -74,12 +74,6 @@ fonksiyonlar:
   - "[[Malzeme Takibi]]"
   - "[[Bugün gelen demiri kaydet]]"
   - "[[Beton sarfiyatı metrajı aşıyor mu?]]"
-  - "[[İSG Kontrol]]"
-  - "[[Süresi dolan İSG belgelerini listele]]"
-  - "[[Ramak kala aç]]"
-  - "[[Taşeron Sözleşme]]"
-  - "[[Yeni sıva taşeron sözleşmesi oluştur]]"
-  - "[[Ek iş protokollerini göster]]"
   - "[[İş Emri]]"
   - "[[Bugünkü iş emirlerini aç]]"
   - "[[C blok sıva emrini tamamla]]"
@@ -89,6 +83,12 @@ fonksiyonlar:
   - "[[Ekip Dağılımı]]"
   - "[[Yarın 4 ustayı D şantiyesine kaydır]]"
   - "[[Boşta kalan ekibi bul]]"
+  - "[[İSG Kontrol]]"
+  - "[[Süresi dolan İSG belgelerini listele]]"
+  - "[[Ramak kala aç]]"
+  - "[[Taşeron Sözleşme]]"
+  - "[[Yeni sıva taşeron sözleşmesi oluştur]]"
+  - "[[Ek iş protokollerini göster]]"
   - "[[Ek İş Kaydı]]"
   - "[[Ek iş kaydı aç]]"
   - "[[Onaysız ek işleri listele]]"
@@ -100,28 +100,30 @@ parca_olmali: 0
 parca_iyi: 12
 parca_durum: tamamlandi
 ---
-# 10-02-01 · Şantiye ihtisas taşeronu
+# 10-07-01 · İnce iş ve kaplama taşeronu
 
-> Sektör: [[10 İnşaat & Yapı]] · Öncelik: **3.6** / 5 · Öneri: **A**
-> Puanlar tahmindir: pazar 4 · ödeme 3 · rekabet boşluğu 3 · kolaylık 4 · aciliyet 4
+> Sektör: [[10 İnşaat & Yapı]] · Öncelik: **3.4** / 5 · Öneri: **B**
+> Puanlar tahmindir: pazar 3 · ödeme 3 · rekabet boşluğu 3 · kolaylık 4 · aciliyet 4
 
 ## 1. Özet
-Başka müteahhidin şantiyesinde duvar, kalıp, sıva, boya, kaplama, çatı veya yalıtım yapan ekip.
+Boya, kaplama, çatı, yalıtım gibi ince iş; metraj ve iş bitirme takibi.
 
 - **İşletme sayısı:** bulunamadı
-- **NACE:** 43
+- **NACE:** 43.3
 - **Sayı türü:** tahmin
 
 ## 2. Günlük iş akışı
-1. Yoklama
-2. metraj veya yevmiye
-3. ana yükleniciye hakediş.
+1. Keşif
+2. Metraj
+3. Puantaj
+4. Hakediş
 
 ```mermaid
 flowchart LR
-  S1["Yoklama"] --> S2
-  S2["metraj veya yevmiye"] --> S3
-  S3["ana yükleniciye hakediş."]
+  S1["Keşif"] --> S2
+  S2["Metraj"] --> S3
+  S3["Puantaj"] --> S4
+  S4["Hakediş"]
 ```
 
 ## 3. İhtiyaçlar ve sorunlar
@@ -198,9 +200,9 @@ _Yok._
 | [[Fotosuz metraj kalemleri]] | [[Fotoğraf Delil]] | Fotosuz metraj kalemleri — İmalat foto+konum. |
 
 ## 5. Teknik detay
-- **Entegrasyonlar:** Modül kartlarındaki entegrasyon notlarına bak; açık API yoksa panel kaydı + kullanıcı girişi.
-- **Ana ekranlar:** İş listesi / kart · Takvim veya pipeline · Tahsilat · Rapor
-- **Veri yapısı:** `Cari → İşKaydı → Belge/Tahsilat → Hatırlatma (onay kuyruğu)`
+- **Entegrasyonlar:** Modül kartlarına bak; açık API yoksa panel kaydı.
+- **Ana ekranlar:** İş listesi · Kart · Tahsilat · Rapor
+- **Veri yapısı:** `Cari → İşKaydı → Belge/Tahsilat → Hatırlatma (onay)`
 
 ## 6. Rakipler
 - [[SantiyePro]]
@@ -210,4 +212,3 @@ _Yok._
 
 ## 7. Kaynaklar
 - [[10 İnşaat & Yapı – Kaynaklar]]
-- Araştırma arşivi: `08 Arşiv/eski-docs-sektorel-arastirma/`

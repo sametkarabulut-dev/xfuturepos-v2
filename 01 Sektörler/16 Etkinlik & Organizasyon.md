@@ -11,7 +11,7 @@ is_modeli: etkinlik
 - Tarih sorusu telefon, Excel, WhatsApp ve Instagram DM arasında kalır. Salon programları takvim, opsiyon ve kaporayı merkeze koyar. Çifte satışın gerekçesi ürün metinlerindedir: aynı takvime iki kişi bakması. Kayıp kapora oranı bu taramada yoktur. Salon yazılımlarının dışarıya açık API’si doğrulanmadı.
 - Sabit düğün salonu işyeri açma ruhsatına tabidir. ÇŞİDB’nin 29.09.2023 görüşü bu salonları sıhhi müessese sayar; müzik yayını yapan işyeri il müdürlüğünden müzik yayın izni alır. Beyoğlu Belediyesi sayfası düğün salonunu umuma açık listeye koyduğu için yerel uygulama tek cümlede kapanmaz. MSG konser ve etkinlik ücretini mekân veya organizatörden toplar. Merkezî mutfakta yemek üretip götüren işletme gıda kayıt rejimindedir.
 - Karar: Fotoğraf, süs ve çiçek tedarikçi olarak dışarıdadır. Stadyum ve uluslararası fuar alanı işletmeciliği kapsama girmez.
-- Modül: sektör ortak 5; alt sektör 6; toplam 23; MVP 23.
+- Alt işletme: 8. Modül kartları `04 Modüller/`.
 - Ortak çekirdek (tüm sektörler) bu dosyada yoktur → `04 Modüller/` çekirdek araçlar.
 
 <!-- dallar:start -->
@@ -20,23 +20,25 @@ is_modeli: etkinlik
 
 | Dal | Alt dal | Fonksiyon | Durum |
 |---|---|---|---|
-| [[Düğün, balo ve davet mekânı işletmeciliği]] | 1 | 10 | açık |
-| [[Özel gün organizatörlüğü]] | 1 | 10 | açık |
-| [[Kurumsal etkinlik ve kongre ajansı]] | 1 | 10 | açık |
-| [[Konser ve küçük festival organizatörlüğü]] | 1 | 10 | açık |
-| [[Sahne, ses ve ışık teknik hizmeti]] | 1 | 10 | açık |
-| [[Etkinlik ikramı]] | 1 | 10 | açık |
+| [[Düğün, balo ve davet mekânı işletmeciliği]] | 2 | 62 | açık |
+| [[Etkinlik ikramı]] | 1 | 31 | açık |
+| [[Konser ve küçük festival organizatörlüğü]] | 1 | 31 | açık |
+| [[Kurumsal etkinlik ve kongre ajansı]] | 1 | 31 | açık |
+| [[Sahne, ses ve ışık teknik hizmeti]] | 1 | 31 | açık |
+| [[Özel gün organizatörlüğü]] | 2 | 62 | açık |
 <!-- dallar:end -->
 
 ## Alt işletme türleri (onay listesi)
 > İşaretli = Adım 1 onay listesi.
 
-- [x] [[Düğün, balo ve davet mekânı işletmeciliği|Düğün, balo ve davet mekânı işletmeciliği]]
-- [x] [[Özel gün organizatörlüğü|Özel gün organizatörlüğü]]
-- [x] [[Kurumsal etkinlik ve kongre ajansı|Kurumsal etkinlik ve kongre ajansı]]
-- [x] [[Konser ve küçük festival organizatörlüğü|Konser ve küçük festival organizatörlüğü]]
-- [x] [[Sahne, ses ve ışık teknik hizmeti|Sahne, ses ve ışık teknik hizmeti]]
+- [x] [[Düğün ve davet salonu|Düğün ve davet salonu]]
+- [x] [[Kendi mutfaklı düğün kompleksi|Kendi mutfaklı düğün kompleksi]]
 - [x] [[Etkinlik ikramı|Etkinlik ikramı]]
+- [x] [[Konser ve küçük festival organizatörlüğü|Konser ve küçük festival organizatörlüğü]]
+- [x] [[Kurumsal etkinlik ve kongre ajansı|Kurumsal etkinlik ve kongre ajansı]]
+- [x] [[Sahne, ses ve ışık teknik hizmeti|Sahne, ses ve ışık teknik hizmeti]]
+- [x] [[Düğün organizatörü|Düğün organizatörü]]
+- [x] [[Özel gün ve kutlama organizatörü|Özel gün ve kutlama organizatörü]]
 
 ## Sınırlar ve doğrulanamayan
 - Sektör arşiv notundaki sınır ve doğrulanamayan maddeler geçerlidir (`08 Arşiv/eski-docs-sektorel-arastirma/ai-kaynak/16-etkinlik-organizasyon.md`).
@@ -123,12 +125,14 @@ flowchart TB
 
 | # | Alt tür | Pazar | Ödeme | Rekabet | Kolaylık | Aciliyet | Öncelik |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | [[Düğün, balo ve davet mekânı işletmeciliği]] | 4 | 4 | 2 | 4 | 5 | **3.8** |
-| 2 | [[Özel gün organizatörlüğü]] | 3 | 3 | 3 | 4 | 4 | **3.4** |
-| 3 | [[Kurumsal etkinlik ve kongre ajansı]] | 3 | 4 | 2 | 3 | 4 | **3.2** |
-| 4 | [[Etkinlik ikramı]] | 3 | 3 | 3 | 3 | 3 | **3.0** |
-| 5 | [[Sahne, ses ve ışık teknik hizmeti]] | 2 | 3 | 3 | 3 | 3 | **2.8** |
-| 6 | [[Konser ve küçük festival organizatörlüğü]] | 2 | 3 | 2 | 2 | 3 | **2.4** |
+| 1 | [[Düğün ve davet salonu]] | 5 | 4 | 3 | 4 | 4 | **4.0** |
+| 2 | [[Düğün organizatörü]] | 4 | 4 | 3 | 4 | 4 | **3.8** |
+| 3 | [[Kendi mutfaklı düğün kompleksi]] | 4 | 4 | 3 | 3 | 4 | **3.6** |
+| 4 | [[Özel gün ve kutlama organizatörü]] | 3 | 4 | 3 | 4 | 3 | **3.4** |
+| 5 | [[Kurumsal etkinlik ve kongre ajansı]] | 3 | 4 | 3 | 3 | 3 | **3.2** |
+| 6 | [[Sahne, ses ve ışık teknik hizmeti]] | 3 | 3 | 3 | 4 | 3 | **3.2** |
+| 7 | [[Etkinlik ikramı]] | 3 | 3 | 3 | 3 | 3 | **3.0** |
+| 8 | [[Konser ve küçük festival organizatörlüğü]] | 2 | 3 | 2 | 2 | 3 | **2.4** |
 
 ## Yasal çerçeve
 | Konu | Kural | Yazılım etkisi | Kaynak |

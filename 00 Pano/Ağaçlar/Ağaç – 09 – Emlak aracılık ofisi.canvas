@@ -4,10 +4,10 @@
       "type": "text",
       "id": "n1",
       "x": 0,
-      "y": -260,
-      "width": 480,
-      "height": 140,
-      "text": "# Emlak aracılık ofisi\n**Sektör → Dal → Alt dal → Fonksiyon**\n[[09 Emlak & Gayrimenkul]]"
+      "y": -180,
+      "width": 460,
+      "height": 110,
+      "text": "# Emlak aracılık ofisi\n[[09 Emlak & Gayrimenkul]]"
     },
     {
       "type": "file",
@@ -15,8 +15,8 @@
       "file": "01 Sektörler/09 Emlak & Gayrimenkul.md",
       "x": 0,
       "y": 0,
-      "width": 420,
-      "height": 120,
+      "width": 400,
+      "height": 100,
       "color": "6"
     },
     {
@@ -24,29 +24,30 @@
       "id": "n3",
       "file": "02 İşletmeler/09 Emlak & Gayrimenkul/Emlak aracılık ofisi/Dal – Emlak aracılık ofisi.md",
       "x": 0,
-      "y": 200,
-      "width": 420,
-      "height": 140,
+      "y": 150,
+      "width": 400,
+      "height": 110,
       "color": "5"
     },
     {
       "type": "file",
       "id": "n4",
-      "file": "02 İşletmeler/09 Emlak & Gayrimenkul/Emlak aracılık ofisi/Emlak aracılık ofisi.md",
-      "x": 560,
-      "y": 180,
-      "width": 420,
-      "height": 160,
+      "file": "02 İşletmeler/09 Emlak & Gayrimenkul/Emlak aracılık ofisi/Bağımsız emlak aracılık ofisi.md",
+      "x": 520,
+      "y": 80,
+      "width": 400,
+      "height": 95,
       "color": "4"
     },
     {
-      "type": "text",
+      "type": "file",
       "id": "n5",
-      "x": 1080,
-      "y": 0,
-      "width": 520,
-      "height": 520,
-      "text": "### Emlak aracılık ofisi\n19 modül · 10 fonksiyon\n\n**Modüller**\n- [[Muhasebe ve Gelir-Gider]]\n- [[e-Fatura ve e-Arşiv]]\n- [[CRM]]\n- [[Personel ve Vardiya]]\n- [[Raporlar]]\n- [[AI Asistan]]\n- [[Ayarlar]]\n- [[Portföy Kartı]]\n- [[Gösterim Randevu]]\n- [[İlan Doğrulama]]\n- [[Yetki Takibi]]\n- [[Sözleşme Taslağı]]\n\n**Fonksiyon örnekleri**\n- Bu alıcıya 5 aday öner\n- Bütçe 8–10M eşleşmeleri getir\n- Yetki bekleyen portföyleri göster\n- Yetki kodu süresi dolanları listele\n- Açık teklifleri sırala\n- Bu portföyün son teklifini özetle\n- Ortak portföyleri listele\n- Paylaşım kuralını özetle"
+      "file": "02 İşletmeler/09 Emlak & Gayrimenkul/Emlak aracılık ofisi/Sözleşmeli veya franchise emlak ofisi.md",
+      "x": 520,
+      "y": 190,
+      "width": 400,
+      "height": 95,
+      "color": "4"
     }
   ],
   "edges": [
@@ -66,11 +67,10 @@
     },
     {
       "id": "e3",
-      "fromNode": "n4",
+      "fromNode": "n3",
       "fromSide": "right",
       "toNode": "n5",
-      "toSide": "left",
-      "label": "kullanır"
+      "toSide": "left"
     }
   ]
 }

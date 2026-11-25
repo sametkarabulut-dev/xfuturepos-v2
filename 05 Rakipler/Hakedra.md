@@ -5,7 +5,7 @@ sektorler:
   - "[[10 İnşaat & Yapı]]"
 fiyat: "bulunamadı"
 guclu: "Hakediş"
-zayif: "Fiyat/şikayet derinliği bu turda taranmadı veya bulunamadı"
+zayif: "Derin şikayet taraması sonraki tur"
 web: ""
 ---
 # Hakedra
@@ -21,7 +21,7 @@ web: ""
 - Hakediş
 
 ## Zayıf yönler
-- Derin Şikayetvar/mağaza taraması bu notta tamamlanmadı → sonraki tur.
+- Bu turda Şikayetvar/mağaza derinliği tamamlanmadı.
 
 ## Kaynaklar
 - bulunamadı

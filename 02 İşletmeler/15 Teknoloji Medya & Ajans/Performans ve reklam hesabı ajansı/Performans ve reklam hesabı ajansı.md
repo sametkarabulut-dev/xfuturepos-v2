@@ -1,6 +1,6 @@
 ---
 tip: isletme
-kod: "15-02-01"
+kod: "15-07-01"
 oneri_harf: A
 oncelik:
 gereksiz: false
@@ -99,7 +99,7 @@ parca_olmali: 0
 parca_iyi: 12
 parca_durum: tamamlandi
 ---
-# 15-02-01 · Performans ve reklam hesabı ajansı
+# 15-07-01 · Performans ve reklam hesabı ajansı
 
 > Sektör: [[15 Teknoloji Medya & Ajans]] · Öncelik: **3.6** / 5 · Öneri: **A**
 > Puanlar tahmindir: pazar 4 · ödeme 4 · rekabet boşluğu 2 · kolaylık 3 · aciliyet 5

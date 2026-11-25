@@ -1,17 +1,17 @@
 ---
 tip: isletme
-kod: "15-03-01"
+kod: "15-06-02"
 oneri_harf: A
 oncelik:
 gereksiz: false
-oncelik_notu:
+oncelik_notu: ""
 sektor: "[[15 Teknoloji Medya & Ajans]]"
 dal: "[[Dal – Müşteri adına içerik ofisi]]"
 durum: tamamlandi
-olcek: ['tek-kisilik', 'mikro', 'kucuk-orta']
+olcek: [mikro, kucuk-orta]
 isletme_sayisi: "bulunamadı"
 sayi_turu: tahmin
-nace: 73.11
+nace: "73.11"
 pazar_puani: 4
 odeme_puani: 3
 rekabet_puani: 3
@@ -73,12 +73,6 @@ fonksiyonlar:
   - "[[Sözleşme Takibi]]"
   - "[[30 gün içinde biten retainer'ları göster]]"
   - "[[Sözleşme yenileme taslağı hazırla]]"
-  - "[[Kaynak Planı]]"
-  - "[[Kim aşırı yüklü?]]"
-  - "[[Sprint için boş kapasiteyi bul]]"
-  - "[[Teklif Paketi]]"
-  - "[[Benzer tekliften taslak üret]]"
-  - "[[Kapsam maddelerini numaralandır]]"
   - "[[Yayın Takvimi]]"
   - "[[Bu hafta boş kalan günleri göster]]"
   - "[[Onaysız içerikleri listele]]"
@@ -88,6 +82,12 @@ fonksiyonlar:
   - "[[Kanal Listesi]]"
   - "[[Müşteri kanallarını listele]]"
   - "[[Erişimi belirsiz kanalları bul]]"
+  - "[[Kaynak Planı]]"
+  - "[[Kim aşırı yüklü?]]"
+  - "[[Sprint için boş kapasiteyi bul]]"
+  - "[[Teklif Paketi]]"
+  - "[[Benzer tekliften taslak üret]]"
+  - "[[Kapsam maddelerini numaralandır]]"
   - "[[SEO İşleri]]"
   - "[[Bu ayın SEO işlerini özetle]]"
   - "[[Yarım kalan sayfa işlerini listele]]"
@@ -99,13 +99,13 @@ parca_olmali: 0
 parca_iyi: 12
 parca_durum: tamamlandi
 ---
-# 15-03-01 · Müşteri adına içerik ofisi
+# 15-06-02 · Sosyal medya içerik ofisi
 
 > Sektör: [[15 Teknoloji Medya & Ajans]] · Öncelik: **3.6** / 5 · Öneri: **A**
 > Puanlar tahmindir: pazar 4 · ödeme 3 · rekabet boşluğu 3 · kolaylık 4 · aciliyet 4
 
 ## 1. Özet
-Müşterinin kanalında takvimle yayın yapan retainer ofis. Reklam hesabı asıl işi değildir.
+Takvim, brief onayı ve içerik üretimi; reklam hesabı 15.02’dedir.
 
 - **İşletme sayısı:** bulunamadı
 - **NACE:** 73.11
@@ -113,16 +113,18 @@ Müşterinin kanalında takvimle yayın yapan retainer ofis. Reklam hesabı ası
 
 ## 2. Günlük iş akışı
 1. Takvim
-2. onay
-3. yayın
-4. aylık iş listesi.
+2. Brief
+3. Üretim
+4. Onay
+5. Yayın
 
 ```mermaid
 flowchart LR
   S1["Takvim"] --> S2
-  S2["onay"] --> S3
-  S3["yayın"] --> S4
-  S4["aylık iş listesi."]
+  S2["Brief"] --> S3
+  S3["Üretim"] --> S4
+  S4["Onay"] --> S5
+  S5["Yayın"]
 ```
 
 ## 3. İhtiyaçlar ve sorunlar
@@ -199,9 +201,9 @@ _Yok._
 | [[Düşen kanalları işaretle]] | [[Etkileşim Özeti]] | Düşen kanalları işaretle — Dönem etkileşim ve müşteri rapor taslağı. |
 
 ## 5. Teknik detay
-- **Entegrasyonlar:** Modül kartlarındaki entegrasyon notlarına bak; açık API yoksa panel kaydı + kullanıcı girişi.
-- **Ana ekranlar:** İş listesi / kart · Takvim veya pipeline · Tahsilat · Rapor
-- **Veri yapısı:** `Cari → İşKaydı → Belge/Tahsilat → Hatırlatma (onay kuyruğu)`
+- **Entegrasyonlar:** Modül kartlarına bak; açık API yoksa panel kaydı.
+- **Ana ekranlar:** İş listesi · Kart · Tahsilat · Rapor
+- **Veri yapısı:** `Cari → İşKaydı → Belge/Tahsilat → Hatırlatma (onay)`
 
 ## 6. Rakipler
 - [[Meta Ads]]
@@ -210,4 +212,3 @@ _Yok._
 
 ## 7. Kaynaklar
 - [[15 Teknoloji Medya & Ajans – Kaynaklar]]
-- Araştırma arşivi: `08 Arşiv/eski-docs-sektorel-arastirma/`

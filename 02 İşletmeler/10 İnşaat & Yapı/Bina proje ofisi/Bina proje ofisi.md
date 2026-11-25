@@ -1,6 +1,6 @@
 ---
 tip: isletme
-kod: "10-06-01"
+kod: "10-01-01"
 oneri_harf: C
 oncelik:
 gereksiz: false
@@ -100,7 +100,7 @@ parca_olmali: 0
 parca_iyi: 12
 parca_durum: tamamlandi
 ---
-# 10-06-01 · Bina proje ofisi
+# 10-01-01 · Bina proje ofisi
 
 > Sektör: [[10 İnşaat & Yapı]] · Öncelik: **2.8** / 5 · Öneri: **C**
 > Puanlar tahmindir: pazar 3 · ödeme 3 · rekabet boşluğu 2 · kolaylık 3 · aciliyet 3

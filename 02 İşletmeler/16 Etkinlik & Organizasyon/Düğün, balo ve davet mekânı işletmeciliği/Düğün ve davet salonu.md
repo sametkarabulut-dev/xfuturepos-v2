@@ -4,14 +4,14 @@ kod: "16-01-01"
 oneri_harf: A
 oncelik:
 gereksiz: false
-oncelik_notu:
+oncelik_notu: ""
 sektor: "[[16 Etkinlik & Organizasyon]]"
 dal: "[[Dal – Düğün, balo ve davet mekânı işletmeciliği]]"
 durum: tamamlandi
-olcek: ['mikro', 'kucuk-orta']
+olcek: [mikro, kucuk-orta]
 isletme_sayisi: "bulunamadı"
 sayi_turu: tahmin
-nace: "56.21 / 93"
+nace: "56.21"
 pazar_puani: 5
 odeme_puani: 4
 rekabet_puani: 3
@@ -82,34 +82,32 @@ parca_olmali: 0
 parca_iyi: 0
 parca_durum: tamamlandi
 ---
-# 16-01-01 · Düğün, balo ve davet mekânı işletmeciliği
+# 16-01-01 · Düğün ve davet salonu
 
 > Sektör: [[16 Etkinlik & Organizasyon]] · Öncelik: **4.0** / 5 · Öneri: **A**
 > Puanlar tahmindir: pazar 5 · ödeme 4 · rekabet boşluğu 3 · kolaylık 4 · aciliyet 4
 
 ## 1. Özet
-Tarihi ve salonu satan işletme. Mekânsız planlayıcı bu satırda değildir.
+Tarih rezervasyonu, kapora ve salon operasyonu; düğün/nişan/kına aynı dalda.
 
 - **İşletme sayısı:** bulunamadı
-- **NACE:** 56.21 / 93
+- **NACE:** 56.21
 - **Sayı türü:** tahmin
 
 ## 2. Günlük iş akışı
-1. Salon takviminde opsiyon
-2. kesin tarih
-3. kapora
-4. kişi sayısı
-5. menü
-6. servis ekibi.
+1. Rezervasyon
+2. Kapora
+3. Run-of-show
+4. Teslim
+5. Tahsilat
 
 ```mermaid
 flowchart LR
-  S1["Salon takviminde opsiyon"] --> S2
-  S2["kesin tarih"] --> S3
-  S3["kapora"] --> S4
-  S4["kişi sayısı"] --> S5
-  S5["menü"] --> S6
-  S6["servis ekibi."]
+  S1["Rezervasyon"] --> S2
+  S2["Kapora"] --> S3
+  S3["Run-of-show"] --> S4
+  S4["Teslim"] --> S5
+  S5["Tahsilat"]
 ```
 
 ## 3. İhtiyaçlar ve sorunlar
@@ -173,9 +171,9 @@ _Yok._
 _Yok._
 
 ## 5. Teknik detay
-- **Entegrasyonlar:** Modül kartlarındaki entegrasyon notlarına bak; açık API yoksa panel kaydı + kullanıcı girişi.
-- **Ana ekranlar:** İş listesi / kart · Takvim veya pipeline · Tahsilat · Rapor
-- **Veri yapısı:** `Cari → İşKaydı → Belge/Tahsilat → Hatırlatma (onay kuyruğu)`
+- **Entegrasyonlar:** Modül kartlarına bak; açık API yoksa panel kaydı.
+- **Ana ekranlar:** İş listesi · Kart · Tahsilat · Rapor
+- **Veri yapısı:** `Cari → İşKaydı → Belge/Tahsilat → Hatırlatma (onay)`
 
 ## 6. Rakipler
 - [[iyzico]]
@@ -183,4 +181,3 @@ _Yok._
 
 ## 7. Kaynaklar
 - [[16 Etkinlik & Organizasyon – Kaynaklar]]
-- Araştırma arşivi: `08 Arşiv/eski-docs-sektorel-arastirma/`

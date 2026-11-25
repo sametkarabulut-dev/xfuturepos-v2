@@ -5,7 +5,7 @@ sektorler:
   - "[[16 Etkinlik & Organizasyon]]"
 fiyat: "işlem oranı"
 guclu: "Kapora / ödeme"
-zayif: "Fiyat/şikayet derinliği bu turda taranmadı veya bulunamadı"
+zayif: "Derin şikayet taraması sonraki tur"
 web: "https://www.iyzico.com"
 ---
 # iyzico
@@ -21,7 +21,7 @@ web: "https://www.iyzico.com"
 - Kapora / ödeme
 
 ## Zayıf yönler
-- Derin Şikayetvar/mağaza taraması bu notta tamamlanmadı → sonraki tur.
+- Bu turda Şikayetvar/mağaza derinliği tamamlanmadı.
 
 ## Kaynaklar
 - https://www.iyzico.com

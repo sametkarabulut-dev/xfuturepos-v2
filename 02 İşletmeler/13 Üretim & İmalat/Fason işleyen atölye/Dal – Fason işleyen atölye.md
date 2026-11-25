@@ -8,11 +8,11 @@ fonksiyon_sayisi: 35
 ---
 # 13-01 · Fason işleyen atölye
 
-> Sektör: [[13 Üretim & İmalat]] · 1 alt dal · 35 fonksiyon
+> Sektör: [[13 Üretim & İmalat]] · 1 alt dal
 > Görsel: [[Ağaç – 13 – Fason işleyen atölye]]
 
 ## Özet
-- Fason işleyen atölye: onaylı alt işletme tür(ler)i ve bağlanan araç/fonksiyonlar.
+- Fason işleyen atölye
 
 ## Alt dallar
 | # | Alt dal | İşletme sayısı | Fonksiyon | Not |
@@ -24,51 +24,6 @@ mindmap
   root((Fason işleyen atölye))
     Fason işleyen atölye
 ```
-
-## Dalın ortak temeli
-- Çekirdek: [[Muhasebe ve Gelir-Gider]], [[e-Fatura ve e-Arşiv]], [[CRM]], [[Personel ve Vardiya]], [[Raporlar]], [[AI Asistan]], [[Ayarlar]]
-- Sektör ortak araçlar + bu dalın alt tür araçları
-
-## Fonksiyon matrisi
-> ● = kullanıyor.
-
-| Fonksiyon | A1 | Kullanım |
-|---|---|---|
-| [[Muhasebe ve Gelir-Gider]] | ● | 1/1 |
-| [[e-Fatura ve e-Arşiv]] | ● | 1/1 |
-| [[CRM]] | ● | 1/1 |
-| [[Personel ve Vardiya]] | ● | 1/1 |
-| [[Raporlar]] | ● | 1/1 |
-| [[AI Asistan]] | ● | 1/1 |
-| [[Ayarlar]] | ● | 1/1 |
-| [[İş Emri (Üretim)]] | ● | 1/1 |
-| [[Sipariş 452 için iş emri aç]] | ● | 1/1 |
-| [[Geciken iş emirlerini listele]] | ● | 1/1 |
-| [[Reçete BOM]] | ● | 1/1 |
-| [[Gömlek reçetesini göster]] | ● | 1/1 |
-| [[Fire oranını yüzde 5 yap]] | ● | 1/1 |
-| [[Fire Kayıt]] | ● | 1/1 |
-| [[İş emri 88 fire kaydet 12 adet]] | ● | 1/1 |
-| [[Bu hafta fire aşımı]] | ● | 1/1 |
-| [[Depo Sevk]] | ● | 1/1 |
-| [[İş emri 90 için sac çıkar]] | ● | 1/1 |
-| [[Fasoncuda kalan bakiyeyi göster]] | ● | 1/1 |
-| [[Fason Mutabakat]] | ● | 1/1 |
-| [[ABC Fason mutabakatını çıkar]] | ● | 1/1 |
-| [[Fire aşımını hakedişten kes]] | ● | 1/1 |
-| [[Müşteri Malzeme]] | ● | 1/1 |
-| [[Müşteri Y kumaş bakiyesi]] | ● | 1/1 |
-| [[Gelen malzeme kaydet]] | ● | 1/1 |
-| [[İşçilik Hakediş]] | ● | 1/1 |
-| [[Müşteri Y bu ay hakediş]] | ● | 1/1 |
-| [[Birim fiyat 4,5 TL]] | ● | 1/1 |
-| [[Dönüş İrsaliye]] | ● | 1/1 |
-| [[Mamulü müşteriye sevk et]] | ● | 1/1 |
-| [[İrsaliye hazırla]] | ● | 1/1 |
-| [[Fire Bildirim]] | ● | 1/1 |
-| [[Fireyi müşteriye bildir]] | ● | 1/1 |
-| [[Kapasite Slot]] | ● | 1/1 |
-| [[Perşembe boş slot]] | ● | 1/1 |
 
 ## Bu daldaki alt dallar (canlı)
 ```base

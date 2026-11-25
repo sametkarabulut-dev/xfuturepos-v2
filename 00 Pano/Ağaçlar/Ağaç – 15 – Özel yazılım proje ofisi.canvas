@@ -4,10 +4,10 @@
       "type": "text",
       "id": "n1",
       "x": 0,
-      "y": -260,
-      "width": 480,
-      "height": 140,
-      "text": "# Özel yazılım proje ofisi\n**Sektör → Dal → Alt dal → Fonksiyon**\n[[15 Teknoloji Medya & Ajans]]"
+      "y": -180,
+      "width": 460,
+      "height": 110,
+      "text": "# Özel yazılım proje ofisi\n[[15 Teknoloji Medya & Ajans]]"
     },
     {
       "type": "file",
@@ -15,8 +15,8 @@
       "file": "01 Sektörler/15 Teknoloji Medya & Ajans.md",
       "x": 0,
       "y": 0,
-      "width": 420,
-      "height": 120,
+      "width": 400,
+      "height": 100,
       "color": "6"
     },
     {
@@ -24,29 +24,30 @@
       "id": "n3",
       "file": "02 İşletmeler/15 Teknoloji Medya & Ajans/Özel yazılım proje ofisi/Dal – Özel yazılım proje ofisi.md",
       "x": 0,
-      "y": 200,
-      "width": 420,
-      "height": 140,
+      "y": 150,
+      "width": 400,
+      "height": 110,
       "color": "5"
     },
     {
       "type": "file",
       "id": "n4",
-      "file": "02 İşletmeler/15 Teknoloji Medya & Ajans/Özel yazılım proje ofisi/Özel yazılım proje ofisi.md",
-      "x": 560,
-      "y": 180,
-      "width": 420,
-      "height": 160,
+      "file": "02 İşletmeler/15 Teknoloji Medya & Ajans/Özel yazılım proje ofisi/Sabit fiyatlı yazılım proje ofisi.md",
+      "x": 520,
+      "y": 80,
+      "width": 400,
+      "height": 95,
       "color": "4"
     },
     {
-      "type": "text",
+      "type": "file",
       "id": "n5",
-      "x": 1080,
-      "y": 0,
-      "width": 520,
-      "height": 520,
-      "text": "### Özel yazılım proje ofisi\n19 modül · 10 fonksiyon\n\n**Modüller**\n- [[Muhasebe ve Gelir-Gider]]\n- [[e-Fatura ve e-Arşiv]]\n- [[CRM]]\n- [[Personel ve Vardiya]]\n- [[Raporlar]]\n- [[AI Asistan]]\n- [[Ayarlar]]\n- [[Proje Kapsamı]]\n- [[Saat Kullanımı]]\n- [[Brief Onayı]]\n- [[Teslim Takvimi]]\n- [[Sözleşme Takibi]]\n\n**Fonksiyon örnekleri**\n- Engelli işleri listele\n- Sprint bitiş özeti yaz\n- Kabul için eksikleri çıkar\n- UAT notlarını maddele\n- Bu talep teklifte var mı?\n- Kapsam dışı PR'ları işaretle\n- Müşteri ortam kartını özetle\n- Eksik erişimleri listele"
+      "file": "02 İşletmeler/15 Teknoloji Medya & Ajans/Özel yazılım proje ofisi/Zaman-malzeme yazılım ofisi.md",
+      "x": 520,
+      "y": 190,
+      "width": 400,
+      "height": 95,
+      "color": "4"
     }
   ],
   "edges": [
@@ -66,11 +67,10 @@
     },
     {
       "id": "e3",
-      "fromNode": "n4",
+      "fromNode": "n3",
       "fromSide": "right",
       "toNode": "n5",
-      "toSide": "left",
-      "label": "kullanır"
+      "toSide": "left"
     }
   ]
 }

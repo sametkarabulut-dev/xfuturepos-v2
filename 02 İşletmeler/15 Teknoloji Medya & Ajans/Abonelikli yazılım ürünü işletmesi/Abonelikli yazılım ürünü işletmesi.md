@@ -1,6 +1,6 @@
 ---
 tip: isletme
-kod: "15-08-01"
+kod: "15-01-01"
 oneri_harf: B
 oncelik:
 gereksiz: false
@@ -99,7 +99,7 @@ parca_olmali: 0
 parca_iyi: 12
 parca_durum: tamamlandi
 ---
-# 15-08-01 · Abonelikli yazılım ürünü işletmesi
+# 15-01-01 · Abonelikli yazılım ürünü işletmesi
 
 > Sektör: [[15 Teknoloji Medya & Ajans]] · Öncelik: **3.2** / 5 · Öneri: **B**
 > Puanlar tahmindir: pazar 3 · ödeme 4 · rekabet boşluğu 2 · kolaylık 3 · aciliyet 4

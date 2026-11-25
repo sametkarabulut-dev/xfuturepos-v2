@@ -1,6 +1,6 @@
 ---
 tip: isletme
-kod: "16-04-01"
+kod: "16-03-01"
 oneri_harf: C
 oncelik:
 gereksiz: false
@@ -82,7 +82,7 @@ parca_olmali: 0
 parca_iyi: 0
 parca_durum: tamamlandi
 ---
-# 16-04-01 · Konser ve küçük festival organizatörlüğü
+# 16-03-01 · Konser ve küçük festival organizatörlüğü
 
 > Sektör: [[16 Etkinlik & Organizasyon]] · Öncelik: **2.4** / 5 · Öneri: **C**
 > Puanlar tahmindir: pazar 2 · ödeme 3 · rekabet boşluğu 2 · kolaylık 2 · aciliyet 3

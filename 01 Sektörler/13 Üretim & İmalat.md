@@ -11,7 +11,7 @@ is_modeli: uretim
 - TÜİK sipariş, parti, fason veya proje payı yayımlamaz. Ayrım MEB’in üretim organizasyonu modülünden ve TOBB kapasite hesabından gelir. Logo hızlı üretim fişi tek seviyeli reçete ve fireyi kapatır. Tiger 3’te üretim emri, rota ve fason emri ayrıdır. Mikro API’sinde iş emri, reçete, fire, rota ve parti-lot vardır. TÜİK 2023 bilişim araştırmasında ERP kullanan girişim oranı %29,7’dir; bu oran 10 ve daha fazla çalışan içindir ve imalata özel değildir.
 - Sanayi sicili devamlı ve seri imalata ilişir. e-İrsaliye bütün imalatçılara otomatik değildir: demir-çelik GTİP 72 ve 73 ciro şartı olmadan kapsamdadır; ayrıca e-Fatura kayıtlı olup 2021 sonrası 10 milyon TL ve üzeri hasılatı olanlar kapsamdadır. Gıda kaydı yalnızca gıda işletmesindedir. CE yalnızca ilgili teknik düzenlemenin aradığı üründedir.
 - Karar: Ayrım hammaddeye göre değil iş emrinin nasıl açıldığına göredir.
-- Modül: sektör ortak 5; alt sektör 6; toplam 35; MVP 23.
+- Alt işletme: 8. Modül kartları `04 Modüller/`.
 - Ortak çekirdek (tüm sektörler) bu dosyada yoktur → `04 Modüller/` çekirdek araçlar.
 
 <!-- dallar:start -->
@@ -20,22 +20,24 @@ is_modeli: uretim
 
 | Dal | Alt dal | Fonksiyon | Durum |
 |---|---|---|---|
-| [[Siparişe göre kısa çevrim atölye]] | 1 | 14 | açık |
-| [[Tekrarlayan parti ve stok üretimi]] | 1 | 14 | açık |
-| [[Fason işleyen atölye]] | 1 | 14 | açık |
-| [[Proje tipi makine ve ekipman imalatı]] | 1 | 14 | açık |
-| [[Gıda işleme]] | 1 | 14 | açık |
-| [[Üretimi dışarı veren imalatçı]] | 1 | 14 | açık |
+| [[Fason işleyen atölye]] | 1 | 35 | açık |
+| [[Gıda işleme]] | 2 | 70 | açık |
+| [[Proje tipi makine ve ekipman imalatı]] | 1 | 34 | açık |
+| [[Siparişe göre kısa çevrim atölye]] | 2 | 70 | açık |
+| [[Tekrarlayan parti ve stok üretimi]] | 1 | 35 | açık |
+| [[Üretimi dışarı veren imalatçı]] | 1 | 34 | açık |
 <!-- dallar:end -->
 
 ## Alt işletme türleri (onay listesi)
 > İşaretli = Adım 1 onay listesi.
 
-- [x] [[Siparişe göre kısa çevrim atölye|Siparişe göre kısa çevrim atölye]]
-- [x] [[Tekrarlayan parti ve stok üretimi|Tekrarlayan parti ve stok üretimi]]
 - [x] [[Fason işleyen atölye|Fason işleyen atölye]]
+- [x] [[Gıda paketleme ve etiketleme hattı|Gıda paketleme ve etiketleme hattı]]
+- [x] [[Parti gıda işleme|Parti gıda işleme]]
 - [x] [[Proje tipi makine ve ekipman imalatı|Proje tipi makine ve ekipman imalatı]]
-- [x] [[Gıda işleme|Gıda işleme]]
+- [x] [[Sipariş atölyesi (tek seferlik iş)|Sipariş atölyesi (tek seferlik iş)]]
+- [x] [[Tamir ve revizyon atölyesi|Tamir ve revizyon atölyesi]]
+- [x] [[Tekrarlayan parti ve stok üretimi|Tekrarlayan parti ve stok üretimi]]
 - [x] [[Üretimi dışarı veren imalatçı|Üretimi dışarı veren imalatçı]]
 
 ## Sınırlar ve doğrulanamayan
@@ -134,12 +136,14 @@ flowchart TB
 
 | # | Alt tür | Pazar | Ödeme | Rekabet | Kolaylık | Aciliyet | Öncelik |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | [[Siparişe göre kısa çevrim atölye]] | 5 | 4 | 3 | 4 | 5 | **4.2** |
+| 1 | [[Sipariş atölyesi (tek seferlik iş)]] | 5 | 4 | 3 | 4 | 4 | **4.0** |
 | 2 | [[Fason işleyen atölye]] | 4 | 3 | 3 | 4 | 4 | **3.6** |
 | 3 | [[Tekrarlayan parti ve stok üretimi]] | 4 | 4 | 2 | 3 | 4 | **3.4** |
-| 4 | [[Üretimi dışarı veren imalatçı]] | 3 | 3 | 3 | 3 | 3 | **3.0** |
-| 5 | [[Gıda işleme]] | 3 | 3 | 2 | 2 | 4 | **2.8** |
-| 6 | [[Proje tipi makine ve ekipman imalatı]] | 2 | 3 | 2 | 2 | 3 | **2.4** |
+| 4 | [[Tamir ve revizyon atölyesi]] | 3 | 3 | 3 | 4 | 3 | **3.2** |
+| 5 | [[Üretimi dışarı veren imalatçı]] | 3 | 3 | 3 | 3 | 3 | **3.0** |
+| 6 | [[Gıda paketleme ve etiketleme hattı]] | 2 | 3 | 3 | 2 | 4 | **2.8** |
+| 7 | [[Parti gıda işleme]] | 3 | 3 | 2 | 2 | 4 | **2.8** |
+| 8 | [[Proje tipi makine ve ekipman imalatı]] | 3 | 3 | 2 | 2 | 3 | **2.6** |
 
 ## Yasal çerçeve
 | Konu | Kural | Yazılım etkisi | Kaynak |

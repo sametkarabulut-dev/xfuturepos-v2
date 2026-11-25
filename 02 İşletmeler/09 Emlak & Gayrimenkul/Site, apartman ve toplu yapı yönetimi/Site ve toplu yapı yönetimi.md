@@ -1,23 +1,22 @@
 ---
 tip: isletme
-kod: "09-01-01"
-oneri_harf: A
+kod: "09-03-02"
+oneri_harf: B
 oncelik:
 gereksiz: false
-oncelik_notu:
+oncelik_notu: ""
 sektor: "[[09 Emlak & Gayrimenkul]]"
-dal: "[[Dal – Emlak aracılık ofisi]]"
+dal: "[[Dal – Site, apartman ve toplu yapı yönetimi]]"
 durum: tamamlandi
-olcek: ['tek-kisilik', 'mikro', 'kucuk-orta']
-isletme_sayisi: "İTO 68.31.01: 14.828 (İstanbul oda; TR geneli yok)"
-isletme_sayisi_n: 14828
-sayi_turu: kaynakli
-nace: 68.31
-pazar_puani: 5
-odeme_puani: 4
-rekabet_puani: 2
+olcek: [mikro, kucuk-orta]
+isletme_sayisi: "bulunamadı"
+sayi_turu: tahmin
+nace: "68.32"
+pazar_puani: 3
+odeme_puani: 3
+rekabet_puani: 3
 kolaylik_puani: 3
-aciliyet_puani: 5
+aciliyet_puani: 4
 ihtiyaclar:
   - "[[Yetki belgesi ve sorumlu danışman takibi]]"
   - "[[Portföy kartı ve medya]]"
@@ -42,11 +41,11 @@ moduller:
   - "[[Sözleşme Taslağı]]"
   - "[[Belge Kasası]]"
   - "[[Komisyon Hesabı]]"
-  - "[[Alıcı Eşleştirme]]"
-  - "[[Malik Yetkilendirme]]"
-  - "[[Teklif Takibi]]"
-  - "[[Ofis Portföy Payı]]"
-  - "[[Piyasa Bandı]]"
+  - "[[İşletme Projesi]]"
+  - "[[Genel Kurul]]"
+  - "[[Arıza Talep]]"
+  - "[[Ortak Alan]]"
+  - "[[Aidat İcra]]"
 rakipler:
   - "[[RE-OS]]"
   - "[[selfSite]]"
@@ -74,6 +73,15 @@ fonksiyonlar:
   - "[[Yetki Takibi]]"
   - "[[Yetki belgesi vadesi yaklaşanları göster]]"
   - "[[Seviye 5 sorumlu listesi]]"
+  - "[[İşletme Projesi]]"
+  - "[[Geçici işletme projesi taslağı oluştur]]"
+  - "[[Yeniden değerleme üst sınırını uygula]]"
+  - "[[Genel Kurul]]"
+  - "[[Son kurul kararlarını özetle]]"
+  - "[[Yönetim planı değişiklik gündemi hazırla]]"
+  - "[[Arıza Talep]]"
+  - "[[Acil arızaları listele]]"
+  - "[[Ortalama çözüm süresini göster]]"
   - "[[Sözleşme Taslağı]]"
   - "[[Satış yetki sözleşmesi taslağı üret]]"
   - "[[Kira sözleşmesi madde özetini çıkar]]"
@@ -83,54 +91,43 @@ fonksiyonlar:
   - "[[Komisyon Hesabı]]"
   - "[[Bu satışta komisyon tutarını hesapla]]"
   - "[[Danışman payını göster]]"
-  - "[[Alıcı Eşleştirme]]"
-  - "[[Bu alıcıya 5 aday öner]]"
-  - "[[Bütçe 8–10M eşleşmeleri getir]]"
-  - "[[Malik Yetkilendirme]]"
-  - "[[Yetki bekleyen portföyleri göster]]"
-  - "[[Yetki kodu süresi dolanları listele]]"
-  - "[[Teklif Takibi]]"
-  - "[[Açık teklifleri sırala]]"
-  - "[[Bu portföyün son teklifini özetle]]"
-  - "[[Ofis Portföy Payı]]"
-  - "[[Ortak portföyleri listele]]"
-  - "[[Paylaşım kuralını özetle]]"
-  - "[[Piyasa Bandı]]"
-  - "[[Bu daire için fiyat bandı öner]]"
-  - "[[Son 30 gün benzer satılıkları özetle]]"
+  - "[[Ortak Alan]]"
+  - "[[Cumartesi salon müsaitliğini göster]]"
+  - "[[Çakışan rezervasyonları bul]]"
+  - "[[Aidat İcra]]"
+  - "[[3+ ay gecikenleri listele]]"
+  - "[[Gecikme tazminatı hesapla]]"
 parca_sart: 28
 parca_olmali: 3
 parca_iyi: 12
 parca_durum: tamamlandi
 ---
-# 09-01-01 · Emlak aracılık ofisi
+# 09-03-02 · Site ve toplu yapı yönetimi
 
-> Sektör: [[09 Emlak & Gayrimenkul]] · Öncelik: **3.8** / 5 · Öneri: **A**
-> Puanlar tahmindir: pazar 5 · ödeme 4 · rekabet boşluğu 2 · kolaylık 3 · aciliyet 5
+> Sektör: [[09 Emlak & Gayrimenkul]] · Öncelik: **3.2** / 5 · Öneri: **B**
+> Puanlar tahmindir: pazar 3 · ödeme 3 · rekabet boşluğu 3 · kolaylık 3 · aciliyet 4
 
 ## 1. Özet
-Yetki belgeli işletme, başkasına ait konut, işyeri, arsa veya devre mülke komisyonla aracılık eder.
+Çok bloklu / toplu yapıda ortak alan, personel, aidat ve kurul süreçleri.
 
-- **İşletme sayısı:** İTO 68.31.01: 14.828 (İstanbul oda; TR geneli yok)
-- **NACE:** 68.31
-- **Sayı türü:** kaynakli
+- **İşletme sayısı:** bulunamadı
+- **NACE:** 68.32
+- **Sayı türü:** tahmin
 
 ## 2. Günlük iş akışı
-1. Yetkilendirme dosyası
-2. EİDS izinli ilan
-3. talep eşleme
-4. yer gösterme
-5. yazılı teklif
-6. aracılık sözleşmesi.
+1. Aidat / banka
+2. Ortak alan
+3. Personel
+4. Kurul
+5. İhtar hazırlığı
 
 ```mermaid
 flowchart LR
-  S1["Yetkilendirme dosyası"] --> S2
-  S2["EİDS izinli ilan"] --> S3
-  S3["talep eşleme"] --> S4
-  S4["yer gösterme"] --> S5
-  S5["yazılı teklif"] --> S6
-  S6["aracılık sözleşmesi."]
+  S1["Aidat / banka"] --> S2
+  S2["Ortak alan"] --> S3
+  S3["Personel"] --> S4
+  S4["Kurul"] --> S5
+  S5["İhtar hazırlığı"]
 ```
 
 ## 3. İhtiyaçlar ve sorunlar
@@ -172,15 +169,15 @@ flowchart LR
 | [[Yetki Takibi]] | [[Yetki Takibi]] | İşletme yetki belgesi, sorumlu emlak danışmanı ve belge vade takibi (TTBS). |
 | [[Yetki belgesi vadesi yaklaşanları göster]] | [[Yetki Takibi]] | Yetki belgesi vadesi yaklaşanları göster — İşletme yetki belgesi, sorumlu emlak danışmanı ve belge vade takibi (TTBS). |
 | [[Seviye 5 sorumlu listesi]] | [[Yetki Takibi]] | Seviye 5 sorumlu listesi — İşletme yetki belgesi, sorumlu emlak danışmanı ve belge vade takibi (TTBS). |
-| [[Alıcı Eşleştirme]] | [[Alıcı Eşleştirme]] | CRM genişlemesi: bütçe/lokasyon/özellik ile portföy adayı skorlama. |
-| [[Bu alıcıya 5 aday öner]] | [[Alıcı Eşleştirme]] | Bu alıcıya 5 aday öner — CRM genişlemesi: bütçe/lokasyon/özellik ile portföy adayı skorlama. |
-| [[Bütçe 8–10M eşleşmeleri getir]] | [[Alıcı Eşleştirme]] | Bütçe 8–10M eşleşmeleri getir — CRM genişlemesi: bütçe/lokasyon/özellik ile portföy adayı skorlama. |
-| [[Malik Yetkilendirme]] | [[Malik Yetkilendirme]] | Malikin e-Devlet üzerinden emlak işletmesine verdiği ilan yetkisinin takip kaydı. |
-| [[Yetki bekleyen portföyleri göster]] | [[Malik Yetkilendirme]] | Yetki bekleyen portföyleri göster — Malikin e-Devlet üzerinden emlak işletmesine verdiği ilan yetkisinin takip kaydı. |
-| [[Yetki kodu süresi dolanları listele]] | [[Malik Yetkilendirme]] | Yetki kodu süresi dolanları listele — Malikin e-Devlet üzerinden emlak işletmesine verdiği ilan yetkisinin takip kaydı. |
-| [[Teklif Takibi]] | [[Teklif Takibi]] | Alıcı teklifleri, karşı teklif ve durum pipeline'ı. |
-| [[Açık teklifleri sırala]] | [[Teklif Takibi]] | Açık teklifleri sırala — Alıcı teklifleri, karşı teklif ve durum pipeline'ı. |
-| [[Bu portföyün son teklifini özetle]] | [[Teklif Takibi]] | Bu portföyün son teklifini özetle — Alıcı teklifleri, karşı teklif ve durum pipeline'ı. |
+| [[İşletme Projesi]] | [[İşletme Projesi]] | Yıllık gelir-gider, avans/aidat dağılımı; geçici proje ve genel kurul onayı. |
+| [[Geçici işletme projesi taslağı oluştur]] | [[İşletme Projesi]] | Geçici işletme projesi taslağı oluştur — Yıllık gelir-gider, avans/aidat dağılımı; geçici proje ve genel kurul onayı. |
+| [[Yeniden değerleme üst sınırını uygula]] | [[İşletme Projesi]] | Yeniden değerleme üst sınırını uygula — Yıllık gelir-gider, avans/aidat dağılımı; geçici proje ve genel kurul onayı. |
+| [[Genel Kurul]] | [[Genel Kurul]] | Toplantı çağrısı, gündem, karar ve tutanak arşivi. |
+| [[Son kurul kararlarını özetle]] | [[Genel Kurul]] | Son kurul kararlarını özetle — Toplantı çağrısı, gündem, karar ve tutanak arşivi. |
+| [[Yönetim planı değişiklik gündemi hazırla]] | [[Genel Kurul]] | Yönetim planı değişiklik gündemi hazırla — Toplantı çağrısı, gündem, karar ve tutanak arşivi. |
+| [[Arıza Talep]] | [[Arıza Talep]] | Kat maliki/kiracı talep, teknisyen atama ve SLA. |
+| [[Acil arızaları listele]] | [[Arıza Talep]] | Acil arızaları listele — Kat maliki/kiracı talep, teknisyen atama ve SLA. |
+| [[Ortalama çözüm süresini göster]] | [[Arıza Talep]] | Ortalama çözüm süresini göster — Kat maliki/kiracı talep, teknisyen atama ve SLA. |
 
 ### Olmalı (3)
 
@@ -200,17 +197,17 @@ flowchart LR
 | [[Komisyon Hesabı]] | [[Komisyon Hesabı]] | Muhasebe & Gelir-Gider genişlemesi: işlem komisyonu ve ofis/danışman payı önerisi. |
 | [[Bu satışta komisyon tutarını hesapla]] | [[Komisyon Hesabı]] | Bu satışta komisyon tutarını hesapla — Muhasebe & Gelir-Gider genişlemesi: işlem komisyonu ve ofis/danışman payı önerisi. |
 | [[Danışman payını göster]] | [[Komisyon Hesabı]] | Danışman payını göster — Muhasebe & Gelir-Gider genişlemesi: işlem komisyonu ve ofis/danışman payı önerisi. |
-| [[Ofis Portföy Payı]] | [[Ofis Portföy Payı]] | Şube/franchise arası portföy görünürlük ve komisyon paylaşım kuralları. |
-| [[Ortak portföyleri listele]] | [[Ofis Portföy Payı]] | Ortak portföyleri listele — Şube/franchise arası portföy görünürlük ve komisyon paylaşım kuralları. |
-| [[Paylaşım kuralını özetle]] | [[Ofis Portföy Payı]] | Paylaşım kuralını özetle — Şube/franchise arası portföy görünürlük ve komisyon paylaşım kuralları. |
-| [[Piyasa Bandı]] | [[Piyasa Bandı]] | Benzer ilanlardan bilgilendirme amaçlı fiyat bandı önerisi. |
-| [[Bu daire için fiyat bandı öner]] | [[Piyasa Bandı]] | Bu daire için fiyat bandı öner — Benzer ilanlardan bilgilendirme amaçlı fiyat bandı önerisi. |
-| [[Son 30 gün benzer satılıkları özetle]] | [[Piyasa Bandı]] | Son 30 gün benzer satılıkları özetle — Benzer ilanlardan bilgilendirme amaçlı fiyat bandı önerisi. |
+| [[Ortak Alan]] | [[Ortak Alan]] | Ortak alan (salon, misafir otopark vb.) rezervasyon yönetimi. |
+| [[Cumartesi salon müsaitliğini göster]] | [[Ortak Alan]] | Cumartesi salon müsaitliğini göster — Ortak alan (salon, misafir otopark vb.) rezervasyon yönetimi. |
+| [[Çakışan rezervasyonları bul]] | [[Ortak Alan]] | Çakışan rezervasyonları bul — Ortak alan (salon, misafir otopark vb.) rezervasyon yönetimi. |
+| [[Aidat İcra]] | [[Aidat İcra]] | Gecikme tazminatı hesabı ve icra dosya hazırlığı; takip başlatma insan onaylı. |
+| [[3+ ay gecikenleri listele]] | [[Aidat İcra]] | 3+ ay gecikenleri listele — Gecikme tazminatı hesabı ve icra dosya hazırlığı; takip başlatma insan onaylı. |
+| [[Gecikme tazminatı hesapla]] | [[Aidat İcra]] | Gecikme tazminatı hesapla — Gecikme tazminatı hesabı ve icra dosya hazırlığı; takip başlatma insan onaylı. |
 
 ## 5. Teknik detay
-- **Entegrasyonlar:** Modül kartlarındaki entegrasyon notlarına bak; açık API yoksa panel kaydı + kullanıcı girişi.
-- **Ana ekranlar:** İş listesi / kart · Takvim veya pipeline · Tahsilat · Rapor
-- **Veri yapısı:** `Cari → İşKaydı → Belge/Tahsilat → Hatırlatma (onay kuyruğu)`
+- **Entegrasyonlar:** Modül kartlarına bak; açık API yoksa panel kaydı.
+- **Ana ekranlar:** İş listesi · Kart · Tahsilat · Rapor
+- **Veri yapısı:** `Cari → İşKaydı → Belge/Tahsilat → Hatırlatma (onay)`
 
 ## 6. Rakipler
 - [[RE-OS]]
@@ -222,4 +219,3 @@ flowchart LR
 
 ## 7. Kaynaklar
 - [[09 Emlak & Gayrimenkul – Kaynaklar]]
-- Araştırma arşivi: `08 Arşiv/eski-docs-sektorel-arastirma/`
