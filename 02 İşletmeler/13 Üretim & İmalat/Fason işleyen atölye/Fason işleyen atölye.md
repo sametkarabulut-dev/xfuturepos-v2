@@ -4,12 +4,13 @@ kod: "13-03-01"
 oneri_harf: A
 oncelik:
 gereksiz: false
-oncelik_notu: ""
+oncelik_notu:
 sektor: "[[13 Üretim & İmalat]]"
 dal: "[[Dal – Fason işleyen atölye]]"
 durum: tamamlandi
 olcek: ['mikro', 'kucuk-orta']
 isletme_sayisi: "bulunamadı"
+sayi_turu: tahmin
 nace: "C"
 pazar_puani: 4
 odeme_puani: 3
@@ -46,16 +47,45 @@ moduller:
 rakipler:
   - "[[Mikro]]"
 fonksiyonlar:
+  - "[[Muhasebe ve Gelir-Gider]]"
+  - "[[e-Fatura ve e-Arşiv]]"
+  - "[[CRM]]"
+  - "[[Personel ve Vardiya]]"
+  - "[[Raporlar]]"
+  - "[[AI Asistan]]"
+  - "[[Ayarlar]]"
+  - "[[İş Emri (Üretim)]]"
+  - "[[Sipariş 452 için iş emri aç]]"
+  - "[[Geciken iş emirlerini listele]]"
+  - "[[Reçete BOM]]"
+  - "[[Gömlek reçetesini göster]]"
+  - "[[Fire oranını yüzde 5 yap]]"
+  - "[[Fire Kayıt]]"
+  - "[[İş emri 88 fire kaydet 12 adet]]"
+  - "[[Bu hafta fire aşımı]]"
+  - "[[Depo Sevk]]"
+  - "[[İş emri 90 için sac çıkar]]"
+  - "[[Fasoncuda kalan bakiyeyi göster]]"
+  - "[[Fason Mutabakat]]"
+  - "[[ABC Fason mutabakatını çıkar]]"
+  - "[[Fire aşımını hakedişten kes]]"
+  - "[[Müşteri Malzeme]]"
   - "[[Müşteri Y kumaş bakiyesi]]"
   - "[[Gelen malzeme kaydet]]"
+  - "[[İşçilik Hakediş]]"
   - "[[Müşteri Y bu ay hakediş]]"
   - "[[Birim fiyat 4,5 TL]]"
+  - "[[Dönüş İrsaliye]]"
   - "[[Mamulü müşteriye sevk et]]"
   - "[[İrsaliye hazırla]]"
+  - "[[Fire Bildirim]]"
   - "[[Fireyi müşteriye bildir]]"
+  - "[[Kapasite Slot]]"
   - "[[Perşembe boş slot]]"
-fiyat_araligi: "bulunamadı"
-is_modeli: "Abonelik (tahmin) — uretim"
+parca_sart: 31
+parca_olmali: 0
+parca_iyi: 4
+parca_durum: tamamlandi
 ---
 # 13-03-01 · Fason işleyen atölye
 
@@ -67,6 +97,7 @@ Başkasının malını işleyip işçilik bedeli kesen atölye.
 
 - **İşletme sayısı:** bulunamadı
 - **NACE:** C
+- **Sayı türü:** tahmin
 
 ## 2. Günlük iş akışı
 1. Gelen mal
@@ -84,77 +115,79 @@ flowchart LR
   S5["hizmet faturası."]
 ```
 
-AI destek (onaylı): Gelen irsaliyeyi açık işe bağlar; iade ve fire farkını mutabakat metnine döker.
-
 ## 3. İhtiyaçlar ve sorunlar
 | İhtiyaç | Bugün nasıl çözüyorlar | Etkisi |
 |---|---|---|
-| [[İş Emri (Üretim)]] | Excel / WhatsApp / portal (tahmin) | Zaman kaybı, hata riski |
-| [[Reçete BOM]] | Excel / WhatsApp / portal (tahmin) | Zaman kaybı, hata riski |
-| [[Fire Kayıt]] | Excel / WhatsApp / portal (tahmin) | Zaman kaybı, hata riski |
-| [[Müşteri Malzeme]] | Excel / WhatsApp / portal (tahmin) | Zaman kaybı, hata riski |
-| [[İşçilik Hakediş]] | Excel / WhatsApp / portal (tahmin) | Zaman kaybı, hata riski |
-| [[Dönüş İrsaliye]] | Excel / WhatsApp / portal (tahmin) | Zaman kaybı, hata riski |
-| [[Fire Bildirim]] | Excel / WhatsApp / portal (tahmin) | Zaman kaybı, hata riski |
-| [[Kapasite Slot]] | Excel / WhatsApp / portal (tahmin) | Zaman kaybı, hata riski |
+| [[İş emri]] | Excel / WhatsApp / portal (tahmin) | Zaman, hata, uyum riski |
+| [[Reçete / BOM]] | Excel / WhatsApp / portal (tahmin) | Zaman, hata, uyum riski |
+| [[Fire kaydı]] | Excel / WhatsApp / portal (tahmin) | Zaman, hata, uyum riski |
+| [[Depo sevk]] | Excel / WhatsApp / portal (tahmin) | Zaman, hata, uyum riski |
+| [[e-Belge / e-İrsaliye]] | Excel / WhatsApp / portal (tahmin) | Zaman, hata, uyum riski |
+| [[Fason mutabakat]] | Excel / WhatsApp / portal (tahmin) | Zaman, hata, uyum riski |
+| [[Lot / SKT]] | Excel / WhatsApp / portal (tahmin) | Zaman, hata, uyum riski |
+| [[Gıda kayıt]] | Excel / WhatsApp / portal (tahmin) | Zaman, hata, uyum riski |
 
-## 4. Çözümümüz: modüller ve özellikler
-**Araç tarifi:** [[Muhasebe ve Gelir-Gider]] + [[e-Fatura ve e-Arşiv]] + [[CRM]] + [[Personel ve Vardiya]] + [[Raporlar]] + [[AI Asistan]] + [[Ayarlar]] + [[İş Emri (Üretim)]] + [[Reçete BOM]] + [[Fire Kayıt]] + [[Depo Sevk]] + [[Fason Mutabakat]] + [[Müşteri Malzeme]] + [[İşçilik Hakediş]]…
+## 4. Parçalar
 
-### Fonksiyonlar
-- [[Müşteri Y kumaş bakiyesi]]
-- [[Gelen malzeme kaydet]]
-- [[Müşteri Y bu ay hakediş]]
-- [[Birim fiyat 4,5 TL]]
-- [[Mamulü müşteriye sevk et]]
-- [[İrsaliye hazırla]]
-- [[Fireyi müşteriye bildir]]
-- [[Perşembe boş slot]]
+35 parça · 31 şart · 0 olmalı · 4 iyi olur
 
-### MVP
-- [[İş Emri (Üretim)]]
-- [[Reçete BOM]]
-- [[Fire Kayıt]]
-- [[Depo Sevk]]
-- [[Fason Mutabakat]]
-- [[Müşteri Malzeme]]
-- [[İşçilik Hakediş]]
-- [[Dönüş İrsaliye]]
+### Şart (31)
 
-### Sonraki sürüm
-- [[Fire Bildirim]]
-- [[Kapasite Slot]]
+| Fonksiyon | Araç | Kullanım |
+|---|---|---|
+| [[Muhasebe ve Gelir-Gider]] | [[Muhasebe ve Gelir-Gider]] | Gelir, gider, cari, kasa ve banka. Sektör belgesi para kaydını buraya düşürür. |
+| [[e-Fatura ve e-Arşiv]] | [[e-Fatura ve e-Arşiv]] | Satış belgesi taslağı; gönderim entegratör + onayla. |
+| [[CRM]] | [[CRM]] | Kişi/firma kartı, iletişim, not; sektör alanları karta eklenir. |
+| [[Personel ve Vardiya]] | [[Personel ve Vardiya]] | Personel kartı, vardiya, puantaj. Bordro/SGK kesilmez. |
+| [[Raporlar]] | [[Raporlar]] | Ciro, tahsilat, açık iş ve personel özeti. |
+| [[AI Asistan]] | [[AI Asistan]] | Komut çalıştırır, taslak üretir; yüksek etkili işlem onaysız bitmez. |
+| [[Ayarlar]] | [[Ayarlar]] | İşletme, belge, bildirim ve entegrasyon ayarları. |
+| [[İş Emri (Üretim)]] | [[İş Emri (Üretim)]] | Sipariş veya stok ihtiyacından iş emri; durum akışı; tam MES değil |
+| [[Sipariş 452 için iş emri aç]] | [[İş Emri (Üretim)]] | Sipariş 452 için iş emri aç — Sipariş veya stok ihtiyacından iş emri; durum akışı; tam MES değil |
+| [[Geciken iş emirlerini listele]] | [[İş Emri (Üretim)]] | Geciken iş emirlerini listele — Sipariş veya stok ihtiyacından iş emri; durum akışı; tam MES değil |
+| [[Reçete BOM]] | [[Reçete BOM]] | Hammadde, birim, beklenen fire oranı; iş emrine bağlanır |
+| [[Gömlek reçetesini göster]] | [[Reçete BOM]] | Gömlek reçetesini göster — Hammadde, birim, beklenen fire oranı; iş emrine bağlanır |
+| [[Fire oranını yüzde 5 yap]] | [[Reçete BOM]] | Fire oranını yüzde 5 yap — Hammadde, birim, beklenen fire oranı; iş emrine bağlanır |
+| [[Fire Kayıt]] | [[Fire Kayıt]] | İş emri bazlı fire; reçete toleransı ile gerçekleşen karşılaştırma |
+| [[İş emri 88 fire kaydet 12 adet]] | [[Fire Kayıt]] | İş emri 88 fire kaydet 12 adet — İş emri bazlı fire; reçete toleransı ile gerçekleşen karşılaştırma |
+| [[Bu hafta fire aşımı]] | [[Fire Kayıt]] | Bu hafta fire aşımı — İş emri bazlı fire; reçete toleransı ile gerçekleşen karşılaştırma |
+| [[Depo Sevk]] | [[Depo Sevk]] | İş emrine bağlı malzeme çıkış/iade ve fason depo bakiyesi. Çekirdek genişleme: e-Fatura/e-Arşiv (e-irsaliye köprüsü). |
+| [[İş emri 90 için sac çıkar]] | [[Depo Sevk]] | İş emri 90 için sac çıkar — İş emrine bağlı malzeme çıkış/iade ve fason depo bakiyesi. Çekirdek genişleme: e-Fatura/e-Arşiv (e-irsaliye köprüsü). |
+| [[Fasoncuda kalan bakiyeyi göster]] | [[Depo Sevk]] | Fasoncuda kalan bakiyeyi göster — İş emrine bağlı malzeme çıkış/iade ve fason depo bakiyesi. Çekirdek genişleme: e-Fatura/e-Arşiv (e-irsaliye köprüsü). |
+| [[Fason Mutabakat]] | [[Fason Mutabakat]] | Sevk, dönüş, kalite, fire, hakediş ve fatura eşleştirme zinciri. Çekirdek genişleme: Muhasebe & Gelir-Gider. |
+| [[ABC Fason mutabakatını çıkar]] | [[Fason Mutabakat]] | ABC Fason mutabakatını çıkar — Sevk, dönüş, kalite, fire, hakediş ve fatura eşleştirme zinciri. Çekirdek genişleme: Muhasebe & Gelir-Gider. |
+| [[Fire aşımını hakedişten kes]] | [[Fason Mutabakat]] | Fire aşımını hakedişten kes — Sevk, dönüş, kalite, fire, hakediş ve fatura eşleştirme zinciri. Çekirdek genişleme: Muhasebe & Gelir-Gider. |
+| [[Müşteri Malzeme]] | [[Müşteri Malzeme]] | Müşteri emanet hammadde bakiyesi |
+| [[Müşteri Y kumaş bakiyesi]] | [[Müşteri Malzeme]] | Müşteri Y kumaş bakiyesi — Müşteri emanet hammadde bakiyesi |
+| [[Gelen malzeme kaydet]] | [[Müşteri Malzeme]] | Gelen malzeme kaydet — Müşteri emanet hammadde bakiyesi |
+| [[İşçilik Hakediş]] | [[İşçilik Hakediş]] | Kabul adedi üzerinden işçilik faturalama. Çekirdek genişleme: e-Fatura/e-Arşiv. |
+| [[Müşteri Y bu ay hakediş]] | [[İşçilik Hakediş]] | Müşteri Y bu ay hakediş — Kabul adedi üzerinden işçilik faturalama. Çekirdek genişleme: e-Fatura/e-Arşiv. |
+| [[Birim fiyat 4,5 TL]] | [[İşçilik Hakediş]] | Birim fiyat 4,5 TL — Kabul adedi üzerinden işçilik faturalama. Çekirdek genişleme: e-Fatura/e-Arşiv. |
+| [[Dönüş İrsaliye]] | [[Dönüş İrsaliye]] | Mamulün müşteriye sevki. Çekirdek genişleme: e-Fatura/e-Arşiv. |
+| [[Mamulü müşteriye sevk et]] | [[Dönüş İrsaliye]] | Mamulü müşteriye sevk et — Mamulün müşteriye sevki. Çekirdek genişleme: e-Fatura/e-Arşiv. |
+| [[İrsaliye hazırla]] | [[Dönüş İrsaliye]] | İrsaliye hazırla — Mamulün müşteriye sevki. Çekirdek genişleme: e-Fatura/e-Arşiv. |
+
+### Olmalı (0)
+
+_Yok._
+
+### İyi olur (4)
+
+| Fonksiyon | Araç | Kullanım |
+|---|---|---|
+| [[Fire Bildirim]] | [[Fire Bildirim]] | Müşteri malzemesinde fire raporu |
+| [[Fireyi müşteriye bildir]] | [[Fire Bildirim]] | Fireyi müşteriye bildir — Müşteri malzemesinde fire raporu |
+| [[Kapasite Slot]] | [[Kapasite Slot]] | Haftalık iş kabul slotları |
+| [[Perşembe boş slot]] | [[Kapasite Slot]] | Perşembe boş slot — Haftalık iş kabul slotları |
 
 ## 5. Teknik detay
-- **Entegrasyonlar:** 13.00.04, Mikro API, Mikro API (doğrulandı), Logo/Nebim (dogrulanmali), Mikro e-İrsaliye API, e-Fatura, e-Fatura, Mikro cari
-- **Ana ekranlar:** Kart / iş listesi · Takvim veya pipeline · Tahsilat · Rapor
+- **Entegrasyonlar:** Modül kartlarındaki entegrasyon notlarına bak; açık API yoksa panel kaydı + kullanıcı girişi.
+- **Ana ekranlar:** İş listesi / kart · Takvim veya pipeline · Tahsilat · Rapor
 - **Veri yapısı:** `Cari → İşKaydı → Belge/Tahsilat → Hatırlatma (onay kuyruğu)`
 
-## 6. Fiyat ve paket önerisi
-| Paket | İçerik | Fiyat | Not |
-|---|---|---|---|
-| Başlangıç | Çekirdek + MVP araçlar | bulunamadı | tahmin |
-| Plus | V2 araçlar | bulunamadı | tahmin |
-
-Uygun iş modeli: Abonelik (taahhütsüz aylık; yıllık indirim) — tahmin
-
-## 7. Satış argümanı
-- **Değer önerisi (tek cümle):** Fason işleyen atölye gününü tek panelde toplar; resmi gönderim ve tahsilat onayda kalır.
-- **3 ana mesaj:**
-  1. Dağınık Excel/WhatsApp yerine tek iş kaydı
-  2. e-Belge ve hatırlatmalar onay kuyruğunda
-  3. Sektöre özel alanlar, ortak çekirdek üzerinde
-- **İtirazlar ve cevaplar:**
-
-| İtiraz | Cevap |
-|---|---|
-| Zaten Excel var | Süre/uyum hatırlatması ve belge taslağı Excel’de dağılır |
-| Resmi API yok | Panel kaydı + kurum portalı; uydurma entegrasyon yok |
-| Pahalı | Taahhütsüz paket; yalnız kullanılan araçlar (tahmin) |
-
-## 8. Rakipler
+## 6. Rakipler
 - [[Mikro]]
 
-## 9. Kaynaklar
+## 7. Kaynaklar
 - [[13 Üretim & İmalat – Kaynaklar]]
-- Arşiv: `08 Arşiv/eski-docs-sektorel-arastirma/ai-kaynak/13-uretim-imalat.md`
+- Araştırma arşivi: `08 Arşiv/eski-docs-sektorel-arastirma/`

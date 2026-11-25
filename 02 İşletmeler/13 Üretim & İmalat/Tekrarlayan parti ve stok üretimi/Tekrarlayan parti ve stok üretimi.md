@@ -4,12 +4,13 @@ kod: "13-02-01"
 oneri_harf: B
 oncelik:
 gereksiz: false
-oncelik_notu: ""
+oncelik_notu:
 sektor: "[[13 Üretim & İmalat]]"
 dal: "[[Dal – Tekrarlayan parti ve stok üretimi]]"
 durum: tamamlandi
 olcek: ['mikro', 'kucuk-orta']
 isletme_sayisi: "bulunamadı"
+sayi_turu: tahmin
 nace: "C"
 pazar_puani: 4
 odeme_puani: 4
@@ -46,16 +47,45 @@ moduller:
 rakipler:
   - "[[Mikro]]"
 fonksiyonlar:
+  - "[[Muhasebe ve Gelir-Gider]]"
+  - "[[e-Fatura ve e-Arşiv]]"
+  - "[[CRM]]"
+  - "[[Personel ve Vardiya]]"
+  - "[[Raporlar]]"
+  - "[[AI Asistan]]"
+  - "[[Ayarlar]]"
+  - "[[İş Emri (Üretim)]]"
+  - "[[Sipariş 452 için iş emri aç]]"
+  - "[[Geciken iş emirlerini listele]]"
+  - "[[Reçete BOM]]"
+  - "[[Gömlek reçetesini göster]]"
+  - "[[Fire oranını yüzde 5 yap]]"
+  - "[[Fire Kayıt]]"
+  - "[[İş emri 88 fire kaydet 12 adet]]"
+  - "[[Bu hafta fire aşımı]]"
+  - "[[Depo Sevk]]"
+  - "[[İş emri 90 için sac çıkar]]"
+  - "[[Fasoncuda kalan bakiyeyi göster]]"
+  - "[[Fason Mutabakat]]"
+  - "[[ABC Fason mutabakatını çıkar]]"
+  - "[[Fire aşımını hakedişten kes]]"
+  - "[[Parti Plan]]"
   - "[[SKU-A için 500'lük parti aç]]"
   - "[[Bu ay planı]]"
+  - "[[Lot Barkod]]"
   - "[[Lot L-2411 oluştur]]"
   - "[[Lot L-2411 nereye gitti]]"
+  - "[[Min Max]]"
   - "[[Min altına düşenleri listele]]"
   - "[[Min 200 yap]]"
+  - "[[Verim Rapor]]"
   - "[[SKU-B verim raporu]]"
+  - "[[Alternatif Reçete]]"
   - "[[Alternatif reçeteyi uygula]]"
-fiyat_araligi: "bulunamadı"
-is_modeli: "Abonelik (tahmin) — uretim"
+parca_sart: 31
+parca_olmali: 0
+parca_iyi: 4
+parca_durum: tamamlandi
 ---
 # 13-02-01 · Tekrarlayan parti ve stok üretimi
 
@@ -67,6 +97,7 @@ Kendi stok kodunu aynı reçeteyle partiler halinde yenileyen işletme.
 
 - **İşletme sayısı:** bulunamadı
 - **NACE:** C
+- **Sayı türü:** tahmin
 
 ## 2. Günlük iş akışı
 1. Sabit reçete
@@ -84,77 +115,79 @@ flowchart LR
   S5["sevkiyat."]
 ```
 
-AI destek (onaylı): Parti adedinden fireli malzeme ihtiyacını çıkarır; stok yetmezse eksiği listeler.
-
 ## 3. İhtiyaçlar ve sorunlar
 | İhtiyaç | Bugün nasıl çözüyorlar | Etkisi |
 |---|---|---|
-| [[İş Emri (Üretim)]] | Excel / WhatsApp / portal (tahmin) | Zaman kaybı, hata riski |
-| [[Reçete BOM]] | Excel / WhatsApp / portal (tahmin) | Zaman kaybı, hata riski |
-| [[Fire Kayıt]] | Excel / WhatsApp / portal (tahmin) | Zaman kaybı, hata riski |
-| [[Parti Plan]] | Excel / WhatsApp / portal (tahmin) | Zaman kaybı, hata riski |
-| [[Lot Barkod]] | Excel / WhatsApp / portal (tahmin) | Zaman kaybı, hata riski |
-| [[Min Max]] | Excel / WhatsApp / portal (tahmin) | Zaman kaybı, hata riski |
-| [[Verim Rapor]] | Excel / WhatsApp / portal (tahmin) | Zaman kaybı, hata riski |
-| [[Alternatif Reçete]] | Excel / WhatsApp / portal (tahmin) | Zaman kaybı, hata riski |
+| [[İş emri]] | Excel / WhatsApp / portal (tahmin) | Zaman, hata, uyum riski |
+| [[Reçete / BOM]] | Excel / WhatsApp / portal (tahmin) | Zaman, hata, uyum riski |
+| [[Fire kaydı]] | Excel / WhatsApp / portal (tahmin) | Zaman, hata, uyum riski |
+| [[Depo sevk]] | Excel / WhatsApp / portal (tahmin) | Zaman, hata, uyum riski |
+| [[e-Belge / e-İrsaliye]] | Excel / WhatsApp / portal (tahmin) | Zaman, hata, uyum riski |
+| [[Fason mutabakat]] | Excel / WhatsApp / portal (tahmin) | Zaman, hata, uyum riski |
+| [[Lot / SKT]] | Excel / WhatsApp / portal (tahmin) | Zaman, hata, uyum riski |
+| [[Gıda kayıt]] | Excel / WhatsApp / portal (tahmin) | Zaman, hata, uyum riski |
 
-## 4. Çözümümüz: modüller ve özellikler
-**Araç tarifi:** [[Muhasebe ve Gelir-Gider]] + [[e-Fatura ve e-Arşiv]] + [[CRM]] + [[Personel ve Vardiya]] + [[Raporlar]] + [[AI Asistan]] + [[Ayarlar]] + [[İş Emri (Üretim)]] + [[Reçete BOM]] + [[Fire Kayıt]] + [[Depo Sevk]] + [[Fason Mutabakat]] + [[Parti Plan]] + [[Lot Barkod]]…
+## 4. Parçalar
 
-### Fonksiyonlar
-- [[SKU-A için 500'lük parti aç]]
-- [[Bu ay planı]]
-- [[Lot L-2411 oluştur]]
-- [[Lot L-2411 nereye gitti]]
-- [[Min altına düşenleri listele]]
-- [[Min 200 yap]]
-- [[SKU-B verim raporu]]
-- [[Alternatif reçeteyi uygula]]
+35 parça · 31 şart · 0 olmalı · 4 iyi olur
 
-### MVP
-- [[İş Emri (Üretim)]]
-- [[Reçete BOM]]
-- [[Fire Kayıt]]
-- [[Depo Sevk]]
-- [[Fason Mutabakat]]
-- [[Parti Plan]]
-- [[Lot Barkod]]
-- [[Min Max]]
+### Şart (31)
 
-### Sonraki sürüm
-- [[Verim Rapor]]
-- [[Alternatif Reçete]]
+| Fonksiyon | Araç | Kullanım |
+|---|---|---|
+| [[Muhasebe ve Gelir-Gider]] | [[Muhasebe ve Gelir-Gider]] | Gelir, gider, cari, kasa ve banka. Sektör belgesi para kaydını buraya düşürür. |
+| [[e-Fatura ve e-Arşiv]] | [[e-Fatura ve e-Arşiv]] | Satış belgesi taslağı; gönderim entegratör + onayla. |
+| [[CRM]] | [[CRM]] | Kişi/firma kartı, iletişim, not; sektör alanları karta eklenir. |
+| [[Personel ve Vardiya]] | [[Personel ve Vardiya]] | Personel kartı, vardiya, puantaj. Bordro/SGK kesilmez. |
+| [[Raporlar]] | [[Raporlar]] | Ciro, tahsilat, açık iş ve personel özeti. |
+| [[AI Asistan]] | [[AI Asistan]] | Komut çalıştırır, taslak üretir; yüksek etkili işlem onaysız bitmez. |
+| [[Ayarlar]] | [[Ayarlar]] | İşletme, belge, bildirim ve entegrasyon ayarları. |
+| [[İş Emri (Üretim)]] | [[İş Emri (Üretim)]] | Sipariş veya stok ihtiyacından iş emri; durum akışı; tam MES değil |
+| [[Sipariş 452 için iş emri aç]] | [[İş Emri (Üretim)]] | Sipariş 452 için iş emri aç — Sipariş veya stok ihtiyacından iş emri; durum akışı; tam MES değil |
+| [[Geciken iş emirlerini listele]] | [[İş Emri (Üretim)]] | Geciken iş emirlerini listele — Sipariş veya stok ihtiyacından iş emri; durum akışı; tam MES değil |
+| [[Reçete BOM]] | [[Reçete BOM]] | Hammadde, birim, beklenen fire oranı; iş emrine bağlanır |
+| [[Gömlek reçetesini göster]] | [[Reçete BOM]] | Gömlek reçetesini göster — Hammadde, birim, beklenen fire oranı; iş emrine bağlanır |
+| [[Fire oranını yüzde 5 yap]] | [[Reçete BOM]] | Fire oranını yüzde 5 yap — Hammadde, birim, beklenen fire oranı; iş emrine bağlanır |
+| [[Fire Kayıt]] | [[Fire Kayıt]] | İş emri bazlı fire; reçete toleransı ile gerçekleşen karşılaştırma |
+| [[İş emri 88 fire kaydet 12 adet]] | [[Fire Kayıt]] | İş emri 88 fire kaydet 12 adet — İş emri bazlı fire; reçete toleransı ile gerçekleşen karşılaştırma |
+| [[Bu hafta fire aşımı]] | [[Fire Kayıt]] | Bu hafta fire aşımı — İş emri bazlı fire; reçete toleransı ile gerçekleşen karşılaştırma |
+| [[Depo Sevk]] | [[Depo Sevk]] | İş emrine bağlı malzeme çıkış/iade ve fason depo bakiyesi. Çekirdek genişleme: e-Fatura/e-Arşiv (e-irsaliye köprüsü). |
+| [[İş emri 90 için sac çıkar]] | [[Depo Sevk]] | İş emri 90 için sac çıkar — İş emrine bağlı malzeme çıkış/iade ve fason depo bakiyesi. Çekirdek genişleme: e-Fatura/e-Arşiv (e-irsaliye köprüsü). |
+| [[Fasoncuda kalan bakiyeyi göster]] | [[Depo Sevk]] | Fasoncuda kalan bakiyeyi göster — İş emrine bağlı malzeme çıkış/iade ve fason depo bakiyesi. Çekirdek genişleme: e-Fatura/e-Arşiv (e-irsaliye köprüsü). |
+| [[Fason Mutabakat]] | [[Fason Mutabakat]] | Sevk, dönüş, kalite, fire, hakediş ve fatura eşleştirme zinciri. Çekirdek genişleme: Muhasebe & Gelir-Gider. |
+| [[ABC Fason mutabakatını çıkar]] | [[Fason Mutabakat]] | ABC Fason mutabakatını çıkar — Sevk, dönüş, kalite, fire, hakediş ve fatura eşleştirme zinciri. Çekirdek genişleme: Muhasebe & Gelir-Gider. |
+| [[Fire aşımını hakedişten kes]] | [[Fason Mutabakat]] | Fire aşımını hakedişten kes — Sevk, dönüş, kalite, fire, hakediş ve fatura eşleştirme zinciri. Çekirdek genişleme: Muhasebe & Gelir-Gider. |
+| [[Parti Plan]] | [[Parti Plan]] | Stok/talep ile parti ve iş emri |
+| [[SKU-A için 500'lük parti aç]] | [[Parti Plan]] | SKU-A için 500'lük parti aç — Stok/talep ile parti ve iş emri |
+| [[Bu ay planı]] | [[Parti Plan]] | Bu ay planı — Stok/talep ile parti ve iş emri |
+| [[Lot Barkod]] | [[Lot Barkod]] | Parti/lot kodu üretimi ve sevk bağlama |
+| [[Lot L-2411 oluştur]] | [[Lot Barkod]] | Lot L-2411 oluştur — Parti/lot kodu üretimi ve sevk bağlama |
+| [[Lot L-2411 nereye gitti]] | [[Lot Barkod]] | Lot L-2411 nereye gitti — Parti/lot kodu üretimi ve sevk bağlama |
+| [[Min Max]] | [[Min Max]] | Yeniden üretim tetik noktası |
+| [[Min altına düşenleri listele]] | [[Min Max]] | Min altına düşenleri listele — Yeniden üretim tetik noktası |
+| [[Min 200 yap]] | [[Min Max]] | Min 200 yap — Yeniden üretim tetik noktası |
+
+### Olmalı (0)
+
+_Yok._
+
+### İyi olur (4)
+
+| Fonksiyon | Araç | Kullanım |
+|---|---|---|
+| [[Verim Rapor]] | [[Verim Rapor]] | Plan vs üretilen vs fire. Çekirdek genişleme: Raporlar. |
+| [[SKU-B verim raporu]] | [[Verim Rapor]] | SKU-B verim raporu — Plan vs üretilen vs fire. Çekirdek genişleme: Raporlar. |
+| [[Alternatif Reçete]] | [[Alternatif Reçete]] | Malzeme yokluğunda alternatif BOM |
+| [[Alternatif reçeteyi uygula]] | [[Alternatif Reçete]] | Alternatif reçeteyi uygula — Malzeme yokluğunda alternatif BOM |
 
 ## 5. Teknik detay
-- **Entegrasyonlar:** Barkod yazıcı, Mikro API, Mikro API (doğrulandı), Logo/Nebim (dogrulanmali), Mikro e-İrsaliye API, Mikro stok, Raporlar, e-Fatura, Mikro cari
-- **Ana ekranlar:** Kart / iş listesi · Takvim veya pipeline · Tahsilat · Rapor
+- **Entegrasyonlar:** Modül kartlarındaki entegrasyon notlarına bak; açık API yoksa panel kaydı + kullanıcı girişi.
+- **Ana ekranlar:** İş listesi / kart · Takvim veya pipeline · Tahsilat · Rapor
 - **Veri yapısı:** `Cari → İşKaydı → Belge/Tahsilat → Hatırlatma (onay kuyruğu)`
 
-## 6. Fiyat ve paket önerisi
-| Paket | İçerik | Fiyat | Not |
-|---|---|---|---|
-| Başlangıç | Çekirdek + MVP araçlar | bulunamadı | tahmin |
-| Plus | V2 araçlar | bulunamadı | tahmin |
-
-Uygun iş modeli: Abonelik (taahhütsüz aylık; yıllık indirim) — tahmin
-
-## 7. Satış argümanı
-- **Değer önerisi (tek cümle):** Tekrarlayan parti ve stok üretimi gününü tek panelde toplar; resmi gönderim ve tahsilat onayda kalır.
-- **3 ana mesaj:**
-  1. Dağınık Excel/WhatsApp yerine tek iş kaydı
-  2. e-Belge ve hatırlatmalar onay kuyruğunda
-  3. Sektöre özel alanlar, ortak çekirdek üzerinde
-- **İtirazlar ve cevaplar:**
-
-| İtiraz | Cevap |
-|---|---|
-| Zaten Excel var | Süre/uyum hatırlatması ve belge taslağı Excel’de dağılır |
-| Resmi API yok | Panel kaydı + kurum portalı; uydurma entegrasyon yok |
-| Pahalı | Taahhütsüz paket; yalnız kullanılan araçlar (tahmin) |
-
-## 8. Rakipler
+## 6. Rakipler
 - [[Mikro]]
 
-## 9. Kaynaklar
+## 7. Kaynaklar
 - [[13 Üretim & İmalat – Kaynaklar]]
-- Arşiv: `08 Arşiv/eski-docs-sektorel-arastirma/ai-kaynak/13-uretim-imalat.md`
+- Araştırma arşivi: `08 Arşiv/eski-docs-sektorel-arastirma/`

@@ -4,13 +4,14 @@ kod: "16-06-01"
 oneri_harf: B
 oncelik:
 gereksiz: false
-oncelik_notu: ""
+oncelik_notu:
 sektor: "[[16 Etkinlik & Organizasyon]]"
 dal: "[[Dal – Etkinlik ikramı]]"
 durum: tamamlandi
 olcek: ['mikro', 'kucuk-orta']
 isletme_sayisi: "bulunamadı"
-nace: "56.21"
+sayi_turu: tahmin
+nace: 56.21
 pazar_puani: 3
 odeme_puani: 3
 rekabet_puani: 3
@@ -45,14 +46,41 @@ rakipler:
   - "[[iyzico]]"
   - "[[Biletix / Passo]]"
 fonksiyonlar:
+  - "[[Muhasebe ve Gelir-Gider]]"
+  - "[[e-Fatura ve e-Arşiv]]"
+  - "[[CRM]]"
+  - "[[Personel ve Vardiya]]"
+  - "[[Raporlar]]"
+  - "[[AI Asistan]]"
+  - "[[Ayarlar]]"
+  - "[[Etkinlik takvimi]]"
+  - "[[15 Haziran akşam boş mu?]]"
+  - "[[Aynı tarihe iki opsiyon var mı?]]"
+  - "[[Kapora sözleşme]]"
+  - "[[Yılmaz düğününün kaporası geldi mi?]]"
+  - "[[Kalan bakiyeyi hatırlat]]"
+  - "[[Tedarikçi teyidi]]"
+  - "[[Cumartesi ikram teyit etti mi?]]"
+  - "[[Teyitsiz tedarikçiler?]]"
+  - "[[Run-of-show]]"
+  - "[[Akışta 19:00 sonrası ne var?]]"
+  - "[[Kurulum penceresi çakışıyor mu?]]"
+  - "[[Kişi sayısı]]"
+  - "[[Kişi 180'den 220'ye çıktı, ne değişir?]]"
+  - "[[Son kişi güncellemesi?]]"
+  - "[[Menü maliyet]]"
   - "[[220 kişilik menü maliyeti?]]"
   - "[[Vejetaryen 30 kişi ekle]]"
+  - "[[Üretim sevkiyat]]"
   - "[[Cumartesi üretim planı]]"
   - "[[Kap-kacak döndü mü?]]"
+  - "[[Gıda kayıt]]"
   - "[[Gıda kayıt numarası?]]"
   - "[[Belge adresi değişti mi?]]"
-fiyat_araligi: "bulunamadı"
-is_modeli: "Abonelik (tahmin) — etkinlik"
+parca_sart: 31
+parca_olmali: 0
+parca_iyi: 0
+parca_durum: tamamlandi
 ---
 # 16-06-01 · Etkinlik ikramı
 
@@ -64,6 +92,7 @@ Müşterinin belirlediği etkinlikte sözleşmeyle yemek üreten işletme. Lokan
 
 - **İşletme sayısı:** bulunamadı
 - **NACE:** 56.21
+- **Sayı türü:** tahmin
 
 ## 2. Günlük iş akışı
 1. Tarih
@@ -85,73 +114,75 @@ flowchart LR
   S7["kap dönüşü."]
 ```
 
-AI destek (onaylı): Kişi sayısı değişince reçeteden üretim miktarını ve servis ekibi ihtiyacını yeniden hesaplar.
-
 ## 3. İhtiyaçlar ve sorunlar
 | İhtiyaç | Bugün nasıl çözüyorlar | Etkisi |
 |---|---|---|
-| [[Etkinlik takvimi]] | Excel / WhatsApp / portal (tahmin) | Zaman kaybı, hata riski |
-| [[Kapora sözleşme]] | Excel / WhatsApp / portal (tahmin) | Zaman kaybı, hata riski |
-| [[Tedarikçi teyidi]] | Excel / WhatsApp / portal (tahmin) | Zaman kaybı, hata riski |
-| [[Menü maliyet]] | Excel / WhatsApp / portal (tahmin) | Zaman kaybı, hata riski |
-| [[Üretim sevkiyat]] | Excel / WhatsApp / portal (tahmin) | Zaman kaybı, hata riski |
-| [[Gıda kayıt]] | Excel / WhatsApp / portal (tahmin) | Zaman kaybı, hata riski |
+| [[Etkinlik takvimi]] | Excel / WhatsApp / portal (tahmin) | Zaman, hata, uyum riski |
+| [[Kapora / sözleşme]] | Excel / WhatsApp / portal (tahmin) | Zaman, hata, uyum riski |
+| [[Tedarikçi teyidi]] | Excel / WhatsApp / portal (tahmin) | Zaman, hata, uyum riski |
+| [[Run-of-show]] | Excel / WhatsApp / portal (tahmin) | Zaman, hata, uyum riski |
+| [[Kişi sayısı]] | Excel / WhatsApp / portal (tahmin) | Zaman, hata, uyum riski |
+| [[e-Belge]] | Excel / WhatsApp / portal (tahmin) | Zaman, hata, uyum riski |
+| [[Salon seans]] | Excel / WhatsApp / portal (tahmin) | Zaman, hata, uyum riski |
+| [[Telif / MSG listesi]] | Excel / WhatsApp / portal (tahmin) | Zaman, hata, uyum riski |
 
-## 4. Çözümümüz: modüller ve özellikler
-**Araç tarifi:** [[Muhasebe ve Gelir-Gider]] + [[e-Fatura ve e-Arşiv]] + [[CRM]] + [[Personel ve Vardiya]] + [[Raporlar]] + [[AI Asistan]] + [[Ayarlar]] + [[Etkinlik takvimi]] + [[Kapora sözleşme]] + [[Tedarikçi teyidi]] + [[Run-of-show]] + [[Kişi sayısı]] + [[Menü maliyet]] + [[Üretim sevkiyat]]…
+## 4. Parçalar
 
-### Fonksiyonlar
-- [[220 kişilik menü maliyeti?]]
-- [[Vejetaryen 30 kişi ekle]]
-- [[Cumartesi üretim planı]]
-- [[Kap-kacak döndü mü?]]
-- [[Gıda kayıt numarası?]]
-- [[Belge adresi değişti mi?]]
+31 parça · 31 şart · 0 olmalı · 0 iyi olur
 
-### MVP
-- [[Etkinlik takvimi]]
-- [[Kapora sözleşme]]
-- [[Tedarikçi teyidi]]
-- [[Run-of-show]]
-- [[Kişi sayısı]]
-- [[Menü maliyet]]
-- [[Üretim sevkiyat]]
-- [[Gıda kayıt]]
+### Şart (31)
 
-### Sonraki sürüm
-- V2 opsiyonel araçlar
+| Fonksiyon | Araç | Kullanım |
+|---|---|---|
+| [[Muhasebe ve Gelir-Gider]] | [[Muhasebe ve Gelir-Gider]] | Gelir, gider, cari, kasa ve banka. Sektör belgesi para kaydını buraya düşürür. |
+| [[e-Fatura ve e-Arşiv]] | [[e-Fatura ve e-Arşiv]] | Satış belgesi taslağı; gönderim entegratör + onayla. |
+| [[CRM]] | [[CRM]] | Kişi/firma kartı, iletişim, not; sektör alanları karta eklenir. |
+| [[Personel ve Vardiya]] | [[Personel ve Vardiya]] | Personel kartı, vardiya, puantaj. Bordro/SGK kesilmez. |
+| [[Raporlar]] | [[Raporlar]] | Ciro, tahsilat, açık iş ve personel özeti. |
+| [[AI Asistan]] | [[AI Asistan]] | Komut çalıştırır, taslak üretir; yüksek etkili işlem onaysız bitmez. |
+| [[Ayarlar]] | [[Ayarlar]] | İşletme, belge, bildirim ve entegrasyon ayarları. |
+| [[Etkinlik takvimi]] | [[Etkinlik takvimi]] | Tarih/seans/kaynak doluluğu; opsiyon ve kesin kayıt; çakışma engeli. |
+| [[15 Haziran akşam boş mu?]] | [[Etkinlik takvimi]] | 15 Haziran akşam boş mu? — Tarih/seans/kaynak doluluğu; opsiyon ve kesin kayıt; çakışma engeli. |
+| [[Aynı tarihe iki opsiyon var mı?]] | [[Etkinlik takvimi]] | Aynı tarihe iki opsiyon var mı? — Tarih/seans/kaynak doluluğu; opsiyon ve kesin kayıt; çakışma engeli. |
+| [[Kapora sözleşme]] | [[Kapora sözleşme]] | Opsiyon, kapora, kesinleşme, kalan bakiye ve iade kuralı. |
+| [[Yılmaz düğününün kaporası geldi mi?]] | [[Kapora sözleşme]] | Yılmaz düğününün kaporası geldi mi? — Opsiyon, kapora, kesinleşme, kalan bakiye ve iade kuralı. |
+| [[Kalan bakiyeyi hatırlat]] | [[Kapora sözleşme]] | Kalan bakiyeyi hatırlat — Opsiyon, kapora, kesinleşme, kalan bakiye ve iade kuralı. |
+| [[Tedarikçi teyidi]] | [[Tedarikçi teyidi]] | Kalem bazlı tedarikçi atama ve yazılı teyit durumu. |
+| [[Cumartesi ikram teyit etti mi?]] | [[Tedarikçi teyidi]] | Cumartesi ikram teyit etti mi? — Kalem bazlı tedarikçi atama ve yazılı teyit durumu. |
+| [[Teyitsiz tedarikçiler?]] | [[Tedarikçi teyidi]] | Teyitsiz tedarikçiler? — Kalem bazlı tedarikçi atama ve yazılı teyit durumu. |
+| [[Run-of-show]] | [[Run-of-show]] | Etkinlik günü zaman akışı ve bağımlı kalemler. |
+| [[Akışta 19:00 sonrası ne var?]] | [[Run-of-show]] | Akışta 19:00 sonrası ne var? — Etkinlik günü zaman akışı ve bağımlı kalemler. |
+| [[Kurulum penceresi çakışıyor mu?]] | [[Run-of-show]] | Kurulum penceresi çakışıyor mu? — Etkinlik günü zaman akışı ve bağımlı kalemler. |
+| [[Kişi sayısı]] | [[Kişi sayısı]] | Sözleşme kişi sayısı ile güncel sayıyı ve etkileri takip eder. |
+| [[Kişi 180'den 220'ye çıktı, ne değişir?]] | [[Kişi sayısı]] | Kişi 180'den 220'ye çıktı, ne değişir? — Sözleşme kişi sayısı ile güncel sayıyı ve etkileri takip eder. |
+| [[Son kişi güncellemesi?]] | [[Kişi sayısı]] | Son kişi güncellemesi? — Sözleşme kişi sayısı ile güncel sayıyı ve etkileri takip eder. |
+| [[Menü maliyet]] | [[Menü maliyet]] | Reçete, kişi başı maliyet ve teklif. |
+| [[220 kişilik menü maliyeti?]] | [[Menü maliyet]] | 220 kişilik menü maliyeti? — Reçete, kişi başı maliyet ve teklif. |
+| [[Vejetaryen 30 kişi ekle]] | [[Menü maliyet]] | Vejetaryen 30 kişi ekle — Reçete, kişi başı maliyet ve teklif. |
+| [[Üretim sevkiyat]] | [[Üretim sevkiyat]] | Mutfak planı, taşıma, servis ekibi, kap-kacak dönüşü. |
+| [[Cumartesi üretim planı]] | [[Üretim sevkiyat]] | Cumartesi üretim planı — Mutfak planı, taşıma, servis ekibi, kap-kacak dönüşü. |
+| [[Kap-kacak döndü mü?]] | [[Üretim sevkiyat]] | Kap-kacak döndü mü? — Mutfak planı, taşıma, servis ekibi, kap-kacak dönüşü. |
+| [[Gıda kayıt]] | [[Gıda kayıt]] | İşletme kayıt belgesi ve faaliyet konusu dosyası. |
+| [[Gıda kayıt numarası?]] | [[Gıda kayıt]] | Gıda kayıt numarası? — İşletme kayıt belgesi ve faaliyet konusu dosyası. |
+| [[Belge adresi değişti mi?]] | [[Gıda kayıt]] | Belge adresi değişti mi? — İşletme kayıt belgesi ve faaliyet konusu dosyası. |
+
+### Olmalı (0)
+
+_Yok._
+
+### İyi olur (0)
+
+_Yok._
 
 ## 5. Teknik detay
-- **Entegrasyonlar:** Panel takvimi, WhatsApp Cloud API, e-Devlet gıda kayıt, iyzico
-- **Ana ekranlar:** Kart / iş listesi · Takvim veya pipeline · Tahsilat · Rapor
+- **Entegrasyonlar:** Modül kartlarındaki entegrasyon notlarına bak; açık API yoksa panel kaydı + kullanıcı girişi.
+- **Ana ekranlar:** İş listesi / kart · Takvim veya pipeline · Tahsilat · Rapor
 - **Veri yapısı:** `Cari → İşKaydı → Belge/Tahsilat → Hatırlatma (onay kuyruğu)`
 
-## 6. Fiyat ve paket önerisi
-| Paket | İçerik | Fiyat | Not |
-|---|---|---|---|
-| Başlangıç | Çekirdek + MVP araçlar | bulunamadı | tahmin |
-| Plus | V2 araçlar | bulunamadı | tahmin |
-
-Uygun iş modeli: Abonelik (taahhütsüz aylık; yıllık indirim) — tahmin
-
-## 7. Satış argümanı
-- **Değer önerisi (tek cümle):** Etkinlik ikramı gününü tek panelde toplar; resmi gönderim ve tahsilat onayda kalır.
-- **3 ana mesaj:**
-  1. Dağınık Excel/WhatsApp yerine tek iş kaydı
-  2. e-Belge ve hatırlatmalar onay kuyruğunda
-  3. Sektöre özel alanlar, ortak çekirdek üzerinde
-- **İtirazlar ve cevaplar:**
-
-| İtiraz | Cevap |
-|---|---|
-| Zaten Excel var | Süre/uyum hatırlatması ve belge taslağı Excel’de dağılır |
-| Resmi API yok | Panel kaydı + kurum portalı; uydurma entegrasyon yok |
-| Pahalı | Taahhütsüz paket; yalnız kullanılan araçlar (tahmin) |
-
-## 8. Rakipler
+## 6. Rakipler
 - [[iyzico]]
 - [[Biletix / Passo]]
 
-## 9. Kaynaklar
+## 7. Kaynaklar
 - [[16 Etkinlik & Organizasyon – Kaynaklar]]
-- Arşiv: `08 Arşiv/eski-docs-sektorel-arastirma/ai-kaynak/16-etkinlik-organizasyon.md`
+- Araştırma arşivi: `08 Arşiv/eski-docs-sektorel-arastirma/`

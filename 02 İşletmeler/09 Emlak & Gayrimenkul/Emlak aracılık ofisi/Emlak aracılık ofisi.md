@@ -4,13 +4,15 @@ kod: "09-01-01"
 oneri_harf: A
 oncelik:
 gereksiz: false
-oncelik_notu: ""
+oncelik_notu:
 sektor: "[[09 Emlak & Gayrimenkul]]"
 dal: "[[Dal – Emlak aracılık ofisi]]"
 durum: tamamlandi
 olcek: ['tek-kisilik', 'mikro', 'kucuk-orta']
 isletme_sayisi: "İTO 68.31.01: 14.828 (İstanbul oda; TR geneli yok)"
-nace: "68.31"
+isletme_sayisi_n: 14828
+sayi_turu: kaynakli
+nace: 68.31
 pazar_puani: 5
 odeme_puani: 4
 rekabet_puani: 2
@@ -53,18 +55,53 @@ rakipler:
   - "[[NOKTApp]]"
   - "[[sahibinden]]"
 fonksiyonlar:
+  - "[[Muhasebe ve Gelir-Gider]]"
+  - "[[e-Fatura ve e-Arşiv]]"
+  - "[[CRM]]"
+  - "[[Personel ve Vardiya]]"
+  - "[[Raporlar]]"
+  - "[[AI Asistan]]"
+  - "[[Ayarlar]]"
+  - "[[Portföy Kartı]]"
+  - "[[Boşta satılık daireleri listele]]"
+  - "[[Kadıköy 3+1 portföyleri getir]]"
+  - "[[Gösterim Randevu]]"
+  - "[[Yarın 14:00 için gösterim aç]]"
+  - "[[Bu hafta müsait slotları göster]]"
+  - "[[İlan Doğrulama]]"
+  - "[[Bu ilanın EİDS durumunu kontrol et]]"
+  - "[[Yetkisiz ilanları işaretle]]"
+  - "[[Yetki Takibi]]"
+  - "[[Yetki belgesi vadesi yaklaşanları göster]]"
+  - "[[Seviye 5 sorumlu listesi]]"
+  - "[[Sözleşme Taslağı]]"
+  - "[[Satış yetki sözleşmesi taslağı üret]]"
+  - "[[Kira sözleşmesi madde özetini çıkar]]"
+  - "[[Belge Kasası]]"
+  - "[[Bu portföyün tapu belgelerini listele]]"
+  - "[[Süresi dolan belgeleri bul]]"
+  - "[[Komisyon Hesabı]]"
+  - "[[Bu satışta komisyon tutarını hesapla]]"
+  - "[[Danışman payını göster]]"
+  - "[[Alıcı Eşleştirme]]"
   - "[[Bu alıcıya 5 aday öner]]"
   - "[[Bütçe 8–10M eşleşmeleri getir]]"
+  - "[[Malik Yetkilendirme]]"
   - "[[Yetki bekleyen portföyleri göster]]"
   - "[[Yetki kodu süresi dolanları listele]]"
+  - "[[Teklif Takibi]]"
   - "[[Açık teklifleri sırala]]"
   - "[[Bu portföyün son teklifini özetle]]"
+  - "[[Ofis Portföy Payı]]"
   - "[[Ortak portföyleri listele]]"
   - "[[Paylaşım kuralını özetle]]"
+  - "[[Piyasa Bandı]]"
   - "[[Bu daire için fiyat bandı öner]]"
   - "[[Son 30 gün benzer satılıkları özetle]]"
-fiyat_araligi: "bulunamadı — tahmin: 790–2.500₺/ay CRM bandı"
-is_modeli: "Abonelik (tahmin) — karma"
+parca_sart: 28
+parca_olmali: 3
+parca_iyi: 12
+parca_durum: tamamlandi
 ---
 # 09-01-01 · Emlak aracılık ofisi
 
@@ -76,6 +113,7 @@ Yetki belgeli işletme, başkasına ait konut, işyeri, arsa veya devre mülke k
 
 - **İşletme sayısı:** İTO 68.31.01: 14.828 (İstanbul oda; TR geneli yok)
 - **NACE:** 68.31
+- **Sayı türü:** kaynakli
 
 ## 2. Günlük iş akışı
 1. Yetkilendirme dosyası
@@ -95,79 +133,86 @@ flowchart LR
   S6["aracılık sözleşmesi."]
 ```
 
-AI destek (onaylı): Dosyadan ilan metni ve talep listesi kurar; yetki bitişi ile ilanı üç gün içinde kaldırma süresini hatırlatır.
-
 ## 3. İhtiyaçlar ve sorunlar
 | İhtiyaç | Bugün nasıl çözüyorlar | Etkisi |
 |---|---|---|
-| [[Portföy Kartı]] | Excel / WhatsApp / portal (tahmin) | Zaman kaybı, hata riski |
-| [[Gösterim Randevu]] | Excel / WhatsApp / portal (tahmin) | Zaman kaybı, hata riski |
-| [[İlan Doğrulama]] | Excel / WhatsApp / portal (tahmin) | Zaman kaybı, hata riski |
-| [[Alıcı Eşleştirme]] | Excel / WhatsApp / portal (tahmin) | Zaman kaybı, hata riski |
-| [[Malik Yetkilendirme]] | Excel / WhatsApp / portal (tahmin) | Zaman kaybı, hata riski |
-| [[Teklif Takibi]] | Excel / WhatsApp / portal (tahmin) | Zaman kaybı, hata riski |
-| [[Ofis Portföy Payı]] | Excel / WhatsApp / portal (tahmin) | Zaman kaybı, hata riski |
-| [[Piyasa Bandı]] | Excel / WhatsApp / portal (tahmin) | Zaman kaybı, hata riski |
+| [[Yetki belgesi ve sorumlu danışman takibi]] | Excel / WhatsApp / portal (tahmin) | Zaman, hata, uyum riski |
+| [[Portföy kartı ve medya]] | Excel / WhatsApp / portal (tahmin) | Zaman, hata, uyum riski |
+| [[Gösterim randevusu]] | Excel / WhatsApp / portal (tahmin) | Zaman, hata, uyum riski |
+| [[Tahsilat / aidat / komisyon kaydı]] | Excel / WhatsApp / portal (tahmin) | Zaman, hata, uyum riski |
+| [[e-Belge]] | Excel / WhatsApp / portal (tahmin) | Zaman, hata, uyum riski |
+| [[Sözleşme taslağı]] | Excel / WhatsApp / portal (tahmin) | Zaman, hata, uyum riski |
+| [[İlan doğrulama / EİDS checklist]] | Excel / WhatsApp / portal (tahmin) | Zaman, hata, uyum riski |
+| [[Kira tahsilat ve dekont]] | Excel / WhatsApp / portal (tahmin) | Zaman, hata, uyum riski |
 
-## 4. Çözümümüz: modüller ve özellikler
-**Araç tarifi:** [[Muhasebe ve Gelir-Gider]] + [[e-Fatura ve e-Arşiv]] + [[CRM]] + [[Personel ve Vardiya]] + [[Raporlar]] + [[AI Asistan]] + [[Ayarlar]] + [[Portföy Kartı]] + [[Gösterim Randevu]] + [[İlan Doğrulama]] + [[Yetki Takibi]] + [[Sözleşme Taslağı]] + [[Belge Kasası]] + [[Komisyon Hesabı]]…
+## 4. Parçalar
 
-### Fonksiyonlar
-- [[Bu alıcıya 5 aday öner]]
-- [[Bütçe 8–10M eşleşmeleri getir]]
-- [[Yetki bekleyen portföyleri göster]]
-- [[Yetki kodu süresi dolanları listele]]
-- [[Açık teklifleri sırala]]
-- [[Bu portföyün son teklifini özetle]]
-- [[Ortak portföyleri listele]]
-- [[Paylaşım kuralını özetle]]
-- [[Bu daire için fiyat bandı öner]]
-- [[Son 30 gün benzer satılıkları özetle]]
+43 parça · 28 şart · 3 olmalı · 12 iyi olur
 
-### MVP
-- [[Portföy Kartı]]
-- [[Gösterim Randevu]]
-- [[İlan Doğrulama]]
-- [[Yetki Takibi]]
-- [[Sözleşme Taslağı]]
-- [[Alıcı Eşleştirme]]
-- [[Malik Yetkilendirme]]
-- [[Teklif Takibi]]
+### Şart (28)
 
-### Sonraki sürüm
-- [[Belge Kasası]]
-- [[Komisyon Hesabı]]
-- [[Ofis Portföy Payı]]
-- [[Piyasa Bandı]]
+| Fonksiyon | Araç | Kullanım |
+|---|---|---|
+| [[Muhasebe ve Gelir-Gider]] | [[Muhasebe ve Gelir-Gider]] | Gelir, gider, cari, kasa ve banka. Sektör belgesi para kaydını buraya düşürür. |
+| [[e-Fatura ve e-Arşiv]] | [[e-Fatura ve e-Arşiv]] | Satış belgesi taslağı; gönderim entegratör + onayla. |
+| [[CRM]] | [[CRM]] | Kişi/firma kartı, iletişim, not; sektör alanları karta eklenir. |
+| [[Personel ve Vardiya]] | [[Personel ve Vardiya]] | Personel kartı, vardiya, puantaj. Bordro/SGK kesilmez. |
+| [[Raporlar]] | [[Raporlar]] | Ciro, tahsilat, açık iş ve personel özeti. |
+| [[AI Asistan]] | [[AI Asistan]] | Komut çalıştırır, taslak üretir; yüksek etkili işlem onaysız bitmez. |
+| [[Ayarlar]] | [[Ayarlar]] | İşletme, belge, bildirim ve entegrasyon ayarları. |
+| [[Portföy Kartı]] | [[Portföy Kartı]] | Satış/kira/işletme için taşınmaz kimliği, özellikler, durum ve medya yönetimi. |
+| [[Boşta satılık daireleri listele]] | [[Portföy Kartı]] | Boşta satılık daireleri listele — Satış/kira/işletme için taşınmaz kimliği, özellikler, durum ve medya yönetimi. |
+| [[Kadıköy 3+1 portföyleri getir]] | [[Portföy Kartı]] | Kadıköy 3+1 portföyleri getir — Satış/kira/işletme için taşınmaz kimliği, özellikler, durum ve medya yönetimi. |
+| [[Gösterim Randevu]] | [[Gösterim Randevu]] | Mülk gösterimi randevu, çakışma kontrolü ve danışman ataması. |
+| [[Yarın 14:00 için gösterim aç]] | [[Gösterim Randevu]] | Yarın 14:00 için gösterim aç — Mülk gösterimi randevu, çakışma kontrolü ve danışman ataması. |
+| [[Bu hafta müsait slotları göster]] | [[Gösterim Randevu]] | Bu hafta müsait slotları göster — Mülk gösterimi randevu, çakışma kontrolü ve danışman ataması. |
+| [[İlan Doğrulama]] | [[İlan Doğrulama]] | İlan öncesi kimlik/yetki doğrulama durumu ve yayın checklist'i; EİDS uyumu. |
+| [[Bu ilanın EİDS durumunu kontrol et]] | [[İlan Doğrulama]] | Bu ilanın EİDS durumunu kontrol et — İlan öncesi kimlik/yetki doğrulama durumu ve yayın checklist'i; EİDS uyumu. |
+| [[Yetkisiz ilanları işaretle]] | [[İlan Doğrulama]] | Yetkisiz ilanları işaretle — İlan öncesi kimlik/yetki doğrulama durumu ve yayın checklist'i; EİDS uyumu. |
+| [[Yetki Takibi]] | [[Yetki Takibi]] | İşletme yetki belgesi, sorumlu emlak danışmanı ve belge vade takibi (TTBS). |
+| [[Yetki belgesi vadesi yaklaşanları göster]] | [[Yetki Takibi]] | Yetki belgesi vadesi yaklaşanları göster — İşletme yetki belgesi, sorumlu emlak danışmanı ve belge vade takibi (TTBS). |
+| [[Seviye 5 sorumlu listesi]] | [[Yetki Takibi]] | Seviye 5 sorumlu listesi — İşletme yetki belgesi, sorumlu emlak danışmanı ve belge vade takibi (TTBS). |
+| [[Alıcı Eşleştirme]] | [[Alıcı Eşleştirme]] | CRM genişlemesi: bütçe/lokasyon/özellik ile portföy adayı skorlama. |
+| [[Bu alıcıya 5 aday öner]] | [[Alıcı Eşleştirme]] | Bu alıcıya 5 aday öner — CRM genişlemesi: bütçe/lokasyon/özellik ile portföy adayı skorlama. |
+| [[Bütçe 8–10M eşleşmeleri getir]] | [[Alıcı Eşleştirme]] | Bütçe 8–10M eşleşmeleri getir — CRM genişlemesi: bütçe/lokasyon/özellik ile portföy adayı skorlama. |
+| [[Malik Yetkilendirme]] | [[Malik Yetkilendirme]] | Malikin e-Devlet üzerinden emlak işletmesine verdiği ilan yetkisinin takip kaydı. |
+| [[Yetki bekleyen portföyleri göster]] | [[Malik Yetkilendirme]] | Yetki bekleyen portföyleri göster — Malikin e-Devlet üzerinden emlak işletmesine verdiği ilan yetkisinin takip kaydı. |
+| [[Yetki kodu süresi dolanları listele]] | [[Malik Yetkilendirme]] | Yetki kodu süresi dolanları listele — Malikin e-Devlet üzerinden emlak işletmesine verdiği ilan yetkisinin takip kaydı. |
+| [[Teklif Takibi]] | [[Teklif Takibi]] | Alıcı teklifleri, karşı teklif ve durum pipeline'ı. |
+| [[Açık teklifleri sırala]] | [[Teklif Takibi]] | Açık teklifleri sırala — Alıcı teklifleri, karşı teklif ve durum pipeline'ı. |
+| [[Bu portföyün son teklifini özetle]] | [[Teklif Takibi]] | Bu portföyün son teklifini özetle — Alıcı teklifleri, karşı teklif ve durum pipeline'ı. |
+
+### Olmalı (3)
+
+| Fonksiyon | Araç | Kullanım |
+|---|---|---|
+| [[Sözleşme Taslağı]] | [[Sözleşme Taslağı]] | Satış/kira/yetkilendirme taslak üretimi; imza ve gönderim insan onayına bağlı. |
+| [[Satış yetki sözleşmesi taslağı üret]] | [[Sözleşme Taslağı]] | Satış yetki sözleşmesi taslağı üret — Satış/kira/yetkilendirme taslak üretimi; imza ve gönderim insan onayına bağlı. |
+| [[Kira sözleşmesi madde özetini çıkar]] | [[Sözleşme Taslağı]] | Kira sözleşmesi madde özetini çıkar — Satış/kira/yetkilendirme taslak üretimi; imza ve gönderim insan onayına bağlı. |
+
+### İyi olur (12)
+
+| Fonksiyon | Araç | Kullanım |
+|---|---|---|
+| [[Belge Kasası]] | [[Belge Kasası]] | Tapu, kimlik, yetki ve ekspertiz belgelerinin versiyonlu arşivi. |
+| [[Bu portföyün tapu belgelerini listele]] | [[Belge Kasası]] | Bu portföyün tapu belgelerini listele — Tapu, kimlik, yetki ve ekspertiz belgelerinin versiyonlu arşivi. |
+| [[Süresi dolan belgeleri bul]] | [[Belge Kasası]] | Süresi dolan belgeleri bul — Tapu, kimlik, yetki ve ekspertiz belgelerinin versiyonlu arşivi. |
+| [[Komisyon Hesabı]] | [[Komisyon Hesabı]] | Muhasebe & Gelir-Gider genişlemesi: işlem komisyonu ve ofis/danışman payı önerisi. |
+| [[Bu satışta komisyon tutarını hesapla]] | [[Komisyon Hesabı]] | Bu satışta komisyon tutarını hesapla — Muhasebe & Gelir-Gider genişlemesi: işlem komisyonu ve ofis/danışman payı önerisi. |
+| [[Danışman payını göster]] | [[Komisyon Hesabı]] | Danışman payını göster — Muhasebe & Gelir-Gider genişlemesi: işlem komisyonu ve ofis/danışman payı önerisi. |
+| [[Ofis Portföy Payı]] | [[Ofis Portföy Payı]] | Şube/franchise arası portföy görünürlük ve komisyon paylaşım kuralları. |
+| [[Ortak portföyleri listele]] | [[Ofis Portföy Payı]] | Ortak portföyleri listele — Şube/franchise arası portföy görünürlük ve komisyon paylaşım kuralları. |
+| [[Paylaşım kuralını özetle]] | [[Ofis Portföy Payı]] | Paylaşım kuralını özetle — Şube/franchise arası portföy görünürlük ve komisyon paylaşım kuralları. |
+| [[Piyasa Bandı]] | [[Piyasa Bandı]] | Benzer ilanlardan bilgilendirme amaçlı fiyat bandı önerisi. |
+| [[Bu daire için fiyat bandı öner]] | [[Piyasa Bandı]] | Bu daire için fiyat bandı öner — Benzer ilanlardan bilgilendirme amaçlı fiyat bandı önerisi. |
+| [[Son 30 gün benzer satılıkları özetle]] | [[Piyasa Bandı]] | Son 30 gün benzer satılıkları özetle — Benzer ilanlardan bilgilendirme amaçlı fiyat bandı önerisi. |
 
 ## 5. Teknik detay
-- **Entegrasyonlar:** EİDS Taşınmaz API, EİDS ilan doğrulama, Google Calendar API, TTBS sorgu ekranı, Web Tapu emlakçı portalı, sahibinden kurumsal aktarım (sözleşmeli)
-- **Ana ekranlar:** Kart / iş listesi · Takvim veya pipeline · Tahsilat · Rapor
+- **Entegrasyonlar:** Modül kartlarındaki entegrasyon notlarına bak; açık API yoksa panel kaydı + kullanıcı girişi.
+- **Ana ekranlar:** İş listesi / kart · Takvim veya pipeline · Tahsilat · Rapor
 - **Veri yapısı:** `Cari → İşKaydı → Belge/Tahsilat → Hatırlatma (onay kuyruğu)`
 
-## 6. Fiyat ve paket önerisi
-| Paket | İçerik | Fiyat | Not |
-|---|---|---|---|
-| Başlangıç | Çekirdek + MVP araçlar | bulunamadı — tahmin: 790–2.500₺/ay CRM bandı | tahmin |
-| Plus | V2 araçlar | bulunamadı | tahmin |
-
-Uygun iş modeli: Abonelik (taahhütsüz aylık; yıllık indirim) — tahmin
-
-## 7. Satış argümanı
-- **Değer önerisi (tek cümle):** Emlak aracılık ofisi gününü tek panelde toplar; resmi gönderim ve tahsilat onayda kalır.
-- **3 ana mesaj:**
-  1. Dağınık Excel/WhatsApp yerine tek iş kaydı
-  2. e-Belge ve hatırlatmalar onay kuyruğunda
-  3. Sektöre özel alanlar, ortak çekirdek üzerinde
-- **İtirazlar ve cevaplar:**
-
-| İtiraz | Cevap |
-|---|---|
-| Zaten Excel var | Süre/uyum hatırlatması ve belge taslağı Excel’de dağılır |
-| Resmi API yok | Panel kaydı + kurum portalı; uydurma entegrasyon yok |
-| Pahalı | Taahhütsüz paket; yalnız kullanılan araçlar (tahmin) |
-
-## 8. Rakipler
+## 6. Rakipler
 - [[RE-OS]]
 - [[selfSite]]
 - [[Dijiyon]]
@@ -175,6 +220,6 @@ Uygun iş modeli: Abonelik (taahhütsüz aylık; yıllık indirim) — tahmin
 - [[NOKTApp]]
 - [[sahibinden]]
 
-## 9. Kaynaklar
+## 7. Kaynaklar
 - [[09 Emlak & Gayrimenkul – Kaynaklar]]
-- Arşiv: `08 Arşiv/eski-docs-sektorel-arastirma/ai-kaynak/09-emlak-gayrimenkul.md`
+- Araştırma arşivi: `08 Arşiv/eski-docs-sektorel-arastirma/`

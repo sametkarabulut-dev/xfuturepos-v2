@@ -4,13 +4,14 @@ kod: "10-04-01"
 oneri_harf: A
 oncelik:
 gereksiz: false
-oncelik_notu: ""
+oncelik_notu:
 sektor: "[[10 İnşaat & Yapı]]"
 dal: "[[Dal – Tadilat ve basit onarım]]"
 durum: tamamlandi
 olcek: ['mikro', 'kucuk-orta']
 isletme_sayisi: "bulunamadı"
-nace: "43.3"
+sayi_turu: tahmin
+nace: 43.3
 pazar_puani: 4
 odeme_puani: 4
 rekabet_puani: 3
@@ -51,18 +52,53 @@ rakipler:
   - "[[ESSantiye]]"
   - "[[Mikro]]"
 fonksiyonlar:
+  - "[[Muhasebe ve Gelir-Gider]]"
+  - "[[e-Fatura ve e-Arşiv]]"
+  - "[[CRM]]"
+  - "[[Personel ve Vardiya]]"
+  - "[[Raporlar]]"
+  - "[[AI Asistan]]"
+  - "[[Ayarlar]]"
+  - "[[Proje Kartı]]"
+  - "[[Aktif şantiyeleri listele]]"
+  - "[[C blok projesini askıya al]]"
+  - "[[Saha Puantajı]]"
+  - "[[Bugün B blokta kaç kişi var?]]"
+  - "[[Elektrik ekibi puantajını özetle]]"
+  - "[[Metraj Hakediş]]"
+  - "[[Mart hakediş taslağını hazırla]]"
+  - "[[Kalıp m² farkını göster]]"
+  - "[[Şantiye Günlüğü]]"
+  - "[[Bugünkü günlük raporu hazırla]]"
+  - "[[Son 7 gün çalışılmayan günleri göster]]"
+  - "[[Malzeme Takibi]]"
+  - "[[Bugün gelen demiri kaydet]]"
+  - "[[Beton sarfiyatı metrajı aşıyor mu?]]"
+  - "[[İSG Kontrol]]"
+  - "[[Süresi dolan İSG belgelerini listele]]"
+  - "[[Ramak kala aç]]"
+  - "[[Taşeron Sözleşme]]"
+  - "[[Yeni sıva taşeron sözleşmesi oluştur]]"
+  - "[[Ek iş protokollerini göster]]"
+  - "[[Keşif Randevu]]"
   - "[[Yarın keşif randevusu koy]]"
   - "[[Bu hafta keşifleri listele]]"
+  - "[[Teklif Onay]]"
   - "[[Banyo tadilat teklifi gönder]]"
   - "[[Onaylanan teklifleri göster]]"
+  - "[[İş Takvimi]]"
   - "[[Mutfak işini perşembeye al]]"
   - "[[Çakışan işleri bul]]"
+  - "[[Önce Sonra]]"
   - "[[Önce-sonra albümü oluştur]]"
   - "[[Eksik foto mahalleri]]"
+  - "[[Garanti Servis]]"
   - "[[Garanti kaydı aç]]"
   - "[[Bu ay servis çağrıları]]"
-fiyat_araligi: "bulunamadı"
-is_modeli: "Abonelik (tahmin) — karma"
+parca_sart: 31
+parca_olmali: 0
+parca_iyi: 12
+parca_durum: tamamlandi
 ---
 # 10-04-01 · Tadilat ve basit onarım
 
@@ -74,6 +110,7 @@ Taşıyıcıya dokunmayan boya, tesisat tamiri ve iç yenilemeyi doğrudan müş
 
 - **İşletme sayısı:** bulunamadı
 - **NACE:** 43.3
+- **Sayı türü:** tahmin
 
 ## 2. Günlük iş akışı
 1. Keşif
@@ -91,84 +128,90 @@ flowchart LR
   S5["iş bitince fatura."]
 ```
 
-AI destek (onaylı): Müşteri mesajındaki iş tarifinden kalemli teklif ve malzeme listesi taslağı çıkarır.
-
 ## 3. İhtiyaçlar ve sorunlar
 | İhtiyaç | Bugün nasıl çözüyorlar | Etkisi |
 |---|---|---|
-| [[Proje Kartı]] | Excel / WhatsApp / portal (tahmin) | Zaman kaybı, hata riski |
-| [[Saha Puantajı]] | Excel / WhatsApp / portal (tahmin) | Zaman kaybı, hata riski |
-| [[Metraj Hakediş]] | Excel / WhatsApp / portal (tahmin) | Zaman kaybı, hata riski |
-| [[Keşif Randevu]] | Excel / WhatsApp / portal (tahmin) | Zaman kaybı, hata riski |
-| [[Teklif Onay]] | Excel / WhatsApp / portal (tahmin) | Zaman kaybı, hata riski |
-| [[İş Takvimi]] | Excel / WhatsApp / portal (tahmin) | Zaman kaybı, hata riski |
-| [[Önce Sonra]] | Excel / WhatsApp / portal (tahmin) | Zaman kaybı, hata riski |
-| [[Garanti Servis]] | Excel / WhatsApp / portal (tahmin) | Zaman kaybı, hata riski |
+| [[Proje / iş kartı]] | Excel / WhatsApp / portal (tahmin) | Zaman, hata, uyum riski |
+| [[Puantaj / yoklama]] | Excel / WhatsApp / portal (tahmin) | Zaman, hata, uyum riski |
+| [[Metraj ve hakediş]] | Excel / WhatsApp / portal (tahmin) | Zaman, hata, uyum riski |
+| [[Malzeme / stok]] | Excel / WhatsApp / portal (tahmin) | Zaman, hata, uyum riski |
+| [[e-Belge]] | Excel / WhatsApp / portal (tahmin) | Zaman, hata, uyum riski |
+| [[Şantiye günlüğü]] | Excel / WhatsApp / portal (tahmin) | Zaman, hata, uyum riski |
+| [[Ruhsat / evrak paketi]] | Excel / WhatsApp / portal (tahmin) | Zaman, hata, uyum riski |
+| [[İSG checklist]] | Excel / WhatsApp / portal (tahmin) | Zaman, hata, uyum riski |
 
-## 4. Çözümümüz: modüller ve özellikler
-**Araç tarifi:** [[Muhasebe ve Gelir-Gider]] + [[e-Fatura ve e-Arşiv]] + [[CRM]] + [[Personel ve Vardiya]] + [[Raporlar]] + [[AI Asistan]] + [[Ayarlar]] + [[Proje Kartı]] + [[Saha Puantajı]] + [[Metraj Hakediş]] + [[Şantiye Günlüğü]] + [[Malzeme Takibi]] + [[İSG Kontrol]] + [[Taşeron Sözleşme]]…
+## 4. Parçalar
 
-### Fonksiyonlar
-- [[Yarın keşif randevusu koy]]
-- [[Bu hafta keşifleri listele]]
-- [[Banyo tadilat teklifi gönder]]
-- [[Onaylanan teklifleri göster]]
-- [[Mutfak işini perşembeye al]]
-- [[Çakışan işleri bul]]
-- [[Önce-sonra albümü oluştur]]
-- [[Eksik foto mahalleri]]
-- [[Garanti kaydı aç]]
-- [[Bu ay servis çağrıları]]
+43 parça · 31 şart · 0 olmalı · 12 iyi olur
 
-### MVP
-- [[Proje Kartı]]
-- [[Saha Puantajı]]
-- [[Metraj Hakediş]]
-- [[Şantiye Günlüğü]]
-- [[Malzeme Takibi]]
-- [[Keşif Randevu]]
-- [[Teklif Onay]]
-- [[İş Takvimi]]
+### Şart (31)
 
-### Sonraki sürüm
-- [[İSG Kontrol]]
-- [[Taşeron Sözleşme]]
-- [[Önce Sonra]]
-- [[Garanti Servis]]
+| Fonksiyon | Araç | Kullanım |
+|---|---|---|
+| [[Muhasebe ve Gelir-Gider]] | [[Muhasebe ve Gelir-Gider]] | Gelir, gider, cari, kasa ve banka. Sektör belgesi para kaydını buraya düşürür. |
+| [[e-Fatura ve e-Arşiv]] | [[e-Fatura ve e-Arşiv]] | Satış belgesi taslağı; gönderim entegratör + onayla. |
+| [[CRM]] | [[CRM]] | Kişi/firma kartı, iletişim, not; sektör alanları karta eklenir. |
+| [[Personel ve Vardiya]] | [[Personel ve Vardiya]] | Personel kartı, vardiya, puantaj. Bordro/SGK kesilmez. |
+| [[Raporlar]] | [[Raporlar]] | Ciro, tahsilat, açık iş ve personel özeti. |
+| [[AI Asistan]] | [[AI Asistan]] | Komut çalıştırır, taslak üretir; yüksek etkili işlem onaysız bitmez. |
+| [[Ayarlar]] | [[Ayarlar]] | İşletme, belge, bildirim ve entegrasyon ayarları. |
+| [[Proje Kartı]] | [[Proje Kartı]] | Şantiye/iş kartı; CRM genişlemesi. |
+| [[Aktif şantiyeleri listele]] | [[Proje Kartı]] | Aktif şantiyeleri listele — Şantiye/iş kartı; CRM genişlemesi. |
+| [[C blok projesini askıya al]] | [[Proje Kartı]] | C blok projesini askıya al — Şantiye/iş kartı; CRM genişlemesi. |
+| [[Saha Puantajı]] | [[Saha Puantajı]] | Firma-ekip-blok puantaj; Personel genişlemesi. Çekirdek genişleme: Personel & Vardiya. |
+| [[Bugün B blokta kaç kişi var?]] | [[Saha Puantajı]] | Bugün B blokta kaç kişi var? — Firma-ekip-blok puantaj; Personel genişlemesi. Çekirdek genişleme: Personel & Vardiya. |
+| [[Elektrik ekibi puantajını özetle]] | [[Saha Puantajı]] | Elektrik ekibi puantajını özetle — Firma-ekip-blok puantaj; Personel genişlemesi. Çekirdek genişleme: Personel & Vardiya. |
+| [[Metraj Hakediş]] | [[Metraj Hakediş]] | Poz/metraj hakediş ve kesintiler; Muhasebe genişlemesi. |
+| [[Mart hakediş taslağını hazırla]] | [[Metraj Hakediş]] | Mart hakediş taslağını hazırla — Poz/metraj hakediş ve kesintiler; Muhasebe genişlemesi. |
+| [[Kalıp m² farkını göster]] | [[Metraj Hakediş]] | Kalıp m² farkını göster — Poz/metraj hakediş ve kesintiler; Muhasebe genişlemesi. |
+| [[Şantiye Günlüğü]] | [[Şantiye Günlüğü]] | Operasyonel günlük; Şantiye-M hazırlık (otomatik API yok). |
+| [[Bugünkü günlük raporu hazırla]] | [[Şantiye Günlüğü]] | Bugünkü günlük raporu hazırla — Operasyonel günlük; Şantiye-M hazırlık (otomatik API yok). |
+| [[Son 7 gün çalışılmayan günleri göster]] | [[Şantiye Günlüğü]] | Son 7 gün çalışılmayan günleri göster — Operasyonel günlük; Şantiye-M hazırlık (otomatik API yok). |
+| [[Malzeme Takibi]] | [[Malzeme Takibi]] | İrsaliye kabul ve şantiye sarfiyatı. Çekirdek genişleme: e-Fatura. |
+| [[Bugün gelen demiri kaydet]] | [[Malzeme Takibi]] | Bugün gelen demiri kaydet — İrsaliye kabul ve şantiye sarfiyatı. Çekirdek genişleme: e-Fatura. |
+| [[Beton sarfiyatı metrajı aşıyor mu?]] | [[Malzeme Takibi]] | Beton sarfiyatı metrajı aşıyor mu? — İrsaliye kabul ve şantiye sarfiyatı. Çekirdek genişleme: e-Fatura. |
+| [[Keşif Randevu]] | [[Keşif Randevu]] | Keşif randevusu; CRM genişlemesi. |
+| [[Yarın keşif randevusu koy]] | [[Keşif Randevu]] | Yarın keşif randevusu koy — Keşif randevusu; CRM genişlemesi. |
+| [[Bu hafta keşifleri listele]] | [[Keşif Randevu]] | Bu hafta keşifleri listele — Keşif randevusu; CRM genişlemesi. |
+| [[Teklif Onay]] | [[Teklif Onay]] | Teklif, kapora, onay. |
+| [[Banyo tadilat teklifi gönder]] | [[Teklif Onay]] | Banyo tadilat teklifi gönder — Teklif, kapora, onay. |
+| [[Onaylanan teklifleri göster]] | [[Teklif Onay]] | Onaylanan teklifleri göster — Teklif, kapora, onay. |
+| [[İş Takvimi]] | [[İş Takvimi]] | Usta ve malzeme günleri. |
+| [[Mutfak işini perşembeye al]] | [[İş Takvimi]] | Mutfak işini perşembeye al — Usta ve malzeme günleri. |
+| [[Çakışan işleri bul]] | [[İş Takvimi]] | Çakışan işleri bul — Usta ve malzeme günleri. |
+
+### Olmalı (0)
+
+_Yok._
+
+### İyi olur (12)
+
+| Fonksiyon | Araç | Kullanım |
+|---|---|---|
+| [[İSG Kontrol]] | [[İSG Kontrol]] | SGP, KKD, ramak kala, belge süresi. Çekirdek genişleme: Personel & Vardiya. |
+| [[Süresi dolan İSG belgelerini listele]] | [[İSG Kontrol]] | Süresi dolan İSG belgelerini listele — SGP, KKD, ramak kala, belge süresi. Çekirdek genişleme: Personel & Vardiya. |
+| [[Ramak kala aç]] | [[İSG Kontrol]] | Ramak kala aç — SGP, KKD, ramak kala, belge süresi. Çekirdek genişleme: Personel & Vardiya. |
+| [[Taşeron Sözleşme]] | [[Taşeron Sözleşme]] | Kapsam, birim fiyat, ölçüm, teminat, ek iş. Çekirdek genişleme: CRM. |
+| [[Yeni sıva taşeron sözleşmesi oluştur]] | [[Taşeron Sözleşme]] | Yeni sıva taşeron sözleşmesi oluştur — Kapsam, birim fiyat, ölçüm, teminat, ek iş. Çekirdek genişleme: CRM. |
+| [[Ek iş protokollerini göster]] | [[Taşeron Sözleşme]] | Ek iş protokollerini göster — Kapsam, birim fiyat, ölçüm, teminat, ek iş. Çekirdek genişleme: CRM. |
+| [[Önce Sonra]] | [[Önce Sonra]] | Mahal foto arşivi. |
+| [[Önce-sonra albümü oluştur]] | [[Önce Sonra]] | Önce-sonra albümü oluştur — Mahal foto arşivi. |
+| [[Eksik foto mahalleri]] | [[Önce Sonra]] | Eksik foto mahalleri — Mahal foto arşivi. |
+| [[Garanti Servis]] | [[Garanti Servis]] | Teslim sonrası servis. |
+| [[Garanti kaydı aç]] | [[Garanti Servis]] | Garanti kaydı aç — Teslim sonrası servis. |
+| [[Bu ay servis çağrıları]] | [[Garanti Servis]] | Bu ay servis çağrıları — Teslim sonrası servis. |
 
 ## 5. Teknik detay
-- **Entegrasyonlar:** GİB e-İrsaliye, Mobil yoklama, Takvim, e-Fatura, İSG-KATİP ekranı, ŞANTİYE-M
-- **Ana ekranlar:** Kart / iş listesi · Takvim veya pipeline · Tahsilat · Rapor
+- **Entegrasyonlar:** Modül kartlarındaki entegrasyon notlarına bak; açık API yoksa panel kaydı + kullanıcı girişi.
+- **Ana ekranlar:** İş listesi / kart · Takvim veya pipeline · Tahsilat · Rapor
 - **Veri yapısı:** `Cari → İşKaydı → Belge/Tahsilat → Hatırlatma (onay kuyruğu)`
 
-## 6. Fiyat ve paket önerisi
-| Paket | İçerik | Fiyat | Not |
-|---|---|---|---|
-| Başlangıç | Çekirdek + MVP araçlar | bulunamadı | tahmin |
-| Plus | V2 araçlar | bulunamadı | tahmin |
-
-Uygun iş modeli: Abonelik (taahhütsüz aylık; yıllık indirim) — tahmin
-
-## 7. Satış argümanı
-- **Değer önerisi (tek cümle):** Tadilat ve basit onarım gününü tek panelde toplar; resmi gönderim ve tahsilat onayda kalır.
-- **3 ana mesaj:**
-  1. Dağınık Excel/WhatsApp yerine tek iş kaydı
-  2. e-Belge ve hatırlatmalar onay kuyruğunda
-  3. Sektöre özel alanlar, ortak çekirdek üzerinde
-- **İtirazlar ve cevaplar:**
-
-| İtiraz | Cevap |
-|---|---|
-| Zaten Excel var | Süre/uyum hatırlatması ve belge taslağı Excel’de dağılır |
-| Resmi API yok | Panel kaydı + kurum portalı; uydurma entegrasyon yok |
-| Pahalı | Taahhütsüz paket; yalnız kullanılan araçlar (tahmin) |
-
-## 8. Rakipler
+## 6. Rakipler
 - [[SantiyePro]]
 - [[Hakedra]]
 - [[ESSantiye]]
 - [[Mikro]]
 
-## 9. Kaynaklar
+## 7. Kaynaklar
 - [[10 İnşaat & Yapı – Kaynaklar]]
-- Arşiv: `08 Arşiv/eski-docs-sektorel-arastirma/ai-kaynak/10-insaat-yapi.md`
+- Araştırma arşivi: `08 Arşiv/eski-docs-sektorel-arastirma/`

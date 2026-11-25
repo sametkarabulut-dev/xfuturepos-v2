@@ -67,3 +67,13 @@ views:
       - rekabet_puani
       - kolaylik_puani
       - aciliyet_puani
+  note.parca_sart:
+    displayName: Şart
+  note.parca_olmali:
+    displayName: Olmalı
+  note.parca_iyi:
+    displayName: İyi olur
+  note.parca_durum:
+    displayName: Parça durumu
+  note.sayi_turu:
+    displayName: Sayı türü

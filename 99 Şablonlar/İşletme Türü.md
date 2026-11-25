@@ -6,6 +6,8 @@ fonksiyonlar: []
 durum: taslak
 olcek: []
 isletme_sayisi:
+isletme_sayisi_n:
+sayi_turu:
 nace:
 pazar_puani:
 odeme_puani:
@@ -15,8 +17,14 @@ aciliyet_puani:
 ihtiyaclar: []
 moduller: []
 rakipler: []
-fiyat_araligi: ""
-is_modeli: ""
+kod: ""
+oneri_harf:
+oncelik:
+gereksiz: false
+parca_sart:
+parca_olmali:
+parca_iyi:
+parca_durum:
 ---
 # {{title}}
 
@@ -31,38 +39,27 @@ is_modeli: ""
 |---|---|---|
 | [[ ]] |  |  |
 
-## 4. Çözümümüz: modüller ve özellikler
-### MVP
-- 
-### Sonraki sürüm
-- 
+## 4. Parçalar
+### Şart
+| Fonksiyon | Araç | Kullanım |
+|---|---|---|
+|  |  |  |
+### Olmalı
+| Fonksiyon | Araç | Kullanım |
+|---|---|---|
+|  |  |  |
+### İyi olur
+| Fonksiyon | Araç | Kullanım |
+|---|---|---|
+|  |  |  |
 
 ## 5. Teknik detay
 - **Entegrasyonlar:** 
 - **Ana ekranlar:** 
 - **Veri yapısı:** 
 
-## 6. Fiyat ve paket önerisi
-| Paket | İçerik | Fiyat | Not |
-|---|---|---|---|
-|  |  |  |  |
-
-Uygun iş modeli: 
-
-## 7. Satış argümanı
-- **Değer önerisi (tek cümle):** 
-- **3 ana mesaj:**
-  1. 
-  2. 
-  3. 
-- **İtirazlar ve cevaplar:**
-
-| İtiraz | Cevap |
-|---|---|
-|  |  |
-
-## 8. Rakipler
+## 6. Rakipler
 - [[ ]]
 
-## 9. Kaynaklar
+## 7. Kaynaklar
 - 

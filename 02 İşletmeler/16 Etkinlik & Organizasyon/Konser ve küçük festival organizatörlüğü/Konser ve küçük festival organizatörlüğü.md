@@ -4,13 +4,14 @@ kod: "16-04-01"
 oneri_harf: C
 oncelik:
 gereksiz: false
-oncelik_notu: ""
+oncelik_notu:
 sektor: "[[16 Etkinlik & Organizasyon]]"
 dal: "[[Dal – Konser ve küçük festival organizatörlüğü]]"
 durum: tamamlandi
 olcek: ['mikro', 'kucuk-orta']
 isletme_sayisi: "bulunamadı"
-nace: "90.02"
+sayi_turu: tahmin
+nace: 90.02
 pazar_puani: 2
 odeme_puani: 3
 rekabet_puani: 2
@@ -45,14 +46,41 @@ rakipler:
   - "[[iyzico]]"
   - "[[Biletix / Passo]]"
 fonksiyonlar:
+  - "[[Muhasebe ve Gelir-Gider]]"
+  - "[[e-Fatura ve e-Arşiv]]"
+  - "[[CRM]]"
+  - "[[Personel ve Vardiya]]"
+  - "[[Raporlar]]"
+  - "[[AI Asistan]]"
+  - "[[Ayarlar]]"
+  - "[[Etkinlik takvimi]]"
+  - "[[15 Haziran akşam boş mu?]]"
+  - "[[Aynı tarihe iki opsiyon var mı?]]"
+  - "[[Kapora sözleşme]]"
+  - "[[Yılmaz düğününün kaporası geldi mi?]]"
+  - "[[Kalan bakiyeyi hatırlat]]"
+  - "[[Tedarikçi teyidi]]"
+  - "[[Cumartesi ikram teyit etti mi?]]"
+  - "[[Teyitsiz tedarikçiler?]]"
+  - "[[Run-of-show]]"
+  - "[[Akışta 19:00 sonrası ne var?]]"
+  - "[[Kurulum penceresi çakışıyor mu?]]"
+  - "[[Kişi sayısı]]"
+  - "[[Kişi 180'den 220'ye çıktı, ne değişir?]]"
+  - "[[Son kişi güncellemesi?]]"
+  - "[[Gösteri dosya]]"
   - "[[Cuma teknik rider eksikleri?]]"
   - "[[Sanatçı çağrı saati?]]"
+  - "[[Telif bildirim]]"
   - "[[MSG bildirim taslağı hazırla]]"
   - "[[Eser listesi eksik sanatçı?]]"
+  - "[[Hasılat izin]]"
   - "[[Ön satış kaç?]]"
   - "[[Özel güvenlik başvurusu yapıldı mı?]]"
-fiyat_araligi: "bulunamadı"
-is_modeli: "Abonelik (tahmin) — etkinlik"
+parca_sart: 31
+parca_olmali: 0
+parca_iyi: 0
+parca_durum: tamamlandi
 ---
 # 16-04-01 · Konser ve küçük festival organizatörlüğü
 
@@ -64,6 +92,7 @@ Yerel konseri veya küçük festivali üreten organizatör. Stadyum işletmecili
 
 - **İşletme sayısı:** bulunamadı
 - **NACE:** 90.02
+- **Sayı türü:** tahmin
 
 ## 2. Günlük iş akışı
 1. Gösteri tarihi
@@ -83,73 +112,75 @@ flowchart LR
   S6["özel güvenlik talebi."]
 ```
 
-AI destek (onaylı): Eser listesini MSG bildirim taslağına dizer; salon, belediye alanı ve güvenlik kalemlerini ayrı hatırlatır.
-
 ## 3. İhtiyaçlar ve sorunlar
 | İhtiyaç | Bugün nasıl çözüyorlar | Etkisi |
 |---|---|---|
-| [[Etkinlik takvimi]] | Excel / WhatsApp / portal (tahmin) | Zaman kaybı, hata riski |
-| [[Kapora sözleşme]] | Excel / WhatsApp / portal (tahmin) | Zaman kaybı, hata riski |
-| [[Tedarikçi teyidi]] | Excel / WhatsApp / portal (tahmin) | Zaman kaybı, hata riski |
-| [[Gösteri dosya]] | Excel / WhatsApp / portal (tahmin) | Zaman kaybı, hata riski |
-| [[Telif bildirim]] | Excel / WhatsApp / portal (tahmin) | Zaman kaybı, hata riski |
-| [[Hasılat izin]] | Excel / WhatsApp / portal (tahmin) | Zaman kaybı, hata riski |
+| [[Etkinlik takvimi]] | Excel / WhatsApp / portal (tahmin) | Zaman, hata, uyum riski |
+| [[Kapora / sözleşme]] | Excel / WhatsApp / portal (tahmin) | Zaman, hata, uyum riski |
+| [[Tedarikçi teyidi]] | Excel / WhatsApp / portal (tahmin) | Zaman, hata, uyum riski |
+| [[Run-of-show]] | Excel / WhatsApp / portal (tahmin) | Zaman, hata, uyum riski |
+| [[Kişi sayısı]] | Excel / WhatsApp / portal (tahmin) | Zaman, hata, uyum riski |
+| [[e-Belge]] | Excel / WhatsApp / portal (tahmin) | Zaman, hata, uyum riski |
+| [[Salon seans]] | Excel / WhatsApp / portal (tahmin) | Zaman, hata, uyum riski |
+| [[Telif / MSG listesi]] | Excel / WhatsApp / portal (tahmin) | Zaman, hata, uyum riski |
 
-## 4. Çözümümüz: modüller ve özellikler
-**Araç tarifi:** [[Muhasebe ve Gelir-Gider]] + [[e-Fatura ve e-Arşiv]] + [[CRM]] + [[Personel ve Vardiya]] + [[Raporlar]] + [[AI Asistan]] + [[Ayarlar]] + [[Etkinlik takvimi]] + [[Kapora sözleşme]] + [[Tedarikçi teyidi]] + [[Run-of-show]] + [[Kişi sayısı]] + [[Gösteri dosya]] + [[Telif bildirim]]…
+## 4. Parçalar
 
-### Fonksiyonlar
-- [[Cuma teknik rider eksikleri?]]
-- [[Sanatçı çağrı saati?]]
-- [[MSG bildirim taslağı hazırla]]
-- [[Eser listesi eksik sanatçı?]]
-- [[Ön satış kaç?]]
-- [[Özel güvenlik başvurusu yapıldı mı?]]
+31 parça · 31 şart · 0 olmalı · 0 iyi olur
 
-### MVP
-- [[Etkinlik takvimi]]
-- [[Kapora sözleşme]]
-- [[Tedarikçi teyidi]]
-- [[Run-of-show]]
-- [[Kişi sayısı]]
-- [[Gösteri dosya]]
-- [[Telif bildirim]]
-- [[Hasılat izin]]
+### Şart (31)
 
-### Sonraki sürüm
-- V2 opsiyonel araçlar
+| Fonksiyon | Araç | Kullanım |
+|---|---|---|
+| [[Muhasebe ve Gelir-Gider]] | [[Muhasebe ve Gelir-Gider]] | Gelir, gider, cari, kasa ve banka. Sektör belgesi para kaydını buraya düşürür. |
+| [[e-Fatura ve e-Arşiv]] | [[e-Fatura ve e-Arşiv]] | Satış belgesi taslağı; gönderim entegratör + onayla. |
+| [[CRM]] | [[CRM]] | Kişi/firma kartı, iletişim, not; sektör alanları karta eklenir. |
+| [[Personel ve Vardiya]] | [[Personel ve Vardiya]] | Personel kartı, vardiya, puantaj. Bordro/SGK kesilmez. |
+| [[Raporlar]] | [[Raporlar]] | Ciro, tahsilat, açık iş ve personel özeti. |
+| [[AI Asistan]] | [[AI Asistan]] | Komut çalıştırır, taslak üretir; yüksek etkili işlem onaysız bitmez. |
+| [[Ayarlar]] | [[Ayarlar]] | İşletme, belge, bildirim ve entegrasyon ayarları. |
+| [[Etkinlik takvimi]] | [[Etkinlik takvimi]] | Tarih/seans/kaynak doluluğu; opsiyon ve kesin kayıt; çakışma engeli. |
+| [[15 Haziran akşam boş mu?]] | [[Etkinlik takvimi]] | 15 Haziran akşam boş mu? — Tarih/seans/kaynak doluluğu; opsiyon ve kesin kayıt; çakışma engeli. |
+| [[Aynı tarihe iki opsiyon var mı?]] | [[Etkinlik takvimi]] | Aynı tarihe iki opsiyon var mı? — Tarih/seans/kaynak doluluğu; opsiyon ve kesin kayıt; çakışma engeli. |
+| [[Kapora sözleşme]] | [[Kapora sözleşme]] | Opsiyon, kapora, kesinleşme, kalan bakiye ve iade kuralı. |
+| [[Yılmaz düğününün kaporası geldi mi?]] | [[Kapora sözleşme]] | Yılmaz düğününün kaporası geldi mi? — Opsiyon, kapora, kesinleşme, kalan bakiye ve iade kuralı. |
+| [[Kalan bakiyeyi hatırlat]] | [[Kapora sözleşme]] | Kalan bakiyeyi hatırlat — Opsiyon, kapora, kesinleşme, kalan bakiye ve iade kuralı. |
+| [[Tedarikçi teyidi]] | [[Tedarikçi teyidi]] | Kalem bazlı tedarikçi atama ve yazılı teyit durumu. |
+| [[Cumartesi ikram teyit etti mi?]] | [[Tedarikçi teyidi]] | Cumartesi ikram teyit etti mi? — Kalem bazlı tedarikçi atama ve yazılı teyit durumu. |
+| [[Teyitsiz tedarikçiler?]] | [[Tedarikçi teyidi]] | Teyitsiz tedarikçiler? — Kalem bazlı tedarikçi atama ve yazılı teyit durumu. |
+| [[Run-of-show]] | [[Run-of-show]] | Etkinlik günü zaman akışı ve bağımlı kalemler. |
+| [[Akışta 19:00 sonrası ne var?]] | [[Run-of-show]] | Akışta 19:00 sonrası ne var? — Etkinlik günü zaman akışı ve bağımlı kalemler. |
+| [[Kurulum penceresi çakışıyor mu?]] | [[Run-of-show]] | Kurulum penceresi çakışıyor mu? — Etkinlik günü zaman akışı ve bağımlı kalemler. |
+| [[Kişi sayısı]] | [[Kişi sayısı]] | Sözleşme kişi sayısı ile güncel sayıyı ve etkileri takip eder. |
+| [[Kişi 180'den 220'ye çıktı, ne değişir?]] | [[Kişi sayısı]] | Kişi 180'den 220'ye çıktı, ne değişir? — Sözleşme kişi sayısı ile güncel sayıyı ve etkileri takip eder. |
+| [[Son kişi güncellemesi?]] | [[Kişi sayısı]] | Son kişi güncellemesi? — Sözleşme kişi sayısı ile güncel sayıyı ve etkileri takip eder. |
+| [[Gösteri dosya]] | [[Gösteri dosya]] | Sanatçı, rider, mekân/alan ve çağrı saatleri. |
+| [[Cuma teknik rider eksikleri?]] | [[Gösteri dosya]] | Cuma teknik rider eksikleri? — Sanatçı, rider, mekân/alan ve çağrı saatleri. |
+| [[Sanatçı çağrı saati?]] | [[Gösteri dosya]] | Sanatçı çağrı saati? — Sanatçı, rider, mekân/alan ve çağrı saatleri. |
+| [[Telif bildirim]] | [[Telif bildirim]] | MESAM-MSG konser/etkinlik lisansı ve eser listesi taslağı. |
+| [[MSG bildirim taslağı hazırla]] | [[Telif bildirim]] | MSG bildirim taslağı hazırla — MESAM-MSG konser/etkinlik lisansı ve eser listesi taslağı. |
+| [[Eser listesi eksik sanatçı?]] | [[Telif bildirim]] | Eser listesi eksik sanatçı? — MESAM-MSG konser/etkinlik lisansı ve eser listesi taslağı. |
+| [[Hasılat izin]] | [[Hasılat izin]] | Bilet/hasılat özeti ve izin/güvenlik kalemleri. |
+| [[Ön satış kaç?]] | [[Hasılat izin]] | Ön satış kaç? — Bilet/hasılat özeti ve izin/güvenlik kalemleri. |
+| [[Özel güvenlik başvurusu yapıldı mı?]] | [[Hasılat izin]] | Özel güvenlik başvurusu yapıldı mı? — Bilet/hasılat özeti ve izin/güvenlik kalemleri. |
+
+### Olmalı (0)
+
+_Yok._
+
+### İyi olur (0)
+
+_Yok._
 
 ## 5. Teknik detay
-- **Entegrasyonlar:** Elle hasılat, MSG bildirim formu, Panel takvimi, WhatsApp Cloud API, iyzico
-- **Ana ekranlar:** Kart / iş listesi · Takvim veya pipeline · Tahsilat · Rapor
+- **Entegrasyonlar:** Modül kartlarındaki entegrasyon notlarına bak; açık API yoksa panel kaydı + kullanıcı girişi.
+- **Ana ekranlar:** İş listesi / kart · Takvim veya pipeline · Tahsilat · Rapor
 - **Veri yapısı:** `Cari → İşKaydı → Belge/Tahsilat → Hatırlatma (onay kuyruğu)`
 
-## 6. Fiyat ve paket önerisi
-| Paket | İçerik | Fiyat | Not |
-|---|---|---|---|
-| Başlangıç | Çekirdek + MVP araçlar | bulunamadı | tahmin |
-| Plus | V2 araçlar | bulunamadı | tahmin |
-
-Uygun iş modeli: Abonelik (taahhütsüz aylık; yıllık indirim) — tahmin
-
-## 7. Satış argümanı
-- **Değer önerisi (tek cümle):** Konser ve küçük festival organizatörlüğü gününü tek panelde toplar; resmi gönderim ve tahsilat onayda kalır.
-- **3 ana mesaj:**
-  1. Dağınık Excel/WhatsApp yerine tek iş kaydı
-  2. e-Belge ve hatırlatmalar onay kuyruğunda
-  3. Sektöre özel alanlar, ortak çekirdek üzerinde
-- **İtirazlar ve cevaplar:**
-
-| İtiraz | Cevap |
-|---|---|
-| Zaten Excel var | Süre/uyum hatırlatması ve belge taslağı Excel’de dağılır |
-| Resmi API yok | Panel kaydı + kurum portalı; uydurma entegrasyon yok |
-| Pahalı | Taahhütsüz paket; yalnız kullanılan araçlar (tahmin) |
-
-## 8. Rakipler
+## 6. Rakipler
 - [[iyzico]]
 - [[Biletix / Passo]]
 
-## 9. Kaynaklar
+## 7. Kaynaklar
 - [[16 Etkinlik & Organizasyon – Kaynaklar]]
-- Arşiv: `08 Arşiv/eski-docs-sektorel-arastirma/ai-kaynak/16-etkinlik-organizasyon.md`
+- Araştırma arşivi: `08 Arşiv/eski-docs-sektorel-arastirma/`
